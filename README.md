@@ -5,8 +5,10 @@
 **A receipts-first revenue operating system for frontier agents.**
 
 No guaranteed income. No fake benchmark dollars. No autonomous spam.
-MoneyPrinter interviews you, chooses one credible payable test, and helps you
-research, offer, sell, deliver, and measure legitimate value.
+MoneyPrinter interviews you, recommends one bounded payable test when the
+evidence supports it—or a smaller discovery step when payment would be
+premature—and helps you research, offer, sell, deliver, and measure legitimate
+value.
 
 Portable Agent Skills source · [host compatibility](docs/compatibility.md) · [evidence standard](skills/moneyprinter/references/evidence-standard.md)
 
@@ -23,9 +25,10 @@ for local verification, remote confirmation, and manual-copy routes.
 
 Invoke `moneyprinter`. It asks a short interview about the assets, expertise,
 proof, time, budget, authority, and risk you actually have. It then compares no
-more than three routes, recommends one bounded payable test and one fallback,
-and asks you to approve the route before it creates acquisition assets. It asks
-again immediately before any message, post, purchase, contract, or publication.
+more than three routes, recommends one bounded payable test (or a smaller
+discovery step when no credible test exists) and one fallback, and asks you to
+approve the route before it creates acquisition assets. It asks again
+immediately before any message, post, purchase, contract, or publication.
 
 What if personal AGI does not arrive as one magic model, but as a person, a
 frontier agent, and a library of economic skills that compound? That is the
