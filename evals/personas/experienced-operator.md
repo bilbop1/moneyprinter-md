@@ -27,7 +27,7 @@
 
 ## Continue threshold
 
-- Continue when the controlled batch shows a documented **Estimated economic value** with formula, assumptions, and sensitivity, while quality and service-level metrics stay within the operator's approved guardrails.
+- Continue when the controlled batch shows a documented **Estimated economic value** with formula, assumptions, and sensitivity, while quality and service-level metrics stay within the operator's approved guardrails. Go only if the documented value exceeds fully loaded test cost and expected contribution margin remains positive.
 
 ## Failure conditions
 

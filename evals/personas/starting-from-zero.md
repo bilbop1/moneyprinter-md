@@ -29,7 +29,7 @@
 
 ## Continue threshold
 
-- Continue only when a buyer commits to a paid trial and record the result as **Revenue contracted** until payment settles; stop if no credible buyer problem or delivery boundary is verified.
+- Continue only when an accepted order, signed agreement, paid deposit, or explicit user attestation confirms an enforceable contract; record it as **Revenue contracted** only then, otherwise use **Pipeline signal**. Go only if the expected contribution margin for the paid trial is positive after fully loaded test cost; stop if no credible buyer problem or delivery boundary is verified.
 
 ## Failure conditions
 

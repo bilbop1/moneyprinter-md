@@ -27,7 +27,7 @@
 
 ## Continue threshold
 
-- Continue only after a compliant buyer commitment is documented as **Revenue contracted**; require qualified human review before any public claim, client communication, or use of confidential data.
+- Continue only when an accepted order, signed agreement, paid deposit, or explicit user attestation confirms an enforceable compliant contract; record it as **Revenue contracted** only then, otherwise use **Pipeline signal**. Go only if the expected contribution margin is positive after fully loaded test cost; require qualified human review before any public claim, client communication, or use of confidential data.
 
 ## Failure conditions
 

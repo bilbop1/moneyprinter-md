@@ -28,7 +28,7 @@
 
 ## Continue threshold
 
-- Continue when the batch produces a qualified estimate opportunity and record it as **Pipeline signal**; compare staff time and any spend against expected margin before expanding.
+- Continue when the batch produces a qualified estimate opportunity and record it as **Pipeline signal**; expand only if the expected contribution margin from recovered jobs is positive after fully loaded test cost, including staff time and any spend.
 
 ## Failure conditions
 
