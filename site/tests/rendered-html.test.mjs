@@ -68,6 +68,10 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
     html,
     /<a[^>]+href="https:\/\/github\.com\/bilbop1\/moneyprinter-md"[^>]*>View on GitHub/i,
   );
+  assert.match(
+    html,
+    /<a[^>]+href="https:\/\/ko-fi\.com\/bilbop"[^>]*>Support maintenance on Ko-fi/i,
+  );
   assert.match(html, /bilbop1\/moneyprinter-md/);
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
 
@@ -136,10 +140,10 @@ test("keeps the production surface honest and starter-free", async () => {
     /Remote install target — confirm the repository is live before running|live-public verification is pending/i,
   );
   assert.match(page, /voluntarily returning 1%/i);
-  assert.doesNotMatch(page, /ko-fi/i);
+  assert.match(page, /https:\/\/ko-fi\.com\/bilbop/);
   assert.deepEqual(
     [...new Set(page.match(/https?:\/\/[^";\s]+/g) ?? [])],
-    ["https://github.com/bilbop1/moneyprinter-md"],
+    ["https://github.com/bilbop1/moneyprinter-md", "https://ko-fi.com/bilbop"],
   );
   assert.doesNotMatch(layout, /next\/font|Starter Project|codex-preview/i);
   assert.doesNotMatch(css, /@import\s+url|https?:\/\//i);

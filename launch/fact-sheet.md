@@ -179,7 +179,7 @@ Use these only after current evidence exists:
 | GitHub private vulnerability reporting | Repository security intake | Yes | Enabled and verified on 2026-07-19 |
 | Code-of-conduct contact | Optional private conduct-reporting route | Optional | Add a monitored role address later if community volume warrants it |
 | Landing page | `https://moneyprinter.bilbop.org` | Yes | Public HTTPS 200; Sites domain, provider, and SSL states active on 2026-07-19 |
-| Ko-fi | Voluntary 1% pledge | No | Exact owner-confirmed Ko-fi username |
+| Ko-fi | `https://ko-fi.com/bilbop` | Yes | Public page verified as “Support bilbop” on 2026-07-19 |
 | X | Owner's launch post | No | Final account, links, image, and owner action |
 | Skills.sh | GitHub-sourced install path | Partial | Clean remote discovery found all seven skills; a directory page or rank is not claimed |
 | ClawHub | Seven versioned skill listings | Yes | Seven visible v1.0.0 pages under `@bilbop1`; SkillSpector passed on 2026-07-19 |
@@ -198,4 +198,5 @@ Donation language never leads a listing. The approved footer is:
 > returning 1% through the project's confirmed Ko-fi link. No tracking and no
 > obligation.
 
-Do not publish that sentence with an inferred or unconfirmed payment link.
+Use the confirmed `https://ko-fi.com/bilbop` destination. Do not infer or
+substitute another payment link.

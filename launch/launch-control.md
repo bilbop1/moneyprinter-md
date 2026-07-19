@@ -14,6 +14,7 @@ domain, provider, and SSL states active.
 | Landing page | `https://moneyprinter.bilbop.org` | **Passed 2026-07-19:** public HTTPS 200, correct project, canonical metadata, social image, and final GitHub/install targets |
 | ClawHub | `https://clawhub.ai/bilbop1/skills/moneyprinter` | **Passed 2026-07-19:** seven visible v1.0.0 listings, clean SkillSpector results, and public OpenClaw install commands |
 | Awesome Skills | `https://www.awesomeskills.dev/en/skill/moneyprinter-md-moneyprinter` | **Passed 2026-07-19:** public flagship listing with the source and install command |
+| Ko-fi | `https://ko-fi.com/bilbop` | **Passed 2026-07-19:** public page loads as “Support bilbop”; repository funding file uses the confirmed username |
 
 Do not post or submit a target URL while it is private, unconfigured, or
 returning placeholder content.
@@ -21,8 +22,8 @@ returning placeholder content.
 Publication of these public surfaces does not prove conversation-level activation
 in Claude, Codex, Kimi, Hermes, OpenClaw, or another host. That retained test is
 still open. ClawHub registry publication and a third-party Awesome Skills page
-are live, but neither substitutes for that invocation test. No Ko-fi link is
-confirmed.
+are live, but neither substitutes for that invocation test. The confirmed
+funding route is `https://ko-fi.com/bilbop`.
 
 ## Organic-growth verdict
 
@@ -57,8 +58,8 @@ promotion, and do not strengthen any unverified compatibility or funding claim:
   in repository settings. Recheck its public embed before posting.
 - The GitHub and landing targets in `launch/x-launch.md` and
   `launch/show-hn.md` match the live URLs exactly.
-- No secret, local path, private hostname, test credential, or unconfirmed Ko-fi
-  username appears in the public package.
+- No secret, local path, private hostname, test credential, or guessed payment
+  route appears in the public package.
 - No host is described as conversation-verified until a retained invocation
   proves it.
 - A private Code of Conduct contact is optional for this launch. If the owner
@@ -96,9 +97,11 @@ experience in replies.
     P0 in the directory matrix. **ClawHub and Awesome Skills passed on
     2026-07-19.** agentskill.sh found all seven files but its database rejected
     writes while over quota, so retry without changing the skills.
-11. Approach curated lists one at a time. Confirm that each list accepts this
+11. **Done 2026-07-19:** confirm the public Ko-fi page and add the exact username
+    to `.github/FUNDING.yml`. Keep the pledge out of opening launch copy.
+12. Approach curated lists one at a time. Confirm that each list accepts this
     category before opening a pull request.
-12. At 2 hours, 24 hours, and 7 days, record results and corrections. Keep the
+13. At 2 hours, 24 hours, and 7 days, record results and corrections. Keep the
     evidence labels separate from promotional metrics.
 
 ## Metrics worth watching

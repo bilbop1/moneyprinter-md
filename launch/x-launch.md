@@ -13,8 +13,8 @@ on 2026-07-19:
 
 The flagship, first reply, and complete thread now point only to live public
 URLs. Nothing is claimed as posted. Host conversation activation remains
-unverified, and no Ko-fi link should be added until its exact handle is
-confirmed.
+unverified. The confirmed Ko-fi route is `https://ko-fi.com/bilbop`, but it is
+intentionally omitted from opening launch copy.
 
 ## Recommended flagship post
 

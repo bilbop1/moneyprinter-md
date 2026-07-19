@@ -76,5 +76,5 @@ cover regulated work, prohibited routes, and when approval expires.
 
 ## License and the 1% pledge
 
-MoneyPrinter uses the [MIT License](LICENSE). If it produces attributable profit, consider voluntarily returning 1% to support maintenance and source review.
+MoneyPrinter uses the [MIT License](LICENSE). If it produces attributable profit, consider voluntarily [returning 1% through Ko-fi](https://ko-fi.com/bilbop) to support maintenance and source review.
 The project does not track the pledge. It is not a license term, fee, or payment requirement. Read the [pledge](PLEDGE.md) and [funding note](docs/funding.md).

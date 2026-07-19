@@ -76,7 +76,8 @@ GitHub topics:
 
 - Landing page in the About website field.
 - Confirmed source URL in all external launch posts.
-- Ko-fi only after the exact handle is confirmed.
+- Native sponsor button through `.github/FUNDING.yml`, using the confirmed
+  `bilbop` Ko-fi username.
 
 ## Assets required
 

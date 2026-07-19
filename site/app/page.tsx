@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 const repositoryUrl = "https://github.com/bilbop1/moneyprinter-md";
+const kofiUrl = "https://ko-fi.com/bilbop";
 const installCommand = "npx skills add bilbop1/moneyprinter-md";
 
 const routes = [
@@ -118,7 +119,13 @@ export default function Home() {
           <div className="method-links"><a href="#flow"><span>01</span><strong>Route before you automate</strong><em>Keep a human decision in the loop.</em></a><a href="#receipts"><span>02</span><strong>Receipt before you repeat</strong><em>Separate delivered value from a story about value.</em></a><a href="#proof"><span>03</span><strong>Review before you scale</strong><em>Stop when the claim outruns the evidence.</em></a></div>
         </section>
 
-        <section id="pledge" className="section-shell pledge" aria-labelledby="pledge-title"><div><p className="section-label">07 / QUIET PLEDGE</p><h2 id="pledge-title">If it helps, pass some signal back.</h2></div><p>If MoneyPrinter produces attributable profit, consider voluntarily returning 1%. No tracking, no obligation, no invented checkout link. Just a reminder that useful tools can leave the place a little stronger.</p></section>
+        <section id="pledge" className="section-shell pledge" aria-labelledby="pledge-title">
+          <div><p className="section-label">07 / QUIET PLEDGE</p><h2 id="pledge-title">If it helps, pass some signal back.</h2></div>
+          <div className="pledge-copy">
+            <p>If MoneyPrinter produces attributable profit, consider voluntarily returning 1%. No tracking and no obligation. It helps fund source review, compatibility checks, and updates.</p>
+            <a className="pledge-link" href={kofiUrl} target="_blank" rel="noreferrer">Support maintenance on Ko-fi <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
       </main>
 
       <footer className="site-footer"><span>MoneyPrinter.md <b>0.1.0-rc.1</b></span><span>Receipts first. Claims second.</span><a href="#hero">Back to top ↑</a></footer>
