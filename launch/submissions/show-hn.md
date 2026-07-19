@@ -31,7 +31,18 @@ Sources: [official Show HN rules](https://news.ycombinator.com/showhn.html) and
 
 ## Listing title
 
-> Show HN: MoneyPrinter.md – revenue skills that separate real cash from AI hype
+Human-written title checklist: do not paste a title from this AI-assisted
+packet. In a blank editor, the owner should write a title that:
+
+- begins with `Show HN:`;
+- plainly describes the runnable project;
+- avoids superlatives, earnings implications, donation language, and
+  unnecessary punctuation;
+- matches the public repository a reader will open; and
+- sounds like the owner's own explanation rather than launch copy.
+
+Use the factual source sheet in [`../show-hn.md`](../show-hn.md) to check details,
+not as wording to lightly rewrite.
 
 ## Short description
 
@@ -54,7 +65,8 @@ by the owner under the body rule below.
 HN's current guidelines tell commenters not to post generated or AI-edited
 text. The explanation beneath a Show HN is a comment, so this packet
 deliberately does **not** provide paste-ready body prose. The owner should write
-it personally.
+it personally. This release also requires the owner to write the title
+personally so every HN-facing word follows one consistent human-only workflow.
 
 ## Human-authored body checklist
 
@@ -102,6 +114,6 @@ graphic.
 
 ## Final human action
 
-Run the clean install and retained end-to-end host invocation, submit the public
-repo with the exact title, write the first comment personally from the
-checklist, and stay available for candid questions.
+Run the clean install and retained end-to-end host invocation. In a blank editor,
+write the title and first comment personally from the checklists, submit the
+public repository once, and stay available for candid questions.

@@ -20,8 +20,9 @@ telemetry. The legitimate publication path is therefore:
 3. Run one clean remote listing/install test.
 4. Share the real install command with users.
 
-Sources: [official CLI reference](https://www.skills.sh/docs/cli) and
-[official ranking explanation](https://www.skills.sh/docs).
+Sources: [official CLI reference](https://www.skills.sh/docs/cli),
+[official ranking explanation](https://www.skills.sh/docs), and the
+[Hermes official Skills System](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills).
 
 ## Prerequisites
 

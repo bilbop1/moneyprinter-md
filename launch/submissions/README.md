@@ -15,6 +15,8 @@ The shared facts and claim boundaries live in
 [`../fact-sheet.md`](../fact-sheet.md). The prioritized decision map is
 [`../channel-matrix.md`](../channel-matrix.md).
 
+This directory contains 22 packets: 5 P0, 5 P1, 9 P2, and 3 P3.
+
 ## Packet index
 
 | Priority | Packet |
@@ -29,6 +31,10 @@ The shared facts and claim boundaries live in
 | P1 | [Show HN](show-hn.md) |
 | P1 | [agentskill.sh](agentskill-sh.md) |
 | P1 | [Awesome Skills](awesome-skills.md) |
+| P2 | [KillerSkills](killerskills.md) |
+| P2 | [Skillery](skillery.md) |
+| P2 | [skillsdir.dev](skillsdir-dev.md) |
+| P2 | [OpenAgentSkill](openagentskill.md) |
 | P2 | [OpenSpace](openspace.md) |
 | P2 | [Uneed](uneed.md) |
 | P2 | [AgenticSkills](agentic-skills.md) |
