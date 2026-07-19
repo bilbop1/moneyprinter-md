@@ -8,8 +8,8 @@ useful releases, stars, forks, discussions, field reports, and linked installs,
 but it cannot guarantee cold-start traffic or Trending placement.
 
 **Status:** public source, remote discovery, metadata, topics, social preview,
-Discussions, and private vulnerability reporting were verified on 2026-07-19.
-The release candidate, one retained host invocation, and landing page remain
+Discussions, private vulnerability reporting, and release candidate were
+verified on 2026-07-19. One retained host invocation and the landing page remain
 pending.
 
 ## Current submission path
@@ -104,7 +104,6 @@ GitHub topics:
 
 ## Final human action
 
-Create and verify the release candidate, then retain one full host invocation.
-Add the landing-page URL only after it works logged out. If community conduct
-volume later warrants a private inbox, add a monitored role address rather than
-a personal address.
+Retain one full host invocation. Add the landing-page URL only after it works
+logged out. If community conduct volume later warrants a private inbox, add a
+monitored role address rather than a personal address.

@@ -58,9 +58,8 @@ experience in replies.
    issues, unique visitors if available, and landing-page visits.
 2. **Done 2026-07-19:** make the GitHub repository public and check it logged
    out.
-3. Create the first public release from the tested commit and verify its notes,
-   files, and version. The notes must allow for a smaller discovery step when a
-   credible payable test does not exist.
+3. **Done 2026-07-19:** create the first public prerelease from the tested
+   commit and verify its notes, files, version, and SHA-256 digest.
 4. **Discovery done 2026-07-19:** the published command found all seven names
    from a clean temporary directory. A retained host invocation remains open.
 5. Publish the landing page. Check desktop, narrow mobile, social metadata, the
