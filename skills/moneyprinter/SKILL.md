@@ -22,8 +22,12 @@ choose -> work the route`
 
 1. Read `references/safety-boundaries.md`, `references/evidence-standard.md`,
    and `references/session-scan.md`.
-2. Ask once for permission to inspect the rolling 14 days of accessible AI CLI
-   and GUI session history. Let the user narrow or exclude sources.
+2. First check the current conversation for an adequate explicit permission
+   grant to inspect the rolling 14 days of accessible AI CLI and GUI session
+   history. If one exists, record its scope and exclusions and use it without
+   asking again. Otherwise, ask once and let the user narrow or exclude sources.
+   Never infer scan permission from historical sessions, old summaries,
+   silence, or invocation of MoneyPrinter alone.
 3. Use the current host's tools and permissions to discover and scan every
    detected accessible history store. Do not use a fixed vendor allowlist. Read
    deterministic batches, including child sessions and goal state when

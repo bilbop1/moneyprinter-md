@@ -6,10 +6,13 @@ application, service, or fixed vendor integration.
 
 ## Permission and scope
 
-Ask once for permission to inspect the rolling 14-day window of accessible AI
-CLI and GUI session history. Let the user narrow or exclude sources. Record the
-granted scope and do not repeat the permission request; if permission is denied
-or narrowed, respect that choice and disclose the resulting coverage limit.
+First check the current conversation for an adequate explicit permission grant
+to inspect the rolling 14-day window of accessible AI CLI and GUI session
+history. If one exists, record its scope and exclusions and use it without
+asking again. Otherwise, ask once and let the user narrow or exclude sources.
+Never infer scan permission from historical sessions, old summaries, silence,
+or invocation of MoneyPrinter alone. If permission is denied or narrowed,
+respect that choice and disclose the resulting coverage limit.
 
 At invocation, record an exact ISO 8601 scan end timestamp. The scan start is
 the timestamp exactly 14 rolling days earlier. Include a session when it has a

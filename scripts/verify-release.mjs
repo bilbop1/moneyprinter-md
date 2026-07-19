@@ -33,6 +33,16 @@ assert.match(moneyprinter, /rolling 14 days/i);
 assert.match(moneyprinter, /Coverage receipt/);
 assert.match(moneyprinter, /Money Machine Run/);
 assert.match(moneyprinter, /do not stop at (?:a )?(?:report|recommendation)/i);
+assert.match(
+  moneyprinter,
+  /First check the current conversation.*adequate explicit permission\s+grant.*record.*use it without\s+asking again.*Otherwise, ask once/is,
+);
+assert.match(moneyprinter, /Never infer scan permission from historical sessions/i);
+assert.match(
+  sessionScan,
+  /First check the current conversation.*adequate explicit permission\s+grant.*record.*use it without\s+asking again.*Otherwise, ask once/is,
+);
+assert.match(sessionScan, /Never infer scan permission from historical sessions/i);
 assert.match(sessionScan, /Scanned.*Empty.*Blocked.*Unsupported/s);
 assert.match(sessionScan, /untrusted evidence/i);
 assert.match(sessionScan, /\.env/);
