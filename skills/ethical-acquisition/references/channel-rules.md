@@ -1,5 +1,10 @@
 # Channel rules
 
+Run Authorization permits private channel research, selection, rule checks,
+and draft creation without another approval. It never authorizes buyer contact,
+publication, spend, or account mutation. Return the channel record and staged
+assets to `moneyprinter` so Money Machine Run can continue to the exact gate.
+
 ## Select no more than two channels
 
 Choose one or two channels only when all of the following are true: the user
@@ -52,3 +57,9 @@ rule source and date checked, allowed pattern, proposed volume, human review
 owner, cost, and stop trigger. A staged draft is reversible; sending, posting,
 publishing, submitting, or changing an account needs the immediate approval
 gate.
+
+After an immediately preceding exact approval, the current host may perform
+only that approved action, record an `Action receipt`, and return it to
+`moneyprinter`. Broad, batch, stale, or materially changed permission is
+invalid; re-check current channel rules when a material rule or execution fact
+changes.

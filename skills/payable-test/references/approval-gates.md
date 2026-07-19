@@ -1,5 +1,10 @@
 # Approval gates for payable tests
 
+Run Authorization permits private payable-test design, drafting, analysis, and
+artifact creation without another approval. It never authorizes an external
+action. Return private artifacts to `moneyprinter` for Money Machine Run
+continuation until an exact action is ready.
+
 ## Required gate
 
 - Drafting is reversible and may proceed.
@@ -10,7 +15,10 @@
   required regulated review has passed for the named jurisdiction and scope.
 - Immediately before an external action, show the exact payload, destination,
   expected cost, and rollback or correction path.
-- Proceed only after explicit approval for that action.
+- Before exact approval, keep the action staged. After an immediately preceding
+  exact approval, the current host may perform only that approved action with
+  its available tools, record an `Action receipt`, and return the result to
+  `moneyprinter`.
 
 Route selection, offer approval, a prior approval, and permission to draft do
 not authorize an external action. Do not batch unrelated actions under one
@@ -52,3 +60,8 @@ payment timing, delivery terms, refund/correction path, scope, legal or policy
 status, approver authority, data basis or minimization, regulated-review status,
 data used, timing, volume, tool, or fulfillment authority. If the rollback path
 or a prerequisite status is unavailable or uncertain, stop rather than execute.
+Broad, batch, or stale permission is never valid, and one approval cannot cover
+multiple actions. The `Action receipt` must record the approved action, actual
+payload and destination, channel and account, execution time, actual cost,
+prerequisite statuses, observed result or error, evidence label, and rollback or
+correction taken or available.

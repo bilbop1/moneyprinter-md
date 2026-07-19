@@ -4,6 +4,11 @@ Choose exactly one decision after reconciling evidence, cash, direct cost,
 human time, and delivery acceptance. Do not substitute a forecast, benchmark,
 invoice, contract, or pipeline metric for the underlying records.
 
+Run Authorization permits this private reconciliation and decision work
+without another approval; it never authorizes an external next step. Return the
+decision and its receipts to `moneyprinter` for Money Machine Run update and
+route reranking.
+
 ## Calculations and labels
 
 - **Cash collected:** total settled payments received during the review period
@@ -108,3 +113,8 @@ post, publish, purchase, charge, sign, submit, or change an account, stage the
 exact payload. Immediately before execution, disclose its destination, expected
 cost, evidence label, and rollback/correction path and obtain explicit approval
 for that exact action. Any material change requires a fresh immediate approval.
+After an immediately preceding exact approval, the current host may perform
+only that approved action, record an `Action receipt`, and return it to
+`moneyprinter`. Broad, batch, stale, or materially changed permission is
+invalid. Regardless of whether an external step is staged, return exactly one
+`STOP`, `REVISE`, `REPEAT`, or `SCALE` decision for portfolio reranking.

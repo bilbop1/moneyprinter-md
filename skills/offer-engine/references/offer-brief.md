@@ -1,6 +1,8 @@
 # Offer brief guidance
 
-Build one primary offer from approved opportunity evidence. Separate facts,
+Build one primary offer from opportunity evidence carried with Run
+Authorization. The authorization permits private offer drafting without
+another approval and never permits external execution. Separate facts,
 evidence-backed observations, assumptions, and open questions. A price,
 outcome, buyer preference, or demand statement remains an assumption unless its
 claim ledger gives a URL, source class, and review date.
@@ -16,7 +18,7 @@ ledger and show unit economics from `unit-economics.md`.
 ## Illustrative examples
 
 These are offer shapes, not claims that these buyers have demand or will pay.
-Validate them against current, approved opportunity evidence before use.
+Validate them against current opportunity evidence before use.
 
 ### Roofer
 
@@ -65,3 +67,12 @@ acceptance check.
 For every example, test delivery authority, privacy, regulations, platform
 rules, and unit economics before proposing a payable version. If a condition is
 unknown, pause and use a smaller manual discovery step.
+
+## Run handoff and external action
+
+Return the completed Offer Brief to `moneyprinter` so it can update Money
+Machine Run and continue to payable-test; do not wait for a separate offer
+approval. Keep any buyer-facing use staged before its exact gate. After an
+immediately preceding exact approval, the current host may perform only that
+approved action, record an `Action receipt`, and return it to `moneyprinter`.
+Broad, batch, stale, or materially changed permission is invalid.

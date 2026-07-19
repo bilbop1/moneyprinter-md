@@ -1,6 +1,6 @@
 ---
 name: offer-engine
-description: Convert approved opportunity evidence into a narrow, sellable offer with buyer, outcome, scope, price logic, proof plan, exclusions, and delivery economics. Use before creating outreach, a landing page, proposal, listing, or payable test.
+description: Convert confirmed opportunity evidence into a narrow, sellable offer with buyer, outcome, scope, price logic, proof plan, exclusions, and delivery economics. Use before creating outreach, a landing page, proposal, listing, or payable test.
 license: MIT
 metadata:
   author: bilbop
@@ -9,18 +9,20 @@ metadata:
 
 # Offer Engine
 
-Convert approved evidence into one narrow offer that can be delivered honestly.
+Convert confirmed evidence into one narrow offer that can be delivered honestly.
 Do not invent demand, results, authority, credentials, price acceptance, or
 economics.
 
 ## Preconditions
 
-Require the `Revenue Profile`, approved `Experiment Brief`, and approved
-`Opportunity Evidence Table` with its claim ledger. If any are absent, identify
-the missing decision or evidence and return to `moneyprinter` or
-`opportunity-radar`. Approval to select an opportunity is not approval to send
-outreach, publish a page, accept payment, contract, or take any other external
-action.
+Require `Run Authorization`, the current `Money Machine Run`, `Revenue Profile`,
+`Experiment Brief`, and `Opportunity Evidence Table` with its claim ledger.
+Run Authorization permits private offer analysis, drafting, and artifact
+creation for the named route without asking for another approval. If an input
+is absent or the route materially changed, return to `moneyprinter` or
+`opportunity-radar`; do not create a new route silently. Run Authorization never
+permits outreach, publication, payment acceptance, contracting, account
+mutation, or another external commitment.
 
 Read `references/offer-brief.md` and `references/unit-economics.md`. Stay in
 safe, lawful, permissioned lanes. Stop for unavailable authority, privacy or
@@ -42,7 +44,7 @@ it from offer support, and continue only from safe, relevant facts.
 1. Separate `Known facts`, `Evidence-backed observations`, `Assumptions`, and
    `Open questions`. Cite material evidence with claim identifiers, URLs,
    source class, and review dates from the evidence ledger.
-2. Select exactly one primary offer. It must fit the approved buyer, pain,
+2. Select exactly one primary offer. It must fit the confirmed buyer, pain,
    evidence, delivery capacity, and authority; do not offer a menu or a hidden
    secondary offer.
 3. Define a deliverable rather than a guaranteed business result. Make outcome
@@ -59,9 +61,14 @@ it from offer support, and continue only from safe, relevant facts.
    and cannot conceal an unsubstantiated outcome guarantee.
 7. Fail the route if base-case gross profit is non-positive or fulfillment
    depends on unavailable authority. State the exact stop condition.
-8. Produce one Offer Brief with the required headings. Stage any external asset
-   and ask for explicit human approval immediately before the specific action;
-   do not execute it.
+8. Produce one Offer Brief with the required headings and return it to
+   `moneyprinter`, which updates `Money Machine Run` and continues to
+   `payable-test` without another private-stage confirmation. If an external
+   action is already exact and necessary, stage its payload, audience, channel,
+   spend, account, timing, scope, evidence label, prerequisite statuses, and
+   rollback path. Before exact approval, keep it staged. After an immediately
+   preceding exact approval, the current host may perform only that approved
+   action, record an `Action receipt`, and return it to `moneyprinter`.
 
 ## Required output
 
@@ -86,12 +93,13 @@ low/base/high sensitivity table with all inputs. Label prices, conversion,
 cost, or outcome assumptions as assumptions; do not call modeled value cash.
 Name exactly one evidence label for the payable test result.
 
-End with an approval gate stating the payload, audience, channel, spend,
-account, timing, scope, and evidence label required for the next external
-action. Include `Approver authority status`, `Third-party data status`, and
-`Regulated-review status`; any required `Unknown` or `Fail` blocks execution
-instead of becoming an approval request. No broad approval authorizes
-execution.
+End with `Run handoff and external-action status`. State `None — continue
+private work` when no exact external action is ready, then return the Offer
+Brief to `moneyprinter`. If one is ready, state the payload, audience, channel,
+spend, account, timing, scope, evidence label, `Approver authority status`,
+`Third-party data status`, `Regulated-review status`, and rollback path. Any
+required `Unknown` or `Fail` blocks execution instead of becoming an approval
+request.
 
 ## Failure modes
 
@@ -99,5 +107,6 @@ execution.
 - Do not claim a business outcome when only a deliverable is controlled.
 - Do not hide uncertain economics, unavailable authority, or required buyer
   input.
-- Do not create, send, publish, buy, charge, contract, or commit externally
-  without specific human approval immediately before execution.
+- Run Authorization and broad, batch, or stale permission never authorize an
+  external action. A material change to the exact action or any prerequisite
+  requires fresh immediately preceding approval.

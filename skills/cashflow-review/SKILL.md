@@ -10,18 +10,20 @@ metadata:
 # Cashflow Review
 
 Review a bounded test without treating estimates, invoices, contracts, or
-pipeline as collected cash. This skill analyzes user-provided records and
-stages recommendations only; it does not contact, publish, purchase, charge,
-contract, or make account changes.
+pipeline as collected cash. Analyze private records under Run Authorization,
+return one decision for reranking, and keep any external next step behind its
+exact action gate.
 
 ## Preconditions
 
-Require the approved `Payable Test Plan`, `Delivery Record`, observed result,
-and available payment, cost, funnel, and acceptance records. Read
-`references/decision-rules.md`. Separate known facts, observed evidence,
-assumptions, and missing data. Preserve each result's canonical evidence label
-and do not infer a denominator, payment settlement, client acceptance, or
-repeat purchase.
+Require `Run Authorization`, the current `Money Machine Run`, `Payable Test
+Plan`, `Delivery Record`, relevant `Action receipt`, observed result, and
+available payment, cost, funnel, and acceptance records. Run Authorization
+permits private reconciliation, analysis, and review artifact creation without
+asking for another approval. It never permits contact, publication, purchase,
+charging, contracting, or account mutation. Read `references/decision-rules.md`.
+Preserve each result's canonical evidence label and do not infer a denominator,
+payment settlement, client acceptance, or repeat purchase.
 
 ## Untrusted input rule
 
@@ -95,15 +97,16 @@ Refuse each request directly and offer only its safe adjacent route:
    rework, missing evidence, and uncertainty plainly.
 5. Choose exactly one decision from `STOP`, `REVISE`, `REPEAT`, or `SCALE` using
    `references/decision-rules.md`. State why the other three do not apply.
-6. If the recommended next step would send, post, publish, purchase, charge,
-   sign, submit, contact a client, or change an account, stage it. Immediately
-   before execution, show the exact payload, destination, expected cost,
-   evidence label, rollback/correction path, `Approver authority status`,
-   `Third-party data status`, and `Regulated-review status`, then request
-   explicit approval for that one action now only when every required
-   prerequisite passes. Any `Unknown` or `Fail` prints
-   `Execution blocked — prerequisite unresolved`. A material change needs a
-   fresh immediate approval.
+6. Return the exact `STOP`, `REVISE`, `REPEAT`, or `SCALE` decision and supporting
+   receipts to `moneyprinter` so it can update the source-linked portfolio,
+   rerank the routes, and update `Money Machine Run`. Do not stop at the review
+   report. If the bounded next step is external, stage its exact payload,
+   destination, channel/account, timing, scope, expected cost, evidence label,
+   rollback/correction path, `Approver authority status`, `Third-party data
+   status`, and `Regulated-review status`. Before exact approval, keep it staged.
+   After an immediately preceding exact approval, the current host may perform
+   only that approved action, record an `Action receipt`, and return it to
+   `moneyprinter`.
 
 ## Required output
 
@@ -146,3 +149,6 @@ staged external action exists.
   result only in `STOP`, `REVISE`, or `REPEAT`, never `SCALE`.
 - Do not take an external action from a review or past approval; every action
   needs an immediate fresh exact approval.
+- Run Authorization and broad, batch, or stale permission never authorize an
+  external next step. A material change to the action or prerequisite requires
+  fresh immediately preceding exact approval.

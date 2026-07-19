@@ -5,6 +5,11 @@ author is not specifically permitted to publish. A report without supporting
 evidence may be published only with the result label `Unverified anecdote`; it
 must say which proof is absent and must not imply verification.
 
+Run Authorization permits private report drafting and redaction without another
+approval; it does not authorize publication. Return the staged report and its
+proof state to `moneyprinter` rather than treating the draft as a completed
+external action.
+
 ## Result label
 ## Date range
 ## Starting assets
@@ -35,3 +40,8 @@ must say which proof is absent and must not imply verification.
 - Keep `External actions approved` factual. Publishing this report itself still
   needs explicit approval immediately before the exact publication action; any
   material change needs a fresh approval.
+- After an immediately preceding exact approval, the current host may perform
+  only that approved action, record a publication `Action receipt`, and return
+  it to `moneyprinter`. Broad, batch, stale, or materially changed permission is
+  invalid. Preserve the receipt separately from the public report so proof does
+  not expose private payloads, account details, or identifiers.

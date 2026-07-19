@@ -1,5 +1,9 @@
 # Unit economics
 
+Run Authorization permits this private modeling without another approval. It
+does not authorize a price publication, charge, purchase, contract, account
+change, or another external action.
+
 Estimate economics only after the offer's delivery boundary is defined. Mark
 every input as observed evidence, assumption, or open question, and cite the
 opportunity ledger for any evidence-backed input. A model is **Estimated
@@ -36,3 +40,13 @@ propose only a safe smaller discovery step if one can resolve the uncertainty.
 Do not treat a forecast, invoice, proposal, order, booked meeting, or benchmark
 as Cash collected. Label the actual test outcome with exactly one approved
 evidence label.
+
+Return the sensitivity table, failed conditions, and unresolved inputs with the
+Offer Brief to `moneyprinter` so it can update Money Machine Run and continue,
+revise, or rerank. Do not convert an economic stop condition into a request for
+ceremonial private-stage approval.
+If applying the model requires an external price, purchase, charge, contract,
+or account action, stage that exact action. After an immediately preceding exact
+approval, the current host may perform only that approved action, record an
+`Action receipt`, and return it to `moneyprinter`. Broad, batch, stale, or
+materially changed permission is invalid.

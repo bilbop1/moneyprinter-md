@@ -1,6 +1,6 @@
 ---
 name: ethical-acquisition
-description: Turn an approved Offer Brief and Payable Test Plan into a small, policy-compliant acquisition plan with staged human-reviewed assets and a specific approval checkpoint. Use before outreach, a listing, a partnership request, public content, or any buyer-facing acquisition action.
+description: Turn a confirmed Offer Brief and Payable Test Plan into a small, policy-compliant acquisition plan with staged human-reviewed assets and a specific approval checkpoint. Use before outreach, a listing, a partnership request, public content, or any buyer-facing acquisition action.
 license: MIT
 metadata:
   author: bilbop
@@ -9,17 +9,20 @@ metadata:
 
 # Ethical Acquisition
 
-Stage a small, honest path to the approved payable test. Do not send, post,
-publish, purchase, charge, sign, submit, change an account, or otherwise take
-an external action.
+Prepare a small, honest path to the confirmed payable test. Before exact
+approval, keep every external action staged. After exact approval, execute only
+the one action covered by that approval.
 
 ## Preconditions
 
-Require an approved `Offer Brief` and `Payable Test Plan`, including the buyer,
-payment condition, scope, evidence label, cost and work ceilings, delivery
-authority, stop condition, and approval checkpoint. Return to `offer-engine` or
-`payable-test` when the offer is not ready to present honestly or no lawful,
-feasible paid test exists.
+Require `Run Authorization`, the current `Money Machine Run`, `Offer Brief`, and
+`Payable Test Plan`, including the buyer, payment condition, scope, evidence
+label, cost and work ceilings, delivery authority, stop condition, and approval
+checkpoint. Run Authorization permits private channel analysis, drafting, and
+artifact creation without asking for another approval. Return to
+`moneyprinter`, `offer-engine`, or `payable-test` when the route materially
+changed or the offer cannot be presented honestly. Run Authorization never
+permits a buyer-facing or account-mutating action.
 
 Read `references/channel-rules.md`, `references/message-standard.md`, and the
 payable-test `references/approval-gates.md`. Use only existing access,
@@ -94,12 +97,21 @@ route instead:
    in `references/message-standard.md`; label unverified claims as assumptions
    or remove them.
 6. Produce a concise staged acquisition plan with no more than two channels,
-   the approved payable test, an evidence label, cost/work limits, and a stop
+   the confirmed payable test, an evidence label, cost/work limits, and a stop
    condition. Include the exact message draft or asset copy for review.
-7. Immediately before any external action, use the payable-test approval gate:
-   show exact payload, destination, expected cost, and rollback or correction
-   path; wait for explicit approval for that one action. Reapproval is required
-   for every material change. Do not act on a broad or earlier approval.
+7. Prepare the private fulfillment artifact needed if the payable test succeeds:
+   deliverable workflow, acceptance checklist, delivery capacity and timing,
+   required human review, evidence to preserve, and failure or refund handling.
+   This is private preparation, not buyer-facing delivery.
+8. Return the staged plan and private fulfillment preparation to `moneyprinter`,
+   which updates `Money Machine Run`. Immediately before the selected external
+   action, use the payable-test approval gate and show the exact payload,
+   destination, channel, account, timing, scope, expected cost, evidence label,
+   rollback or correction path, and prerequisite statuses. Before exact
+   approval, keep it staged. After an immediately preceding exact approval, the
+   current host may perform only that approved action with its available tools,
+   record an `Action receipt`, and return it to `moneyprinter` for routing to
+   `delivery-proof` or the awaited-result state.
 
 ## Required output
 
@@ -115,6 +127,7 @@ Start with known facts, assumptions, and open questions. Then provide:
 ## Cost and human-work limits
 ## Evidence label available
 ## Stop condition
+## Private fulfillment preparation
 ## Approval checkpoint
 
 In `Staged acquisition assets`, mark every asset `DRAFT — NOT SENT OR
@@ -126,6 +139,12 @@ the exact payload, destination, expected cost, rollback or correction path,
 `Regulated-review status`. Include an explicit yes/no approval request only
 when every required prerequisite passes; otherwise print
 `Execution blocked — prerequisite unresolved`. Keep the asset staged.
+In `Private fulfillment preparation`, include the deliverable workflow,
+acceptance checklist, delivery capacity and timing, required human review,
+evidence to preserve, and failure or refund handling. Mark it private and not
+delivered.
+After execution, append the `Action receipt` rather than presenting the staged
+plan as if it were the observed result.
 
 ## Failure modes
 
@@ -136,5 +155,7 @@ when every required prerequisite passes; otherwise print
 - Do not hide a commercial intent, impersonate a person or organization, use
   fake familiarity, fabricate a case study, review, testimonial, result, or
   scarcity signal, or evade a platform rule.
-- Do not use or retain unnecessary personal data. Do not take any external
-  action without an immediate, exact, human approval.
+- Do not use or retain unnecessary personal data. Run Authorization and broad,
+  batch, stale, or earlier permission never authorize an external action. A
+  material change to payload, destination, channel, account, timing, scope,
+  spend, prerequisite, or rollback path requires fresh exact approval.

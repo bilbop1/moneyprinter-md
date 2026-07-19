@@ -1,6 +1,6 @@
 ---
 name: payable-test
-description: Turn an approved Offer Brief into one ethical, smallest viable paid validation plan with clear payment terms, evidence labels, cost limits, and a specific human approval gate. Use after offer-engine creates an Offer Brief and before acquisition or delivery.
+description: Turn a confirmed Offer Brief into one ethical, smallest viable paid validation plan with clear payment terms, evidence labels, cost limits, and a specific external-action gate. Use after offer-engine creates an Offer Brief and before acquisition or delivery.
 license: MIT
 metadata:
   author: bilbop
@@ -17,12 +17,14 @@ exists.
 
 ## Preconditions
 
-Require one approved `Offer Brief` from `offer-engine`, including its buyer,
-scope, exclusions, price hypothesis, unit economics, smallest payable version,
-evidence label, delivery authority, and stop condition. Route back to
-`offer-engine` when any of those decisions are missing, unsupported, unsafe, or
-depend on unavailable authority. Offer approval is not permission to contact a
-buyer, publish an asset, accept a payment, or make any other external action.
+Require `Run Authorization`, the current `Money Machine Run`, and one `Offer
+Brief` from `offer-engine`, including its buyer, scope, exclusions, price
+hypothesis, unit economics, smallest payable version, evidence label, delivery
+authority, and stop condition. Run Authorization permits private test design,
+analysis, and artifact creation without asking for another approval. Route back
+to `offer-engine` or `moneyprinter` when a material input is missing or the route
+changed. Run Authorization never permits buyer contact, publication, payment,
+account mutation, or another external commitment.
 
 Read `references/test-designs.md` and `references/approval-gates.md` before
 selecting a test. Stay lawful, permissioned, and within platform rules. Stop
@@ -97,9 +99,9 @@ route instead:
 4. Set a cash-spend ceiling and a human-work ceiling. Show the inputs from the
    Offer Brief, label unknown inputs as unknown, and stop rather than imply a
    positive margin without a credible delivery path.
-5. Define the test artifact and one permissible acquisition surface. Stage the
-   artifact only; do not send, post, publish, charge, sign, submit, purchase,
-   or change an account.
+5. Define the test artifact and one permissible acquisition surface. Create the
+   private draft under Run Authorization and mark it staged until an exact
+   external action is ready.
 6. Set a continue threshold based on a real payment condition or the strongest
    available evidence label. A like, view, click, waitlist, reply, free call,
    survey, or stated interest is a `Pipeline signal`, not payable validation,
@@ -109,9 +111,13 @@ route instead:
 7. Set a stop condition covering price resistance, absent payment, failed
    delivery authority, cost overrun, refund/correction inability, policy or
    legal concern, or evidence below threshold.
-8. Produce the required plan and an explicit approval checkpoint from
-   `references/approval-gates.md`. Keep all acquisition assets staged until the
-   human approves the exact next external action immediately before execution.
+8. Produce the required plan and return it to `moneyprinter`, which updates
+   `Money Machine Run` and continues to `ethical-acquisition` without another
+   private-stage confirmation. Use `references/approval-gates.md` only when an
+   exact external action is ready. Before exact approval, keep it staged. After
+   an immediately preceding exact approval, the current host may perform only
+   that approved action, record an `Action receipt`, and return it to
+   `moneyprinter`.
 
 ## Required output
 
@@ -132,14 +138,13 @@ in this order:
 ## Stop condition
 ## Approval checkpoint
 
-Under `Approval checkpoint`, show the exact staged payload, destination,
-expected cost, and rollback or correction path for the next action. State that
-drafting is reversible, identify the action as external, request explicit
-approval for that one action, and list `Approver authority status`,
-`Third-party data status`, and `Regulated-review status` using the exact status
-rules in `references/approval-gates.md`. Any `Unknown` or `Fail` must print
-`Execution blocked — prerequisite unresolved` instead of an approval request.
-List material changes that require a new approval. Do not execute the action.
+Under `Approval checkpoint`, state `None — continue private preparation in
+ethical-acquisition` unless the exact external action is already final. When it
+is final, show the exact staged payload, destination, expected cost, rollback
+or correction path, `Approver authority status`, `Third-party data status`, and
+`Regulated-review status` using `references/approval-gates.md`. Any `Unknown` or
+`Fail` must print `Execution blocked — prerequisite unresolved` instead of an
+approval request. List material changes that require a new approval.
 
 ## Failure modes
 
@@ -152,3 +157,7 @@ List material changes that require a new approval. Do not execute the action.
   payable test when a bounded paid version is feasible.
 - Do not exceed the approved cost or work ceilings, invent buyer consent,
   suppress price terms, or create external assets beyond staged drafts.
+- Run Authorization and broad, batch, or stale permission never authorize an
+  external action. A material change to the exact action, payment condition,
+  delivery terms, audience, channel, account, timing, or prerequisite requires
+  fresh immediately preceding approval.

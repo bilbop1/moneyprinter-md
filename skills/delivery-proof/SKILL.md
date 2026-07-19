@@ -1,6 +1,6 @@
 ---
 name: delivery-proof
-description: Record an approved delivery against pre-defined acceptance criteria, preserve private evidence, and prepare an evidence-labelled field report. Use after a payable test has a delivery context and observed result.
+description: Coordinate and record an exact-approved delivery against pre-defined acceptance criteria, preserve private evidence, and prepare an evidence-labelled field report. Use after a payable test reaches delivery or an observed result.
 license: MIT
 metadata:
   author: bilbop
@@ -9,18 +9,22 @@ metadata:
 
 # Delivery Proof
 
-Turn an approved payable test and an observed delivery result into an honest,
-private-by-default delivery record. This skill records evidence; it does not
-send, publish, charge, contact a client, or make a commitment.
+Coordinate exact-approved delivery, wait for the observed delivery result, and
+preserve delivery proof in an honest, private-by-default record. Private
+fulfillment work continues under Run Authorization; buyer-facing delivery keeps
+its own exact external-action gate.
 
 ## Preconditions
 
-Require the approved `Payable Test Plan`, the agreed deliverable and payment
-terms, user-provided delivery context, and observed result. Before delivery,
-define clear, observable acceptance criteria with the client or identify them
-as missing. Do not invent client acceptance, settlement, permission, or proof.
-Read `references/acceptance-and-proof.md` and use
-`references/field-report.md` for any public-report draft.
+Require `Run Authorization`, the current `Money Machine Run`, `Payable Test
+Plan`, private fulfillment preparation, any acquisition `Action receipt`, and
+the available delivery or buyer-result context. Run Authorization permits
+private deliverable creation, checking, evidence preparation, and correction
+without asking for another approval. It never permits buyer-facing delivery,
+publication, charging, contracting, or account mutation. If the acquisition or
+delivery result has not arrived, record the awaited external result and return
+to `moneyprinter`; do not invent it. Read `references/acceptance-and-proof.md`
+and use `references/field-report.md` for any public-report draft.
 
 Keep confidential, personal, regulated, account, and commercially sensitive
 material private by default. Retain only the minimum evidence necessary, use
@@ -73,36 +77,44 @@ refusals. Refuse each request directly and offer only its safe adjacent route:
 
 1. Separate known facts, observed evidence, client statements, assumptions,
    and open questions. Check the agreed scope, delivery authority, acceptance
-   criteria, and current evidence label before treating work as delivered.
+   criteria, current evidence label, and prior Action receipt before treating
+   work as delivered.
 2. Read `references/acceptance-and-proof.md`. Define or confirm the acceptance
    checklist before delivery begins; if criteria are absent, record that gap
    and request clarification rather than backfilling success criteria.
-3. Record the deliverable, completed work, and acceptance outcome. Identify
-   human work and agent work separately, including each human review and its
-   result. A client statement, delivery submission, invoice, and payment are
-   different facts.
-4. Apply exactly one label from MoneyPrinter's evidence standard. A benchmark
+3. Complete every safe private fulfillment step and human review under Run
+   Authorization. Stage the final buyer-facing delivery action with the exact
+   payload or artifact, destination, channel/account, timing, scope, expected
+   cost, evidence label, authority, data, regulated-review, and
+   rollback/correction facts. Before exact approval, keep it staged. After an
+   immediately preceding exact approval, the current host may perform only that
+   approved action, record a delivery `Action receipt`, and return it to
+   `moneyprinter`.
+4. Wait for an observed delivery result such as submission, acceptance,
+   rejection, correction, refund, payment, or settlement. A result that must
+   arrive from another person or system is a permitted run pause. Record the
+   deliverable, completed work, acceptance outcome, and human versus agent work;
+   a client statement, delivery submission, invoice, and payment are different
+   facts.
+5. Apply exactly one label from MoneyPrinter's evidence standard. A benchmark
    grader awarding $2,000 is `Simulation`; an unpaid $2,000 invoice is
    `Revenue booked`; a settled $500 card payment supported by an inspected,
    privacy-safe settlement artifact is `Cash collected`. A reported payment or
    contract without its required artifact is `Unverified anecdote`.
-5. Preserve the minimum safe supporting evidence. Redact or omit client names,
+6. Preserve the minimum safe supporting evidence. Redact or omit client names,
    contact information, credentials, private files, transaction identifiers,
    regulated details, and other material the user lacks authority to disclose.
    State the reason for every material omission.
-6. Produce the required `Delivery Record` and, only when requested, a staged
+7. Produce the required `Delivery Record` and, only when requested, a staged
    `MoneyPrinter Field Report` using the public template. Report failures,
    corrections, refunds, rework, missing proof, and unmet criteria plainly;
    do not bury them in a success narrative.
-7. Do not publish client or customer material without the person's specific
-permission. Immediately before any publication, posting, sending, sharing,
-payment action, contract, or account change, show the exact payload,
-destination, expected cost, evidence label, and rollback/correction path;
-show `Approver authority status`, `Third-party data status`, and
-`Regulated-review status`; request explicit approval for that exact action now
-only when every required prerequisite passes. Any `Unknown` or `Fail` prints
-`Execution blocked — prerequisite unresolved`. Any material change requires a
-fresh immediate approval. Keep the asset staged until approved.
+8. Return the Delivery Record, delivery Action receipt, preserved proof, and
+   awaited-result status to `moneyprinter`, which updates `Money Machine Run`
+   and continues to `cashflow-review` once an observed result exists. Any other
+   publication, posting, sending, sharing, payment action, contract, or account
+   change uses the same exact-action gate. `Unknown` or `Fail` prints `Execution
+   blocked — prerequisite unresolved`.
 
 ## Required output
 
@@ -114,6 +126,7 @@ Then use these headings exactly, in this order:
 ## Agreed deliverable
 ## Acceptance criteria
 ## Work completed
+## Action receipt
 ## Human review
 ## Client acceptance status
 ## Economic result label
@@ -126,8 +139,9 @@ required review that has not happened. Under `Client acceptance status`, use
 only `Accepted`, `Rejected`, `Pending`, or `Unknown`, with the supporting fact.
 Under `Economic result label`, use exactly one canonical evidence label, never
 an upgraded label. Under `Follow-up`, name failed criteria, correction/rework,
-refund, or the smallest next step; stage rather than execute any external
-action.
+refund, awaited external result, or the smallest next step. Under `Action
+receipt`, record `None — delivery not executed` until an exact-approved delivery
+occurs; never substitute a draft or plan for an observed action.
 
 ## Failure modes
 
@@ -140,5 +154,7 @@ action.
   a field report without specific publication consent and safe redaction.
 - Do not collapse human review into agent work, hide failed acceptance criteria,
   or omit refunds, rework, corrections, and missing evidence.
-- Do not rely on a route, drafting, or earlier consent as execution authority:
-  every external action needs a fresh immediate exact approval.
+- Do not rely on Run Authorization, route confirmation, broad, batch, stale, or
+  earlier permission as execution authority. A material change to payload,
+  destination, channel/account, timing, scope, cost, prerequisite, or rollback
+  path requires fresh immediately preceding exact approval.

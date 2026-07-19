@@ -6,6 +6,11 @@ below before it can be presented for approval. A passing draft is still staged;
 the human must review it and separately approve the exact external action
 immediately before sending or publishing.
 
+Run Authorization permits this private drafting and review without another
+approval; it never permits delivery of the message. Return the reviewed draft
+to `moneyprinter` with Money Machine Run state rather than stopping at a
+report-only handoff.
+
 ## Required standards
 
 - **Specific observed situation**: name one real, relevant situation observed
@@ -38,6 +43,13 @@ Claims verified or removed: [list]
 Human review: pending
 External action approval: pending
 ```
+
+After an immediately preceding exact approval, the current host may perform
+only that approved action, record an `Action receipt`, and return it to
+`moneyprinter`. The receipt replaces `pending` with the exact payload,
+destination, channel/account, execution time, cost, observed result or error,
+evidence label, and rollback or correction status. Broad, batch, stale, or
+materially changed permission is invalid.
 
 ## Negative example
 

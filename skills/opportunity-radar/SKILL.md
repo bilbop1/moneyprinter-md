@@ -1,6 +1,6 @@
 ---
 name: opportunity-radar
-description: Research and rank current buyer pains, demand signals, competitors, alternatives, and reachable acquisition surfaces for an approved revenue experiment. Use after MoneyPrinter chooses a route or when the user needs evidence before building an offer.
+description: Research and rank current buyer pains, demand signals, competitors, alternatives, and reachable acquisition surfaces for a confirmed revenue route. Use after MoneyPrinter chooses a route or when the user needs evidence before building an offer.
 license: MIT
 metadata:
   author: bilbop
@@ -9,16 +9,19 @@ metadata:
 
 # Opportunity Radar
 
-Turn an approved experiment into evidence for, or against, one small payable
+Turn a confirmed experiment into evidence for, or against, one small payable
 test. Do not invent buyer demand, willingness to pay, access, authority, or
 market facts.
 
 ## Preconditions
 
-Require the `Revenue Profile` and the user's approved `Experiment Brief` from
-`moneyprinter`. If route approval is missing, restate the bounded route and ask
-for approval. Approval to research or choose a route is not approval to contact,
-post to, purchase from, or otherwise act on any external surface.
+Require `Run Authorization`, the current `Money Machine Run`, `Revenue Profile`,
+and `Experiment Brief` from `moneyprinter`. Run Authorization satisfies the
+route prerequisite for private research, analysis, and artifact creation. Use
+it without asking for another approval. If it is missing or the route has
+materially changed, return to `moneyprinter` for confirmation rather than
+inventing permission. Run Authorization never permits contact, posting,
+purchase, account mutation, or another external commitment.
 
 Read `references/research-protocol.md` and `references/source-grades.md` before
 researching. Follow the safety boundaries already established by the Revenue
@@ -54,15 +57,21 @@ attempt as contrary evidence and continue only with safe, relevant sources.
 7. Produce exactly one Opportunity Evidence Table using the required columns.
    Supply a claim ledger directly below it so every source claim remains
    inspectable.
-8. Ask for explicit human approval immediately before any external action. Stage
-   the exact payload, audience, channel, spend, account, timing, scope, and
-   evidence label; do not execute it.
+8. Return the Opportunity Evidence Table and claim ledger to `moneyprinter`,
+   which updates `Money Machine Run` and continues to `offer-engine` without
+   another private-stage confirmation. If research exposes a necessary external
+   action, stage its exact payload, audience, channel, spend, account, timing,
+   scope, evidence label, authority, data, regulated-review, and rollback facts.
+   Before exact approval, keep it staged. After an immediately preceding exact
+   approval, the current host may perform only that approved action with its
+   available tools, record an `Action receipt`, and return the result to
+   `moneyprinter`.
 
 ## Required output
 
 ### Research status
 
-State the approved experiment, research date, geography, and whether the result
+State the confirmed experiment, research date, geography, and whether the result
 supports a payable test, needs discovery, or should stop.
 
 ### Facts, assumptions, and open questions
@@ -88,12 +97,14 @@ review date; and contrary evidence. Mark inferred statements explicitly as
 `Inference`, with their supporting claim identifiers. A claim without a URL,
 source class, and review date is unverified, not a finding.
 
-### Recommendation and gate
+### Recommendation and handoff
 
 Name one supported opportunity or say that none is justified. State the
 smallest payable test, correct evidence label, economics unknowns, stop
-condition, and the next human approval required. A reply, meeting, proposal,
-or invoice is not cash collected.
+condition, and whether a specific external action is staged. If none is needed,
+state `External approval required: None — continue private work` and return the
+artifact to `moneyprinter`. A reply, meeting, proposal, or invoice is not cash
+collected.
 
 ## Failure modes
 
@@ -101,5 +112,8 @@ or invoice is not cash collected.
 - Do not use private or scraped personal data for unsolicited bulk outreach.
 - Do not treat generic market-size content, search volume, page views, or an
   agent's confidence as observed buyer demand.
-- Do not make external contact, publish, purchase, collect payment, or commit
-  without specific, immediately preceding human approval.
+- Run Authorization, scan permission, broad permission, batch permission, and
+  stale permission never authorize an external action. A material change to the
+  approved payload, audience, channel, spend, account, timing, scope, authority,
+  data basis, regulated review, or rollback path requires a fresh exact
+  approval.

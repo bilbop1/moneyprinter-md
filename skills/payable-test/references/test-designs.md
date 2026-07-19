@@ -1,6 +1,8 @@
 # Payable test designs
 
-Choose one design only after checking the Offer Brief's buyer, authority,
+Run Authorization permits private test selection, design, and draft creation
+without another approval; it never permits external execution. Choose one
+design only after checking the Offer Brief's buyer, authority,
 economics, delivery boundary, evidence label, and cost ceiling. Every design
 must make the price, payment condition, deliverable, delivery timing,
 qualification, and cancellation or refund terms clear. Stage a draft first;
@@ -108,3 +110,13 @@ signal`. Modeling a likely result is `Estimated economic value`; a hypothetical
 example is `Simulation`; a report without the artifact required for a stronger
 label is `Unverified anecdote`. Use the label that the observed evidence earns,
 not the label that makes the test look strongest.
+
+## Run handoff and execution
+
+Return the selected design and staged test artifact to `moneyprinter` so it can
+update Money Machine Run and continue to ethical-acquisition. Do not stop for a
+separate design approval. Before exact approval, keep external use staged.
+After an immediately preceding exact approval, the current host may perform
+only that approved action, record an `Action receipt`, and return it to
+`moneyprinter`. Broad, batch, stale, or materially changed permission is
+invalid.

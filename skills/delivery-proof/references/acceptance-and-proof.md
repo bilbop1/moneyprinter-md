@@ -3,6 +3,12 @@
 Use this protocol before delivery work starts. It makes delivery acceptance,
 economic proof, and public publication separate decisions.
 
+Run Authorization permits private fulfillment, acceptance-check preparation,
+evidence handling, and correction work without another approval. It never
+authorizes buyer-facing delivery. Return the checklist and evidence state to
+`moneyprinter` so Money Machine Run continues or waits honestly for an external
+result.
+
 ## Acceptance checklist
 
 Record each item before delivery. A criterion must be observable and tied to
@@ -22,6 +28,13 @@ recording the change and obtaining the appropriate client agreement.
 
 If scope, acceptance authority, criteria, delivery capacity, correction path,
 or privacy authority is unknown, mark it `Unknown`; do not claim acceptance.
+
+Stage the exact delivery payload or artifact, destination, channel/account,
+timing, scope, expected cost, evidence label, prerequisite statuses, and
+rollback/correction path. After an immediately preceding exact approval, the
+current host may perform only that approved action, record a delivery `Action
+receipt`, and return it to `moneyprinter`. Broad, batch, stale, or materially
+changed permission is invalid.
 
 ## Evidence labels
 
@@ -53,3 +66,5 @@ privacy constraint, record: what happened, when, the evidence available, the
 economic effect if known, the owner of the next step, and whether it blocks
 acceptance. Do not publish this material without the same specific permission
 and immediate approval gate required for any other customer material.
+Preserve the delivery Action receipt with the minimum privacy-safe supporting
+proof, then return the observed acceptance and economic facts to `moneyprinter`.
