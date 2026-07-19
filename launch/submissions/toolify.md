@@ -8,8 +8,9 @@ instructions. That is relevant discovery after a real ClawHub publication. No
 official ingestion or direct submission rule for the skills index was verified,
 so do not promise that a ClawHub listing will appear.
 
-**Status:** blocked on ClawHub publication and downstream-index verification.
-No payment or submission has been made.
+**Status:** ClawHub publication is live; blocked only on downstream-index
+verification.
+No Toolify payment or submission has been made.
 
 ## Current official submission path
 
@@ -18,9 +19,8 @@ The relevant surface is
 It documents ClawHub CLI, GitHub, and manual installation, but this research
 pass found no official skill-submission form or ingestion contract.
 
-Publish through ClawHub first, then search Toolify for the exact owner/skill
-slugs and verify any resulting pages. Treat this as observation, not a
-submission.
+Now that ClawHub is live, search Toolify for the exact owner/skill slugs and
+verify any resulting pages. Treat this as observation, not a submission.
 
 The separate [Submit AI form](https://www.toolify.ai/submit) displayed a $99
 main-tool listing total on 2026-07-19. That form remains weak fit and should not
@@ -86,8 +86,7 @@ GitHub listing. Ingestion, timing, and placement are unverified.
 
 ## Final human action
 
-After ClawHub is live, search the Toolify OpenClaw Skills directory for each
-exact slug and record only pages that actually resolve logged out. Skip the $99
-main-tool submission. If it is ever reconsidered, the owner must review the
-current price, refund terms, generated copy, and measurable acquisition goal
-before paying.
+Search the Toolify OpenClaw Skills directory for each exact slug and record only
+pages that actually resolve logged out. Skip the $99 main-tool submission. If
+it is ever reconsidered, the owner must review the current price, refund terms,
+generated copy, and measurable acquisition goal before paying.

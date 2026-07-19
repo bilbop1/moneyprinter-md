@@ -6,8 +6,10 @@
 MoneyPrinter skill a versioned, searchable page with install commands, download
 counts, stars, tags, changelogs, and scan state.
 
-**Status:** public source verified; blocked on ClawHub authentication, the
-confirmed publisher handle, and a clean dry run. Nothing has been uploaded.
+**Status:** live. On 2026-07-19, ClawHub CLI 0.23.1 authenticated as
+`@bilbop1`, the provenance-pinned dry run found exactly seven new skills with
+zero failures, and all seven v1.0.0 releases were published. SkillSpector later
+marked every package clean and the dashboard changed each listing to visible.
 
 ## Current official submission path
 
@@ -34,20 +36,37 @@ Sources: [official ClawHub overview](https://docs.openclaw.ai/clawhub),
 ## Exact commands
 
 ```sh
-npm install -g clawhub
+npm install -g clawhub@0.23.1
 clawhub login
 clawhub whoami
-clawhub sync --root ./skills --all --dry-run
+clawhub sync \
+  --root ./skills \
+  --all \
+  --dry-run \
+  --owner bilbop1 \
+  --source-repo https://github.com/bilbop1/moneyprinter-md \
+  --source-ref main \
+  --source-commit 61549ff7440331588fd43b6c0707e8d783c51144 \
+  --bump patch
 ```
 
 Only after the dry run is clean:
 
 ```sh
-clawhub sync --root ./skills --all
+clawhub sync \
+  --root ./skills \
+  --all \
+  --owner bilbop1 \
+  --source-repo https://github.com/bilbop1/moneyprinter-md \
+  --source-ref main \
+  --source-commit 61549ff7440331588fd43b6c0707e8d783c51144 \
+  --bump patch \
+  --tags latest
 ```
 
-Do not add an `--owner` value until `clawhub whoami` or the dashboard confirms
-the exact handle.
+For a future release, replace the pinned source commit with the exact tested
+commit and select the intentional semantic-version bump. Do not reuse this
+command blindly.
 
 ## Listing title
 
@@ -113,6 +132,10 @@ source repository's social preview current.
 
 ## Final human action
 
-Review the exact dry-run plan and confirmed publisher, then run the real
-`clawhub sync` command under ClawHub's documented MIT-0 publication terms.
-Inspect every resulting public page logged out before linking it.
+No publication action remains for v1.0.0. Maintain source provenance on future
+syncs, review the dry run, use the correct semantic version bump, and inspect
+the resulting public pages before linking them.
+
+Primary public listing:
+
+`https://clawhub.ai/bilbop1/skills/moneyprinter`

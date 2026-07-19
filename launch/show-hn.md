@@ -17,7 +17,8 @@ Nothing has been submitted to Hacker News. Current publication status:
 
 - GitHub: `https://github.com/bilbop1/moneyprinter-md` is public; clean remote
   discovery found all seven skills on 2026-07-19.
-- Landing page: `https://moneyprinter.bilbop.org` is not live.
+- Landing page: `https://moneyprinter.bilbop.org` returned public HTTPS 200 on
+  2026-07-19.
 
 Do not submit until one retained end-to-end host invocation exists. The landing
 page is optional for an HN submission whose original source is the repository.

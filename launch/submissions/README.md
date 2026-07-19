@@ -1,14 +1,16 @@
 # MoneyPrinter.md submission packets
 
-These files are copy decks and operator checklists. They are not evidence that
-any submission, review, approval, publication, ranking, or listing occurred.
+These files are copy decks, operator checklists, and dated status records.
+Treat a directory route as live only when its packet names a verified public
+listing URL and review date. A prepared packet by itself proves nothing was
+submitted, approved, ranked, or published.
 
 Before using any packet:
 
 1. Confirm the public GitHub and landing-page URLs in a logged-out browser.
 2. Recheck the linked official rules.
 3. Do not replace facts with stronger claims.
-4. Complete the platform-specific auth and ownership steps yourself.
+4. Complete or review any remaining platform-specific auth and ownership steps.
 5. Record the actual listing URL and status after submission.
 
 The shared facts and claim boundaries live in
@@ -16,6 +18,8 @@ The shared facts and claim boundaries live in
 [`../channel-matrix.md`](../channel-matrix.md).
 
 This directory contains 22 packets: 5 P0, 5 P1, 9 P2, and 3 P3.
+The channel matrix also tracks newer curated-collection routes that do not yet
+have full copy packets.
 
 ## Packet index
 

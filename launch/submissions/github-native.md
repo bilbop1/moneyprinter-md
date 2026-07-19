@@ -9,7 +9,8 @@ but it cannot guarantee cold-start traffic or Trending placement.
 
 **Status:** public source, remote discovery, metadata, topics, social preview,
 Discussions, private vulnerability reporting, and release candidate were
-verified on 2026-07-19. One retained host invocation and the landing page remain
+verified on 2026-07-19. The landing page is also public at
+`https://moneyprinter.bilbop.org`. One retained host invocation remains
 pending.
 
 ## Current submission path
@@ -104,6 +105,6 @@ GitHub topics:
 
 ## Final human action
 
-Retain one full host invocation. Add the landing-page URL only after it works
-logged out. If community conduct volume later warrants a private inbox, add a
-monitored role address rather than a personal address.
+Retain one full host invocation. Keep the confirmed landing-page URL in the
+repository About field. If community conduct volume later warrants a private
+inbox, add a monitored role address rather than a personal address.

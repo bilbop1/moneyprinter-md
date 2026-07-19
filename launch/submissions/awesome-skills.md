@@ -4,7 +4,11 @@
 
 **P1 — exact third-party directory fit with a very low submission burden.**
 
-**Status:** public source ready; nothing has been submitted.
+**Status:** live. The flagship deep link was indexed on 2026-07-19 at
+`https://www.awesomeskills.dev/en/skill/moneyprinter-md-moneyprinter`.
+Submitting a second deep link from the same repository was treated as a
+duplicate of the flagship, so one repo-level directory page is the verified
+shape rather than seven separate listings.
 
 ## Current official submission path
 
@@ -72,10 +76,11 @@ skill pages.
   parser mistakes.
 - Auto-detected platform support may overstate compatibility. Request a
   correction if the page claims host verification the repository does not have.
-- Seven separate deep-link submissions would be noisy; try one repo import
-  first.
+- The directory treated another skill path from this repository as a duplicate.
+  Do not spam retries to force seven pages.
 
 ## Final human action
 
-Submit the confirmed repository once, inspect all generated pages, and correct
-any compatibility or description claim that exceeds the source.
+No submission action remains for the current flagship page. Recheck the page
+after major source changes and request a correction if its auto-detected
+compatibility copy exceeds verified host behavior.

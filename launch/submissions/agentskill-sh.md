@@ -5,7 +5,10 @@
 **P1 — exact third-party directory fit.** The form imports every detected
 `SKILL.md` from a public GitHub repository and can keep it synced.
 
-**Status:** public source ready; nothing has been imported.
+**Status:** attempted 2026-07-19. The importer detected all seven `SKILL.md`
+files, then returned a storage-quota write failure for every record because the
+platform's database was over quota. This is a platform-side blocker, not a
+skill-format failure. Retry the same repository URL after writes resume.
 
 ## Current official submission path
 
@@ -75,6 +78,7 @@ daily or webhook-based source updates.
 
 ## Final human action
 
-Paste the confirmed repository URL, inspect all seven imported records, then
-optionally connect GitHub for ownership verification. Add a webhook only after
-reviewing its exact permissions and delivery events.
+Retry the confirmed repository URL after the platform database accepts writes,
+then inspect all seven records. Optionally connect GitHub for ownership
+verification only after the import succeeds. Add a webhook only after reviewing
+its exact permissions and delivery events.

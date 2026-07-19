@@ -2,15 +2,19 @@
 
 ## Publication status
 
-The GitHub source and remote discovery path were confirmed live on 2026-07-19:
+The GitHub source, remote discovery path, and landing page were confirmed live
+on 2026-07-19:
 
 - GitHub: `https://github.com/bilbop1/moneyprinter-md`
 - Remote check: `npx skills add bilbop1/moneyprinter-md --list` found all seven
   skills.
-- Landing-page target: `https://moneyprinter.bilbop.org` is **not live yet**.
+- Landing page: `https://moneyprinter.bilbop.org` returned HTTPS 200 with active
+  Sites custom-domain, provider, and SSL states.
 
-The recommended flagship post and thread posts 1–5 may be used now. Do not post
-the first reply or thread post 6 until the landing-page URL works logged out.
+The flagship, first reply, and complete thread now point only to live public
+URLs. Nothing is claimed as posted. Host conversation activation remains
+unverified, and no Ko-fi link should be added until its exact handle is
+confirmed.
 
 ## Recommended flagship post
 

@@ -71,13 +71,23 @@ Covered cases:
 The primary card says `QUICK INTERVIEW`, `BEGINNER → OPERATOR`, and
 `PORTABLE CORE`. It does not claim that every host has been activation-tested.
 
-## Remaining publication checks
+## Published runtime checks
 
-Before public promotion:
+Verified on 2026-07-19:
 
-1. Open the deployed Sites URL and eventual custom domain in a logged-out
-   browser.
-2. Confirm the canonical and image URLs use the requested host.
-3. Reconfirm the GitHub control opens the intended public repository.
-4. Re-run the already-passed published installer after deployment to catch any
-   release-time regression.
+- `https://moneyprinter.bilbop.org` returned HTTPS 200 with a valid
+  certificate.
+- Sites reported the custom-domain, provider, and SSL states active.
+- The canonical and `og:url` use
+  `https://moneyprinter.bilbop.org/`; the X and Open Graph image use
+  `https://moneyprinter.bilbop.org/og.png`.
+- `/og.png` returned HTTP 200 as `image/png`.
+- The live page contains the final GitHub URL and
+  `npx skills add bilbop1/moneyprinter-md`.
+- The GitHub repository returned HTTP 200. A fresh remote `--list` check against
+  retained source commit `61549ff7440331588fd43b6c0707e8d783c51144` found
+  all seven skills.
+
+These checks establish public site and installer availability. They do not
+establish conversation-level activation in any named host; that retained test
+remains open.

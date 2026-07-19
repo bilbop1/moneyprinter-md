@@ -5,48 +5,45 @@ Local site source: `site/`
 
 ## Current status
 
-The production build, tests, lint, desktop render, and exact 390 px / 320 px
-mobile renders pass. The site is not deployed and the custom hostname is not
-configured.
+The site is deployed through Sites and public at
+`https://moneyprinter.bilbop.org`. On 2026-07-19:
 
-The required Sites project creation was attempted once on 2026-07-19 with:
+- the custom hostname returned HTTPS 200 with a valid certificate;
+- Sites reported the custom-domain, provider, and SSL states active;
+- DNS resolved the `moneyprinter` CNAME to
+  `custom-domains.chatgpt.site.`;
+- the canonical, `og:url`, and social-image URLs used the custom hostname;
+- `/og.png` returned HTTP 200 as `image/png`;
+- the live GitHub link and displayed install command matched the public
+  repository; and
+- the retained release/distribution source commit was
+  `61549ff7440331588fd43b6c0707e8d783c51144`, and a clean remote listing
+  against it found all seven skills.
 
-- title: `MoneyPrinter.md`
-- slug: `moneyprinter-md`
-- description: `Receipts-first revenue operating system for frontier AI
-  agents.`
+The existing Sites project ID is persisted in
+`site/.openai/hosting.json`. Reuse that exact project for later versions; do
+not create a duplicate project or substitute another ID.
 
-The Sites service returned an internal error. An immediate owned-site listing
-showed no MoneyPrinter project, so no opaque `project_id` or source credential
-was returned and nothing could be persisted to
-`site/.openai/hosting.json`. No version was saved or deployed.
+## DNS safety boundary
 
-The Sites workflow prohibits blindly calling create more than once for the same
-local site. Do not invent an ID, reuse another project, or pretend a production
-URL exists.
+The MoneyPrinter hostname uses the dedicated `moneyprinter` CNAME. Publishing
+this subdomain did not require changing the root A records, nameservers, MX,
+SPF, DMARC, DKIM, `autoconfig`, or `autodiscover` records. Those records serve
+the root site and mail and must remain untouched.
 
-## Safe recovery
+For a later domain repair, use only the exact records returned by Sites and
+compare the complete DNS record set before and after the change. Do not infer a
+target from another Sites project.
 
-1. List the owner's Sites projects and confirm that a MoneyPrinter project was
-   not created asynchronously.
-2. If no project exists, recover through the Sites UI/support or a fresh
-   user-authorized publish attempt rather than guessing an identifier.
-3. Persist the returned project ID exactly as `project_id` in
-   `site/.openai/hosting.json`.
-4. If a standalone Sites source checkout is required, initialize it from the
-   committed `site/` directory; do not depend on ignored local metadata.
-5. Commit the hosting manifest, rerun `npm test` and `npm run lint`, and push
-   that exact site source state to the Sites source repository using a
-   short-lived credential.
-6. Package and save a Sites version from the same pushed commit SHA.
-7. Verify owner-only access, deploy the saved version privately, poll to a
-   terminal state, and inspect the production URL.
-8. Attach `moneyprinter.bilbop.org` only after the production site is healthy.
-   Use the exact CNAME and verification records returned by Sites.
-9. Add those exact records at the domain's DNS provider. No DNS target has been
-   returned yet, so none is documented here.
-10. Recheck the custom-domain status, then obtain explicit approval before any
-    public/open-world deployment.
+## Future deployment sequence
+
+1. Use the existing project in `site/.openai/hosting.json`.
+2. Rerun `npm test` and `npm run lint` from `site/`.
+3. Push the exact site source state to its Sites source repository.
+4. Save a version from that pushed commit SHA and deploy that saved version.
+5. Poll the deployment to a terminal state.
+6. Recheck the custom-domain, provider, and SSL states.
+7. Repeat the public checks below before announcing a new version.
 
 ## Post-deploy checks
 

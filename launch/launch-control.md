@@ -2,16 +2,27 @@
 
 ## Current state
 
-GitHub is live and its clean remote-discovery check passes. The landing page
-remains unpublished:
+GitHub and the landing page are live. On 2026-07-19, the release and
+distribution checks used source commit
+`61549ff7440331588fd43b6c0707e8d783c51144`, a clean remote-discovery check
+found all seven skills, and the custom domain returned HTTPS 200 with its Sites
+domain, provider, and SSL states active.
 
-| Surface | Publication target | Launch-ready when |
+| Surface | Publication target | Verified state |
 | --- | --- | --- |
 | GitHub | `https://github.com/bilbop1/moneyprinter-md` | **Passed 2026-07-19:** public logged-out access and clean discovery of all seven skills |
-| Landing page | `https://moneyprinter.bilbop.org` | Public, correct project renders, mobile works, and both calls to action resolve |
+| Landing page | `https://moneyprinter.bilbop.org` | **Passed 2026-07-19:** public HTTPS 200, correct project, canonical metadata, social image, and final GitHub/install targets |
+| ClawHub | `https://clawhub.ai/bilbop1/skills/moneyprinter` | **Passed 2026-07-19:** seven visible v1.0.0 listings, clean SkillSpector results, and public OpenClaw install commands |
+| Awesome Skills | `https://www.awesomeskills.dev/en/skill/moneyprinter-md-moneyprinter` | **Passed 2026-07-19:** public flagship listing with the source and install command |
 
 Do not post or submit a target URL while it is private, unconfigured, or
 returning placeholder content.
+
+Publication of these public surfaces does not prove conversation-level activation
+in Claude, Codex, Kimi, Hermes, OpenClaw, or another host. That retained test is
+still open. ClawHub registry publication and a third-party Awesome Skills page
+are live, but neither substitutes for that invocation test. No Ko-fi link is
+confirmed.
 
 ## Organic-growth verdict
 
@@ -26,25 +37,30 @@ report is better evidence than a large burst of passive impressions.
 
 ## What must be live first
 
-The GitHub source is already public. Promotion that includes the landing page
-remains blocked until its items below pass:
+The GitHub source and landing page are public. Keep these checks true before
+promotion, and do not strengthen any unverified compatibility or funding claim:
 
-- The GitHub repository opens while logged out and renders the intended README.
+- **Passed 2026-07-19:** the GitHub repository opens while logged out; the
+  retained release/distribution source commit is
+  `61549ff7440331588fd43b6c0707e8d783c51144`.
 - **Passed 2026-07-19:** GitHub private vulnerability reporting is enabled.
 - The default branch contains the license, seven skill directories, examples,
   compatibility limits, safety rules, contribution guide, and issue forms.
-- `npx skills add bilbop1/moneyprinter-md --list` succeeds from a clean
-  directory and lists each expected skill exactly once.
+- **Passed 2026-07-19:** `npx skills add bilbop1/moneyprinter-md --list`
+  succeeds from a clean directory and lists each expected skill exactly once.
 - Every example is visibly labeled `Simulation`.
-- The landing page opens while logged out on desktop and mobile.
-- The landing page's GitHub and install calls to action point to the final
-  public repository.
+- **Passed 2026-07-19:** the landing page opens at
+  `https://moneyprinter.bilbop.org` over valid HTTPS.
+- **Passed 2026-07-19:** the landing page's GitHub and install calls to action
+  point to the final public repository and command.
 - **Passed 2026-07-19:** the 1200 × 630 social preview is uploaded and renders
   in repository settings. Recheck its public embed before posting.
 - The GitHub and landing targets in `launch/x-launch.md` and
   `launch/show-hn.md` match the live URLs exactly.
 - No secret, local path, private hostname, test credential, or unconfirmed Ko-fi
   username appears in the public package.
+- No host is described as conversation-verified until a retained invocation
+  proves it.
 - A private Code of Conduct contact is optional for this launch. If the owner
   later creates one, document only a monitored role address such as
   `conduct@bilbop.org`; do not invent or expose a personal address.
@@ -62,8 +78,9 @@ experience in replies.
    commit and verify its notes, files, version, and SHA-256 digest.
 4. **Discovery done 2026-07-19:** the published command found all seven names
    from a clean temporary directory. A retained host invocation remains open.
-5. Publish the landing page. Check desktop, narrow mobile, social metadata, the
-   install command, and every outbound link.
+5. **Done 2026-07-19:** publish the landing page, activate
+   `moneyprinter.bilbop.org`, and check valid HTTPS, canonical and social
+   metadata, the install command, and the GitHub target.
 6. Update any publication-target labels in launch assets only after both URLs
    pass. Freeze the exact post copy and image you will use.
 7. Choose one X format. The recommended launch is the flagship post plus its
@@ -76,7 +93,9 @@ experience in replies.
    prohibits generated or AI-edited comments. Submit once, stay available, and
    do not coordinate votes or ask friends to comment.
 10. Submit the direct skill surfaces next, beginning with the channels marked
-    P0 in the directory matrix. Customize each submission to its rules.
+    P0 in the directory matrix. **ClawHub and Awesome Skills passed on
+    2026-07-19.** agentskill.sh found all seven files but its database rejected
+    writes while over quota, so retry without changing the skills.
 11. Approach curated lists one at a time. Confirm that each list accepts this
     category before opening a pull request.
 12. At 2 hours, 24 hours, and 7 days, record results and corrections. Keep the
