@@ -176,11 +176,22 @@ red until Task 5 changes the release metadata.
 
 **Files:**
 - Modify: `skills/opportunity-radar/SKILL.md`
+- Modify: `skills/opportunity-radar/references/research-protocol.md`
+- Modify: `skills/opportunity-radar/references/source-grades.md`
 - Modify: `skills/offer-engine/SKILL.md`
+- Modify: `skills/offer-engine/references/offer-brief.md`
+- Modify: `skills/offer-engine/references/unit-economics.md`
 - Modify: `skills/payable-test/SKILL.md`
+- Modify: `skills/payable-test/references/approval-gates.md`
+- Modify: `skills/payable-test/references/test-designs.md`
 - Modify: `skills/ethical-acquisition/SKILL.md`
+- Modify: `skills/ethical-acquisition/references/channel-rules.md`
+- Modify: `skills/ethical-acquisition/references/message-standard.md`
 - Modify: `skills/delivery-proof/SKILL.md`
+- Modify: `skills/delivery-proof/references/acceptance-and-proof.md`
+- Modify: `skills/delivery-proof/references/field-report.md`
 - Modify: `skills/cashflow-review/SKILL.md`
+- Modify: `skills/cashflow-review/references/decision-rules.md`
 
 **Interfaces:**
 - Consumes: `Run Authorization` and artifacts from Task 2.
@@ -205,7 +216,23 @@ continues to the next private stage. `delivery-proof` waits for an observed
 delivery result; `cashflow-review` consumes the resulting receipt and sends its
 decision back for reranking.
 
-- [ ] **Step 4: Run safety and activation evaluations**
+- [ ] **Step 4: Make approved actions executable**
+
+Remove absolute "do not execute" language from research, offer, payable-test,
+and acquisition stages. Before approval they stage the exact action. After an
+immediately preceding exact approval, the current host may perform that one
+action with its available tools, record an `Action receipt`, and continue.
+Delivery uses the same rule for buyer-facing fulfillment. Broad, stale, or
+materially changed approvals remain invalid.
+
+- [ ] **Step 5: Keep every reference consistent**
+
+Update the existing reference files so they describe the same run
+authorization, state handoff, exact-action execution, receipt, and reranking
+contract as their parent skills. No reference may silently restore an
+intermediate approval or report-only stop.
+
+- [ ] **Step 6: Run safety and activation evaluations**
 
 Run:
 
@@ -222,12 +249,25 @@ approval.
 
 **Files:**
 - Modify: `README.md`
+- Modify: `CONTRIBUTING.md`
+- Modify: `SECURITY.md`
 - Modify: `docs/install.md`
 - Modify: `docs/compatibility.md`
 - Modify: `docs/troubleshooting.md`
+- Modify: `evals/README.md`
+- Modify: `research/README.md`
+- Modify: `site/README.md`
+- Modify: `launch/submissions/README.md`
 - Modify: `launch/fact-sheet.md`
+- Modify: `launch/channel-matrix.md`
+- Modify: `launch/show-hn.md`
 - Modify: `launch/submissions/clawhub.md`
 - Modify: `launch/submissions/*.md` where interview-first canonical copy appears
+- Modify: `examples/starting-from-zero.md`
+- Modify: `examples/roofer-revenue-recovery.md`
+- Modify: `examples/lawyer-productized-expertise.md`
+- Modify: `examples/tiktok-shop-conversion.md`
+- Modify: `examples/existing-business-leverage.md`
 - Modify: `ROADMAP.md`
 - Modify: `CHANGELOG.md`
 
@@ -266,7 +306,19 @@ Replace interview-first descriptions in `launch/fact-sheet.md` and current
 submission packets. Historical specs, plans, and recorded rc.1/rc.2 eval output
 remain unchanged.
 
-- [ ] **Step 4: Add rc.3 changelog and roadmap state**
+- [ ] **Step 4: Update security and contribution contracts**
+
+Document history-scan consent, prompt injection, credential-path exclusion, raw
+history leakage, and coverage-report requirements. Keep approved one-off
+external execution distinct from prohibited autonomous or bulk action.
+
+- [ ] **Step 5: Update the five examples**
+
+Each example must show a simulated coverage receipt, cash-first ranking, one
+confirmation, continued private work, exact-action approval, receipt, and
+rerank. Keep every existing `Simulation` label and never invent a real outcome.
+
+- [ ] **Step 6: Add rc.3 changelog and roadmap state**
 
 Record the 14-day scan, confirmation intake, cash-first ranking, and private
 continuation loop without relabeling old evaluations as rc.3 evidence.
@@ -276,6 +328,7 @@ continuation loop without relabeling old evaluations as rc.3 evidence.
 **Files:**
 - Modify: `site/app/page.tsx`
 - Modify: `site/app/layout.tsx`
+- Modify: `site/app/globals.css`
 - Modify: `site/tests/rendered-html.test.mjs`
 - Modify: `site/package.json`
 - Modify: `site/package-lock.json`
@@ -309,6 +362,9 @@ The flow becomes:
 Permission -> 14-day scan -> Confirm -> Prioritize -> Offer ->
 Payable test -> Acquire -> Deliver -> Receipt -> Rerank
 ```
+
+Update the responsive grid for the ten-stage flow without introducing
+horizontal overflow at 320px.
 
 - [ ] **Step 3: Update metadata and rc.3 versions**
 
@@ -378,7 +434,13 @@ Expected: every fenced X post is at most 280 weighted characters.
 
 **Files:**
 - Modify: `evals/session-scan/2026-07-19-results.md`
+- Create: `evals/orchestration/prompts.md`
+- Create: `evals/orchestration/oracle.md`
+- Create: `evals/orchestration/2026-07-19-results.md`
 - Modify: `evals/latest-results.md`
+- Modify: `evals/provenance.md`
+- Modify: `evals/rubrics/router-rubric.md`
+- Modify: `evals/rubrics/evidence-rubric.md`
 - Modify: `launch/launch-control.md`
 - Modify: `docs/deployment/bilbop-org.md`
 
@@ -407,6 +469,10 @@ seven-skill discovery all pass.
 Evaluate S01-S06 against the rewritten skill. Record exact pass/fail results and
 limitations in `evals/session-scan/2026-07-19-results.md`; do not call these
 customer outcomes or host activation.
+
+Add orchestration cases for the full state graph and the
+`STOP`/`REVISE`/`REPEAT`/`SCALE` rerank paths. Update the current results index
+and provenance notes while keeping rc.1 and rc.2 raw outputs immutable.
 
 - [ ] **Step 3: Commit and push source**
 
