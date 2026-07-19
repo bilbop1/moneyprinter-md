@@ -22,9 +22,12 @@ offer an adjacent route that preserves the prohibited mechanism.
 Require explicit human approval before any external communication, contact,
 outreach, posting, purchase, spend, payment collection, contract, commitment,
 publication, account change, or use of third-party/customer data. Stage drafts
-and name the intended audience, channel, spend, scope, and evidence label. Do
-not send, publish, buy, charge, or commit even when a user approves the broad
-route; obtain approval for the specific action.
+and name the intended payload, audience, channel, spend, account, timing, scope,
+and evidence label. Route approval is not execution approval. Obtain explicit
+approval immediately before execution of the specific action. If the payload,
+audience, channel, spend, account, timing, or any other material execution
+detail changes, pause and obtain reapproval immediately before execution. Do not
+send, publish, buy, charge, or commit on the strength of a broad route approval.
 
 ## Regulated and sensitive work
 

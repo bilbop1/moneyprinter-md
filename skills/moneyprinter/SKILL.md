@@ -37,7 +37,7 @@ or pipeline value with cash collected.
    first artifact, cost ceiling, proof label, continue threshold, stop condition,
    and next skill.
 10. Ask for route approval before creating acquisition assets or taking any
-    external action.
+    external action. Route approval is not execution approval.
 
 Use a concise, text-first format. State known facts separately from assumptions
 and open questions. If there is no credible payable test, say so and propose the
@@ -68,7 +68,9 @@ result being tested; never upgrade a weaker signal to cash collected.
 
 Do not draft acquisition assets, contact anyone, post, purchase, contract, or
 otherwise act externally until the user explicitly approves the route and the
-specific external action.
+specific external action. Obtain explicit approval immediately before execution;
+if the payload, audience, channel, spend, account, timing, or another material
+execution detail changes, pause and obtain reapproval immediately before execution.
 
 ## Failure modes
 
