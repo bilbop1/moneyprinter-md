@@ -48,4 +48,6 @@ In this simulation, the reviewer rejects the practice-area topic as unsuitable f
 
 ## Review decision
 
-**STOP.** Preserve the reviewer concern, do not pivot to individualized advice, and seek another attorney-approved topic only through a fresh compliance review.
+STOP — no credible signal or unacceptable economics
+
+Preserve the reviewer concern, do not pivot to individualized advice, and seek another attorney-approved topic only through a fresh compliance review.

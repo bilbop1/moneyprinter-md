@@ -48,4 +48,6 @@ In this simulation, the owner decides an existing CRM already covers the workflo
 
 ## Review decision
 
-**STOP.** Record the existing-CRM contrary evidence. Do not claim a recovery opportunity. Consider a different owner-requested workflow only after a fresh interview and approval.
+STOP — no credible signal or unacceptable economics
+
+Record the existing-CRM contrary evidence. Do not claim a recovery opportunity. Consider a different owner-requested workflow only after a fresh interview and approval.

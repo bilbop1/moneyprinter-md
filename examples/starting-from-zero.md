@@ -48,4 +48,6 @@ In this simulation, the contact says the scope is too small and no payment occur
 
 ## Review decision
 
-**STOP.** Do not expand channels or price claims. Ask one consenting peer for usability feedback and rerun a separately approved payable test only after concrete problem evidence appears.
+STOP — no credible signal or unacceptable economics
+
+Do not expand channels or price claims. Ask one consenting peer for usability feedback and rerun a separately approved payable test only after concrete problem evidence appears.

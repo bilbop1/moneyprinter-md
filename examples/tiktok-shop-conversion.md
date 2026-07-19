@@ -48,4 +48,6 @@ In this simulation, the approved video receives hypothetical views but no attrib
 
 ## Review decision
 
-**STOP.** Do not add spend or repeat. Recheck policy and attribution only if a real settled payout record later exists; otherwise choose another approved experiment.
+STOP — no credible signal or unacceptable economics
+
+Do not add spend or repeat. Recheck policy and attribution only if a real settled payout record later exists; otherwise choose another approved experiment.

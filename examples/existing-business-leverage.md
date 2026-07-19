@@ -48,4 +48,6 @@ In this simulation, staff adopt a draft checklist for one week, but the owner ca
 
 ## Review decision
 
-**REVISE, then stop pending measurement.** Define a privacy-safe baseline and one owner-approved measure before another bounded pilot. Do not scale or claim an economic outcome until observed evidence exists.
+REVISE — signal exists but offer, channel, or delivery failed
+
+Define a privacy-safe baseline and one owner-approved measure before another bounded pilot. Do not scale or claim an economic outcome until observed evidence exists.
