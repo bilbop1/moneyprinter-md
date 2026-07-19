@@ -1,109 +1,146 @@
-# Show HN launch package
+# Hacker News human-only prep sheet
 
-## Publication status
+## Do not paste from this file
 
-These are publication targets until verified from a logged-out browser:
+The [Hacker News Guidelines](https://news.ycombinator.com/newsguidelines.html)
+state under Comments: "Don't post generated text or AI-edited text." HN is for
+human conversation.
 
-- `https://github.com/bilbop1/moneyprinter-md`
-- `https://moneyprinter.bilbop.org`
+This file was produced with AI assistance. It is background material only.
+Do not paste, lightly rewrite, or run any HN submission text or comment through
+AI. The owner must write the title, submission text, and every reply personally,
+from a blank editor and in their own words.
 
-Do not submit to Hacker News while either link is private, broken, or still
-shows placeholder content. The repository also needs to pass its clean install
-check first.
+## No-submission status
 
-## Submission title
+Nothing has been submitted to Hacker News. These remain unverified publication
+targets:
 
-```text
-Show HN: MoneyPrinter.md - revenue skills that separate cash from AI hype
-```
+- GitHub: `https://github.com/bilbop1/moneyprinter-md`
+- Landing page: `https://moneyprinter.bilbop.org`
 
-## Submission body
+Do not submit until the GitHub repository is public, its published install path
+passes from a clean directory, and both targets open while logged out.
 
-```text
-I built MoneyPrinter.md, an open-source pack of seven text-first Agent Skills for testing AI-assisted income ideas.
+## Best source to submit
 
-The name is intentionally provocative. The method is deliberately boring: run a short interview, compare no more than three routes, choose one bounded payable test, and label the result according to the evidence.
+HN asks submitters to link the original source. If the repository is public and
+working, the likely original source is:
 
-That last part is the reason I made it. A booked call is not revenue. An invoice is not settled cash. Estimated labor savings are not earnings. MoneyPrinter keeps seven labels separate, from Cash collected through Simulation and Unverified anecdote.
+`https://github.com/bilbop1/moneyprinter-md`
 
-The interview changes depth based on the user. Someone starting from zero gets a small manual test. An existing operator gets a narrower leverage or workflow audit. The repository includes simulated walkthroughs for a beginner, roofer, lawyer, TikTok Shop creator, and service business. They are workflow examples, not customer results.
+The owner should make that decision after reading the current HN guidelines.
+The landing page can remain in the README or in a human-written discussion
+comment if it directly answers a question.
 
-The source follows the Agent Skills format. The repo documents installer or manual routes for Claude Code, Codex, Kimi Code, Hermes, and OpenClaw, with the current verification limits called out. External messages, posts, purchases, contracts, and publications stay behind a human approval gate.
+## Factual source sheet
 
-I would especially value criticism of the evidence taxonomy, the route-selection logic, and whether the text-first package stays useful across agent harnesses.
+These bullets are reminders, not post copy. Verify each against the linked file
+before writing:
 
-Source: https://github.com/bilbop1/moneyprinter-md
-Method and demo: https://moneyprinter.bilbop.org
-```
+- Product name: MoneyPrinter.md.
+- Primary hook used elsewhere: "The models are finally good. Their money
+  playbooks are not."
+- Format: seven text-first Agent Skills under the MIT License.
+- Entry point: a short interview that produces a Revenue Profile, one
+  recommended route, one fallback, and an Experiment Brief.
+- Routing boundary: the router compares no more than three paths and waits for
+  approval before it creates acquisition assets.
+- Proof boundary: Cash collected, Revenue contracted, Revenue booked, Pipeline
+  signal, Estimated economic value, Simulation, and Unverified anecdote are
+  different labels.
+- Example boundary: all five persona walkthroughs are simulations, not customer
+  results, endorsements, or forecasts.
+- Action boundary: messages, posts, purchases, contracts, and publications
+  require immediate human approval.
+- Compatibility boundary: the source uses the common Agent Skills format, but
+  no host is marked conversation-verified in this release.
+- Income boundary: the project does not promise income, profit, customers,
+  conversion, or any particular result.
 
-## Author replies to predictable objections
+Repository sources:
 
-### "This sounds like a get-rich-quick scam."
+- [README](../README.md)
+- [Evidence standard](../skills/moneyprinter/references/evidence-standard.md)
+- [Safety boundaries](../skills/moneyprinter/references/safety-boundaries.md)
+- [Compatibility matrix](../docs/compatibility.md)
+- [Install guide](../docs/install.md)
+- [Persona eval method](../evals/README.md)
+- [Research ledger](../research/source-ledger.md)
 
-```text
-The name borrows the phrase on purpose, but the workflow rejects the usual claim. It can finish with $0, a failed fit check, or a stop decision. The README prohibits income guarantees and requires every result to carry an evidence label.
-```
+## Topic and title framing for the owner to rewrite
 
-### "These are Markdown files. Where is the product?"
+Do not use the wording below as a title. Pick the idea that matches why you
+personally built the project, then write a plain title yourself.
 
-```text
-The Markdown is the product format here. Each skill has a narrow job, explicit inputs and outputs, references, approval gates, and failure modes. I chose the common Agent Skills format so the method can be inspected and moved between harnesses without another runtime.
-```
+- Evidence-accounting frame: an Agent Skills pack that keeps settled cash,
+  invoices, pipeline, estimates, and simulations distinct.
+- Text-first product frame: seven inspectable revenue workflows without a new
+  runtime or SaaS layer.
+- Cross-harness experiment frame: one common skills package with documented
+  portability limits.
+- Safety frame: a revenue workflow that can recommend a stop decision and keeps
+  external actions behind approval.
 
-### "Did an AI write all of this?"
+If the owner uses the `Show HN:` convention, the rest of the title should be a
+plain description. Avoid uppercase, exclamation points, praise, gratuitous
+numbers, and editorial claims.
 
-```text
-AI helped build and test the repository. You can inspect the source ledger, safety boundaries, simulated persona runs, validation commands, and issue templates for corrections. Specific criticism is welcome.
-```
+## Questions the owner should answer from personal experience
 
-### "Where are the real revenue results?"
+Write the submission only after answering these without AI:
 
-```text
-There are no claimed customer earnings in this release. The five walkthroughs are labeled Simulation, and their hypothetical cash collected is $0. The field-report format exists so future results cannot quietly upgrade a reply, invoice, estimate, or benchmark into cash.
-```
+1. Which projects or recurring claims made you want to build this?
+2. What did you personally find misleading about the way simulated value was
+   described?
+3. Why did you choose inspectable text skills instead of a SaaS product or
+   agent runtime?
+4. Which design decision took the most judgment?
+5. What did the five persona runs reveal or force you to change?
+6. What has actually been tested locally?
+7. What has not been tested in third-party hosts?
+8. Why is a failed experiment or a $0 result useful to you?
+9. What specific criticism do you want from HN readers?
+10. What would make you stop, narrow, or materially revise the project?
 
-### "Why call it receipts-first before you have field reports?"
+The answers should contain concrete details the owner remembers and can defend.
+Do not invent a founder story or claim experience that did not happen.
 
-```text
-"Receipts-first" describes the accounting rule, not a claim that the repo has already produced receipts. A result cannot be called Cash collected without a settled payment record. Until real field reports exist, the examples remain simulations.
-```
+## Discussion topics to prepare for
 
-### "Does it actually work in every agent?"
+These are questions the owner may receive. They are not prompts for generated
+answers:
 
-```text
-No. The source uses the common Agent Skills format, and the repo documents installer or manual routes for several hosts. The compatibility table currently marks no host as conversation-verified. I would rather publish that limitation than turn portability into another unsupported claim.
-```
+- Is the name intentionally scam-adjacent?
+- Where are the real customer or revenue results?
+- Why call it receipts-first before field reports exist?
+- Are Markdown files enough to count as a product?
+- Did AI generate the repository?
+- Does it work in every named agent?
+- Could the acquisition skill automate spam?
+- Why publish the method before building software around it?
+- Is the personal-AGI framing serious or promotional?
+- What is the optional 1% pledge, and does it affect the license?
 
-### "Is this going to automate spam?"
+For each reply, answer the strongest version of the question from direct
+experience and repository evidence. If the answer is unknown, say that. Do not
+open this file to retrieve canned wording while replying.
 
-```text
-No. The safety boundary excludes spam, scraping for spam, impersonation, fake reviews, deceptive growth, and platform-rule evasion. It can draft an acquisition artifact, but sending or publishing it requires approval of the exact action.
-```
+## Human writing and submission checklist
 
-### "Why not make this a SaaS?"
+- Read the current HN guidelines immediately before submitting.
+- Open a blank editor with AI assistance disabled.
+- Write the title and any submission text from personal memory.
+- Check factual details against the source links, then close this prep sheet.
+- Keep the tone curious and specific rather than promotional.
+- Link the original public source without a signup wall.
+- Disclose limitations that matter to the claim.
+- Submit once from the maker's established account.
+- Stay available to participate as a person.
+- Write every comment yourself. Do not paste generated text, use AI editing, or
+  ask an AI to draft a reply.
+- Do not solicit upvotes, comments, or submissions.
+- Do not coordinate votes, manufacture support, delete and repost, or use HN
+  primarily as a promotion channel.
 
-```text
-The first thing I want tested is the method. Plain files make the assumptions and safety gates easy to inspect, fork, and correct. A runtime would add deployment and trust questions before there is evidence that one is needed.
-```
-
-### "Is the personal-AGI language serious?"
-
-```text
-It is a question, not a product claim. I am interested in whether a person, a capable model, and a library of reusable economic procedures can outperform a generic prompt. This repository tests one narrow part of that idea.
-```
-
-### "What is the 1% pledge?"
-
-```text
-It is an optional maintenance pledge for attributable profit, with no tracking or obligation. It is not a license condition, success fee, or part of the Show HN pitch. The project remains MIT licensed and fully usable without payment.
-```
-
-## Submission conduct
-
-- Submit once from the maker's account.
-- Stay available to answer technical and methodological questions in your own
-  words.
-- Do not ask anyone to upvote, coordinate votes, or create supportive comments.
-- Link directly to working source. Do not use a signup wall.
-- Answer criticism with repo evidence or change the repo. Do not argue from the
-  name, the model brand, or hypothetical future results.
+If the owner cannot follow the human-only rule, skip Hacker News.

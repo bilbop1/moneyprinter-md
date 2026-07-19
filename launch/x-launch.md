@@ -17,17 +17,17 @@ The models are finally good. Their money playbooks are not.
 
 MoneyPrinter.md is open source: 7 portable AI revenue skills.
 
-A 5-minute interview picks one payable test. Cash, pipeline, estimates, and simulations stay separate.
+A short interview picks one payable test. Cash, pipeline, estimates, and simulations stay separate.
 
 https://github.com/bilbop1/moneyprinter-md
 ```
 
-Character count: 270, including the full URL.
+Character count: 267, including the full URL.
 
 ## First reply
 
 ```text
-Start with the 5-minute interview, whether you're starting from zero or already run a business. Routes change with your assets, proof, time, authority, and risk.
+Start with the short interview, whether you're starting from zero or already run a business. Routes change with your assets, proof, time, authority, and risk.
 
 Every example is a Simulation. External actions need approval.
 
@@ -126,8 +126,10 @@ https://github.com/bilbop1/moneyprinter-md
 
 ## Posting notes
 
-- Pair the post with the MoneyPrinter social card or one clean screenshot of the
-  interview-to-experiment flow. Do not use a fake revenue dashboard.
+- Use `launch/assets/moneyprinter-social-card.png` as the primary image. For a
+  product screenshot, use `launch/assets/landing-desktop-preview.png` or
+  `launch/assets/landing-mobile-preview.png` after confirming it matches the
+  live page. Do not use a fake revenue dashboard.
 - Use the flagship post plus first reply for the cleanest personal-account
   launch. Use the thread only if you can stay available to answer questions.
 - Do not put the voluntary 1% pledge in the opening post or thread. If someone

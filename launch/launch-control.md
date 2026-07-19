@@ -65,8 +65,10 @@ experience in replies.
    the initial launch. Do not post both as duplicate launches.
 8. Post while you can stay available for at least two hours. Answer questions
    with links to exact source files, and turn reproducible failures into issues.
-9. Submit Show HN once, only when you can participate in the discussion. Do not
-   coordinate votes or ask friends to comment.
+9. Consider Show HN only after the owner reads `launch/show-hn.md` and writes
+   the title, submission text, and comments personally from a blank editor. HN
+   prohibits generated or AI-edited comments. Submit once, stay available, and
+   do not coordinate votes or ask friends to comment.
 10. Submit the direct skill surfaces next, beginning with the channels marked
     P0 in the directory matrix. Customize each submission to its rules.
 11. Approach curated lists one at a time. Confirm that each list accepts this
