@@ -2,13 +2,12 @@
 
 ## Verdict
 
-**P0 — exact registry fit, with a license decision.** ClawHub can give each
+**P0 — exact registry fit.** ClawHub can give each
 MoneyPrinter skill a versioned, searchable page with install commands, download
 counts, stars, tags, changelogs, and scan state.
 
-**Status:** blocked on ClawHub authentication, the confirmed publisher handle,
-the public source URL, and an explicit owner decision about MIT-0 publication.
-Nothing has been uploaded.
+**Status:** public source verified; blocked on ClawHub authentication, the
+confirmed publisher handle, and a clean dry run. Nothing has been uploaded.
 
 ## Current official submission path
 
@@ -28,9 +27,9 @@ Sources: [official ClawHub overview](https://docs.openclaw.ai/clawhub),
 - Authenticate with a GitHub account that passes ClawHub's upload gate.
 - Confirm the personal or organization publisher handle.
 - Review the scan output for all seven folders.
-- **Owner accepts that ClawHub currently publishes skills under MIT-0.** The
-  repository uses MIT and each `SKILL.md` currently declares MIT. Do not publish
-  until the intended licensing treatment is resolved.
+- Keep the GitHub repository under MIT. ClawHub's current CLI reference says a
+  published skill is released there under MIT-0; its publishing guide omits
+  that detail. Treat the ClawHub submission as a separately licensed copy.
 
 ## Exact commands
 
@@ -41,7 +40,7 @@ clawhub whoami
 clawhub sync --root ./skills --all --dry-run
 ```
 
-Only after the dry run is clean and the license decision is recorded:
+Only after the dry run is clean:
 
 ```sh
 clawhub sync --root ./skills --all
@@ -106,7 +105,7 @@ source repository's social preview current.
 
 ## Review risks
 
-- MIT versus MIT-0 is a real publication decision, not a formatting detail.
+- Keep the repository and skill metadata license declarations consistent.
 - The word “money” may trigger extra security/moderation scrutiny; the
   descriptions must lead with bounded tests, evidence labels, and approval.
 - Publishing seven skills creates seven artifacts to version and maintain.
@@ -114,6 +113,6 @@ source repository's social preview current.
 
 ## Final human action
 
-Review the exact dry-run plan, confirm the publisher and license decision, then
-approve or decline the real `clawhub sync` command. Inspect every resulting
-public page logged out before linking it.
+Review the exact dry-run plan and confirmed publisher, then run the real
+`clawhub sync` command under ClawHub's documented MIT-0 publication terms.
+Inspect every resulting public page logged out before linking it.

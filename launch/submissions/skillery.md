@@ -6,8 +6,8 @@
 Skillery advertises submission of GitHub-hosted skills and marketplace
 discovery for Claude Code, Codex CLI, and other agents.
 
-**Status:** blocked on the live public GitHub URL, owner sign-in, and inspection
-of the authenticated submission form. Nothing has been submitted or listed.
+**Status:** public source ready; blocked on owner sign-in and inspection of the
+authenticated submission form. Nothing has been submitted or listed.
 
 ## Current official submission path
 
@@ -109,7 +109,7 @@ data exist.
 
 ## Final human action
 
-After the repository is public, open the live submission gate and review the
+Open the live submission gate and review the
 authentication permissions and actual fields. Submit the smallest supported
 shape, then inspect every generated claim and public URL logged out before
 sharing it.

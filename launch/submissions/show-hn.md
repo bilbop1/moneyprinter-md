@@ -6,9 +6,9 @@
 The project qualifies only when HN readers can install and run it from the
 public repository without a signup wall.
 
-**Status:** blocked on the public repository, a successful clean remote
-install, and one retained end-to-end host invocation. Nothing has been
-submitted.
+**Status:** public repository and clean remote discovery verified; blocked on
+one retained end-to-end host invocation and the owner's human-written
+submission. Nothing has been submitted.
 
 ## Current official submission path
 
@@ -114,6 +114,6 @@ graphic.
 
 ## Final human action
 
-Run the clean install and retained end-to-end host invocation. In a blank editor,
-write the title and first comment personally from the checklists, submit the
-public repository once, and stay available for candid questions.
+Complete the retained end-to-end host invocation. In a blank editor, write the
+title and first comment personally from the checklists, submit the public
+repository once, and stay available for candid questions.

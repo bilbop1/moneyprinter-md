@@ -8,7 +8,7 @@ under `optional-skills/<category>/<skill-name>/` and submit a pull request. A
 merged contribution enters the official catalog; submission does not imply
 acceptance.
 
-**Status:** blocked on the public GitHub URL, Hermes-specific packaging, a
+**Status:** public source ready; blocked on Hermes-specific packaging, a
 retained Hermes install-and-invocation test, and review of the current
 repository contribution rules. No pull request has been opened.
 

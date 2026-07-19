@@ -129,11 +129,11 @@ test("keeps the production surface honest and starter-free", async () => {
   assert.match(page, /https:\/\/github\.com\/bilbop1\/moneyprinter-md/);
   assert.match(page, /host activation remains unverified/i);
   assert.match(page, /MiniMax is provider-only/i);
-  assert.match(page, /Remote install target — confirm the repository is live before running\./i);
-  assert.match(page, /GitHub installer route is documented; live-public verification is pending\./i);
+  assert.match(page, /Install all seven skills from the public repository\./i);
+  assert.match(page, /Public GitHub installer command verified\./i);
   assert.doesNotMatch(
     page,
-    /Install all seven skills from the public repository|Public GitHub installer command is provided/i,
+    /Remote install target — confirm the repository is live before running|live-public verification is pending/i,
   );
   assert.match(page, /voluntarily returning 1%/i);
   assert.doesNotMatch(page, /ko-fi/i);

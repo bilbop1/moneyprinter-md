@@ -7,9 +7,10 @@ contain skills. Anthropic documents submissions to the `claude-community`
 marketplace and separately documents independently hosted marketplaces. The
 curated `claude-plugins-official` marketplace has no application process.
 
-**Status:** blocked on Claude plugin packaging, local validation, live URLs,
-account access, and review. The current repository is an Agent Skills source
-pack, not a confirmed Claude marketplace plugin.
+**Status:** public source ready; blocked on Claude plugin packaging, local
+validation, the landing/policy URLs, account access, and review. The current
+repository is an Agent Skills source pack, not a confirmed Claude marketplace
+plugin.
 
 ## Current official submission path
 

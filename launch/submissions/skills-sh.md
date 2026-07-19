@@ -6,8 +6,8 @@
 surface for the current repository format. It can also feed Hermes discovery,
 because Hermes' Skills Hub searches Skills.sh.
 
-**Status:** blocked until the GitHub repository is public and the remote install
-works. No separate submission or listing is claimed.
+**Status:** public source and clean remote discovery verified on 2026-07-19.
+No separate submission form or directory-placement claim is made.
 
 ## Current official submission path
 
@@ -33,7 +33,7 @@ Sources: [official CLI reference](https://www.skills.sh/docs/cli),
 
 ## Exact commands
 
-Run only after the repository works logged out:
+Verified release commands:
 
 ```sh
 npx skills add bilbop1/moneyprinter-md --list
@@ -96,6 +96,5 @@ before launch because Skills.sh sends users back to source.
 
 ## Final human action
 
-After public-URL confirmation, run the two commands once, inspect the resulting
-Skills.sh pages, then add only the real package URL and install badge to the
-README.
+Inspect the resulting Skills.sh pages, then add only a confirmed package URL
+and install badge to the README. Do not repeat installs to manufacture rank.

@@ -2,13 +2,15 @@
 
 ## Publication status
 
-The links below are publication targets, not confirmed live URLs:
+The GitHub source and remote discovery path were confirmed live on 2026-07-19:
 
-- GitHub target: `https://github.com/bilbop1/moneyprinter-md`
-- Landing-page target: `https://moneyprinter.bilbop.org`
+- GitHub: `https://github.com/bilbop1/moneyprinter-md`
+- Remote check: `npx skills add bilbop1/moneyprinter-md --list` found all seven
+  skills.
+- Landing-page target: `https://moneyprinter.bilbop.org` is **not live yet**.
 
-Do not post this copy until both links open in a logged-out browser and the
-GitHub install path passes from a clean directory.
+The recommended flagship post and thread posts 1–5 may be used now. Do not post
+the first reply or thread post 6 until the landing-page URL works logged out.
 
 ## Recommended flagship post
 

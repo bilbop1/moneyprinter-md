@@ -13,14 +13,14 @@ from a blank editor and in their own words.
 
 ## No-submission status
 
-Nothing has been submitted to Hacker News. These remain unverified publication
-targets:
+Nothing has been submitted to Hacker News. Current publication status:
 
-- GitHub: `https://github.com/bilbop1/moneyprinter-md`
-- Landing page: `https://moneyprinter.bilbop.org`
+- GitHub: `https://github.com/bilbop1/moneyprinter-md` is public; clean remote
+  discovery found all seven skills on 2026-07-19.
+- Landing page: `https://moneyprinter.bilbop.org` is not live.
 
-Do not submit until the GitHub repository is public, its published install path
-passes from a clean directory, and both targets open while logged out.
+Do not submit until one retained end-to-end host invocation exists. The landing
+page is optional for an HN submission whose original source is the repository.
 
 ## Best source to submit
 

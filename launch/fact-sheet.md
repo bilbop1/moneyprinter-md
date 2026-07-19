@@ -50,12 +50,13 @@ contains a `SKILL.md`; supporting material stays beside the skill.
 - Format: text-first Agent Skills directories using `SKILL.md`.
 - Repository license: MIT.
 - Release candidate: `0.1.0-rc.1`.
-- Public repository target: `https://github.com/bilbop1/moneyprinter-md`.
-- The target URL is not a live-publication claim until it works in a logged-out
-  browser and a fresh remote install.
-- ClawHub is a special case: its current terms publish skills under MIT-0.
-  Publishing there requires a deliberate owner decision; do not imply the
-  repository's MIT license and ClawHub's MIT-0 publication are identical.
+- Public repository: `https://github.com/bilbop1/moneyprinter-md`.
+- Logged-out access and a clean seven-skill remote discovery run were verified
+  on 2026-07-19.
+- ClawHub's current CLI reference says publishing releases the submitted copy
+  under MIT-0, even though its publishing guide does not surface that license
+  detail. The GitHub repository remains MIT; publishing the same skill content
+  on ClawHub under its documented MIT-0 terms is separately permitted.
 
 ## Audience
 
@@ -170,14 +171,14 @@ Use these only after current evidence exists:
 
 | Surface | Intended value | Confirmed live? | Blocker |
 |---|---|---:|---|
-| GitHub | `https://github.com/bilbop1/moneyprinter-md` | No | Public repository and logged-out verification |
+| GitHub | `https://github.com/bilbop1/moneyprinter-md` | Yes | Public and verified logged out on 2026-07-19 |
 | GitHub private vulnerability reporting | Repository security intake | No | Enable in repository settings before public launch |
 | Code-of-conduct enforcement | Confirmed private reporting route | No | Owner-confirmed monitored private contact or GitHub private-reporting route |
 | Landing page | MoneyPrinter page on `bilbop.org` | No | Final deployed URL and logged-out verification |
 | Ko-fi | Voluntary 1% pledge | No | Exact owner-confirmed Ko-fi username |
 | X | Owner's launch post | No | Final account, links, image, and owner action |
-| Skills.sh | GitHub-sourced install page | No | Public repository and first legitimate remote install |
-| ClawHub | Seven versioned skill listings | No | GitHub-backed auth, owner handle, MIT-0 decision, dry run |
+| Skills.sh | GitHub-sourced install path | Yes | Clean remote discovery found all seven skills; directory rank is not claimed |
+| ClawHub | Seven versioned skill listings | No | GitHub-backed auth, owner handle, and dry run |
 | OpenAI Plugins Directory | Skills-only plugin | No | Plugin package, public policy/support URLs, identity, auth, review |
 | Claude community marketplace | Skills plugin | No | Claude plugin package, validation, eligible submitter account, auth, review |
 | Hermes optional-skills catalog | Native catalog listing | No | Hermes-specific packaging, retained host test, public source, PR review |

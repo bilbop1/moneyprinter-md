@@ -69,7 +69,7 @@ export default function Home() {
               <code>{installCommand}</code>
               <button type="button" onClick={copyInstall} aria-label={`${copyLabel}: ${installCommand}`}>{copyLabel}</button>
             </div>
-            <p className="copy-status" aria-live="polite">{copyState === "manual" ? "Clipboard unavailable — the command stays selectable." : copyState === "copied" ? "Command copied to clipboard." : "Remote install target — confirm the repository is live before running."}</p>
+            <p className="copy-status" aria-live="polite">{copyState === "manual" ? "Clipboard unavailable — the command stays selectable." : copyState === "copied" ? "Command copied to clipboard." : "Install all seven skills from the public repository."}</p>
             <div className="hero-controls">
               <a className="text-control" href={repositoryUrl} target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
               <a className="text-control" href="#method">Read the method <span aria-hidden="true">↓</span></a>
@@ -110,7 +110,7 @@ export default function Home() {
 
         <section id="compatibility" className="section-shell compatibility" aria-labelledby="compatibility-title">
           <div><p className="section-label">05 / PORTABILITY IS A CLAIM TOO</p><h2 id="compatibility-title">Installable is not activated.</h2><p>The portable core is installer-documented but host activation remains unverified. MiniMax is provider-only. Treat every host-specific claim as a receipt waiting to happen.</p></div>
-          <div className="matrix" role="table" aria-label="Compatibility matrix"><div className="matrix-row matrix-head" role="row"><span role="columnheader">Surface</span><span role="columnheader">State</span><span role="columnheader">Meaning</span></div><div className="matrix-row" role="row"><span role="cell">Portable core</span><span role="cell" className="signal">Installer-documented</span><span role="cell">GitHub installer route is documented; live-public verification is pending.</span></div><div className="matrix-row" role="row"><span role="cell">Host activation</span><span role="cell" className="warning">Unverified</span><span role="cell">Do not imply it works everywhere.</span></div><div className="matrix-row" role="row"><span role="cell">MiniMax</span><span role="cell" className="warning">Provider-only</span><span role="cell">Not a general compatibility promise.</span></div></div>
+          <div className="matrix" role="table" aria-label="Compatibility matrix"><div className="matrix-row matrix-head" role="row"><span role="columnheader">Surface</span><span role="columnheader">State</span><span role="columnheader">Meaning</span></div><div className="matrix-row" role="row"><span role="cell">Portable core</span><span role="cell" className="signal">Installer-verified</span><span role="cell">Public GitHub installer command verified.</span></div><div className="matrix-row" role="row"><span role="cell">Host activation</span><span role="cell" className="warning">Unverified</span><span role="cell">Do not imply it works everywhere.</span></div><div className="matrix-row" role="row"><span role="cell">MiniMax</span><span role="cell" className="warning">Provider-only</span><span role="cell">Not a general compatibility promise.</span></div></div>
         </section>
 
         <section id="method" className="section-shell method-section" aria-labelledby="method-title">

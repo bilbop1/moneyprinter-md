@@ -1,8 +1,8 @@
 # MoneyPrinter.md site
 
 Production landing page for MoneyPrinter.md: a receipts-first revenue operating
-system for frontier agents. The site does not promise income, publish an
-unconfirmed repository, or imply host compatibility that has not been verified.
+system for frontier agents. The site does not promise income or imply host
+compatibility that has not been verified.
 
 The deployable source is a Vinext/React page with a Cloudflare Worker entry
 point for Sites. It has no application authentication, database, analytics,
@@ -21,8 +21,9 @@ npm test
 
 Use `npx skills add . --list` as the local discovery check before publishing.
 The visitor-facing command is
-`npx skills add bilbop1/moneyprinter-md`; do not deploy the site until that
-remote command passes from a clean directory. `npm run build` produces the
+`npx skills add bilbop1/moneyprinter-md`; that remote command found all seven
+skills from a clean directory on 2026-07-19. `npm run build` produces the
 Cloudflare Worker-compatible production output. The required deployment wiring
 is committed in `.openai/hosting.json`, `vite.config.ts`, `build/`, and
-`worker/`; generated build output and local dependency state are ignored by Git.
+`worker/`; generated build output and local dependency state are ignored by
+Git.

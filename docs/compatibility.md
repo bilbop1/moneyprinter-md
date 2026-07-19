@@ -25,28 +25,29 @@ current documentation at install time.
 
 | Surface | Status | What this means now | Practical route |
 | --- | --- | --- | --- |
-| Claude Code CLI/IDE | Installer-supported | `skills` documents a Claude Code target; Claude Code also documents scoped custom skills. | Use the publication-target installer command after the repository is public, or copy the source directory into a Claude Code skill scope. |
+| Claude Code CLI/IDE | Installer-supported | `skills` documents a Claude Code target; Claude Code also documents scoped custom skills. | Use `npx skills add bilbop1/moneyprinter-md`, or copy the source directory into a Claude Code skill scope. |
 | Claude web/Cowork | Manual | This repository does not claim a native marketplace or durable automatic install for the web/Cowork surface. | Paste the relevant skill into project knowledge/instructions or upload the source files where that workspace permits it. |
-| Codex app/CLI | Installer-supported | `skills` documents a Codex target; Codex documents skills, with availability varying by app, CLI, plan, and administrator settings. | Use the publication-target installer command after the repository is public, or copy the source directory into a Codex-recognized skill location. |
+| Codex app/CLI | Installer-supported | `skills` documents a Codex target; Codex documents skills, with availability varying by app, CLI, plan, and administrator settings. | Use `npx skills add bilbop1/moneyprinter-md`, or copy the source directory into a Codex-recognized skill location. |
 | ChatGPT web | Manual | The web product is not claimed as an automatic Agent Skills consumer by this project. | Paste the needed workflow into project instructions or attach the selected `SKILL.md` and references when the workspace allows files. |
-| Kimi Code CLI | Installer-supported | `skills` documents a Kimi Code CLI target, and Kimi Code documents custom skills. | Use the publication-target installer command after the repository is public, or copy the source directory into Kimi Code's current documented skill location. |
+| Kimi Code CLI | Installer-supported | `skills` documents a Kimi Code CLI target, and Kimi Code documents custom skills. | Use `npx skills add bilbop1/moneyprinter-md`, or copy the source directory into Kimi Code's current documented skill location. |
 | Kimi app/Work | Manual | Kimi's app/Work experience is not claimed as a stable automatic importer here. | Paste or upload the selected workflow and keep external actions human-approved. |
 | Hermes | Manual | Hermes documents a skills system and user/project skill locations; this project has not run its activation suite there. | Copy a complete skill directory, including `references/`, to the location in the installed Hermes documentation. |
-| OpenClaw | Installer-supported | `skills` documents an OpenClaw target, and OpenClaw documents local/project skill loading. | Use the publication-target installer command after the repository is public, or copy a complete skill directory to the current documented OpenClaw scope. |
+| OpenClaw | Installer-supported | `skills` documents an OpenClaw target, and OpenClaw documents local/project skill loading. | Use `npx skills add bilbop1/moneyprinter-md`, or copy a complete skill directory to the current documented OpenClaw scope. |
 | MiniMax | Provider-only | MiniMax is treated here as a model/provider or tool surface, not as proof of an equivalent stable consumer skill host. | Use MoneyPrinter through a compatible harness that can call MiniMax; do not infer a native MiniMax import path from this repository. |
 
-## What was actually checked locally
+## What was actually checked
 
-Before publication, this project uses:
+The local discovery check is:
 
 ```bash
 npx skills add . --list
 ```
 
-The expected result is one listing each for `moneyprinter`, `opportunity-radar`,
-`offer-engine`, `payable-test`, `ethical-acquisition`, `delivery-proof`, and
-`cashflow-review`. This verifies local package discovery only. It does not
-upgrade any table row to **Verified**.
+The same `--list` check against `bilbop1/moneyprinter-md` found one listing each
+for `moneyprinter`, `opportunity-radar`, `offer-engine`, `payable-test`,
+`ethical-acquisition`, `delivery-proof`, and `cashflow-review` from a clean
+directory on 2026-07-19. This verifies installer discovery, not activation in a
+third-party host, so it does not upgrade any table row to **Verified**.
 
 ## Manual-copy contract
 

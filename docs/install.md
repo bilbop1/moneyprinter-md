@@ -25,22 +25,18 @@ Expected result: each of the seven names above appears exactly once. This is a
 local discovery check, not a claim that a particular agent surface has been
 activated.
 
-## Publication-target installer commands
+## Public installer commands
 
-`bilbop1/moneyprinter-md` is a **publication target only** at the time this
-document was written. The remote has not been confirmed public, so do not treat
-the following as live commands until the maintainer confirms that the repository
-exists publicly at its intended URL.
+The public repository and remote discovery route were verified on 2026-07-19.
+A clean `--list` run found all seven expected skills:
 
 ```bash
-# Run only after public-remote confirmation.
 npx skills add bilbop1/moneyprinter-md
 ```
 
-When the public remote is confirmed, select a target explicitly if desired:
+Select a target explicitly if desired:
 
 ```bash
-# Publication-target examples; do not run before public-remote confirmation.
 npx skills add bilbop1/moneyprinter-md -g -a claude-code
 npx skills add bilbop1/moneyprinter-md -g -a codex
 npx skills add bilbop1/moneyprinter-md -g -a kimi-code-cli

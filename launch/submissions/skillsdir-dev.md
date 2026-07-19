@@ -5,7 +5,7 @@
 **P2 — exact skill-directory fit with a documented GitHub and CLI contribution
 path, but reach is not independently validated.**
 
-**Status:** blocked on the live public source, owner GitHub authentication, and
+**Status:** public source ready; blocked on owner GitHub authentication and
 review of the current issue template or CLI behavior. Nothing has been
 submitted or published.
 
@@ -100,7 +100,7 @@ CLI. Acceptance, placement, and traffic are not guaranteed.
 
 ## Final human action
 
-After the public source works, inspect the current GitHub issue template and CLI
-documentation. Prefer the GitHub issue path unless the owner has reviewed the
+Inspect the current GitHub issue template and CLI documentation. Prefer the
+GitHub issue path unless the owner has reviewed the
 exact `skill` CLI package and command. Submit the router first, then record the
 accepted listing URL before considering companion submissions.

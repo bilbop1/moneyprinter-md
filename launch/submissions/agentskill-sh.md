@@ -5,7 +5,7 @@
 **P1 — exact third-party directory fit.** The form imports every detected
 `SKILL.md` from a public GitHub repository and can keep it synced.
 
-**Status:** blocked on the live public GitHub URL. Nothing has been imported.
+**Status:** public source ready; nothing has been imported.
 
 ## Current official submission path
 

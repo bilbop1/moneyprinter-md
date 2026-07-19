@@ -8,8 +8,9 @@ GitHub pull requests and says site login supports voting. That conflicts with
 the previously inferred live-site launch flow, so this channel must wait for a
 fresh authoritative route check.
 
-**Status:** blocked on authoritative submission-path verification and live
-URLs. No listing, pull request, draft, or launch is claimed.
+**Status:** public repository ready; blocked on authoritative submission-path
+verification and the live landing page. No listing, pull request, draft, or
+launch is claimed.
 
 ## Current submission path
 

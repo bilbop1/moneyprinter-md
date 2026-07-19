@@ -6,8 +6,9 @@
 scheduled launch page and persistent listing, but a direct skill directory
 should precede it.
 
-**Status:** blocked on the live landing page and repository, account access,
-logo, and screenshots. No product has been added to the queue or scheduled.
+**Status:** public repository ready; blocked on the live landing page, account
+access, logo, and screenshots. No product has been added to the queue or
+scheduled.
 
 ## Current official submission path
 

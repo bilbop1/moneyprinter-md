@@ -7,9 +7,8 @@ zero-star cold start.** OpenAgentSkill requires at least ten GitHub stars before
 submission and applies static security, AI quality, and publication-gate
 checks.
 
-**Status:** blocked on the live public GitHub repository, at least ten organic
-stars, owner submission, and approval. Nothing has been submitted, approved, or
-listed.
+**Status:** public source ready; blocked on at least ten organic stars, owner
+submission, and approval. Nothing has been submitted, approved, or listed.
 
 ## Current official submission path
 

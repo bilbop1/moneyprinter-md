@@ -6,8 +6,8 @@
 validated.** It is worth a second-wave submission after the larger direct skill
 directories.
 
-**Status:** blocked on the live GitHub URL and owner-confirmed identity/contact
-fields. Nothing has been submitted.
+**Status:** public source ready; blocked on owner-confirmed identity/contact
+fields and submission. Nothing has been submitted.
 
 ## Current official submission path
 

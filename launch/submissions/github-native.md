@@ -7,8 +7,9 @@ other high-fit channel resolves back to the repository. GitHub can amplify
 useful releases, stars, forks, discussions, field reports, and linked installs,
 but it cannot guarantee cold-start traffic or Trending placement.
 
-**Status:** blocked on a live public repository and working owner
-authentication. The repository target is not claimed live.
+**Status:** public source and remote install verified on 2026-07-19. Repository
+metadata, social preview, release, Discussions, and security settings are being
+configured; the landing-page URL remains pending.
 
 ## Current submission path
 

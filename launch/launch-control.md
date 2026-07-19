@@ -2,12 +2,12 @@
 
 ## Current state
 
-The intended public URLs are not considered live until the preflight below
-passes:
+GitHub is live and its clean remote-discovery check passes. The landing page
+remains unpublished:
 
 | Surface | Publication target | Launch-ready when |
 | --- | --- | --- |
-| GitHub | `https://github.com/bilbop1/moneyprinter-md` | Public, logged-out access works, and a clean install lists all seven skills |
+| GitHub | `https://github.com/bilbop1/moneyprinter-md` | **Passed 2026-07-19:** public logged-out access and clean discovery of all seven skills |
 | Landing page | `https://moneyprinter.bilbop.org` | Public, correct project renders, mobile works, and both calls to action resolve |
 
 Do not post or submit a target URL while it is private, unconfigured, or
@@ -26,7 +26,8 @@ report is better evidence than a large burst of passive impressions.
 
 ## What must be live first
 
-Launch is blocked until every item below passes:
+The GitHub source is already public. Promotion that includes the landing page
+remains blocked until its items below pass:
 
 - The GitHub repository opens while logged out and renders the intended README.
 - GitHub private vulnerability reporting is enabled before public launch.
@@ -44,10 +45,9 @@ Launch is blocked until every item below passes:
   `launch/show-hn.md` match the live URLs exactly.
 - No secret, local path, private hostname, test credential, or unconfirmed Ko-fi
   username appears in the public package.
-- Before inviting public participation at scale, the owner configures a real
-  private Code of Conduct enforcement contact. This is owner-required. Do not
-  invent an address, expose a private address in launch copy, or claim the
-  contact exists while it remains unset.
+- A private Code of Conduct contact is optional for this launch. If the owner
+  later creates one, document only a monitored role address such as
+  `conduct@bilbop.org`; do not invent or expose a personal address.
 
 If any item fails, fix it before promotion. Do not explain a broken first-run
 experience in replies.
@@ -56,12 +56,13 @@ experience in replies.
 
 1. Record the pre-launch baseline: repository stars, forks, watchers, open
    issues, unique visitors if available, and landing-page visits.
-2. Make the GitHub repository public first. Check it from a logged-out browser.
+2. **Done 2026-07-19:** make the GitHub repository public and check it logged
+   out.
 3. Create the first public release from the tested commit and verify its notes,
    files, and version. The notes must allow for a smaller discovery step when a
    credible payable test does not exist.
-4. Run the published install command from a new temporary directory. Confirm
-   all seven names and invoke `moneyprinter` with the harmless interview prompt.
+4. **Discovery done 2026-07-19:** the published command found all seven names
+   from a clean temporary directory. A retained host invocation remains open.
 5. Publish the landing page. Check desktop, narrow mobile, social metadata, the
    install command, and every outbound link.
 6. Update any publication-target labels in launch assets only after both URLs

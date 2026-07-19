@@ -8,9 +8,9 @@ plugin can bundle skills. This makes the repository easy to share once its Kimi
 manifest and retained host test exist. This research pass found no official
 third-party Kimi catalog submission form.
 
-**Status:** blocked on a Kimi plugin manifest, the public GitHub URL, a retained
+**Status:** public source ready; blocked on a Kimi plugin manifest, a retained
 Kimi Code install-and-invocation test, and a current community-rule check.
-Nothing has been installed publicly, listed, or posted.
+Nothing has been listed or posted.
 
 ## Current official submission path
 
@@ -20,7 +20,7 @@ Kimi Code accepts a plugin manifest at either:
 - `.kimi-plugin/plugin.json`
 
 The manifest can point its `skills` field at the packaged skills directory.
-After the public repository and manifest exist, install it with:
+After the manifest exists, install it with:
 
 ```text
 /plugins install https://github.com/bilbop1/moneyprinter-md

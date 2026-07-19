@@ -4,7 +4,7 @@
 
 **P1 — exact third-party directory fit with a very low submission burden.**
 
-**Status:** blocked on a public GitHub URL. Nothing has been submitted.
+**Status:** public source ready; nothing has been submitted.
 
 ## Current official submission path
 

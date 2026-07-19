@@ -1,5 +1,7 @@
 # MoneyPrinter.md
 
+![MoneyPrinter.md — run AI income experiments and keep the receipts](launch/assets/moneyprinter-social-card.png)
+
 > The models are finally good. Their money playbooks are not.
 
 **A receipts-first revenue operating system for frontier agents.**
@@ -13,13 +15,17 @@ value.
 Portable Agent Skills source · [host compatibility](docs/compatibility.md) · [evidence standard](skills/moneyprinter/references/evidence-standard.md)
 
 ```sh
-# From this repository checkout
+# Install from the public repository
+npx skills add bilbop1/moneyprinter-md
+
+# Or install from a local checkout
 npx skills add .
 ```
 
-The repository is prepared for publication as `bilbop1/moneyprinter-md`; that
-remote is a publication target, not a live-install claim. See [Install](docs/install.md)
-for local verification, remote confirmation, and manual-copy routes.
+The public source is
+[`bilbop1/moneyprinter-md`](https://github.com/bilbop1/moneyprinter-md).
+On 2026-07-19, a clean remote discovery check found all seven skills. See
+[Install](docs/install.md) for explicit host targets and manual-copy routes.
 
 ## Twenty-second explanation
 

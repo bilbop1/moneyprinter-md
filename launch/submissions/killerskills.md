@@ -7,8 +7,8 @@ reach is not independently validated.** KillerSkills accepts a public
 `SKILL.md` URL, validates and safety-scans it, and publishes approved content to
 its marketplace.
 
-**Status:** blocked on the live public GitHub URL, owner sign-in, and inspection
-of the authenticated submission flow. Nothing has been submitted or listed.
+**Status:** public source ready; blocked on owner sign-in and inspection of the
+authenticated submission flow. Nothing has been submitted or listed.
 
 ## Current official submission path
 
@@ -103,6 +103,6 @@ surface. Publication, placement, and traffic are not guaranteed.
 
 ## Final human action
 
-After the repository works logged out, sign in and submit only the primary
+The repository works logged out. Sign in and submit only the primary
 `moneyprinter` URL. Inspect the parsed content, safety result, compatibility
 claims, and public page before deciding whether to submit the six companions.
