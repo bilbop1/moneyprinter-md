@@ -1,172 +1,80 @@
 # MoneyPrinter.md
 
-![MoneyPrinter.md — run AI income experiments and keep the receipts](launch/assets/moneyprinter-social-card.png)
+![MoneyPrinter.md: run AI income experiments and keep the receipts](launch/assets/moneyprinter-social-card.png)
 
 > The models are finally good. Their money playbooks are not.
 
-**A receipts-first revenue operating system for frontier agents.**
+Most AI money playbooks are idea soup.
 
-No guaranteed income. No fake benchmark dollars. No autonomous spam.
-MoneyPrinter interviews you, recommends one bounded payable test when the
-evidence supports it—or a smaller discovery step when payment would be
-premature—and helps you research, offer, sell, deliver, and measure legitimate
-value.
+MoneyPrinter gives your agent a sequence: interview you, pick one route, design
+the smallest paid test, ask before doing anything public, then track whether money landed.
 
-Portable Agent Skills source · [host compatibility](docs/compatibility.md) · [evidence standard](skills/moneyprinter/references/evidence-standard.md)
+It can also tell you the idea is premature. That counts as working.
+
+This repo contains seven open-source Agent Skills. It does not promise income, customers, or a magic autonomous business.
 
 ```sh
-# Install from the public repository
 npx skills add bilbop1/moneyprinter-md
-
-# Or install from a local checkout
-npx skills add .
 ```
 
-The public source is
-[`bilbop1/moneyprinter-md`](https://github.com/bilbop1/moneyprinter-md).
-On 2026-07-19, a clean remote discovery check found all seven skills. See
-[Install](docs/install.md) for explicit host targets and manual-copy routes.
+Live overview: [moneyprinter.bilbop.org](https://moneyprinter.bilbop.org). A clean remote check found all seven skills.
+See the [install guide](docs/install.md) for local checkouts, manual copies, and host-specific notes.
 
-## Twenty-second explanation
+## What happens when you run it
 
-Invoke `moneyprinter`. It asks a short interview about the assets, expertise,
-proof, time, budget, authority, and risk you actually have. It then compares no
-more than three routes, recommends one bounded payable test (or a smaller
-discovery step when no credible test exists) and one fallback, and asks you to
-approve the route before it creates acquisition assets. It asks again
-immediately before any message, post, purchase, contract, or publication.
+1. Run `moneyprinter`.
+2. Answer a short interview about your skills, proof, time, budget, and risk.
+3. Review up to three routes. If none deserves a paid test, you get a smaller discovery step.
+4. Approve one route and its stop condition.
+5. If a payable test earns approval, use the remaining skills through delivery proof and cash review. Discovery routes stop earlier.
 
-What if personal AGI does not arrive as one magic model, but as a person, a
-frontier agent, and a library of economic skills that compound? That is the
-question this repository is testing—not a claim that it has been solved.
+It asks again immediately before any message, post, purchase, charge, contract, or publication. A vague "go ahead" is not permanent permission.
 
-## How the interview routes different people
+## The seven skills
 
-MoneyPrinter starts from reality rather than an archetype. A person with no
-audience may get a one-contact, fixed-scope test. A local operator may get a
-permissioned internal-workflow audit. The included lawyer simulation narrows to
-private scope-mapping with qualified review and no delegated judgment; it does
-not validate the pack for every regulated profession or jurisdiction. A creator
-gets a disclosed, policy-checked test rather than an engagement-growth promise.
-
-The output is a **Revenue Profile**, a primary route, a fallback, and an
-**Experiment Brief** with buyer, pain, offer hypothesis, cost ceiling, proof
-label, continue threshold, and stop condition. If a credible payable test does
-not exist, it says so and proposes a smaller discovery step.
-
-## Receipts taxonomy
-
-Economic language is a safety feature. Every result must carry exactly one
-label; a better-looking label cannot be inferred from weaker evidence.
-
-| Label | Means |
+| Skill | What it does |
 | --- | --- |
-| Cash collected | A payment settled and an inspected, privacy-safe settlement artifact supports it. |
-| Revenue contracted | An inspected, privacy-safe signed-obligation artifact exists; payment has not settled. |
-| Revenue booked | An invoice or order exists; payment has not settled. |
-| Pipeline signal | A reply, meeting, proposal, waitlist, or intent exists. |
-| Estimated economic value | A model with explicit assumptions and sensitivity. |
-| Simulation | A benchmark or hypothetical result. |
-| Unverified anecdote | A reported result without the artifact required for a stronger label. |
+| `moneyprinter` | Interviews you, compares routes, and writes the experiment brief. |
+| `opportunity-radar` | Checks current demand and keeps sources attached. |
+| `offer-engine` | Turns one problem into a fixed-scope offer with real economics. |
+| `payable-test` | Designs the smallest legitimate payment test. |
+| `ethical-acquisition` | Stages permissioned outreach for approval. |
+| `delivery-proof` | Defines delivery and records what the buyer accepted. |
+| `cashflow-review` | Decides whether to stop, revise, repeat, or scale. |
 
-Read the full [evidence standard](skills/moneyprinter/references/evidence-standard.md)
-before publishing a field report.
+## Five starting points
 
-## Three persona examples
+Every example below is a simulation, not a customer result, endorsement, or forecast.
 
-All examples are simulations: they are workflow demonstrations, not results,
-endorsements, or forecasts.
+- [Starting from zero](examples/starting-from-zero.md): one permitted contact and a four-hour ceiling.
+- [Roofer](examples/roofer-revenue-recovery.md): a private estimate follow-up audit before any homeowner contact.
+- [Lawyer](examples/lawyer-productized-expertise.md): scope mapping with qualified review and no delegated judgment.
+- [TikTok Shop creator](examples/tiktok-shop-conversion.md): a disclosed test checked against current platform rules.
+- [Existing operator](examples/existing-business-leverage.md): one leaking handoff, measured before live delivery changes.
 
-- [Starting from zero](examples/starting-from-zero.md): a $49 manual follow-up
-  sheet test with a single permitted contact and a four-hour ceiling.
-- [Roofer](examples/roofer-revenue-recovery.md): a permissioned internal
-  estimate-follow-up audit that never contacts homeowners or promises recovery.
-- [Lawyer](examples/lawyer-productized-expertise.md): an attorney-reviewed
-  educational FAQ route that excludes individualized legal advice.
+## What counts as proof
 
-There are also simulations for a [TikTok Shop creator](examples/tiktok-shop-conversion.md)
-and an [existing service business](examples/existing-business-leverage.md).
+- A reply is pipeline.
+- An invoice or order is booked revenue, not collected cash.
+- A model is an estimate.
+- Only a settled payment with inspected, privacy-safe support is cash collected.
 
-## Skill map
+The full [evidence standard](skills/moneyprinter/references/evidence-standard.md) defines the labels used across the pack.
 
-| Skill | Job | Output |
-| --- | --- | --- |
-| `moneyprinter` | Interview and route selection | Revenue Profile and Experiment Brief |
-| `opportunity-radar` | Current, source-labeled demand research | Opportunity dossier |
-| `offer-engine` | Fixed-scope offer and economics | Offer brief |
-| `payable-test` | Smallest legitimate payment test | Test card and thresholds |
-| `ethical-acquisition` | Permissioned acquisition planning | Drafts only, pending approval |
-| `delivery-proof` | Delivery boundary and proof capture | Acceptance record and field report |
-| `cashflow-review` | Stop, revise, repeat, or scale decision | Review decision |
+## Compatibility and safety
 
-Each skill is deliberately narrow. Start with `moneyprinter`; it chooses the
-next skill only after a route is approved.
+Installer discovery is verified. Conversation-level host activation is not. Read the [compatibility matrix](docs/compatibility.md) before claiming a host works.
+MiniMax is provider-only, not a confirmed native skill host.
 
-## Compatibility
+MoneyPrinter stages external actions until you give specific human approval. The [safety boundaries](skills/moneyprinter/references/safety-boundaries.md)
+cover regulated work, prohibited routes, and when approval expires.
 
-The canonical package is seven [Agent Skills](https://agentskills.io/specification)
-directories. The `skills` installer documents targets for Claude Code, Codex,
-Kimi Code CLI, and OpenClaw; Hermes has a documented manual route. GUI and web
-surfaces may require manual import, and MiniMax is treated as a provider rather
-than a confirmed native skill host. No host is claimed as conversation-validated
-by this release.
+## Read the full docs
 
-Use the [compatibility matrix](docs/compatibility.md) for the status of each
-surface and [installation guide](docs/install.md) for the local, published, and
-manual routes.
+[Evidence](skills/moneyprinter/references/evidence-standard.md) · [Compatibility](docs/compatibility.md) · [Research ledger](research/source-ledger.md) ·
+[Evaluation](evals/README.md) · [Contributing](CONTRIBUTING.md) · [Safety](skills/moneyprinter/references/safety-boundaries.md)
 
-## Research and proof methodology
+## License and the 1% pledge
 
-Research distinguishes primary or official evidence, replicated evidence,
-practitioner heuristics, and project hypotheses. Every research reference gets
-a source and review date in the [source ledger](research/source-ledger.md).
-
-The [persona evals](evals/README.md) exercise the interview and safety
-boundaries for a beginner, roofer, lawyer, creator, and experienced operator.
-The separate regulated-work fixtures cover stop and staging behavior for legal,
-medical, financial, tax, and employment prompts. Neither suite represents
-customer outcomes, professional validation, or jurisdictional compliance. Read
-the [evaluation provenance](evals/provenance.md); the relevant qualified
-review, host documentation, and fresh market evidence must be checked again
-before a real external action.
-
-## Safety and external-action gates
-
-MoneyPrinter excludes trading, gambling, speculative crypto, adult services,
-deceptive growth, impersonation, fake reviews, undisclosed synthetic
-testimonials, spam, and platform-rule evasion. It also does not automatically
-send, post, purchase, charge, sign, contract, or publish.
-
-The user must approve a specific external action immediately before execution.
-If the audience, channel, spend, payload, timing, account, or another material
-detail changes, approval must be renewed. Read the full
-[safety boundaries](skills/moneyprinter/references/safety-boundaries.md).
-
-## Contributing and field reports
-
-Useful contributions make the repository more inspectable: current sources,
-bounded workflows, clear evidence labels, and tests that prove the route stays
-inside its safety boundary. Start with [Contributing](CONTRIBUTING.md).
-
-Use the Field Report issue form only for a redacted, consent-aware account of
-what occurred. A failed test, a contradictory source, or an approval gate that
-prevented a bad action is useful evidence too. Use the research-correction form
-when a factual claim needs repair.
-
-## Voluntary 1% pledge
-
-If MoneyPrinter produces attributable profit for you, consider voluntarily
-returning 1% of that profit through Ko-fi. No tracking and no obligation. It
-funds source review, compatibility checks, and new field-tested playbooks.
-
-This is a social contract, not a license term, success fee, or payment
-requirement. There is no funding link until the owner confirms the precise
-Ko-fi username; read the [pledge](PLEDGE.md) and [funding note](docs/funding.md).
-
-## License and disclaimer
-
-MoneyPrinter is released under the [MIT License](LICENSE). It is a workflow
-library, not legal, financial, tax, medical, employment, or platform-policy
-advice. You remain responsible for review, consent, compliance, and every
-external action. It does not promise income, profit, customers, conversion, or
-any particular result.
+MoneyPrinter uses the [MIT License](LICENSE). If it produces attributable profit, consider voluntarily returning 1% to support maintenance and source review.
+The project does not track the pledge. It is not a license term, fee, or payment requirement. Read the [pledge](PLEDGE.md) and [funding note](docs/funding.md).
