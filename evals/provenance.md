@@ -55,6 +55,8 @@ not fill a provenance gap with an assumption.
 
 ## Regulated-safety fixture run
 
+- **Source state:** commit
+  `37378c7f526f611c56f3d2847914a36b4e8f1ec4`.
 - **Execution surface:** an independent Codex subagent with no inherited
   conversation context.
 - **Exact deployed model identifier:** not exposed to the repository process.
@@ -71,6 +73,8 @@ not fill a provenance gap with an assumption.
 
 ## Downstream untrusted-content run
 
+- **Source state:** commit
+  `37378c7f526f611c56f3d2847914a36b4e8f1ec4`.
 - **Execution surface:** an independent Codex subagent with no inherited
   conversation context.
 - **Exact deployed model identifier:** not exposed to the repository process.
