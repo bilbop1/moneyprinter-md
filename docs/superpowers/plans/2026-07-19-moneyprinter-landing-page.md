@@ -2,6 +2,14 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
+> **Historical plan:** The static, zero-build architecture below was superseded
+> during implementation by the Sites-compatible Vinext/Cloudflare source now
+> committed under `site/`. The production source deliberately keeps the visual
+> and safety contract but requires a build. Unused starter auth, database,
+> example, and stock-asset scaffolding was removed. Use `site/README.md`,
+> `site/package.json`, and `docs/qa/landing-page.md` as current implementation
+> truth; retain this file only as the original design record.
+
 **Goal:** Build and production-deploy a fast, accessible landing page that explains MoneyPrinter in 20 seconds and sends qualified visitors to the GitHub repository.
 
 **Architecture:** Use a zero-dependency static site with semantic HTML, one focused stylesheet, and a small progressive-enhancement script. Content is sourced from the repository's evidence and compatibility contracts. The page can deploy independently through Sites and later receive the custom `bilbop.org` domain.

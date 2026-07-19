@@ -4,7 +4,7 @@ description: Turn an approved Offer Brief and Payable Test Plan into a small, po
 license: MIT
 metadata:
   author: bilbop
-  version: "0.1.0"
+  version: "0.1.0-rc.1"
 ---
 
 # Ethical Acquisition

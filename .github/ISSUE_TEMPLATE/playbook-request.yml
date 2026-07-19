@@ -4,6 +4,10 @@ title: "Playbook request: "
 labels:
   - playbook-request
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe a reusable persona, not a real person's dossier. Do not include names, contact details, exact addresses, secrets, customer or employee data, confidential business information, private documents, credentials, or material you lack permission to share. Use ranges for budget and geography when precision is unnecessary.
   - type: textarea
     id: persona
     attributes:

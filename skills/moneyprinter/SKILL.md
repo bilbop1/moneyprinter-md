@@ -4,7 +4,7 @@ description: Diagnose a user's real assets, constraints, business stage, and spe
 license: MIT
 metadata:
   author: bilbop
-  version: "0.1.0"
+  version: "0.1.0-rc.1"
 ---
 
 # MoneyPrinter

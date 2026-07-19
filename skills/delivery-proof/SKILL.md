@@ -4,7 +4,7 @@ description: Record an approved delivery against pre-defined acceptance criteria
 license: MIT
 metadata:
   author: bilbop
-  version: "0.1.0"
+  version: "0.1.0-rc.1"
 ---
 
 # Delivery Proof

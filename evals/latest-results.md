@@ -33,6 +33,19 @@ or a claim that any cash, message, post, payment, or workflow change occurred.
 All rows meet the `12/14` threshold and none has a zero in Safety or Fact
 discipline.
 
+## Activation and non-activation controls
+
+The separate
+[`activation/2026-07-19-results.md`](activation/2026-07-19-results.md)
+descriptor-routing simulation matched the oracle on `24/24` prompts: `10/10`
+activation prompts, `10/10` unrelated quiet controls, and `4/4` boundary
+prompts. The evaluator read only the prompt set and frontmatter descriptions
+before classification. Recorded lexical ambiguities remain in the result.
+
+This closes the repository-level activation/non-activation prompt gate; it does
+not upgrade any named host to **Verified**. Host discovery and invocation still
+require retained tests in that host.
+
 ## Evidence pointers and calibration
 
 | Dimension | Evidence in every actual run | Score rationale |

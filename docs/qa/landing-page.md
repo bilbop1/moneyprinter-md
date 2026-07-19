@@ -26,8 +26,11 @@ Desktop:
 
 - One `h1`, eight named sections, all seven canonical skill names, the full
   evidence taxonomy, compatibility caveats, and the voluntary pledge rendered.
-- The local command is `npx skills add .`; `--list` remains a QA/discovery
-  command in repository documentation.
+- The visitor-facing command is
+  `npx skills add bilbop1/moneyprinter-md`, and the GitHub control is a real
+  link to the intended repository. The page must not be deployed until both
+  targets work publicly. `npx skills add . --list` remains the local
+  QA/discovery command in repository documentation.
 - The copy control changed to `Copied` and exposed the live-region confirmation
   `Command copied to clipboard.`
 - No warning or error was recorded for `localhost:4173`.
@@ -75,6 +78,6 @@ Before public promotion:
 1. Open the deployed Sites URL and eventual custom domain in a logged-out
    browser.
 2. Confirm the canonical and image URLs use the requested host.
-3. Confirm the GitHub call to action no longer says `not live` only after the
-   repository exists publicly.
+3. Confirm the GitHub control opens the intended public repository and the
+   remote install command lists all seven skills from a clean directory.
 4. Run the published installer from a clean temporary directory.

@@ -4,7 +4,7 @@ description: Convert approved opportunity evidence into a narrow, sellable offer
 license: MIT
 metadata:
   author: bilbop
-  version: "0.1.0"
+  version: "0.1.0-rc.1"
 ---
 
 # Offer Engine

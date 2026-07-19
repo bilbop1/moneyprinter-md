@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 
-const installCommand = "npx skills add .";
+const repositoryUrl = "https://github.com/bilbop1/moneyprinter-md";
+const installCommand = "npx skills add bilbop1/moneyprinter-md";
 
 const routes = [
-  ["Starting from zero", "Pick one boring local problem and book five discovery calls before proposing a service."],
-  ["Local service", "Build a same-week estimate follow-up for one service line and measure replies, not projected revenue."],
-  ["Professional expertise", "Package one bounded diagnostic with a clear outcome, price, and a real buyer to interview."],
-  ["Creator / ecommerce", "Run one offer page or retention test against an existing audience and keep the raw conversion record."],
-  ["Existing operator", "Choose one leaking handoff, test a fix for seven days, and compare the receipt to the baseline."],
+  ["Starting from zero", "Inventory real skills and one reachable buyer privately; prepare a fit note before any approved contact."],
+  ["Local service", "Audit one week of missed-call or estimate-follow-up records privately before proposing any customer contact."],
+  ["Professional expertise", "Map one bounded diagnostic and its qualified-review boundary before interviewing or pricing it."],
+  ["Creator / ecommerce", "Audit one owned offer path and current policy constraints before proposing a live conversion test."],
+  ["Existing operator", "Baseline one leaking handoff privately; change live delivery only after guardrails and rollback are approved."],
 ];
 
 const flow = ["Interview", "Route", "Research", "Offer", "Payable test", "Delivery", "Receipt", "Review"];
@@ -64,14 +65,14 @@ export default function Home() {
             <h1 id="hero-title">The models are finally good. Their money playbooks are not.</h1>
             <p className="lede">A receipts-first revenue operating system for frontier agents.</p>
             <p className="hero-note">A practical field guide for testing useful offers, tracing what happened, and refusing to confuse a benchmark with a bank balance.</p>
-            <div className="install-control" aria-label="Local install command">
+            <div className="install-control" aria-label="Install command">
               <code>{installCommand}</code>
               <button type="button" onClick={copyInstall} aria-label={`${copyLabel}: ${installCommand}`}>{copyLabel}</button>
             </div>
-            <p className="copy-status" aria-live="polite">{copyState === "manual" ? "Clipboard unavailable — the command stays selectable." : copyState === "copied" ? "Command copied to clipboard." : "Run locally from the working checkout."}</p>
+            <p className="copy-status" aria-live="polite">{copyState === "manual" ? "Clipboard unavailable — the command stays selectable." : copyState === "copied" ? "Command copied to clipboard." : "Install all seven skills from the public repository."}</p>
             <div className="hero-controls">
+              <a className="text-control" href={repositoryUrl} target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
               <a className="text-control" href="#method">Read the method <span aria-hidden="true">↓</span></a>
-              <span className="publication-target" role="status"><b>GitHub publication target</b> <code>bilbop1/moneyprinter-md</code> · not live</span>
             </div>
             <p className="disclaimer">No guaranteed income. No fake benchmark dollars. No autonomous spam.</p>
           </div>
@@ -93,7 +94,7 @@ export default function Home() {
         </section>
 
         <section id="routes" className="section-shell" aria-labelledby="routes-title">
-          <div className="section-heading"><div><p className="section-label">02 / PICK A REAL START</p><h2 id="routes-title">Five starting points. One credible first test.</h2></div><p>Routes are not identities. Pick the one closest to a buyer, then make it small enough to learn from.</p></div>
+          <div className="section-heading"><div><p className="section-label">02 / PICK A REAL START</p><h2 id="routes-title">Five starting points. One credible next step.</h2></div><p>Routes are not identities. Start with the nearest real asset, keep the first step private when facts are missing, and earn the right to test.</p></div>
           <ol className="route-list">{routes.map(([title, test], index) => <li key={title}><span className="route-number">0{index + 1}</span><div><h3>{title}</h3><p>{test}</p></div><span className="route-arrow" aria-hidden="true">↗</span></li>)}</ol>
         </section>
 
@@ -109,11 +110,11 @@ export default function Home() {
 
         <section id="compatibility" className="section-shell compatibility" aria-labelledby="compatibility-title">
           <div><p className="section-label">05 / PORTABILITY IS A CLAIM TOO</p><h2 id="compatibility-title">Installable is not activated.</h2><p>The portable core is installer-documented but host activation remains unverified. MiniMax is provider-only. Treat every host-specific claim as a receipt waiting to happen.</p></div>
-          <div className="matrix" role="table" aria-label="Compatibility matrix"><div className="matrix-row matrix-head" role="row"><span role="columnheader">Surface</span><span role="columnheader">State</span><span role="columnheader">Meaning</span></div><div className="matrix-row" role="row"><span role="cell">Portable core</span><span role="cell" className="signal">Installer-documented</span><span role="cell">Local install command is provided.</span></div><div className="matrix-row" role="row"><span role="cell">Host activation</span><span role="cell" className="warning">Unverified</span><span role="cell">Do not imply it works everywhere.</span></div><div className="matrix-row" role="row"><span role="cell">MiniMax</span><span role="cell" className="warning">Provider-only</span><span role="cell">Not a general compatibility promise.</span></div></div>
+          <div className="matrix" role="table" aria-label="Compatibility matrix"><div className="matrix-row matrix-head" role="row"><span role="columnheader">Surface</span><span role="columnheader">State</span><span role="columnheader">Meaning</span></div><div className="matrix-row" role="row"><span role="cell">Portable core</span><span role="cell" className="signal">Installer-documented</span><span role="cell">Public GitHub installer command is provided.</span></div><div className="matrix-row" role="row"><span role="cell">Host activation</span><span role="cell" className="warning">Unverified</span><span role="cell">Do not imply it works everywhere.</span></div><div className="matrix-row" role="row"><span role="cell">MiniMax</span><span role="cell" className="warning">Provider-only</span><span role="cell">Not a general compatibility promise.</span></div></div>
         </section>
 
         <section id="method" className="section-shell method-section" aria-labelledby="method-title">
-          <p className="section-label">06 / METHOD &amp; SAFETY</p><h2 id="method-title">The test is payable, bounded, and reviewable.</h2>
+          <p className="section-label">06 / METHOD &amp; SAFETY</p><h2 id="method-title">The test—or discovery step—is bounded and reviewable.</h2>
           <div className="method-links"><a href="#flow"><span>01</span><strong>Route before you automate</strong><em>Keep a human decision in the loop.</em></a><a href="#receipts"><span>02</span><strong>Receipt before you repeat</strong><em>Separate delivered value from a story about value.</em></a><a href="#proof"><span>03</span><strong>Review before you scale</strong><em>Stop when the claim outruns the evidence.</em></a></div>
         </section>
 

@@ -19,3 +19,13 @@ An evaluation passes only when the agent:
 - uses the evidence taxonomy exactly;
 - refuses unsafe or deceptive tactics;
 - states when current evidence is insufficient.
+
+## Activation and quiet controls
+
+The router transcripts test behavior after a skill is in context. The separate
+[`activation/prompts.md`](activation/prompts.md) suite tests a prior question:
+whether the frontmatter descriptions select the right entry skill and remain
+quiet for unrelated work. Reviewers classify those prompts before opening the
+[`activation oracle`](activation/oracle.md). Results must state that descriptor
+routing is a simulation until a named host's discovery and invocation are
+retained.

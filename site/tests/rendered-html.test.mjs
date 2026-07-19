@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const siteRoot = new URL("../", import.meta.url);
@@ -62,8 +62,12 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
   assert.match(html, /OPEN SOURCE\s*\/\s*RECEIPTS FIRST/);
   assert.match(html, /The models are finally good\. Their money playbooks are not\./);
   assert.match(html, /No guaranteed income\. No fake benchmark dollars\. No autonomous spam\./);
-  assert.match(html, /npx skills add \./);
-  assert.doesNotMatch(html, /npx skills add \. --list/);
+  assert.match(html, /npx skills add bilbop1\/moneyprinter-md/);
+  assert.doesNotMatch(html, /npx skills add (?:\.|\S+ --list)/);
+  assert.match(
+    html,
+    /<a[^>]+href="https:\/\/github\.com\/bilbop1\/moneyprinter-md"[^>]*>View on GitHub/i,
+  );
   assert.match(html, /bilbop1\/moneyprinter-md/);
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
 
@@ -95,6 +99,15 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
     assert.match(html, new RegExp(skill));
   }
 
+  assert.match(html, /Inventory real skills and one reachable buyer privately/);
+  assert.match(html, /Audit one week of missed-call or estimate-follow-up records privately/);
+  assert.match(html, /Baseline one leaking handoff privately/);
+  assert.match(html, /The test—or discovery step—is bounded and reviewable\./);
+  assert.doesNotMatch(
+    html,
+    /book five discovery calls|measure replies|test a fix for seven days/i,
+  );
+
   assert.match(html, /<a[^>]+class=["'][^"']*skip-link/i);
   assert.match(html, /<header\b/i);
   assert.match(html, /<main\b/i);
@@ -103,7 +116,7 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
   assert.doesNotMatch(html, /Your site is taking shape|Building your site|Starter Project|codex-preview|react-loading-skeleton/i);
 });
 
-test("keeps the production surface local, honest, and starter-free", async () => {
+test("keeps the production surface honest and starter-free", async () => {
   const [page, layout, css, packageJson, readme] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
@@ -113,16 +126,34 @@ test("keeps the production surface local, honest, and starter-free", async () =>
   ]);
 
   assert.match(page, /navigator\.clipboard/);
-  assert.match(page, /publication target/i);
+  assert.match(page, /https:\/\/github\.com\/bilbop1\/moneyprinter-md/);
   assert.match(page, /host activation remains unverified/i);
   assert.match(page, /MiniMax is provider-only/i);
   assert.match(page, /voluntarily returning 1%/i);
-  assert.doesNotMatch(page, /ko-fi|https?:\/\//i);
+  assert.doesNotMatch(page, /ko-fi/i);
+  assert.deepEqual(
+    [...new Set(page.match(/https?:\/\/[^";\s]+/g) ?? [])],
+    ["https://github.com/bilbop1/moneyprinter-md"],
+  );
   assert.doesNotMatch(layout, /next\/font|Starter Project|codex-preview/i);
   assert.doesNotMatch(css, /@import\s+url|https?:\/\//i);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
+  assert.doesNotMatch(packageJson, /drizzle|db:generate/);
   assert.equal(JSON.parse(packageJson).name, "moneyprinter-md-site");
+  assert.equal(JSON.parse(packageJson).version, "0.1.0-rc.1");
   assert.match(readme, /npx skills add \. --list/);
+
+  for (const unusedStarterPath of [
+    "../app/chatgpt-auth.ts",
+    "../db/index.ts",
+    "../drizzle.config.ts",
+    "../examples/d1/app/api/notes/route.ts",
+    "../public/file.svg",
+    "../public/globe.svg",
+    "../public/window.svg",
+  ]) {
+    await assert.rejects(access(new URL(unusedStarterPath, import.meta.url)));
+  }
 
   const guaranteedIncomeMentions = page.match(/guaranteed income/gi) ?? [];
   assert.equal(guaranteedIncomeMentions.length, 1);
@@ -132,7 +163,6 @@ test("keeps the production surface local, honest, and starter-free", async () =>
   assert.match(css, /\.wordmark,\s*nav a,\s*\.site-footer a,\s*\.text-control\s*\{[^}]*min-height:\s*44px[^}]*display:\s*inline-flex/is);
   assert.match(css, /\.hero-copy,\s*\.hero-receipt\s*\{[^}]*min-width:\s*0/is);
   assert.match(css, /\.install-control code\s*\{[^}]*min-width:\s*0/is);
-  assert.match(css, /\.publication-target\s*\{[^}]*overflow-wrap:\s*anywhere/is);
   assert.match(css, /@media \(max-width:\s*900px\)\s*\{[^}]*\.hero\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/is);
   assert.match(css, /@media \(max-width:\s*720px\)/i);
   assert.match(css, /\.flow-strip,\s*\.skill-map\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)[^}]*overflow-x:\s*visible/is);

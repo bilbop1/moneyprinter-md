@@ -22,8 +22,8 @@ was returned and nothing could be persisted to
 `site/.openai/hosting.json`. No version was saved or deployed.
 
 The Sites workflow prohibits blindly calling create more than once for the same
-local site. Do not invent an ID, reuse the unrelated `PVC Signal Ledger`
-project, or pretend a production URL exists.
+local site. Do not invent an ID, reuse another project, or pretend a production
+URL exists.
 
 ## Safe recovery
 
@@ -33,9 +33,8 @@ project, or pretend a production URL exists.
    user-authorized publish attempt rather than guessing an identifier.
 3. Persist the returned project ID exactly as `project_id` in
    `site/.openai/hosting.json`.
-4. Restore the validated nested site Git metadata from the ignored reversible
-   backup at `.superpowers/sdd/site-nested-git-backup` if a standalone Sites
-   source push is required.
+4. If a standalone Sites source checkout is required, initialize it from the
+   committed `site/` directory; do not depend on ignored local metadata.
 5. Commit the hosting manifest, rerun `npm test` and `npm run lint`, and push
    that exact site source state to the Sites source repository using a
    short-lived credential.
@@ -55,6 +54,6 @@ project, or pretend a production URL exists.
 - Confirm the canonical, `og:url`, Open Graph image, and X image use the
   requested host.
 - Confirm `/og.png` is 1200 × 630 and publicly fetchable.
-- Confirm the page has no `not live` GitHub label only after the repository is
-  public.
+- Confirm the GitHub control opens the intended public repository and the
+  displayed remote install command passes from a clean directory.
 - Repeat the clean published-install test before posting launch copy.
