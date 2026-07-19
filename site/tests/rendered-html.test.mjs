@@ -116,7 +116,7 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
   assert.match(html, /<header\b/i);
   assert.match(html, /<main\b/i);
   assert.match(html, /<footer\b/i);
-  assert.match(html, /0\.1\.0-rc\.1/);
+  assert.match(html, /0\.1\.0-rc\.2/);
   assert.doesNotMatch(html, /Your site is taking shape|Building your site|Starter Project|codex-preview|react-loading-skeleton/i);
 });
 
@@ -150,7 +150,7 @@ test("keeps the production surface honest and starter-free", async () => {
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.doesNotMatch(packageJson, /drizzle|db:generate/);
   assert.equal(JSON.parse(packageJson).name, "moneyprinter-md-site");
-  assert.equal(JSON.parse(packageJson).version, "0.1.0-rc.1");
+  assert.equal(JSON.parse(packageJson).version, "0.1.0-rc.2");
   assert.match(readme, /npx skills add \. --list/);
 
   for (const unusedStarterPath of [

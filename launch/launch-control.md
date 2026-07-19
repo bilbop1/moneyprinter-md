@@ -2,11 +2,10 @@
 
 ## Current state
 
-GitHub and the landing page are live. On 2026-07-19, the release and
-distribution checks used source commit
-`61549ff7440331588fd43b6c0707e8d783c51144`, a clean remote-discovery check
-found all seven skills, and the custom domain returned HTTPS 200 with its Sites
-domain, provider, and SSL states active.
+GitHub and the landing page are live. On 2026-07-19, a clean remote-discovery
+check against the current public source found all seven skills, and the custom
+domain returned HTTPS 200 with its Sites domain, provider, and SSL states
+active. The next release source target is `v0.1.0-rc.2`.
 
 | Surface | Publication target | Verified state |
 | --- | --- | --- |
@@ -41,9 +40,9 @@ report is better evidence than a large burst of passive impressions.
 The GitHub source and landing page are public. Keep these checks true before
 promotion, and do not strengthen any unverified compatibility or funding claim:
 
-- **Passed 2026-07-19:** the GitHub repository opens while logged out; the
-  retained release/distribution source commit is
-  `61549ff7440331588fd43b6c0707e8d783c51144`.
+- **Passed 2026-07-19:** the GitHub repository opens while logged out.
+- **Release gate:** publish and recheck retained release/distribution source
+  tag `v0.1.0-rc.2`.
 - **Passed 2026-07-19:** GitHub private vulnerability reporting is enabled.
 - The default branch contains the license, seven skill directories, examples,
   compatibility limits, safety rules, contribution guide, and issue forms.
@@ -75,8 +74,8 @@ experience in replies.
    issues, unique visitors if available, and landing-page visits.
 2. **Done 2026-07-19:** make the GitHub repository public and check it logged
    out.
-3. **Done 2026-07-19:** create the first public prerelease from the tested
-   commit and verify its notes, files, version, and SHA-256 digest.
+3. **Release gate:** publish `v0.1.0-rc.2` from the final tested source and
+   verify its notes, archive, version, and SHA-256 digest.
 4. **Discovery done 2026-07-19:** the published command found all seven names
    from a clean temporary directory. A retained host invocation remains open.
 5. **Done 2026-07-19:** publish the landing page, activate
@@ -84,9 +83,9 @@ experience in replies.
    metadata, the install command, and the GitHub target.
 6. Update any publication-target labels in launch assets only after both URLs
    pass. Freeze the exact post copy and image you will use.
-7. Choose one X format. The recommended launch is the flagship post plus its
-   first reply. Use the six-post thread instead if you want the full method in
-   the initial launch. Do not post both as duplicate launches.
+7. Use the flagship post plus its first reply in `launch/x-launch.md`. Add the
+   optional third post only if you want more detail in the initial thread. Do
+   not publish the alternate hooks as duplicate launches.
 8. Post while you can stay available for at least two hours. Answer questions
    with links to exact source files, and turn reproducible failures into issues.
 9. Consider Show HN only after the owner reads `launch/show-hn.md` and writes

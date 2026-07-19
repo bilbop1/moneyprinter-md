@@ -1,143 +1,125 @@
 # MoneyPrinter.md X launch copy
 
-## Publication status
+## Release gate
 
-The GitHub source, remote discovery path, and landing page were confirmed live
-on 2026-07-19:
+The current public launch surfaces were checked again on 2026-07-19:
 
-- GitHub: `https://github.com/bilbop1/moneyprinter-md`
-- Remote check: `npx skills add bilbop1/moneyprinter-md --list` found all seven
-  skills.
-- Landing page: `https://moneyprinter.bilbop.org` returned HTTPS 200 with active
-  Sites custom-domain, provider, and SSL states.
+- GitHub and the seven-skill install path are live. The copy below targets
+  `v0.1.0-rc.2` and must wait until that release and site badge are public.
+- `https://moneyprinter.bilbop.org` is live with the correct repository,
+  install command, and Ko-fi link.
+- ClawHub has seven public v1.0.0 listings under `@bilbop1`.
+- Awesome Skills has the public MoneyPrinter flagship page.
+- The Ko-fi page loads as `Support bilbop`.
 
-The flagship, first reply, and complete thread now point only to live public
-URLs. Nothing is claimed as posted. Host conversation activation remains
-unverified. The confirmed Ko-fi route is `https://ko-fi.com/bilbop`, but it is
-intentionally omitted from opening launch copy.
+Host conversation activation remains unverified. The copy below does not say
+the skills work everywhere.
 
 ## Recommended flagship post
 
+Attach `launch/assets/moneyprinter-social-card.png`.
+
 ```text
-The models are finally good. Their money playbooks are not.
+I built an "AI money printer" repo that's allowed to tell you the idea is bad.
 
-MoneyPrinter.md: 7 open-source skills.
+MoneyPrinter interviews you, narrows the next test, and keeps benchmarks separate from cash.
 
-A short interview recommends a bounded test, or a smaller discovery step when payment is premature. Cash and simulations stay separate.
+Sometimes it says you're not ready to charge yet.
+
+7 open-source skills. MIT.
 
 https://github.com/bilbop1/moneyprinter-md
 ```
 
-Character count: 280, including the full URL.
+Character count: 295 raw, 276 with X's 23-character URL weighting.
 
 ## First reply
 
+Post this as a self-reply to the flagship.
+
 ```text
-Start with the short interview, whether you're starting from zero or already run a business. Routes change with your assets, proof, time, authority, and risk.
+First it asks what you can do, prove, risk, and reach.
 
-Every example is a Simulation. External actions need approval.
+Then it gives you one small test or, if charging now would be bullshit, a private discovery step.
 
-Method + demo:
+It drafts the work. You approve before anything gets sent, posted, bought, charged, or signed.
+
 https://moneyprinter.bilbop.org
 ```
 
-## Six-post thread
+Character count: 282 raw, 274 with X's 23-character URL weighting.
 
-Use this instead of the flagship post, not immediately after it.
+## Optional third post
 
-### 1/6
+Use this only if you want the install command in the initial thread.
 
 ```text
-The models are finally good. Their money playbooks are not.
+I tested it against five starting points: a total beginner, a roofer, a lawyer, a TikTok Shop creator, and an existing operator.
 
-A benchmark can look like revenue until you ask whether a payment settled.
+Each example says Simulation. I'd rather show $0 than dress up a benchmark as revenue.
 
-I built MoneyPrinter.md to make that question unavoidable.
-
-Open source:
-https://github.com/bilbop1/moneyprinter-md
+Install:
+npx skills add bilbop1/moneyprinter-md
 ```
 
-### 2/6
+Character count: 265.
+
+## Alternate flagship
+
+Use this instead of the recommended flagship, not as a duplicate post.
 
 ```text
-MoneyPrinter uses 7 evidence labels.
+I kept seeing "AI money printer" repos that treated a benchmark like money in the bank.
 
-A reply or meeting is a Pipeline signal. An invoice is Revenue booked. Modeled savings are Estimated economic value. A hypothetical run is a Simulation.
+So I built the one I wanted: it starts with what you can actually do, helps you design one small test, and can say the idea isn't ready.
 
-Only a settled payment with inspected support is Cash collected.
-```
-
-### 3/6
-
-```text
-Invoke `moneyprinter` and it runs a short interview.
-
-It asks about what you have: expertise, audience, proof, time, budget, authority, and risk.
-
-That gives a beginner and an experienced operator the same front door without giving them the same plan.
-```
-
-### 4/6
-
-```text
-The router compares up to 3 paths. It recommends a bounded payable test and a fallback, or a smaller discovery step when payment is premature. Then it waits for approval.
-
-The repo includes simulations for a beginner, roofer, lawyer, creator, and service business.
-```
-
-### 5/6
-
-```text
-Seven text-first skills cover the interview, research, offer design, payable test, ethical acquisition, delivery proof, and cashflow review.
-
-The repo documents install or manual routes for Claude Code, Codex, Kimi Code, Hermes, and OpenClaw. Host testing is still open work.
-```
-
-### 6/6
-
-```text
-Read the source. Try the harmless interview. Break the method.
-
-If you run a real test, submit a redacted field report with the correct evidence label. Failed tests count too.
-
-GitHub: https://github.com/bilbop1/moneyprinter-md
-Demo: https://moneyprinter.bilbop.org
-```
-
-## Alternate hook 1
-
-```text
-AI agents can draft offers and build delivery. They can still confuse a benchmark with money.
-
-MoneyPrinter.md recommends a bounded test, or a smaller discovery step if payment is premature, then labels the result honestly.
-
-Source:
-https://github.com/bilbop1/moneyprinter-md
-```
-
-## Alternate hook 2
-
-```text
-I built a "make money with AI" repo allowed to report $0.
-
-MoneyPrinter.md recommends a bounded test, or smaller discovery when payment is premature. It keeps simulations separate from cash.
-
-The source is open, with no income promises.
+7 open-source skills. MIT.
 
 https://github.com/bilbop1/moneyprinter-md
 ```
 
-## Posting notes
+Character count: 297 raw, 278 with X's 23-character URL weighting.
 
-- Use `launch/assets/moneyprinter-social-card.png` as the primary image. For a
-  product screenshot, use `launch/assets/landing-desktop-preview.png` or
-  `launch/assets/landing-mobile-preview.png` after confirming it matches the
-  live page. Do not use a fake revenue dashboard.
-- Use the flagship post plus first reply for the cleanest personal-account
-  launch. Use the thread only if you can stay available to answer questions.
-- Do not put the voluntary 1% pledge in the opening post or thread. If someone
-  asks how maintenance is funded, answer from `PLEDGE.md`.
-- Do not say the skills "work everywhere." The repository documents several
-  installer and manual routes, but its compatibility matrix does not yet mark a
-  host as conversation-verified.
+## Later follow-up
+
+This works as a separate follow-up after the launch has had time to breathe.
+
+```text
+If an agent says it made you $19,000 because a benchmark estimated $19,000 of value, it made you $0.
+
+That stupid distinction is why I built MoneyPrinter.
+
+A short interview leads to one test or an honest "not yet." You approve every external action.
+
+https://github.com/bilbop1/moneyprinter-md
+```
+
+Character count: 294 raw, 275 with X's 23-character URL weighting.
+
+## Funding reply
+
+Do not put this in the launch post or initial thread. Use it only if someone
+asks how maintenance is funded.
+
+```text
+If this ever makes you profit you can honestly trace back to it, and you want to help me keep it updated, I set up a voluntary 1% pledge:
+
+https://ko-fi.com/bilbop
+
+No tracking. No obligation. The repo stays MIT either way.
+```
+
+Character count: 223 raw, 222 with X's 23-character URL weighting.
+
+## Posting sequence
+
+1. Post the recommended flagship with the social card attached.
+2. Add the first reply immediately so the method and live overview are easy to
+   find.
+3. Add the optional third post only if you want a compact thread.
+4. Stay available for replies. Answer from the repository and turn
+   reproducible failures into issues.
+
+Do not post the alternate flagship on the same launch day. Do not add the
+Ko-fi link to the opener. Do not say MoneyPrinter works in a named host until a
+retained invocation proves it.

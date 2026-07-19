@@ -6,11 +6,11 @@ Do not publish secrets, access tokens, private keys, customer data, internal
 documents, or reproducible exploit details in an issue, discussion, pull
 request, example, or field report.
 
-Once the public GitHub repository exists and private vulnerability reporting is
-enabled, use GitHub's private vulnerability-reporting flow for the repository.
-Until that route is enabled, do not open a public report containing sensitive
-details. Preserve the minimum information needed to reproduce the issue and
-wait for a private route rather than exposing others.
+Use GitHub's [private vulnerability-reporting
+flow](https://github.com/bilbop1/moneyprinter-md/security/advisories/new) for
+this repository. If that form is unavailable, do not open a public report
+containing sensitive details. Preserve the minimum information needed to
+reproduce the issue and wait for a private route rather than exposing others.
 
 ## Scope
 

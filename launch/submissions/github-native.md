@@ -45,7 +45,7 @@ Repository name:
 
 Release title:
 
-> MoneyPrinter.md 0.1.0-rc.1 — receipts before hype
+> MoneyPrinter.md 0.1.0-rc.2 - ready for honest tests
 
 ## Short description
 
@@ -57,7 +57,7 @@ Repository About:
 
 Release notes:
 
-> First public release candidate of MoneyPrinter.md: seven open-source Agent
+> Final launch release candidate of MoneyPrinter.md: seven open-source Agent
 > Skills that route a short business interview toward one bounded payable test
 > when credible or the smallest safe discovery step when it is not. The pack
 > covers evidence-backed research, offer design, permissioned acquisition,

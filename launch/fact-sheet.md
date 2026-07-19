@@ -49,12 +49,12 @@ contains a `SKILL.md`; supporting material stays beside the skill.
 
 - Format: text-first Agent Skills directories using `SKILL.md`.
 - Repository license: MIT.
-- Release candidate: `0.1.0-rc.1`.
+- Release candidate: `0.1.0-rc.2`.
 - Public repository: `https://github.com/bilbop1/moneyprinter-md`.
 - Logged-out access and a clean seven-skill remote discovery run were verified
   on 2026-07-19.
-- The retained release and distribution checks used source commit
-  `61549ff7440331588fd43b6c0707e8d783c51144`.
+- The next retained release and distribution source target is
+  `v0.1.0-rc.2`; verify it again after the tag is public.
 - Public landing page: `https://moneyprinter.bilbop.org`. HTTPS 200 and active
   Sites custom-domain, provider, and SSL states were verified on 2026-07-19.
 - ClawHub's current CLI reference says publishing releases the submitted copy

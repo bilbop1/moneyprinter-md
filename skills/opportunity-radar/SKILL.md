@@ -4,7 +4,7 @@ description: Research and rank current buyer pains, demand signals, competitors,
 license: MIT
 metadata:
   author: bilbop
-  version: "0.1.0-rc.1"
+  version: "0.1.0-rc.2"
 ---
 
 # Opportunity Radar

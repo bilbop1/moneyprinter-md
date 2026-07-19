@@ -56,7 +56,7 @@ export default function Home() {
         <nav aria-label="Section navigation">
           <a href="#proof">Proof</a><a href="#flow">Method</a><a href="#compatibility">Compatibility</a>
         </nav>
-        <span className="release-mark">0.1.0-rc.1</span>
+        <span className="release-mark">0.1.0-rc.2</span>
       </header>
 
       <main id="main-content">
@@ -128,7 +128,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><span>MoneyPrinter.md <b>0.1.0-rc.1</b></span><span>Receipts first. Claims second.</span><a href="#hero">Back to top ↑</a></footer>
+      <footer className="site-footer"><span>MoneyPrinter.md <b>0.1.0-rc.2</b></span><span>Receipts first. Claims second.</span><a href="#hero">Back to top ↑</a></footer>
     </>
   );
 }
