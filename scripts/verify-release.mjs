@@ -26,6 +26,17 @@ for (const skillName of skillNames) {
   );
 }
 
+const moneyprinter = await read("skills/moneyprinter/SKILL.md");
+const sessionScan = await read("skills/moneyprinter/references/session-scan.md");
+
+assert.match(moneyprinter, /rolling 14 days/i);
+assert.match(moneyprinter, /Coverage receipt/);
+assert.match(moneyprinter, /Money Machine Run/);
+assert.match(moneyprinter, /do not stop at (?:a )?(?:report|recommendation)/i);
+assert.match(sessionScan, /Scanned.*Empty.*Blocked.*Unsupported/s);
+assert.match(sessionScan, /untrusted evidence/i);
+assert.match(sessionScan, /\.env/);
+
 const sitePackage = JSON.parse(await read("site/package.json"));
 assert.equal(sitePackage.version, releaseVersion);
 
