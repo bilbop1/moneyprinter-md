@@ -1,27 +1,60 @@
 # Route map
 
-Score at most three routes. Rate each dimension from 1 (weak or high risk) to 5
-(strong or low risk), and add one sentence grounded in known facts. Do not turn
-unknowns into high scores. For `proof burden`, `delivery risk`, and `platform
-dependency`, 5 means lower burden or risk. The score supports judgment; it does
-not replace the safety gate, user approval, or a credible delivery boundary.
+Rank at most three routes and choose one primary route plus one fallback. Money
+and credible proximity to payment are the primary objective; strategic upside
+is secondary. Apply the canonical evidence labels in `evidence-standard.md`
+before scoring. A reported payment without its required artifact is an
+`Unverified anecdote`, not observed payment.
+
+Rate each dimension from 1 (weak or high risk) to 5 (strong or low risk), add
+one sentence grounded in current facts, and cite the relevant source receipt or
+user correction. Do not turn an unknown into a high score. Cash evidence and
+time to the next payable event override an attractive aggregate score.
+
+## Cash-first decision order
+
+Resolve ties and conflicts in this order:
+
+1. **Observed economic evidence** - recent, artifact-supported payment first,
+   then contracted or booked revenue, then current pipeline evidence. Prefer a
+   working cash engine over a speculative new build.
+2. **Current buyer evidence** - direct buyer contact, renewal context, paid
+   behavior, current problem evidence, and a permissioned way to reach the
+   buyer.
+3. **Time to the next payable event** - the shortest credible path to a paid
+   trial, deposit, signed agreement, order, renewal, or settled payment.
+4. **User control** - the user can perform or approve the next step without
+   waiting on unavailable access, eligibility, another owner, or a platform.
+5. **Existing leverage** - reusable assets, distribution, proof, relationships,
+   expertise, and delivery systems already controlled.
+6. **Delivery economics** - capacity, direct cost, human time, margin,
+   acceptance risk, refund exposure, and repeatability.
+7. **External blockers and downside** - authority, consent, regulation,
+   platform rules, account access, dependencies, and irreversible risk.
+
+Code volume, hours spent, session count, novelty, excitement, technical
+complexity, and confident agent language are not evidence of demand or payment.
+They must not raise a route's rank. For example, an unreleased product with 80
+hours of code and no buyers loses to a small service with recent supported paid
+invoices, warm relationships, and a renewal path unless a material blocker
+makes the service route unavailable.
 
 ## Scoring dimensions
 
-- **existing advantage** — owned assets, relationships, proof, or access that
-  make this route easier than a new venture.
-- **observable demand** — direct, current, permissioned evidence of a buyer
-  problem rather than a market-size claim.
-- **time to payable test** — ability to test a paid trial, deposit, signed
-  agreement, or another honestly labeled signal within 24 hours.
-- **proof burden** — how much verified proof is needed before the buyer can
-  reasonably accept a small test.
-- **delivery risk** — likelihood that scope, quality, capacity, or regulation
-  prevents a safe delivery.
-- **gross-margin potential** — plausible margin after fully loaded test costs;
-  leave it uncertain when price or cost is unknown.
-- **platform dependency** — reliance on a platform's eligibility, policy,
-  attribution, or algorithm rather than controlled buyer access.
+- **observed economic evidence** - strength and recency of correctly labelled,
+  artifact-supported payment, contract, order, or pipeline evidence.
+- **current buyer evidence** - direct evidence of a reachable buyer, current
+  pain, paid behavior, renewal context, or permissioned relationship.
+- **time to next payable event** - credible speed to the next payment condition,
+  not merely to another internal artifact.
+- **user control** - authority and ability to take or approve the next action.
+- **existing leverage** - controlled assets, distribution, proof,
+  relationships, expertise, and delivery systems.
+- **delivery economics** - plausible margin, capacity, direct cost, human time,
+  acceptance risk, and repeatability. Mark unknown price or cost as unknown.
+- **external blockers** - access, consent, qualified review, regulation,
+  platform dependency, another person's decision, or irreversible downside. A
+  score of 5 means few blockers and low downside.
 
 Explicitly prefer improving an existing cash engine over inventing a new
 business. Choose a new route only when the existing engine has no measurable
@@ -51,6 +84,9 @@ lever, is not approved for change, or cannot support a safe payable test.
 ## Decision rules
 
 - Select one primary route and one fallback, not a menu.
+- Explain the choice from cash evidence, current buyer evidence, payable timing,
+  user control, leverage, delivery economics, and blockers; never from effort
+  already spent or agent enthusiasm.
 - Route to an existing-business improvement when a measurable bottleneck,
   permission, and capacity exist.
 - Downgrade a route when its buyer, demand, authority, pricing, proof, delivery,
