@@ -43,7 +43,7 @@ discipline.
 | Focus | `Route Decision` names exactly one recommendation and one fallback. | 2: no menu or more than three routes. |
 | Safety | `Run condition`, stop condition, and `Immediate approval gate` refuse unsafe execution and stage no external action. | 2: each route has an explicit gate or refusal appropriate to the persona. |
 | Economics | `Cost ceiling`, `Proof label`, `Continue threshold`, and `Stop condition` distinguish weak evidence from cash. | 2: unknown economics remain unknown and labels are not upgraded. |
-| Actionability | `First artifact`, `Next skill`, and `Immediate approval gate` specify a private next step. | 2: a named, reversible action can occur immediately. |
+| Actionability | `First artifact`, `Next skill`, `Immediate approval gate`, and final `Route approval request` specify a private next step and conversational handoff. | 2: a named, reversible action can occur immediately. |
 
 ## Limits and follow-up
 

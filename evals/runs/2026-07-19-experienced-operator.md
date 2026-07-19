@@ -85,3 +85,7 @@ Return to `moneyprinter` when the owner supplies missing facts. Use `cashflow-re
 ## Immediate approval gate
 
 No external action is staged or approved. The private map needs none. Before data access or a live workflow change, require operator approval of exact data boundary, sample/cohort, tool/account, owner, timing, internal cost, quality guardrails, rollback, and `Estimated economic value` label; any change needs new approval.
+
+## Route approval request
+
+Do you approve this primary route and fallback so I can prepare the next private artifact? Route approval is not execution approval: every external action still needs fresh, exact approval immediately before execution and again after any material change.

@@ -85,3 +85,7 @@ Stop if policy, eligibility, attribution, disclosure, claim, or account status c
 ## Immediate approval gate
 
 No external action is staged or approved. The private checklist needs none. Before publication, require creator approval of exact post text/video, product, audience/region, account, timing, spend, disclosure, claim sources, and evidence label; any change needs new approval.
+
+## Route approval request
+
+Do you approve this primary route and fallback so I can prepare the next private artifact? Route approval is not execution approval: every external action still needs fresh, exact approval immediately before execution and again after any material change.

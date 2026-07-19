@@ -14,6 +14,7 @@ Questions asked: (1) What work can you show? (2) Which buyer can you reach with 
 | --- | --- | --- |
 | Starting stage | Known | Starting from zero; no audience and no existing offer. |
 | Owned assets | Known | Budget below $100; 15 hours this week. |
+| Time and budget | Known | 15 hours available this week and a budget below $100. |
 | Credible expertise | Open question | No transferable skill or past work is supplied. |
 | Audience/distribution | Known | No audience; a permitted buyer is not supplied. |
 | Current offer/proof | Known | Neither exists. |
@@ -86,3 +87,7 @@ Stop if no skill, permitted buyer, or bounded delivery can be verified; do not s
 ## Immediate approval gate
 
 No external action is staged or approved. Private drafting needs no approval. Before contact, require approval of exact payload, named recipient, channel, account, timing, $0 spend, scope, and `Pipeline signal` label; any change needs new approval.
+
+## Route approval request
+
+Do you approve this primary route and fallback so I can prepare the next private artifact? Route approval is not execution approval: every external action still needs fresh, exact approval immediately before execution and again after any material change.
