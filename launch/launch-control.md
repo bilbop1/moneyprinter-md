@@ -29,6 +29,7 @@ report is better evidence than a large burst of passive impressions.
 Launch is blocked until every item below passes:
 
 - The GitHub repository opens while logged out and renders the intended README.
+- GitHub private vulnerability reporting is enabled before public launch.
 - The default branch contains the license, seven skill directories, examples,
   compatibility limits, safety rules, contribution guide, and issue forms.
 - `npx skills add bilbop1/moneyprinter-md --list` succeeds from a clean
@@ -43,6 +44,10 @@ Launch is blocked until every item below passes:
   `launch/show-hn.md` match the live URLs exactly.
 - No secret, local path, private hostname, test credential, or unconfirmed Ko-fi
   username appears in the public package.
+- Before inviting public participation at scale, the owner configures a real
+  private Code of Conduct enforcement contact. This is owner-required. Do not
+  invent an address, expose a private address in launch copy, or claim the
+  contact exists while it remains unset.
 
 If any item fails, fix it before promotion. Do not explain a broken first-run
 experience in replies.
@@ -53,7 +58,8 @@ experience in replies.
    issues, unique visitors if available, and landing-page visits.
 2. Make the GitHub repository public first. Check it from a logged-out browser.
 3. Create the first public release from the tested commit and verify its notes,
-   files, and version.
+   files, and version. The notes must allow for a smaller discovery step when a
+   credible payable test does not exist.
 4. Run the published install command from a new temporary directory. Confirm
    all seven names and invoke `moneyprinter` with the harmless interview prompt.
 5. Publish the landing page. Check desktop, narrow mobile, social metadata, the

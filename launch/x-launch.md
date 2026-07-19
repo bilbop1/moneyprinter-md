@@ -15,14 +15,14 @@ GitHub install path passes from a clean directory.
 ```text
 The models are finally good. Their money playbooks are not.
 
-MoneyPrinter.md is open source: 7 portable AI revenue skills.
+MoneyPrinter.md: 7 open-source skills.
 
-A short interview picks one payable test. Cash, pipeline, estimates, and simulations stay separate.
+A short interview recommends a bounded test, or a smaller discovery step when payment is premature. Cash and simulations stay separate.
 
 https://github.com/bilbop1/moneyprinter-md
 ```
 
-Character count: 267, including the full URL.
+Character count: 280, including the full URL.
 
 ## First reply
 
@@ -75,11 +75,9 @@ That gives a beginner and an experienced operator the same front door without gi
 ### 4/6
 
 ```text
-The router compares no more than 3 paths. It recommends one bounded payable test and one fallback, then waits for approval.
+The router compares up to 3 paths. It recommends a bounded payable test and a fallback, or a smaller discovery step when payment is premature. Then it waits for approval.
 
-The repo includes walkthroughs for someone starting from zero, a roofer, a lawyer, a TikTok Shop creator, and a service business.
-
-All are simulations.
+The repo includes simulations for a beginner, roofer, lawyer, creator, and service business.
 ```
 
 ### 5/6
@@ -104,22 +102,22 @@ Demo: https://moneyprinter.bilbop.org
 ## Alternate hook 1
 
 ```text
-AI agents can write the offer, draft the outreach, and build the delivery. They still confuse a benchmark with money.
+AI agents can draft offers and build delivery. They can still confuse a benchmark with money.
 
-MoneyPrinter.md routes you to one bounded payable test and labels the result honestly.
+MoneyPrinter.md recommends a bounded test, or a smaller discovery step if payment is premature, then labels the result honestly.
 
-Open source:
+Source:
 https://github.com/bilbop1/moneyprinter-md
 ```
 
 ## Alternate hook 2
 
 ```text
-I built a "make money with AI" repo that is allowed to report $0.
+I built a "make money with AI" repo allowed to report $0.
 
-MoneyPrinter.md interviews you, picks one credible test, and keeps simulated value separate from cash collected.
+MoneyPrinter.md recommends a bounded test, or smaller discovery when payment is premature. It keeps simulations separate from cash.
 
-The source is open, and there are no income promises.
+The source is open, with no income promises.
 
 https://github.com/bilbop1/moneyprinter-md
 ```
