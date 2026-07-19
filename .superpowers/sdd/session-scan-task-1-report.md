@@ -56,3 +56,28 @@ production skill file was changed.
   `skills/moneyprinter/references/session-scan.md` and rewrites MoneyPrinter to
   meet the asserted contract. That failure is the requested baseline, not a
   completed release verification.
+
+## Follow-up: public-claim coverage requirement
+
+The oracle now grades public-facing language as well as the private coverage
+receipt. S02 explicitly requires a summary to say that only detected and
+accessible stores were scanned; it must not imply blocked, unsupported,
+malformed, excluded, or otherwise inaccessible stores were scanned. The pass
+rule makes a universal-coverage implication a suite failure.
+
+### Follow-up commands and output summary
+
+1. `node scripts/verify-release.mjs`
+   - Expected RED failure (exit `1`) only: `ENOENT` while opening
+     `skills/moneyprinter/references/session-scan.md`.
+2. `node --check scripts/verify-release.mjs`
+   - Passed (exit `0`).
+3. `git diff --check`
+   - Passed (exit `0`).
+
+### Follow-up self-review
+
+- The requirement is observable in the required-behavior table, S02 prompt and
+  scenario expectation, and the suite pass rule.
+- It preserves Task 1 scope: only the evaluation prompt, oracle, and retained
+  evaluation report changed; no production skill files were touched.
