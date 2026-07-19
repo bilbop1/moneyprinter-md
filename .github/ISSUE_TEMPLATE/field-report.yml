@@ -1,0 +1,81 @@
+name: Field report
+description: Share a consent-aware, redacted outcome from a MoneyPrinter route.
+title: "Field report: "
+labels:
+  - field-report
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include secrets, customer data, private documents, or material you lack permission to share. A failed or stopped test is useful evidence.
+  - type: dropdown
+    id: result_label
+    attributes:
+      label: Result label
+      description: Choose the single label that best describes the result.
+      options:
+        - Cash collected
+        - Revenue contracted
+        - Revenue booked
+        - Pipeline signal
+        - Estimated economic value
+        - Simulation
+        - Unverified anecdote
+    validations:
+      required: true
+  - type: input
+    id: date_range
+    attributes:
+      label: Date range
+      placeholder: 2026-07-01 to 2026-07-07
+    validations:
+      required: true
+  - type: input
+    id: model_harness
+    attributes:
+      label: Model and harness
+      placeholder: Model version, agent host, and relevant skill version
+    validations:
+      required: true
+  - type: textarea
+    id: human_time
+    attributes:
+      label: Human time
+      description: State total human time and the material tasks performed.
+    validations:
+      required: true
+  - type: textarea
+    id: spend
+    attributes:
+      label: Cash spend
+      description: State the amount, currency, and what it covered; write zero if none.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Method and starting assets
+      description: Describe the route, approvals, starting conditions, and bounded test.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted evidence
+      description: Explain what supports the label without publishing sensitive information.
+    validations:
+      required: true
+  - type: textarea
+    id: failures
+    attributes:
+      label: Failures, contrary evidence, or stop conditions
+      description: What did not work, what changed, and what should others avoid?
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent and safety
+      options:
+        - label: I have permission to share this redacted report and did not include secrets or personal data.
+          required: true

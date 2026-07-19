@@ -1,0 +1,41 @@
+name: Playbook request
+description: Request a bounded, evidence-first route for a persona not yet covered.
+title: "Playbook request: "
+labels:
+  - playbook-request
+body:
+  - type: textarea
+    id: persona
+    attributes:
+      label: Persona
+      description: Who is the user and what stage, skills, constraints, and geography matter?
+    validations:
+      required: true
+  - type: textarea
+    id: buyer
+    attributes:
+      label: Buyer
+      description: Who might pay, what authority do they have, and what legitimate problem might exist?
+    validations:
+      required: true
+  - type: textarea
+    id: current_assets
+    attributes:
+      label: Current assets
+      description: List owned audience, expertise, proof, tools, time, budget, and permitted access.
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk and boundaries
+      description: Name consent, privacy, regulatory, platform, delivery, or authority constraints.
+    validations:
+      required: true
+  - type: textarea
+    id: route_gap
+    attributes:
+      label: Why existing routes do not cover it
+      description: Link the closest current route and explain the material gap without duplicating it.
+    validations:
+      required: true

@@ -1,0 +1,34 @@
+name: Research correction
+description: Correct a factual, compatibility, or methodology claim with current evidence.
+title: "Research correction: "
+labels:
+  - research-correction
+body:
+  - type: textarea
+    id: disputed_claim
+    attributes:
+      label: Disputed claim
+      description: Quote the exact claim and link its file and line when possible.
+    validations:
+      required: true
+  - type: input
+    id: current_source
+    attributes:
+      label: Current source
+      description: Link the source presently supporting or contradicting the claim.
+    validations:
+      required: true
+  - type: input
+    id: replacement_source
+    attributes:
+      label: Replacement source
+      description: Link the proposed primary, official, or otherwise stronger source.
+    validations:
+      required: true
+  - type: textarea
+    id: requested_correction
+    attributes:
+      label: Requested correction
+      description: State the exact wording, evidence label, compatibility status, or source-ledger change requested.
+    validations:
+      required: true
