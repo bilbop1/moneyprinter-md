@@ -110,9 +110,31 @@ for unacceptable economics or an unsafe or non-credible route.
 
 A decision authorizes no external action. If a next step would contact, send,
 post, publish, purchase, charge, sign, submit, or change an account, stage the
-exact payload. Immediately before execution, disclose its destination, expected
-cost, evidence label, and rollback/correction path and obtain explicit approval
-for that exact action. Any material change requires a fresh immediate approval.
+canonical checkpoint from payable-test:
+
+```markdown
+Action: [send/post/publish/purchase/charge/sign/submit/account change]
+Exact payload: [the final text, asset, order, charge amount, agreement, or setting]
+Destination: [named recipient, audience, platform, vendor, or system]
+Channel: [email/DM/post/listing/payment rail/contract flow/account surface]
+Account: [named sending, publishing, purchasing, payment, or system account]
+Timing: [execution date/time or bounded window]
+Scope: [one exact action and its included payload, audience, or commitment]
+Volume: [one recipient/item or exact bounded count]
+Tool: [host tool, connector, browser, CLI, or service used for execution]
+Expected cost: [cash amount/currency, staff time, fee, or "none known"]
+Evidence label: [label that the action could support]
+Rollback or correction path: [how it can be withdrawn, corrected, refunded, reversed, or remediated]
+Approver authority status: [Pass + basis / Unknown / Fail]
+Third-party data status: [None used / Pass + consent or lawful-use basis and minimum data / Unknown / Fail]
+Regulated-review status: [Not applicable / Pass + qualified reviewer, jurisdiction, and approved scope / Unknown / Fail]
+Approval requested: Approve this exact action now? [yes/no]
+```
+
+Any `Unknown` or `Fail` prerequisite blocks the request. Any material change to
+the action, payload, destination, channel, account, timing, scope, volume, tool,
+cost, evidence label, rollback/correction path, authority, data basis, or
+regulated-review status requires a fresh immediate approval.
 After an immediately preceding exact approval, the current host may perform
 only that approved action, record an `Action receipt`, and return it to
 `moneyprinter`. Broad, batch, stale, or materially changed permission is
