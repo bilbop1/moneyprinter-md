@@ -35,8 +35,8 @@ https://github.com/bilbop1/moneyprinter-md
 
 ## Short description
 
-> Receipts-first revenue workflows that route a short interview to one ethical
-> payable test and one fallback.
+> Receipts-first revenue workflows that route a short interview toward one
+> credible payable test or the smallest safe discovery step.
 
 ## Long description
 

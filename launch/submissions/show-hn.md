@@ -6,8 +6,9 @@
 The project qualifies only when HN readers can install and run it from the
 public repository without a signup wall.
 
-**Status:** blocked on the public repository and a successful clean remote
-install. Nothing has been submitted.
+**Status:** blocked on the public repository, a successful clean remote
+install, and one retained end-to-end host invocation. Nothing has been
+submitted.
 
 ## Current official submission path
 
@@ -22,6 +23,7 @@ Sources: [official Show HN rules](https://news.ycombinator.com/showhn.html) and
 
 - Public GitHub repository.
 - One-command install works for an unauthenticated reader.
+- One end-to-end host invocation is retained and reproducible.
 - At least one concrete persona walkthrough is easy to inspect.
 - The author is available to answer technical and skeptical questions.
 - The author's HN use is not primarily promotional.
@@ -36,9 +38,9 @@ Sources: [official Show HN rules](https://news.ycombinator.com/showhn.html) and
 HN has no short-description field. The factual one-line summary for the owner's
 own preparation is:
 
-> Seven open-source Agent Skills route a short business interview to one bounded
-> payable test while keeping cash separate from pipeline, estimates, and
-> simulations.
+> Seven open-source Agent Skills route a short business interview toward one
+> bounded payable test when credible or the smallest safe discovery step when
+> it is not, while keeping cash separate from weaker signals.
 
 Do not paste that line as an HN comment.
 
@@ -100,6 +102,6 @@ graphic.
 
 ## Final human action
 
-Run the clean install, submit the public repo with the exact title, write the
-first comment personally from the checklist, and stay available for candid
-questions.
+Run the clean install and retained end-to-end host invocation, submit the public
+repo with the exact title, write the first comment personally from the
+checklist, and stay available for candid questions.

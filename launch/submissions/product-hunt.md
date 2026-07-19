@@ -41,17 +41,18 @@ product rather than a landing page around downloadable text:
 
 ## Short description
 
-> Interview your real starting point, choose one bounded revenue experiment,
-> and keep cash separate from pipeline, estimates, and simulations.
+> Interview your real starting point, identify a credible revenue experiment or
+> safe discovery step, and keep cash separate from weaker signals.
 
 ## Long description
 
 > MoneyPrinter.md is an open-source pack of seven Agent Skills for legitimate
-> revenue experiments. A short interview routes the user to one bounded payable
-> test and one fallback; focused workflows then guide research, offer design,
-> permissioned acquisition, delivery proof, and cashflow review. Results stay
-> labelled as cash, contracted, booked, pipeline, estimated, simulated, or
-> anecdotal, and external actions always require human approval.
+> revenue experiments. A short interview routes the user toward one bounded
+> payable test when credible or the smallest safe discovery step when it is
+> not; focused workflows then guide research, offer design, permissioned
+> acquisition, delivery proof, and cashflow review. Results stay labelled as
+> cash, contracted, booked, pipeline, estimated, simulated, or anecdotal, and
+> external actions always require human approval.
 
 ## Maker comment outline
 

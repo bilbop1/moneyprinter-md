@@ -1,25 +1,39 @@
-# Toolify
+# Toolify OpenClaw Skills index
 
 ## Verdict
 
-**P3 — paid and weak fit. Do not spend for the text-only release.** Toolify's
-current form is aimed at user-facing AI tools and sells a paid listing.
+**P2 for passive downstream verification; P3 for the paid main-tool form.**
+Toolify now exposes an OpenClaw Skills directory with ClawHub and GitHub install
+instructions. That is relevant discovery after a real ClawHub publication. No
+official ingestion or direct submission rule for the skills index was verified,
+so do not promise that a ClawHub listing will appear.
 
-**Status:** intentionally blocked. No payment or submission has been made.
+**Status:** blocked on ClawHub publication and downstream-index verification.
+No payment or submission has been made.
 
 ## Current official submission path
 
-Use [toolify.ai/submit](https://www.toolify.ai/submit). At the 2026-07-19
-review, the form displayed a $99 total and a claimed listing time within 48
-hours. Price and terms can change and must be rechecked before purchase.
+The relevant surface is
+[Toolify's OpenClaw Skills directory](https://www.toolify.ai/openclaw-skills).
+It documents ClawHub CLI, GitHub, and manual installation, but this research
+pass found no official skill-submission form or ingestion contract.
+
+Publish through ClawHub first, then search Toolify for the exact owner/skill
+slugs and verify any resulting pages. Treat this as observation, not a
+submission.
+
+The separate [Submit AI form](https://www.toolify.ai/submit) displayed a $99
+main-tool listing total on 2026-07-19. That form remains weak fit and should not
+be purchased for the text-only release.
 
 ## Prerequisites
 
-- Live user-facing tool URL.
-- Final brand assets and English product copy.
-- Owner-approved budget.
-- Referral tracking and a conversion hypothesis.
-- Fit with Toolify's current listing criteria.
+- Public ClawHub listings and GitHub source.
+- Exact owner and skill slugs retained after publication.
+- Logged-out search of the Toolify OpenClaw Skills index.
+- Manual inspection of any indexed metadata and claims.
+- For the separate paid main-tool form only: live user-facing tool URL, final
+  assets, owner-approved budget, and a measured conversion hypothesis.
 
 ## Listing title
 
@@ -27,16 +41,17 @@ hours. Price and terms can change and must be rechecked before purchase.
 
 ## Short description
 
-> Seven receipts-first AI workflows for testing one legitimate revenue idea at
-> a time.
+> Seven receipts-first Agent Skills for credible revenue tests and safe
+> discovery steps.
 
 ## Long description
 
-> MoneyPrinter.md interviews users about their actual assets, constraints,
-> authority, and risk, then recommends one bounded payable test and one
-> fallback. It guides research, offer design, permissioned acquisition,
-> delivery proof, and cashflow review while separating real cash from booked
-> revenue, pipeline, estimates, simulations, and anecdotes.
+> MoneyPrinter.md starts from a user's actual assets, constraints, authority,
+> and risk, then routes toward one bounded payable test when credible or the
+> smallest safe discovery step when it is not. It guides research, offer
+> design, permissioned acquisition, delivery proof, and cashflow review while
+> separating real cash from booked revenue, pipeline, estimates, simulations,
+> and anecdotes.
 
 ## Tags / category
 
@@ -44,27 +59,35 @@ hours. Price and terms can change and must be rechecked before purchase.
 
 ## Links required
 
-- Live product URL.
-- Source repository if the form offers a separate field.
+- Public source repository.
+- Public ClawHub listing.
+- Any downstream Toolify skill URL only after it is confirmed logged out.
 
 ## Assets required
 
-Logo, product screenshots, and a landing page that demonstrates immediate use.
+None for passive verification. The paid main-tool form would require a logo,
+product screenshots, and a landing page that demonstrates immediate use.
 
 ## Expected discovery mechanism
 
-Paid directory pages, “Just Launched” placement, translations, and backlinks
-described by the selected submission tier.
+OpenClaw Skills search and category pages if Toolify indexes the ClawHub or
+GitHub listing. Ingestion, timing, and placement are unverified.
 
 ## Review risks
 
+- Assuming that ClawHub automatically feeds Toolify without an official
+  ingestion rule.
+- Auto-generated metadata may overstate compatibility or results.
 - Payment before proof of audience fit.
-- A repository may not meet the expected definition of an AI tool.
+- A repository may not meet the paid form's expected definition of an AI tool.
 - Directory backlinks are not evidence of users, installs, or revenue.
-- Generated listing copy may need careful correction for evidence claims.
+- An indexed skill page may need correction, but a correction path is not yet
+  documented.
 
 ## Final human action
 
-Skip during the initial release. If later considered, the owner must review the
+After ClawHub is live, search the Toolify OpenClaw Skills directory for each
+exact slug and record only pages that actually resolve logged out. Skip the $99
+main-tool submission. If it is ever reconsidered, the owner must review the
 current price, refund terms, generated copy, and measurable acquisition goal
 before paying.

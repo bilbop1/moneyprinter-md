@@ -60,8 +60,9 @@ Primary skill:
 
 ## Short description
 
-> Route a user's actual assets and constraints to one bounded payable test, then
-> retain evidence labels and approval gates through the result.
+> Route a user's actual assets and constraints toward one credible payable test
+> or the smallest safe discovery step, then retain evidence labels and approval
+> gates through the result.
 
 ## Long description
 

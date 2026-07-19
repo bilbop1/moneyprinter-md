@@ -36,14 +36,15 @@ https://github.com/bilbop1/moneyprinter-md
 ## Short description
 
 > A receipts-first Agent Skills pack that routes users from a short business
-> interview to an ethical payable test, delivery proof, and correctly labelled
-> economic results.
+> interview toward a credible payable test or the smallest safe discovery step,
+> with delivery proof and correctly labelled economic results.
 
 ## Long description
 
 > MoneyPrinter.md contains seven portable, open-source workflows for legitimate
 > revenue experimentation. It starts with real assets and constraints, chooses
-> one bounded test and one fallback, and preserves a human approval gate before
+> one route and one fallback, then defines a payable test when credible or a
+> safe discovery step when it is not. It preserves a human approval gate before
 > external action. Five simulated persona runs make the routing behavior
 > inspectable without presenting simulations as customer outcomes.
 

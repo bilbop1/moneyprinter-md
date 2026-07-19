@@ -6,8 +6,9 @@ sheet, narrow the claim rather than strengthening it.
 
 ## One sentence
 
-MoneyPrinter.md is an open-source, receipts-first Agent Skills pack that turns a
-short interview into one bounded revenue experiment and one fallback.
+MoneyPrinter.md is an open-source, receipts-first Agent Skills pack that routes
+a short interview toward one bounded payable test when credible, or the
+smallest safe discovery step when it is not.
 
 ## Short description
 
@@ -19,8 +20,10 @@ cashflow review.
 
 MoneyPrinter.md starts with the assets, expertise, proof, time, budget,
 authority, and risk a person actually has. It compares no more than three
-routes, recommends one small payable test and one fallback, and asks for human
-approval before it prepares buyer-facing assets. Six narrower skills then guide
+routes, recommends one route and one fallback, and defines the smallest credible
+payable test. When no credible test exists, it names that constraint and
+proposes the smallest safe discovery step instead. Human approval is required
+before buyer-facing assets or external actions. Six narrower skills then guide
 research, offer design, test design, ethical acquisition, delivery proof, and
 the final stop, revise, repeat, or scale decision. Cash collected, contracted
 revenue, booked revenue, pipeline, estimates, simulations, and anecdotes remain
@@ -140,18 +143,19 @@ Use these only after current evidence exists:
 
 **Short listing**
 
-> A seven-skill, open-source workflow pack that turns a short interview into one
-> bounded payable test while keeping cash, booked revenue, pipeline, estimates,
-> simulations, and anecdotes separate.
+> A seven-skill, open-source workflow pack that routes a short interview toward
+> one bounded payable test when credible, or the smallest safe discovery step
+> when it is not, while keeping economic evidence honestly labelled.
 
 **Long listing**
 
 > MoneyPrinter.md is an open-source pack of seven `SKILL.md` workflows for
-> turning a person's actual assets, constraints, and authority into one small,
-> legitimate revenue experiment. It runs a short interview, researches demand,
-> narrows an offer, designs a payable test, stages permissioned acquisition,
-> records delivery evidence, and reviews the result. It does not promise income
-> or automatically send messages, post, purchase, charge, sign, or publish.
+> routing a person's actual assets, constraints, and authority toward one
+> small, legitimate revenue experiment when credible. When no credible payable
+> test exists, it proposes the smallest safe discovery step instead. The pack
+> researches demand, narrows an offer, stages permissioned acquisition, records
+> delivery evidence, and reviews the result. It does not promise income or
+> automatically send messages, post, purchase, charge, sign, or publish.
 
 **Tags**
 
@@ -163,13 +167,17 @@ Use these only after current evidence exists:
 | Surface | Intended value | Confirmed live? | Blocker |
 |---|---|---:|---|
 | GitHub | `https://github.com/bilbop1/moneyprinter-md` | No | Public repository and logged-out verification |
+| GitHub private vulnerability reporting | Repository security intake | No | Enable in repository settings before public launch |
+| Code-of-conduct enforcement | Confirmed private reporting route | No | Owner-confirmed monitored private contact or GitHub private-reporting route |
 | Landing page | MoneyPrinter page on `bilbop.org` | No | Final deployed URL and logged-out verification |
 | Ko-fi | Voluntary 1% pledge | No | Exact owner-confirmed Ko-fi username |
 | X | Owner's launch post | No | Final account, links, image, and owner action |
 | Skills.sh | GitHub-sourced install page | No | Public repository and first legitimate remote install |
 | ClawHub | Seven versioned skill listings | No | GitHub-backed auth, owner handle, MIT-0 decision, dry run |
 | OpenAI Plugins Directory | Skills-only plugin | No | Plugin package, public policy/support URLs, identity, auth, review |
-| Claude marketplace | Skills plugin | No | Claude plugin package, validation, account auth, review |
+| Claude community marketplace | Skills plugin | No | Claude plugin package, validation, eligible submitter account, auth, review |
+| Hermes optional-skills catalog | Native catalog listing | No | Hermes-specific packaging, retained host test, public source, PR review |
+| Kimi Code | Direct GitHub plugin install | No | Kimi plugin manifest, retained host test, public source |
 
 ## Donation language
 

@@ -36,8 +36,9 @@ Source: [AlternativeTo official FAQ](https://alternativeto.net/faq/).
 
 ## Long description
 
-> MoneyPrinter.md interviews the user, chooses one bounded payable test, and
-> guides research, offer design, permissioned acquisition, delivery proof, and
+> MoneyPrinter.md interviews the user and routes toward one bounded payable test
+> when credible or the smallest safe discovery step when it is not. It guides
+> research, offer design, permissioned acquisition, delivery proof, and
 > cashflow review. Seven evidence labels keep cash separate from invoices,
 > pipeline, estimates, simulations, and anecdotes.
 

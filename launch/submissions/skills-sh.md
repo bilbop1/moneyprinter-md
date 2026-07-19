@@ -48,15 +48,16 @@ telemetry.
 
 ## Short description
 
-> A seven-skill, open-source workflow pack that turns a short interview into one
-> bounded payable test while keeping cash, booked revenue, pipeline, estimates,
-> simulations, and anecdotes separate.
+> A seven-skill, open-source workflow pack that routes a short interview toward
+> one credible payable test or the smallest safe discovery step while keeping
+> economic evidence honestly labelled.
 
 ## Long description
 
 > MoneyPrinter.md starts from the user's actual assets, constraints, authority,
-> and risk. It recommends one small revenue experiment and one fallback, then
-> guides opportunity research, offer design, a payable test, permissioned
+> and risk. It recommends one route and one fallback, then defines a payable
+> test when credible or the smallest safe discovery step when it is not.
+> Companion skills guide opportunity research, offer design, permissioned
 > acquisition, delivery proof, and an honest cashflow review. It does not
 > promise income or automatically send, post, purchase, charge, sign, or
 > publish.

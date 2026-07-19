@@ -25,9 +25,11 @@ and [GitHub Trending](https://github.com/trending).
 
 - Working owner authentication.
 - Public repository at the intended URL.
-- Clean clone and remote install both pass.
+- Clean clone, remote install, and one end-to-end host invocation pass.
 - README, license, security, contribution, issue templates, and compatibility
   caveats present.
+- GitHub private vulnerability reporting enabled.
+- A confirmed, monitored private conduct-enforcement/reporting route.
 - Inspected 1200×630 social preview.
 - Owner approval for the public release.
 
@@ -52,11 +54,12 @@ Repository About:
 Release notes:
 
 > First public release candidate of MoneyPrinter.md: seven open-source Agent
-> Skills for routing a short business interview to one bounded payable test.
-> The pack covers evidence-backed research, offer design, permissioned
-> acquisition, delivery proof, and cashflow review. Five checked-in persona runs
-> demonstrate the router as simulations; they are not customer outcomes or
-> earnings claims. External actions require specific human approval.
+> Skills that route a short business interview toward one bounded payable test
+> when credible or the smallest safe discovery step when it is not. The pack
+> covers evidence-backed research, offer design, permissioned acquisition,
+> delivery proof, and cashflow review. Five checked-in persona runs demonstrate
+> the router as simulations; they are not customer outcomes or earnings claims.
+> External actions require specific human approval.
 
 ## Tags
 
@@ -98,6 +101,8 @@ GitHub topics:
 
 ## Final human action
 
-Authenticate as the intended owner, publish the repository, configure the About
-text/topics/social preview, create the release candidate, and test the page and
-install logged out before sharing any external link.
+Authenticate as the intended owner, enable private vulnerability reporting,
+confirm the monitored private conduct-enforcement route, publish the
+repository, configure the About text/topics/social preview, create the release
+candidate, and test the page, install, and one full host invocation before
+sharing any external link.

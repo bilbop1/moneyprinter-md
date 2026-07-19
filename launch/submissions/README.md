@@ -23,16 +23,17 @@ The shared facts and claim boundaries live in
 | P0 | [Skills.sh](skills-sh.md) |
 | P0 | [ClawHub / OpenClaw](clawhub.md) |
 | P0 | [OpenAI Plugins Directory](openai-plugins.md) |
-| P0 | [Claude marketplace](claude-marketplace.md) |
-| P1 | [Hermes and Kimi communities](hermes-kimi.md) |
+| P0 | [Claude community and independent marketplaces](claude-marketplace.md) |
+| P1 | [Hermes optional-skills catalog](hermes.md) |
+| P1 | [Kimi Code plugin install](kimi.md) |
 | P1 | [Show HN](show-hn.md) |
-| P1 | [Dev Hunt](dev-hunt.md) |
 | P1 | [agentskill.sh](agentskill-sh.md) |
 | P1 | [Awesome Skills](awesome-skills.md) |
 | P2 | [OpenSpace](openspace.md) |
 | P2 | [Uneed](uneed.md) |
 | P2 | [AgenticSkills](agentic-skills.md) |
+| P2 | [Toolify OpenClaw Skills index](toolify.md) |
+| P2 | [Dev Hunt](dev-hunt.md) |
 | P3 | [Product Hunt](product-hunt.md) |
 | P3 | [AlternativeTo](alternative-to.md) |
 | P3 | [Futurepedia](futurepedia.md) |
-| P3 | [Toolify](toolify.md) |

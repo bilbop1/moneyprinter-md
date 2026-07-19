@@ -66,18 +66,20 @@ Use the canonical skill names rather than renaming them for promotion:
 
 Primary `moneyprinter` listing:
 
-> Interview a user's real assets and constraints, then route them to one ethical
-> revenue experiment and one fallback with receipts-first evidence labels.
+> Interview a user's real assets and constraints, then route toward one
+> credible revenue experiment or the smallest safe discovery step with
+> receipts-first evidence labels.
 
 ## Long description
 
 > MoneyPrinter is the router for a seven-skill revenue workflow. It creates a
-> Revenue Profile, compares at most three routes, recommends one bounded payable
-> test, and asks for approval before buyer-facing work. Companion skills cover
-> evidence-backed opportunity research, a narrow offer, test design,
-> permissioned acquisition drafts, delivery proof, and a stop/revise/repeat/
-> scale review. It does not promise income or perform external actions without
-> specific human approval.
+> Revenue Profile, compares at most three routes, recommends one route and one
+> fallback, then defines a payable test when credible or the smallest safe
+> discovery step when it is not. It asks for approval before buyer-facing work.
+> Companion skills cover evidence-backed opportunity research, a narrow offer,
+> test design, permissioned acquisition drafts, delivery proof, and a
+> stop/revise/repeat/scale review. It does not promise income or perform
+> external actions without specific human approval.
 
 ## Tags
 

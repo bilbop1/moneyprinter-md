@@ -7,16 +7,17 @@ scheduled launch page and persistent listing, but a direct skill directory
 should precede it.
 
 **Status:** blocked on the live landing page and repository, account access,
-logo, and screenshots. No product has been added to the queue.
+logo, and screenshots. No product has been added to the queue or scheduled.
 
 ## Current official submission path
 
-After creating an account, add the product through Uneed's product flow. The
-current official guide describes a free waiting queue and optional paid
-scheduling, launch-day visibility, rolling leaderboards, and permanent
-retention.
+Submission can begin at Uneed's tool form without an account; sign-up is
+required to save it. The free queue automatically assigns the launch date.
+The $29.99 skip-queue option lets the owner choose a date. Default to the free
+queue unless there is a measured reason and explicit owner approval to pay.
 
-Source: [Uneed how it works](https://www.uneed.best/how-it-works).
+Sources: [Uneed submit a tool](https://www.uneed.best/submit-a-tool) and
+[Uneed how it works](https://www.uneed.best/how-it-works).
 
 ## Prerequisites
 
@@ -24,7 +25,8 @@ Source: [Uneed how it works](https://www.uneed.best/how-it-works).
 - Uneed account owned by the publisher.
 - Logo and inspected product images.
 - Correct free/open-source pricing label.
-- Owner choice between free queue and any paid scheduling; default to free.
+- Acceptance that the free queue auto-assigns the launch date, or explicit
+  owner approval for the $29.99 date-selection option; default to free.
 
 ## Listing title
 
@@ -36,18 +38,20 @@ Source: [Uneed how it works](https://www.uneed.best/how-it-works).
 
 ## Short description
 
-> Seven open-source Agent Skills that turn a short interview into one bounded
-> revenue experiment without calling pipeline, estimates, or simulations cash.
+> Seven open-source Agent Skills that route a short interview toward one
+> credible payable test or the smallest safe discovery step, without calling
+> pipeline, estimates, or simulations cash.
 
 ## Long description
 
 > MoneyPrinter.md is a text-first workflow pack for beginners, creators, local
 > businesses, professionals, and experienced operators. It starts from actual
-> assets, authority, time, budget, proof, and risk. One router chooses a small
-> payable test and fallback; six focused skills guide research, offer design,
-> permissioned acquisition, delivery proof, and cashflow review. Five persona
-> walkthroughs demonstrate the method as simulations. The project does not
-> guarantee income or automatically take external actions.
+> assets, authority, time, budget, proof, and risk. One router recommends a
+> route and fallback, then defines a payable test when credible or a safe
+> discovery step when it is not. Six focused skills guide research, offer
+> design, permissioned acquisition, delivery proof, and cashflow review. Five
+> persona walkthroughs demonstrate the method as simulations. The project does
+> not guarantee income or automatically take external actions.
 
 ## Tags / category
 
@@ -75,12 +79,13 @@ products.
 ## Review risks
 
 - The audience is broader than the Agent Skills audience.
-- The free queue can delay launch.
+- The free queue assigns the date and can delay launch.
+- The $29.99 option buys date choice, not attention or results.
 - Upvote visibility is not the same as installs or retained users.
 - Do not coordinate votes or buy placement without a measured reason.
 
 ## Final human action
 
-Create a draft with the free queue selected, inspect the page, and let the owner
-approve the launch date. Do not pay to skip the queue during the initial
-evidence-free release.
+Start the form, sign up only to save the draft, select the free queue, and
+inspect the page. The owner does not choose the free launch date. Do not pay
+$29.99 to skip the queue during the initial evidence-free release.

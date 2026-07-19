@@ -44,16 +44,17 @@ select **Skills only**.
 
 ## Short description
 
-> Turn a short business interview into one bounded, evidence-labelled revenue
-> experiment with human approval before external action.
+> Route a short business interview toward one bounded revenue experiment when
+> credible, or a safe discovery step, with approval before external action.
 
 ## Long description
 
 > MoneyPrinter.md is a seven-skill workflow for testing legitimate revenue
 > ideas without turning estimates or simulations into earnings claims. It
-> interviews the user, researches current demand, narrows an offer, defines the
-> smallest payable test, stages permissioned acquisition, records delivery
-> proof, and reviews the result. It distinguishes cash collected, contracted
+> interviews the user, researches current demand, narrows an offer, and defines
+> the smallest payable test when credible; otherwise it proposes the smallest
+> safe discovery step. It can stage permissioned acquisition, record delivery
+> proof, and review the result. It distinguishes cash collected, contracted
 > revenue, booked revenue, pipeline, estimated value, simulations, and
 > unverified anecdotes. It never promises income and requires specific approval
 > before a message, post, purchase, charge, signature, contract, or publication.

@@ -29,8 +29,9 @@ again before any purchase.
 
 ## Short description
 
-> A receipts-first AI workflow that turns a short business interview into one
-> bounded revenue experiment with human approval gates.
+> A receipts-first AI workflow that routes a short business interview toward a
+> credible revenue experiment or the smallest safe discovery step, with human
+> approval gates.
 
 ## Long description
 

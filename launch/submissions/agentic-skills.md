@@ -6,19 +6,23 @@
 validated.** It is worth a second-wave submission after the larger direct skill
 directories.
 
-**Status:** blocked on the live GitHub URL. Nothing has been submitted.
+**Status:** blocked on the live GitHub URL and owner-confirmed identity/contact
+fields. Nothing has been submitted.
 
 ## Current official submission path
 
-Enter the public GitHub repository URL at
-[agenticskills.io/submit](https://agenticskills.io/submit). The current form
-describes AgenticSkills as a curated directory.
+Complete the free form at
+[agenticskills.io/submit](https://agenticskills.io/submit). At the 2026-07-19
+review it required Skill Name, GitHub URL, Category, Short Description, Author
+Name, and Email, and stated that submissions are reviewed within 48 hours.
+Featured placement was contact-only, with no public price shown.
 
 ## Prerequisites
 
 - Public GitHub source.
 - Clear `SKILL.md` frontmatter.
-- Final canonical description and tags.
+- Final skill name, category, and short description.
+- Owner-confirmed author name and monitored email.
 - Owner available to answer any curation request.
 
 ## Exact repository value
@@ -35,8 +39,9 @@ https://github.com/bilbop1/moneyprinter-md
 
 ## Short description
 
-> A receipts-first Agent Skills pack that turns one short business interview
-> into a bounded payable test and an honestly labelled result.
+> A receipts-first Agent Skills pack that routes a short business interview
+> toward one credible payable test or the smallest safe discovery step, with an
+> honestly labelled result.
 
 ## Long description
 
@@ -58,7 +63,8 @@ https://github.com/bilbop1/moneyprinter-md
 
 ## Assets required
 
-No asset is visible in the initial form; recheck before final submission.
+No asset was visible in the initial form on 2026-07-19; recheck before final
+submission.
 
 ## Expected discovery mechanism
 
@@ -67,11 +73,15 @@ traffic expectations until referral data exists.
 
 ## Review risks
 
-- Curation criteria and turnaround were not published on the initial form.
+- Review timing is a platform statement, not a guaranteed acceptance deadline.
+- Featured placement has an undisclosed price and is not required for the base
+  submission.
 - Auto-inferred compatibility may exceed the repository's verified status.
 - A second-wave listing should not distract from higher-fit P0/P1 launch work.
 
 ## Final human action
 
-Submit the confirmed repository URL, save the resulting listing URL, and inspect
-every compatibility and outcome claim before sharing it.
+Enter the confirmed repository URL and owner-approved contact fields in the
+free form. Save the resulting status or listing URL, and inspect every
+compatibility and outcome claim before sharing it. Do not request paid featured
+placement for the initial release.

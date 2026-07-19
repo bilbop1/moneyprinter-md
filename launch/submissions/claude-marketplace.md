@@ -1,10 +1,11 @@
-# Claude official/community marketplace
+# Claude community and independent marketplaces
 
 ## Verdict
 
 **P0 — strong first-party fit after plugin packaging.** Claude Code plugins can
-contain skills, and Anthropic documents both an official marketplace submission
-form and independently hosted marketplaces.
+contain skills. Anthropic documents submissions to the `claude-community`
+marketplace and separately documents independently hosted marketplaces. The
+curated `claude-plugins-official` marketplace has no application process.
 
 **Status:** blocked on Claude plugin packaging, local validation, live URLs,
 account access, and review. The current repository is an Agent Skills source
@@ -12,17 +13,23 @@ pack, not a confirmed Claude marketplace plugin.
 
 ## Current official submission path
 
-Anthropic documents two official forms:
+Anthropic documents two community-marketplace forms:
 
-- `https://claude.ai/settings/plugins/submit`
-- `https://platform.claude.com/plugins/submit`
+- Team and Enterprise users with permission to manage the organization's
+  plugin directory:
+  `https://claude.ai/admin-settings/directory/submissions/plugins/new`
+- Individual developers:
+  `https://platform.claude.com/plugins/submit`
+
+Both routes feed `claude-community`, not the curated
+`claude-plugins-official` marketplace.
 
 An independent marketplace can be hosted from a GitHub repository with
 `.claude-plugin/marketplace.json`, then added with
 `/plugin marketplace add owner/repo`.
 
-Sources: [official discover and submission guide](https://code.claude.com/docs/en/discover-plugins)
-and [official marketplace packaging guide](https://code.claude.com/docs/en/plugin-marketplaces).
+Sources: [official community submission guide](https://code.claude.com/docs/en/plugins#submit-your-plugin-to-the-community-marketplace)
+and [official independent-marketplace packaging guide](https://code.claude.com/docs/en/plugin-marketplaces).
 
 ## Prerequisites
 
@@ -34,7 +41,9 @@ and [official marketplace packaging guide](https://code.claude.com/docs/en/plugi
 - Retain a reproducible Claude host test before changing compatibility from
   installer-supported to verified.
 - Public repository and landing page.
-- Authenticated Claude or Console account for official submission.
+- For the organization form: Team or Enterprise access plus permission to
+  manage the plugin directory.
+- For the individual form: authenticated Platform developer access.
 
 ## Exact validation and independent-marketplace commands
 
@@ -56,15 +65,15 @@ name.
 
 ## Short description
 
-> Receipts-first revenue experiments: one interview, one bounded payable test,
-> seven evidence labels, and approval before external action.
+> Receipts-first revenue experiments: route toward one bounded payable test
+> when credible, or a safe discovery step, with approval before external action.
 
 ## Long description
 
-> MoneyPrinter.md packages seven text-first workflows for Claude Code. It routes
-> beginners, creators, local businesses, professionals, and experienced
-> operators from a short interview to one credible revenue experiment and one
-> fallback. Companion skills guide research, offer design, a payable test,
+> MoneyPrinter.md packages seven text-first workflows for Claude Code. It
+> starts from the user's actual assets, constraints, authority, and risk, then
+> routes toward one bounded payable test when credible or the smallest safe
+> discovery step when it is not. Companion skills guide research, offer design,
 > permissioned acquisition, delivery proof, and cashflow review. Results are
 > labelled as cash, contracted, booked, pipeline, estimated, simulated, or
 > anecdotal. No guaranteed income and no automatic external action.
@@ -87,7 +96,7 @@ name.
 
 ## Expected discovery mechanism
 
-- Official marketplace Discover tab and search if accepted.
+- `claude-community` Discover/search if accepted.
 - Direct independent-marketplace install from GitHub.
 - Favorites and sharing inside Claude Code.
 
@@ -97,10 +106,13 @@ name.
 - Plugin installs are high-trust; every included path and permission should be
   minimal.
 - Namespaced plugin skill invocation may differ from direct Agent Skills use.
-- The official marketplace is reviewed; submission does not guarantee listing.
+- The community marketplace is reviewed; submission does not guarantee
+  listing.
+- Do not describe a community submission as an application to
+  `claude-plugins-official`.
 
 ## Final human action
 
 After the package passes local validation and a real Claude invocation, choose
-between the fast independent marketplace and official review. The owner must
-authenticate and submit the official form.
+between the independent marketplace and `claude-community` review. The owner
+must use the form that matches their account type and permissions.
