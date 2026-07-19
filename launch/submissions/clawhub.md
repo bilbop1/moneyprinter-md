@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P0 — exact registry fit.** ClawHub can give each
+**P0 - exact registry fit.** ClawHub can give each
 MoneyPrinter skill a versioned, searchable page with install commands, download
 counts, stars, tags, changelogs, and scan state.
 
@@ -10,6 +10,10 @@ counts, stars, tags, changelogs, and scan state.
 `@bilbop1`, the provenance-pinned dry run found exactly seven new skills with
 zero failures, and all seven v1.0.0 releases were published. SkillSpector later
 marked every package clean and the dashboard changed each listing to visible.
+
+The description below is prepared for a future sync. The live v1.0.0 listing
+remains a historical rc.2 publication until a new source release is published
+and synced.
 
 ## Current official submission path
 
@@ -84,20 +88,19 @@ Use the canonical skill names rather than renaming them for promotion:
 
 Primary `moneyprinter` listing:
 
-> Interview a user's real assets and constraints, then route toward one
-> credible revenue experiment or the smallest safe discovery step with
-> receipts-first evidence labels.
+> With permission, scan the last 14 days of detected, accessible AI CLI and GUI
+> sessions, confirm the read once, and start the best cash-first route.
 
 ## Long description
 
-> MoneyPrinter is the router for a seven-skill revenue workflow. It creates a
-> Revenue Profile, compares at most three routes, recommends one route and one
-> fallback, then defines a payable test when credible or the smallest safe
-> discovery step when it is not. It asks for approval before buyer-facing work.
-> Companion skills cover evidence-backed opportunity research, a narrow offer,
-> test design, permissioned acquisition drafts, delivery proof, and a
-> stop/revise/repeat/scale review. It does not promise income or perform
-> external actions without specific human approval.
+> MoneyPrinter is the router for seven revenue skills. The current host scans
+> only detected, permitted session sources it can access, reports coverage
+> gaps, builds a source-linked portfolio, and asks for one confirmation. It
+> ranks no more than three routes with cash evidence and payable speed first,
+> then continues through private research, offer creation, test design,
+> acquisition preparation, and delivery preparation. It pauses before one
+> exact external action. After specific approval, it records the action,
+> reviews the result, and reranks. It does not promise income.
 
 ## Tags
 
@@ -125,7 +128,7 @@ source repository's social preview current.
 ## Review risks
 
 - Keep the repository and skill metadata license declarations consistent.
-- The word “money” may trigger extra security/moderation scrutiny; the
+- The word "money" may trigger extra security/moderation scrutiny; the
   descriptions must lead with bounded tests, evidence labels, and approval.
 - Publishing seven skills creates seven artifacts to version and maintain.
 - A blocked scan may hide a release from public search/install surfaces.

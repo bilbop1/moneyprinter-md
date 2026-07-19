@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P3 — weak and likely ineligible in the current form.** AlternativeTo lists
+**P3 - weak and likely ineligible in the current form.** AlternativeTo lists
 applications and says it generally does not approve guides/tutorials, basic AI
 tools, AI wrappers, or several other low-distinction categories. A text-first
 skill pack may not qualify as an application.
@@ -32,20 +32,23 @@ Source: [AlternativeTo official FAQ](https://alternativeto.net/faq/).
 ## Short description
 
 > Open-source revenue-experiment workflows for AI coding agents, with evidence
-> labels and approval before external action.
+> labels, a permissioned 14-day session scan, and approval before external
+> action.
 
 ## Long description
 
-> MoneyPrinter.md interviews the user and routes toward one bounded payable test
-> when credible or the smallest safe discovery step when it is not. It guides
-> research, offer design, permissioned acquisition, delivery proof, and
-> cashflow review. Seven evidence labels keep cash separate from invoices,
-> pipeline, estimates, simulations, and anecdotes.
+> MoneyPrinter.md scans the rolling 14 days of detected, permitted AI CLI and
+> GUI session sources the current host can access. After one confirmation, it
+> picks the cash-first route and continues through private research, offer
+> work, payable-test design, acquisition preparation, and delivery preparation.
+> A specific approval gates one exact external action. Its receipt and result
+> drive the next ranking. Seven evidence labels keep cash separate from
+> invoices, pipeline, estimates, simulations, and anecdotes.
 
 ## Platforms
 
 Do not claim operating-system or host platforms until AlternativeTo's form and
-the repository's host tests support them. “Web” is not accurate for the
+the repository's host tests support them. "Web" is not accurate for the
 text-only repository merely because it has a landing page.
 
 ## Tags
@@ -75,5 +78,6 @@ approval.
 
 ## Final human action
 
-Skip for this release. Revisit after an interactive application exists and only
-if it has honest, user-meaningful alternatives.
+Skip this channel. MoneyPrinter remains a portable Markdown skill, not a
+companion app. Do not build an unnecessary application to meet this directory's
+eligibility rules.

@@ -1,53 +1,89 @@
 # Roofer: estimate follow-up recovery audit
 
-**Simulation — hypothetical walkthrough only. No roofing company, homeowner, campaign, or revenue result is represented here.**
+**Simulation: hypothetical walkthrough only. This is not a real-world result. No
+roofing company, homeowner, campaign, or revenue result is represented here.**
 
-## Starting context
+## Simulated coverage receipt
 
-A hypothetical independent roofer has past estimate requests, a phone and calendar, and authority for a one-time internal process review. They cannot upload homeowner data to an unapproved tool. Their priority is handling existing estimates, not getting more leads.
+The rolling window is 2026-07-05 09:00 UTC through 2026-07-19 09:00 UTC. The
+user permits the current host to inspect the detected work sources below.
 
-## Interview delta
+| Receipt | Detected source | Status | Sessions | Note |
+| --- | --- | --- | ---: | --- |
+| `RF-01` | Claude Code | Scanned | 3 | Service packaging notes and one owner conversation summary |
+| `RF-02` | ChatGPT GUI | Unsupported | 0 | Detected, but this host has no session-history interface for it |
 
-The owner reports occasional unscheduled estimate follow-ups. Known: the business owns its estimate records. Unknown: missed-follow-up volume, consent requirements, local solicitation rules, and whether a reminder process would create a sale.
+The unsupported source is not counted as scanned. No homeowner records,
+credential paths, or raw sessions are opened.
 
-## Route decision
+## What appears true
 
-Recommend a paid internal “estimate follow-up audit + 14-day call-sheet setup” for a hypothetical $350. Fallback: an owner-only 30-minute process map. The route excludes scraping, cold bulk outreach, and any booked-roof promise.
+The user has a permissioned relationship with one independent roofing owner and
+can deliver a manual internal audit. The owner has authority over estimate
+records but has not authorized data export or homeowner contact. Missed
+follow-up volume and any revenue effect remain unknown. These simulated facts
+come from `RF-01`.
 
-## Opportunity evidence
+## One confirmation
 
-With permission, the owner points to three estimates without a documented next follow-up date. That is an internal workflow observation, not proof of revenue leakage. Project hypothesis: a bounded reminder/status system can make the next action visible.
+MoneyPrinter asks: "Is the owner relationship current, and is any source fact
+wrong, private, abandoned, or newly changed?" The user confirms one private
+owner email is permitted, excludes all homeowner data, and says the owner
+already uses a CRM.
 
-## Offer brief
+## Cash-first ranking
 
-- Buyer: authorized roofing-business owner or manager.
-- Deliverable: redacted process map, follow-up status sheet, one-staff-member training, and one correction pass.
-- Price hypothesis: $350 before delivery begins.
-- Exclusions: homeowner contact, advertising, claims handling, pricing advice, CRM migration, or recovered-revenue promise.
-- Ceiling: six human hours and no paid media.
+| Rank | Route | Cash evidence and speed | Decision |
+| ---: | --- | --- | --- |
+| 1 | $350 internal estimate follow-up audit | Known buyer access and a bounded service, but no proof of a workflow gap | Primary fit check |
+| 2 | Owner-only process map | Faster and safer, but weaker payable scope | Fallback |
+| 3 | New-lead campaign | No authority, budget, or demand proof | Drop |
 
-## Payable test
+The internal audit remains first because it is the nearest controlled payable
+event. The CRM correction lowers confidence.
 
-Proceed only after approval of scope, privacy handling, and internal fields. Stop if access needs homeowner data without an approved basis, the owner requests auto-sending, or mapping cannot finish inside six hours. Recognize payment only after a real settlement record, never an invoice draft.
+## Private work continued
 
-## Staged acquisition artifact
+The simulated run privately prepares a demand-risk note, a $350 fixed-scope
+offer, a six-hour payable test, one owner email, and a delivery plan. The plan
+uses redacted process stages, one staff walkthrough, an acceptance checklist,
+and a deletion rule for any unnecessary homeowner data. It excludes
+advertising, claims work, scraping, cold outreach, CRM migration, and recovered
+sales promises.
 
-**Draft only — not sent; human review and immediate send approval are pending.**
+Staged draft:
 
-> Hi [Owner], I help owners make the next follow-up on existing estimates visible through a short internal audit and a simple 14-day call sheet. I do not contact homeowners or promise recovered sales. If a fixed-scope $350 outline is useful, I can share it; if not, please disregard this note.
+> Hi [Owner], I offer a short internal audit that makes the next follow-up on
+> existing estimates visible in a simple 14-day call sheet. I do not contact
+> homeowners or promise recovered sales. If a fixed-scope $350 outline would
+> help, I can send it. If not, please disregard this note.
 
-Observed situation and permitted source: only a known relationship or owner-approved inbound request. Identity and intent disclosed: yes. Easy decline: “please disregard.” Claims verified or removed: recovery claim removed. Human review: pending. External action approval: pending.
+## Exact-action approval
+
+The simulated checkpoint names one email, the exact draft above, the
+pseudonymous owner, the user's own account, one send at 09:30 local time, $0
+cost, and no attachment. The user approves that email only. Homeowner contact,
+CRM access, follow-up messages, and batch sends remain unauthorized.
+
+## Simulated action receipt
+
+At 09:30 local time, the hypothetical host sends the approved email unchanged
+to the approved owner. The mail service reports accepted. The receipt records
+one recipient, one message, $0 spend, and no data attachment.
 
 ## Hypothetical result
 
-In this simulation, the owner decides an existing CRM already covers the workflow. Hypothetical cash collected: **$0**. No customer message is sent and no estimate is recovered. This is a failed fit check, not a business result.
+In this simulation, the owner replies that the existing CRM already covers the
+workflow. Hypothetical cash collected: **$0**. No homeowner message is sent and
+no estimate is recovered. This is a failed fit check, not a business result.
 
 ## Correct evidence label
 
-**Simulation.** An internal observation or hypothetical scope decision cannot be labeled revenue, pipeline, or savings.
+**Simulation.** The internal observation and hypothetical reply cannot be
+reported as revenue, pipeline, or savings.
 
-## Review decision
+## Rerank
 
-STOP — no credible signal or unacceptable economics
-
-Record the existing-CRM contrary evidence. Do not claim a recovery opportunity. Consider a different owner-requested workflow only after a fresh interview and approval.
+**STOP: the contrary evidence removes the route.** Record the CRM correction
+and drop both audit variants. Consider another owner-requested workflow only
+after new evidence, private preparation, and a fresh exact-action approval.

@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P2 — exact skill-marketplace fit with a simple per-file submission path, but
+**P2 - exact skill-marketplace fit with a simple per-file submission path, but
 reach is not independently validated.** KillerSkills accepts a public
 `SKILL.md` URL, validates and safety-scans it, and publishes approved content to
 its marketplace.
@@ -56,19 +56,20 @@ Use each canonical frontmatter name, beginning with:
 
 ## Short description
 
-> Interview a user's real assets and constraints, then route toward one
-> credible payable test or the smallest safe discovery step with receipts-first
-> evidence labels.
+> With permission, scan the last 14 days of detected, accessible AI CLI and GUI
+> sessions, confirm the read once, and start the best cash-first route.
 
 ## Long description
 
-> MoneyPrinter is the router for seven open-source revenue workflows. It starts
-> from actual assets, constraints, authority, time, budget, proof, and risk;
-> recommends one route and one fallback; and defines a bounded payable test only
-> when credible. Companion skills cover research, offer design, test design,
-> permissioned acquisition, delivery proof, and cashflow review. Results keep
-> cash, contracted revenue, booked revenue, pipeline, estimates, simulations,
-> and anecdotes separate. External actions require specific human approval.
+> MoneyPrinter is the router for seven open-source revenue workflows. The
+> current host scans only detected, permitted session sources it can access,
+> reports gaps, and asks for one confirmation. Cash evidence and speed to a
+> payable event drive the route choice. Companion skills continue through
+> private research, offer work, test design, acquisition preparation, and
+> delivery preparation. The agent pauses before one exact external action,
+> records the specifically approved action, reviews the result, and reranks.
+> MoneyPrinter keeps weaker signals separate from cash and does not promise
+> income.
 
 ## Tags
 
@@ -96,7 +97,7 @@ surface. Publication, placement, and traffic are not guaranteed.
 
 - The form is per file; submitting seven skills creates seven records to inspect
   and maintain.
-- “Published instantly” applies only to approved content, not flagged content.
+- "Published instantly" applies only to approved content, not flagged content.
 - Automated validation or safety labels are not proof of host activation or
   business outcomes.
 - Authenticated fields, terms, and moderation behavior can change.

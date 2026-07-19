@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P1 — potentially high-quality technical discovery, highly unpredictable.**
+**P1 - potentially high-quality technical discovery, highly unpredictable.**
 The project qualifies only when HN readers can install and run it from the
 public repository without a signup wall.
 
@@ -49,9 +49,9 @@ not as wording to lightly rewrite.
 HN has no short-description field. The factual one-line summary for the owner's
 own preparation is:
 
-> Seven open-source Agent Skills route a short business interview toward one
-> bounded payable test when credible or the smallest safe discovery step when
-> it is not, while keeping cash separate from weaker signals.
+> One permissioned 14-day scan across detected, accessible AI sessions starts a
+> confirmed cash-first run through private work, exact-action approval, a
+> receipt, and reranking.
 
 Do not paste that line as an HN comment.
 
@@ -72,10 +72,11 @@ personally so every HN-facing word follows one consistent human-only workflow.
 
 In the owner's own words, cover:
 
-1. What personally bothered you about AI “money printer” repositories.
+1. What personally bothered you about AI "money printer" repositories.
 2. Why you chose plain `SKILL.md` files rather than an opaque application.
 3. The seven economic evidence labels and why the distinction matters.
-4. How the short interview routes the five included personas differently.
+4. How the 14-day scan and one confirmation route the five simulations
+   differently.
 5. The exact one-line install and what a reader can try immediately.
 6. What remains unproven: real customer outcomes and per-host activation.
 7. The technical or product feedback you genuinely want.
@@ -104,7 +105,7 @@ graphic.
 
 ## Review risks
 
-- A text-only repository can be mistaken for “other reading material.” The
+- A text-only repository can be mistaken for "other reading material." The
   working install and runnable workflow must be obvious.
 - Generic marketing language, exaggerated claims, or donation emphasis will
   hurt credibility.

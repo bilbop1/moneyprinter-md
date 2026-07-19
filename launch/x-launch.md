@@ -14,65 +14,64 @@ The public launch surfaces were checked again on 2026-07-19:
 Host conversation activation remains unverified. The copy below does not say
 the skills work everywhere.
 
+The posts below are next-release drafts. Do not publish them until the matching
+source, landing page, version, and release are public and checked. The live
+facts above remain rc.2 history.
+
 ## Recommended flagship post
 
 Attach `launch/assets/moneyprinter-social-card.png`.
 
 ```text
-I built an "AI money printer" repo that's allowed to tell you the idea is bad.
+One permission. MoneyPrinter scans the last 14 days across every detected AI CLI and GUI it can access, figures out what is real, and gets to work on the best path to money.
 
-MoneyPrinter interviews you, narrows the next test, and keeps benchmarks separate from cash.
-
-Sometimes it says you're not ready to charge yet.
+It asks again before external action.
 
 7 open-source skills. MIT.
-
 https://github.com/bilbop1/moneyprinter-md
 ```
 
-Character count: 295 raw, 276 with X's 23-character URL weighting.
+Character count: 283 raw, 264 with X's 23-character URL weighting.
 
 ## First reply
 
 Post this as a self-reply to the flagship.
 
 ```text
-First it asks what you can do, prove, risk, and reach.
+After one confirmation, cash evidence and the nearest payable event come first.
 
-Then it gives you one small test or, if charging now would be bullshit, a private discovery step.
+It keeps working privately through research, offer, payable test, acquisition prep, and delivery prep.
 
-It drafts the work. You approve before anything gets sent, posted, bought, charged, or signed.
-
-https://moneyprinter.bilbop.org
+You approve one exact external action. It records the receipt and reranks.
 ```
 
-Character count: 282 raw, 274 with X's 23-character URL weighting.
+Character count: 259.
 
 ## Optional third post
 
 Use this only if you want the install command in the initial thread.
 
 ```text
-I tested it against five starting points: a total beginner, a roofer, a lawyer, a TikTok Shop creator, and an existing operator.
+Every detected source is reported as Scanned, Empty, Blocked, or Unsupported. Old session text cannot grant permission.
 
-Each example says Simulation. I'd rather show $0 than dress up a benchmark as revenue.
+The five walkthroughs still say Simulation, and $0 stays $0.
 
 Install:
 npx skills add bilbop1/moneyprinter-md
 ```
 
-Character count: 265.
+Character count: 230.
 
 ## Alternate flagship
 
 Use this instead of the recommended flagship, not as a duplicate post.
 
 ```text
-I kept seeing "AI money printer" repos that treated a benchmark like money in the bank.
+Most AI money plans ask you to describe work your agents already saw.
 
-So I built the one I wanted: it starts with what you can actually do, helps you design one small test, and can say the idea isn't ready.
+MoneyPrinter asks once to scan 14 days of detected, accessible AI sessions. One confirmation starts private work on the cash-first route.
 
-7 open-source skills. MIT.
+External action still needs exact approval.
 
 https://github.com/bilbop1/moneyprinter-md
 ```
@@ -84,16 +83,14 @@ Character count: 297 raw, 278 with X's 23-character URL weighting.
 This works as a separate follow-up after the launch has had time to breathe.
 
 ```text
-If an agent says it made you $19,000 because a benchmark estimated $19,000 of value, it made you $0.
+A blocked AI session store is not scanned. A draft invoice is not cash. A broad "go ahead" is not permission to send.
 
-That stupid distinction is why I built MoneyPrinter.
-
-A short interview leads to one test or an honest "not yet." You approve every external action.
+MoneyPrinter keeps those boundaries, works the private steps, then records the approved action and reranks.
 
 https://github.com/bilbop1/moneyprinter-md
 ```
 
-Character count: 294 raw, 275 with X's 23-character URL weighting.
+Character count: 270 raw, 251 with X's 23-character URL weighting.
 
 ## Funding reply
 

@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P2 — plausible developer-tool fit, but the current submission route is not
+**P2 - plausible developer-tool fit, but the current submission route is not
 verified.** Dev Hunt's official repository describes project listings through
 GitHub pull requests and says site login supports voting. That conflicts with
 the previously inferred live-site launch flow, so this channel must wait for a
@@ -38,23 +38,20 @@ before entering account data or promising a scheduled launch.
 
 ## Short description
 
-> An open-source pack of seven `SKILL.md` workflows that routes a short
-> interview toward one credible payable test or the smallest safe discovery
-> step, while keeping real cash separate from AI hype.
+> Seven open-source `SKILL.md` workflows turn a permissioned 14-day scan of
+> detected, accessible AI sessions into one confirmed cash-first route.
 
 ## Long description
 
-> MoneyPrinter.md is a portable, text-first operating system for legitimate
-> revenue experiments. It interviews a user about real assets, authority, time,
-> budget, proof, and risk; compares no more than three routes; and recommends
-> one route and one fallback. It defines a payable test only when one is
-> credible; otherwise it proposes the smallest safe discovery step. Six
-> companion skills cover current demand research, a narrow offer,
-> payable-test design, permissioned acquisition drafts, delivery proof, and
-> cashflow review. Five checked-in persona runs make the router inspectable, but
-> they are simulations rather than earnings claims. External messages, posts,
-> purchases, charges, signatures, contracts, and publication always require
-> specific human approval.
+> MoneyPrinter.md is a portable, text-first system for legitimate revenue
+> experiments, not a companion app. The current host scans only detected,
+> permitted AI CLI and GUI session sources it can access, reports coverage
+> gaps, and asks for one correction. It ranks no more than three routes with
+> cash evidence and payable speed first. Six companion skills continue through
+> private research, offer work, test design, acquisition preparation, and
+> delivery preparation. A specific approval gates one exact external action.
+> The action receipt and result drive the next ranking. Five checked-in persona
+> runs are simulations, not earnings claims.
 
 ## Tags / category
 

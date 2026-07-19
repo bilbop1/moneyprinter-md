@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P0 — strong first-party fit after plugin packaging.** Claude Code plugins can
+**P0 - strong first-party fit after plugin packaging.** Claude Code plugins can
 contain skills. Anthropic documents submissions to the `claude-community`
 marketplace and separately documents independently hosted marketplaces. The
 curated `claude-plugins-official` marketplace has no application process.
@@ -66,18 +66,19 @@ name.
 
 ## Short description
 
-> Receipts-first revenue experiments: route toward one bounded payable test
-> when credible, or a safe discovery step, with approval before external action.
+> A permissioned 14-day scan of detected, accessible AI sessions starts one
+> confirmed cash-first route, with approval before external action.
 
 ## Long description
 
-> MoneyPrinter.md packages seven text-first workflows for Claude Code. It
-> starts from the user's actual assets, constraints, authority, and risk, then
-> routes toward one bounded payable test when credible or the smallest safe
-> discovery step when it is not. Companion skills guide research, offer design,
-> permissioned acquisition, delivery proof, and cashflow review. Results are
-> labelled as cash, contracted, booked, pipeline, estimated, simulated, or
-> anecdotal. No guaranteed income and no automatic external action.
+> MoneyPrinter.md packages seven text-first workflows for Claude Code. The
+> current host scans only detected, permitted session sources it can access,
+> reports coverage gaps, and asks for one correction. It picks the route
+> closest to a real payable event, then continues through private research,
+> offer creation, test design, acquisition preparation, and delivery
+> preparation. A specific approval gates one exact external action. Its receipt
+> and result drive the next ranking. Results keep their evidence labels. The
+> pack does not guarantee income or run autonomous external action.
 
 ## Tags / category
 

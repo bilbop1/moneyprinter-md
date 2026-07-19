@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P2 — plausible indie-tool exposure, not skill-native.** Uneed can provide a
+**P2 - plausible indie-tool exposure, not skill-native.** Uneed can provide a
 scheduled launch page and persistent listing, but a direct skill directory
 should precede it.
 
@@ -39,20 +39,20 @@ Sources: [Uneed submit a tool](https://www.uneed.best/submit-a-tool) and
 
 ## Short description
 
-> Seven open-source Agent Skills that route a short interview toward one
-> credible payable test or the smallest safe discovery step, without calling
-> pipeline, estimates, or simulations cash.
+> Seven open-source Agent Skills turn a permissioned 14-day scan of detected,
+> accessible AI sessions into one confirmed cash-first route.
 
 ## Long description
 
-> MoneyPrinter.md is a text-first workflow pack for beginners, creators, local
-> businesses, professionals, and experienced operators. It starts from actual
-> assets, authority, time, budget, proof, and risk. One router recommends a
-> route and fallback, then defines a payable test when credible or a safe
-> discovery step when it is not. Six focused skills guide research, offer
-> design, permissioned acquisition, delivery proof, and cashflow review. Five
-> persona walkthroughs demonstrate the method as simulations. The project does
-> not guarantee income or automatically take external actions.
+> MoneyPrinter.md is a text-first workflow pack, not a companion app. With
+> permission, the current host scans the rolling 14 days of detected AI CLI and
+> GUI session sources it can access, reports coverage gaps, and asks for one
+> correction. It ranks no more than three routes with cash evidence first, then
+> continues through private research, offer creation, payable-test design,
+> acquisition preparation, and delivery preparation. A specific approval gates
+> one exact external action. Its receipt and result feed the next ranking. Five
+> walkthroughs demonstrate the method as simulations. The project does not
+> guarantee income.
 
 ## Tags / category
 

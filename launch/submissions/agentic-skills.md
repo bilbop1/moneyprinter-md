@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P2 — exact category, but reach and review behavior are not yet independently
+**P2 - exact category, but reach and review behavior are not yet independently
 validated.** It is worth a second-wave submission after the larger direct skill
 directories.
 
@@ -39,17 +39,19 @@ https://github.com/bilbop1/moneyprinter-md
 
 ## Short description
 
-> A receipts-first Agent Skills pack that routes a short business interview
-> toward one credible payable test or the smallest safe discovery step, with an
-> honestly labelled result.
+> With permission, MoneyPrinter scans the last 14 days of detected AI CLI and
+> GUI sessions the host can access, confirms the read once, and starts the
+> cash-first route.
 
 ## Long description
 
-> Seven open-source skills cover route selection, current opportunity research,
-> a narrow offer, payable-test design, permissioned acquisition, delivery proof,
-> and cashflow review. The pack distinguishes cash, contracted revenue, booked
-> revenue, pipeline, estimates, simulations, and anecdotes. Human approval is
-> required before every external action.
+> Seven open-source skills turn the permitted scan into a source-linked
+> portfolio, no more than three ranked routes, and one primary route. The run
+> continues through private research, offer creation, payable-test design,
+> acquisition preparation, and delivery preparation. A specific approval is
+> required before an external action. The agent records the approved action,
+> reviews the result, and reranks. Coverage is limited to detected, permitted,
+> accessible sources, and the pack does not promise income.
 
 ## Tags
 

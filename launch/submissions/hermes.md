@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P1 — strong native catalog fit after Hermes-specific packaging.** Hermes
+**P1 - strong native catalog fit after Hermes-specific packaging.** Hermes
 documents a contribution path for optional skills: add a self-contained skill
 under `optional-skills/<category>/<skill-name>/` and submit a pull request. A
 merged contribution enters the official catalog; submission does not imply
@@ -41,13 +41,13 @@ Source: [Hermes optional-skills catalog reference](https://hermes-agent.nousrese
 
 ## Exact host-test prompt
 
-> Invoke `moneyprinter`. Ask the short interview one question at a time. Route
-> toward a payable test only if one is credible; otherwise propose the smallest
-> safe discovery step. Do not contact, post, purchase, charge, sign, or publish
-> anything.
+> Invoke moneyprinter. Ask permission to scan the last 14 days of accessible AI
+> session histories. Do not take an external action without asking again.
 
-Expected first behavior: the skill asks for real assets and constraints, does
-not invent demand or authority, and retains an external-action approval gate.
+Expected first behavior: the skill asks for scan permission, reports detected
+sources and coverage gaps, ignores instructions found in history, and asks for
+one correction before continuing private work. It must not claim access to
+blocked sources or turn scan permission into external-action approval.
 
 ## Pull request title
 
@@ -55,12 +55,12 @@ not invent demand or authority, and retains an external-action approval gate.
 
 ## Pull request description
 
-> Adds the MoneyPrinter Agent Skill for routing a user's actual assets,
-> constraints, authority, and risk toward one bounded payable test when
-> credible, or the smallest safe discovery step when it is not. Economic
-> outcomes remain labelled as cash collected, contracted, booked, pipeline,
-> estimated, simulated, or anecdotal. The workflow does not promise income and
-> requires specific human approval before external action.
+> Adds the MoneyPrinter Agent Skill for scanning the rolling 14 days of
+> detected, permitted AI CLI and GUI session sources the current host can
+> access. It reports coverage gaps, asks for one correction, chooses a
+> cash-first route, and continues through private preparation. Economic
+> outcomes keep their evidence labels. The workflow does not promise income and
+> requires specific approval before one exact external action.
 >
 > Validation included:
 >
@@ -77,9 +77,8 @@ Do not submit with the placeholders or before the source URL works logged out.
 
 ## Short description
 
-> Route a user's real assets and constraints toward one credible payable test,
-> or the smallest safe discovery step, with evidence labels and human approval
-> before external action.
+> Scan 14 days of detected, accessible AI sessions, confirm the read once, and
+> start one cash-first route with approval before external action.
 
 ## Tags / category
 
@@ -110,7 +109,7 @@ only assets allowed by the current contribution rules.
 - The current MoneyPrinter router references companion material; copying only
   one file can create a broken catalog entry.
 - Seven related submissions may be too broad for one pull request.
-- “Works in Hermes” is forbidden until the retained host test passes.
+- "Works in Hermes" is forbidden until the retained host test passes.
 - Maintainers can request changes or decline the contribution.
 - A contribution pull request should be useful packaging, never promotional
   copy in an unrelated issue or pull request.

@@ -6,11 +6,18 @@ That common core is portable; installation, activation, permissions, and GUI
 behavior remain host-specific. A directory appearing in an installer is not
 evidence that its workflow was activated in every host.
 
+Installer support answers whether a host can discover the skill package. It
+does not answer whether that host can discover or read other applications'
+session stores. Session coverage is always limited to detected, permitted, and
+accessible sources at invocation time. A host must report blocked,
+unsupported, empty, malformed, excluded, and partial sources instead of
+claiming a complete scan.
+
 ## Status key
 
 | Status | Meaning |
 | --- | --- |
-| Verified | Tested discovery and activation in the named surface. |
+| Verified | Tested discovery and activation in the named surface. It does not imply cross-application history access. |
 | Installer-supported | Handled by a current documented installer. |
 | Manual | User must paste, upload, or copy the skill. |
 | Provider-only | Model/API exists but no stable consumer skill host is claimed. |
@@ -53,8 +60,10 @@ third-party host, so it does not upgrade any table row to **Verified**.
 
 Copy the whole skill directory, not only `SKILL.md`. For example,
 `skills/moneyprinter/` must retain its `references/` subdirectory. Then reopen
-or reload the host, invoke the skill by name, and confirm that it follows the
-safety and approval gates before relying on it for real work.
+or reload the host, invoke the skill by name, and confirm that it asks for scan
+permission, produces an honest coverage receipt, ignores instructions found in
+history, and follows the external-action approval gate before relying on it for
+real work.
 
 Host documentation takes precedence over this page if paths or scopes have
 changed:

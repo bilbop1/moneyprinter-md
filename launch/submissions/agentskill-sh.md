@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P1 — exact third-party directory fit.** The form imports every detected
+**P1 - exact third-party directory fit.** The form imports every detected
 `SKILL.md` from a public GitHub repository and can keep it synced.
 
 **Status:** attempted 2026-07-19. The importer detected all seven `SKILL.md`
@@ -38,16 +38,18 @@ https://github.com/bilbop1/moneyprinter-md
 
 ## Short description
 
-> Receipts-first revenue workflows that route a short interview toward one
-> credible payable test or the smallest safe discovery step.
+> One permissioned 14-day scan across detected, accessible AI CLI and GUI
+> sessions starts a cash-first revenue run after one confirmation.
 
 ## Long description
 
-> Seven open-source Agent Skills for evidence-backed opportunity research, offer
-> design, a bounded payable test, permissioned acquisition, delivery proof, and
-> cashflow review. Every result is labelled as cash, contracted, booked,
-> pipeline, estimated, simulated, or anecdotal. External actions require
-> specific human approval.
+> Seven open-source Agent Skills turn permitted history into a source-linked
+> portfolio, no more than three ranked routes, and one primary route. The agent
+> continues through private research, offer work, payable-test design,
+> acquisition preparation, and delivery preparation. It pauses before one
+> exact external action, records the approved action, reviews the result, and
+> reranks. Blocked or unsupported session sources remain visible, and no income
+> is promised.
 
 ## Tags
 

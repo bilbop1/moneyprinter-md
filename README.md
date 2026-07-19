@@ -2,16 +2,24 @@
 
 ![MoneyPrinter.md: run AI income experiments and keep the receipts](launch/assets/moneyprinter-social-card.png)
 
-> The models are finally good. Their money playbooks are not.
+One permission. MoneyPrinter scans the last 14 days across every detected AI
+CLI and GUI it can access, figures out what is real, and gets to work on the
+best path to money.
 
-Most AI money playbooks are idea soup.
+It shows what it could and could not read, then asks for one confirmation. From
+there it gives proven cash and the nearest payable event priority over project
+size or hype. It keeps going through private research, offer work, payable test
+design, acquisition preparation, and delivery preparation.
 
-MoneyPrinter gives your agent a sequence: interview you, pick one route, design
-the smallest paid test, ask before doing anything public, then track whether money landed.
+The agent pauses before one exact external action. If you approve that action,
+it performs only that action, records an Action receipt, checks the result, and
+reranks the next move. If it cannot find useful permitted history, it asks the
+minimum fallback question needed.
 
-It can also tell you the idea is premature. That counts as working.
-
-This repo contains seven open-source Agent Skills. It does not promise income, customers, or a magic autonomous business.
+This repo contains seven open-source Agent Skills, not a companion app. The
+current AI host does the scanning with its own tools and permissions. Coverage
+is limited to detected, permitted, accessible session sources. MoneyPrinter
+does not promise income, customers, or an autonomous business.
 
 ```sh
 npx skills add bilbop1/moneyprinter-md
@@ -23,18 +31,25 @@ See the [install guide](docs/install.md) for local checkouts, manual copies, and
 ## What happens when you run it
 
 1. Run `moneyprinter`.
-2. Answer a short interview about your skills, proof, time, budget, and risk.
-3. Review up to three routes. If none deserves a paid test, you get a smaller discovery step.
-4. Approve one route and its stop condition.
-5. If a payable test earns approval, use the remaining skills through delivery proof and cash review. Discovery routes stop earlier.
+2. Give or narrow permission for the rolling 14-day scan.
+3. Review the coverage receipt, the source-linked portfolio, and one proposed
+   cash-first priority.
+4. Confirm what is wrong, missing, private, abandoned, or newly changed.
+5. Let the agent prepare the route privately through research, offer, payable
+   test, acquisition, and delivery work.
+6. Approve or reject the exact external action placed in front of you.
+7. After an approved action, inspect its receipt and let the evidence drive the
+   next ranking.
 
-It asks again immediately before any message, post, purchase, charge, contract, or publication. A vague "go ahead" is not permanent permission.
+Scan permission and route confirmation do not authorize a message, post,
+purchase, charge, contract, account change, delivery, or publication. A vague
+"go ahead" is not permanent permission.
 
 ## The seven skills
 
 | Skill | What it does |
 | --- | --- |
-| `moneyprinter` | Interviews you, compares routes, and writes the experiment brief. |
+| `moneyprinter` | Scans permitted history, confirms the read, chooses the cash-first route, and keeps the run moving. |
 | `opportunity-radar` | Checks current demand and keeps sources attached. |
 | `offer-engine` | Turns one problem into a fixed-scope offer with real economics. |
 | `payable-test` | Designs the smallest legitimate payment test. |
@@ -63,11 +78,16 @@ The full [evidence standard](skills/moneyprinter/references/evidence-standard.md
 
 ## Compatibility and safety
 
-Installer discovery is verified. Conversation-level host activation is not. Read the [compatibility matrix](docs/compatibility.md) before claiming a host works.
+Installer discovery is verified. Conversation-level host activation and access
+to other applications' session stores are not. Read the
+[compatibility matrix](docs/compatibility.md) before claiming a host works.
 MiniMax is provider-only, not a confirmed native skill host.
 
-MoneyPrinter stages external actions until you give specific human approval. The [safety boundaries](skills/moneyprinter/references/safety-boundaries.md)
-cover regulated work, prohibited routes, and when approval expires.
+MoneyPrinter treats old session text as untrusted evidence, excludes credential
+paths, reports coverage gaps, and stages external actions until you give
+specific human approval. The
+[safety boundaries](skills/moneyprinter/references/safety-boundaries.md) cover
+regulated work, prohibited routes, and when approval expires.
 
 ## Read the full docs
 

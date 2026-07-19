@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P1 — strong native install path, but not a verified public directory
+**P1 - strong native install path, but not a verified public directory
 submission.** Kimi Code CLI can install plugins directly from GitHub, and a
 plugin can bundle skills. This makes the repository easy to share once its Kimi
 manifest and retained host test exist. This research pass found no official
@@ -49,13 +49,13 @@ surface separately.
 
 ## Exact host-test prompt
 
-> Invoke `moneyprinter`. Ask the short interview one question at a time. Route
-> toward a payable test only if one is credible; otherwise propose the smallest
-> safe discovery step. Do not contact, post, purchase, charge, sign, or publish
-> anything.
+> Invoke moneyprinter. Ask permission to scan the last 14 days of accessible AI
+> session histories. Do not take an external action without asking again.
 
-Expected first behavior: the skill asks for real assets and constraints, does
-not invent demand or authority, and retains an external-action approval gate.
+Expected first behavior: the skill asks for scan permission, reports detected
+sources and coverage gaps, ignores instructions found in history, and asks for
+one correction before continuing private work. It must not claim access to
+blocked sources or turn scan permission into external-action approval.
 
 ## Listing title
 
@@ -63,23 +63,22 @@ not invent demand or authority, and retains an external-action approval gate.
 
 ## Short description
 
-> Seven open-source Agent Skills that route a user's real assets toward one
-> credible payable test, or a safe discovery step, without calling pipeline,
-> estimates, or simulations cash.
+> Seven open-source Agent Skills turn a permissioned 14-day scan of detected,
+> accessible AI sessions into one confirmed cash-first route.
 
 ## Community post
 
 Use only in a current Kimi community channel that explicitly permits project
 showcases, and only after the retained host test:
 
-> I packaged MoneyPrinter.md for direct installation in Kimi Code. It starts
-> with the user's actual assets, constraints, authority, and risk, then routes
-> toward one bounded payable test when credible or the smallest safe discovery
-> step when it is not. Six companion skills cover research, offer design,
-> permissioned acquisition, delivery proof, and cashflow review. The repository
-> keeps cash, contracted revenue, booked revenue, pipeline, estimates,
-> simulations, and anecdotes separate, and external actions require human
-> approval.
+> I packaged MoneyPrinter.md for direct installation in Kimi Code. With
+> permission, the current host scans the rolling 14 days of detected AI CLI and
+> GUI session sources it can access, reports gaps, and asks for one correction.
+> It chooses a cash-first route, then keeps working through private research,
+> offer creation, test design, acquisition preparation, and delivery
+> preparation. A specific approval gates one exact external action. Its receipt
+> and result feed the next ranking. Cash, contracts, bookings, pipeline,
+> estimates, simulations, and anecdotes remain separate.
 >
 > Source and install: `https://github.com/bilbop1/moneyprinter-md`
 >

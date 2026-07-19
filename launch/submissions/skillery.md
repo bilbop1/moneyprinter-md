@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P2 — exact GitHub-hosted skill-marketplace fit, with unvalidated reach.**
+**P2 - exact GitHub-hosted skill-marketplace fit, with unvalidated reach.**
 Skillery advertises submission of GitHub-hosted skills and marketplace
 discovery for Claude Code, Codex CLI, and other agents.
 
@@ -58,19 +58,19 @@ names instead.
 
 ## Short description
 
-> Seven receipts-first Agent Skills that route a short interview toward one
-> credible payable test or the smallest safe discovery step, with approval
-> before external action.
+> Seven receipts-first Agent Skills turn a permissioned 14-day scan of
+> detected, accessible AI sessions into one confirmed cash-first route.
 
 ## Long description
 
-> MoneyPrinter.md is an open-source pack for legitimate revenue experiments. A
-> short interview starts from the user's actual assets, constraints, authority,
-> and risk, then recommends one route and one fallback. Focused skills guide
-> current research, a narrow offer, a payable test, permissioned acquisition,
-> delivery proof, and cashflow review. Economic outcomes remain labelled as
-> cash, contracted, booked, pipeline, estimated, simulated, or anecdotal. The
-> pack does not promise income or act externally without specific approval.
+> MoneyPrinter.md is an open-source pack for legitimate revenue experiments.
+> The current host scans only detected, permitted session sources it can access,
+> reports gaps, builds a source-linked portfolio, and asks for one correction.
+> Cash evidence and payable speed drive the route choice. Focused skills
+> continue through private research, offer work, test design, acquisition
+> preparation, and delivery preparation. The agent pauses before one exact
+> external action, records the specifically approved action, reviews the
+> result, and reranks. It does not promise income.
 
 ## Tags
 
@@ -104,7 +104,7 @@ data exist.
   rather than predict.
 - Marketplace platform labels are not evidence of activation in Claude, Codex,
   or another host.
-- “Hundreds of skills” is Skillery's own current marketing statement, not an
+- "Hundreds of skills" is Skillery's own current marketing statement, not an
   independently audited audience measure.
 
 ## Final human action

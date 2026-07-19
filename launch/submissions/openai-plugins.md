@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P0 — strong first-party fit, not overnight-click-ready.** OpenAI currently
+**P0 - strong first-party fit, not overnight-click-ready.** OpenAI currently
 accepts skills-only plugins, but this repository still needs plugin packaging,
 submission-specific tests, public policy/support URLs, identity verification,
 and authenticated review.
@@ -44,25 +44,25 @@ select **Skills only**.
 
 ## Short description
 
-> Route a short business interview toward one bounded revenue experiment when
-> credible, or a safe discovery step, with approval before external action.
+> Scan 14 days of detected, accessible AI sessions, confirm the read once, and
+> start one cash-first route with approval before external action.
 
 ## Long description
 
-> MoneyPrinter.md is a seven-skill workflow for testing legitimate revenue
-> ideas without turning estimates or simulations into earnings claims. It
-> interviews the user, researches current demand, narrows an offer, and defines
-> the smallest payable test when credible; otherwise it proposes the smallest
-> safe discovery step. It can stage permissioned acquisition, record delivery
-> proof, and review the result. It distinguishes cash collected, contracted
-> revenue, booked revenue, pipeline, estimated value, simulations, and
-> unverified anecdotes. It never promises income and requires specific approval
-> before a message, post, purchase, charge, signature, contract, or publication.
+> MoneyPrinter.md is a seven-skill workflow for legitimate revenue experiments.
+> With permission, the current host scans the rolling 14 days of detected AI
+> CLI and GUI session sources it can access, reports coverage gaps, and asks for
+> one correction. Cash evidence and payable speed drive the route choice. The
+> run continues through private research, offer creation, payable-test design,
+> acquisition preparation, and delivery preparation. A specific approval gates
+> one exact external action. Its receipt and result drive the next ranking.
+> Economic evidence keeps its label, and MoneyPrinter never promises income.
 
 ## Starter prompts
 
-> Invoke MoneyPrinter and interview me one question at a time. I have no
-> audience and at most four hours this week. Do not contact anyone.
+> Invoke MoneyPrinter. Ask permission to scan the last 14 days of accessible AI
+> session histories. I have no audience and at most four hours this week. Do
+> not take an external action without asking again.
 
 > I run a roofing company. Help me investigate one permissioned internal revenue
 > leak before proposing any customer outreach.
@@ -98,7 +98,7 @@ not publication.
 
 ## Review risks
 
-- “MoneyPrinter” can look like an earnings promise without the evidence and
+- "MoneyPrinter" can look like an earnings promise without the evidence and
   safety explanation.
 - Policy scanning may require narrower instructions or reject unnecessary
   permissions.

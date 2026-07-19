@@ -1,53 +1,93 @@
 # Existing business: onboarding handoff audit
 
-**Simulation — hypothetical walkthrough only. No business, client, contract, payment, retention outcome, or savings result is represented here.**
+**Simulation: hypothetical walkthrough only. This is not a real-world result. No
+business, client, contract, payment, retention outcome, or savings result is
+represented here.**
 
-## Starting context
+## Simulated coverage receipt
 
-A hypothetical five-person service business has paying customers, an owner who can approve internal process work, and a recurring sales-to-delivery handoff. The owner suspects onboarding is uneven but has not measured churn, rework, cycle time, or satisfaction. Customer data stays inside approved systems.
+The rolling window is 2026-07-05 09:00 UTC through 2026-07-19 09:00 UTC. The
+operator permits the current host to inspect the detected work sources below.
 
-## Interview delta
+| Receipt | Detected source | Status | Sessions | Note |
+| --- | --- | --- | ---: | --- |
+| `OB-01` | Codex CLI | Scanned | 8 | Process notes, owner constraints, and service drafts |
+| `OB-02` | Hermes | Scanned | 3 | Handoff checklist experiments |
+| `OB-03` | Claude GUI | Blocked | 0 | Detected, but this host cannot read the store |
 
-Known: staff can identify handoff stages and authorize an internal audit. Unknown: whether onboarding is the constraint, whether changes improve retention, and whether client communications need consent or review. The team has 10 staff-hours but no authority for automatic account changes.
+The blocked source remains in the receipt. No customer records, credentials,
+or raw histories are opened.
 
-## Route decision
+## What appears true
 
-Recommend a fixed-scope handoff map plus one internal checklist pilot at a hypothetical $1,200 project price. Fallback: an owner-only 45-minute diagnostic session. The route uses permissioned internal access and avoids client contact or retained-revenue claims.
+The user has a permissioned relationship with a hypothetical five-person
+service business and can deliver internal process work. The owner can approve
+staff time, but customer data must remain inside approved systems. Different
+handoff notes appear in `OB-01` and `OB-02`, yet no clean baseline proves lost
+revenue, churn, rework, or savings.
 
-## Opportunity evidence
+## One confirmation
 
-Observed after approval: two staff members describe different next steps after a sale. This is a process inconsistency, not proof of lost customers or dollars. Project hypothesis: one agreed checklist may reduce internal ambiguity. A baseline and client-safe measurement plan are required before any value claim.
+MoneyPrinter asks: "Does the owner still want one internal handoff test, and is
+anything above wrong, private, abandoned, or newly changed?" The user confirms
+the request, limits access to redacted process stages, and says no software
+implementation or client contact is allowed.
 
-## Offer brief
+## Cash-first ranking
 
-- Buyer: authorized business owner or operations lead.
-- Deliverable: internal process map, one checklist pilot, staff walkthrough, and one correction pass.
-- Price hypothesis: $1,200 before final documentation handoff.
-- Exclusions: software implementation, client messaging, retention guarantee, data extraction, HR policy, and ongoing operations management.
-- Ceiling: eight human hours and no new software purchase.
+| Rank | Route | Cash evidence and speed | Decision |
+| ---: | --- | --- | --- |
+| 1 | $1,200 handoff map and checklist pilot | Existing buyer access and clear delivery capacity, but no value baseline | Primary payable test |
+| 2 | Owner-only diagnostic | Faster and lower risk, with a smaller payable event | Fallback |
+| 3 | New onboarding software | Slow, costly, and unsupported by current evidence | Drop |
 
-## Payable test
+The fixed-scope service ranks first because it extends an existing relationship
+and reaches a payable decision sooner than a new build.
 
-Begin only with owner approval of scope, data boundaries, and staff time. Stop if data access violates a client commitment, no internal baseline can be established, the pilot expands into software implementation, or the eight-hour ceiling is breached. Any client notice remains a separate draft and approval.
+## Private work continued
 
-## Staged acquisition artifact
+The simulated run prepares a process-evidence note, a $1,200 offer, an
+eight-hour payable test, one owner email, and a delivery plan. The plan includes
+a redacted process map, one checklist pilot, a staff walkthrough, an acceptance
+check, a privacy-safe baseline, and a correction pass. It excludes software
+implementation, client messages, retention claims, data extraction, and
+ongoing management.
 
-**Draft only — not sent; human review and immediate send approval are pending.**
+Staged draft:
 
-> Hi [Owner], I am testing a fixed-scope internal handoff audit for service teams that want one visible next-step checklist after a sale. It is not a retention guarantee and does not require client outreach. If a $1,200 scope is useful to review, I can send it; if not, no action is needed.
+> Hi [Owner], I am testing a fixed-scope internal handoff audit for service
+> teams that want one visible next-step checklist after a sale. It does not
+> promise retention and needs no client outreach. If a $1,200 scope is useful
+> to review, I can send it. If not, no action is needed.
 
-Observed situation and permitted source: only a known, authorized owner request or permissioned relationship. Identity and intent disclosed: yes. Easy decline: “no action is needed.” Claims verified or removed: retained-revenue claim removed. Human review: pending. External action approval: pending.
+## Exact-action approval
+
+The simulated checkpoint names one email, the exact draft above, the
+pseudonymous owner, the user's own account, one send at 14:00 local time, $0
+cost, and no attachment. The user approves that email only. Client contact,
+staff-account changes, follow-up, and bulk action remain unauthorized.
+
+## Simulated action receipt
+
+At 14:00 local time, the hypothetical host sends the approved email unchanged
+to the approved owner. The mail service reports accepted. The receipt records
+one recipient, one message, $0 spend, and no customer data.
 
 ## Hypothetical result
 
-In this simulation, staff adopt a draft checklist for one week, but the owner cannot obtain a clean baseline and pauses the pilot. Hypothetical cash collected: **$0**. The team does not infer savings, retention, or successful delivery from adoption alone.
+In this simulation, the owner asks to review the scope but cannot provide a
+privacy-safe baseline. Hypothetical cash collected: **$0**. The reply is a
+pipeline signal only. This is not a business, customer, retention, or savings
+result.
 
 ## Correct evidence label
 
-**Simulation.** Hypothetical checklist adoption is neither payment nor proof of operational value; it cannot be reported as revenue or savings.
+**Simulation.** Hypothetical interest and checklist adoption are not payment or
+proof of operational value.
 
-## Review decision
+## Rerank
 
-REVISE — signal exists but offer, channel, or delivery failed
-
-Define a privacy-safe baseline and one owner-approved measure before another bounded pilot. Do not scale or claim an economic outcome until observed evidence exists.
+**REVISE: buyer interest exists, but proof and delivery inputs are missing.**
+Move the owner-only diagnostic to first place. Prepare a baseline worksheet
+privately, then request fresh approval before sending it. Do not scale or claim
+an economic outcome.

@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P3 — weak fit for this release. Do not prioritize.** Product Hunt's current
+**P3 - weak fit for this release. Do not prioritize.** Product Hunt's current
 featuring guidelines explicitly list templates among products it does not
 feature. MoneyPrinter.md is intentionally a text-only skill pack, so an
 otherwise polished submission is unlikely to receive the organic homepage
@@ -21,11 +21,10 @@ and [official posting guide](https://help.producthunt.com/en/articles/479557-how
 
 ## Prerequisites
 
-For reconsideration, MoneyPrinter should become a genuinely interactive digital
-product rather than a landing page around downloadable text:
+Reconsider only if Product Hunt accepts portable text skills in their current
+form. Do not create a companion app just to qualify. Other prerequisites would
+still include:
 
-- Live product people can use immediately.
-- Clear functionality beyond static templates or guides.
 - Personal Product Hunt account.
 - Square thumbnail and at least two gallery images.
 - Direct product URL and maker profile.
@@ -41,18 +40,19 @@ product rather than a landing page around downloadable text:
 
 ## Short description
 
-> Interview your real starting point, identify a credible revenue experiment or
-> safe discovery step, and keep cash separate from weaker signals.
+> Scan 14 days of detected, accessible AI sessions, confirm the read once, and
+> start one cash-first route with honest evidence labels.
 
 ## Long description
 
 > MoneyPrinter.md is an open-source pack of seven Agent Skills for legitimate
-> revenue experiments. A short interview routes the user toward one bounded
-> payable test when credible or the smallest safe discovery step when it is
-> not; focused workflows then guide research, offer design, permissioned
-> acquisition, delivery proof, and cashflow review. Results stay labelled as
-> cash, contracted, booked, pipeline, estimated, simulated, or anecdotal, and
-> external actions always require human approval.
+> revenue experiments. The current host scans only detected, permitted session
+> sources it can access, reports coverage gaps, and asks for one correction.
+> Cash evidence drives the route choice. The run continues through private
+> research, offer creation, payable-test design, acquisition preparation, and
+> delivery preparation. A specific approval gates one exact external action.
+> Its receipt and result feed the next ranking. MoneyPrinter does not promise
+> income.
 
 ## Maker comment outline
 
@@ -99,5 +99,6 @@ desired high-impact discovery path.
 
 ## Final human action
 
-Skip Product Hunt for the text-only release. Revisit only after the project has
-an interactive, immediately usable product surface that stands on its own.
+Skip Product Hunt for the text-only release. MoneyPrinter remains a portable
+Markdown skill, not a companion app. Revisit only if the platform later accepts
+that product shape.

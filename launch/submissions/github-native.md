@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P0 — the required source and the most important compounding surface.** Every
+**P0 - the required source and the most important compounding surface.** Every
 other high-fit channel resolves back to the repository. GitHub can amplify
 useful releases, stars, forks, discussions, field reports, and linked installs,
 but it cannot guarantee cold-start traffic or Trending placement.
@@ -55,15 +55,18 @@ Repository About:
 
 ## Long description
 
-Release notes:
+Next release notes draft. Do not attach this copy to the public rc.2 release or
+claim it is published before the version bump and release task:
 
-> Final launch release candidate of MoneyPrinter.md: seven open-source Agent
-> Skills that route a short business interview toward one bounded payable test
-> when credible or the smallest safe discovery step when it is not. The pack
-> covers evidence-backed research, offer design, permissioned acquisition,
-> delivery proof, and cashflow review. Five checked-in persona runs demonstrate
-> the router as simulations; they are not customer outcomes or earnings claims.
-> External actions require specific human approval.
+> MoneyPrinter.md is seven open-source Agent Skills built around one
+> permissioned 14-day scan. The current host reports every detected AI CLI and
+> GUI session source as scanned, empty, blocked, or unsupported, then asks for
+> one correction. Cash evidence and payable speed drive the route choice. The
+> run continues through private research, offer creation, payable-test design,
+> acquisition preparation, and delivery preparation. A specific approval gates
+> one exact external action. Its receipt and result drive the next ranking.
+> Five checked-in walkthroughs are simulations, not customer or earnings
+> claims.
 
 ## Tags
 

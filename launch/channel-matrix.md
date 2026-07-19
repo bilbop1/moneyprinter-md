@@ -1,7 +1,11 @@
 # MoneyPrinter.md distribution channel matrix
 
 Reviewed 2026-07-19. Priority reflects audience fit and credible discovery, not
-prestige. “Blocked” means no submission or publication has occurred.
+prestige. "Blocked" means no submission or publication has occurred.
+
+The status column records public rc.2 distribution facts. Scan-first packet
+copy is prepared for the next release but is not public on those surfaces until
+the release and each listing update are verified.
 
 ## Priority key
 

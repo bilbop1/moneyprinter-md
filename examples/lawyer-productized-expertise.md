@@ -1,53 +1,92 @@
 # Lawyer: productized intake-content review
 
-**Simulation — hypothetical walkthrough only. No law firm, legal client, legal advice, engagement, or revenue result is represented here.**
+**Simulation: hypothetical walkthrough only. This is not a real-world result. No
+law firm, legal client, legal advice, engagement, or revenue result is
+represented here.**
 
-## Starting context
+## Simulated coverage receipt
 
-A hypothetical attorney has subject-matter expertise, a firm website, and a marketing reviewer. They cannot delegate legal judgment to an AI system or make individualized legal claims. They retain responsibility for professional rules, conflicts, advertising, and jurisdiction-specific review.
+The rolling window is 2026-07-05 09:00 UTC through 2026-07-19 09:00 UTC. The
+user permits the current host to inspect the detected work sources below.
 
-## Interview delta
+| Receipt | Detected source | Status | Sessions | Note |
+| --- | --- | --- | ---: | --- |
+| `LW-01` | Codex app | Scanned | 5 | Product notes and public-content planning |
+| `LW-02` | Claude GUI | Blocked | 0 | Detected, but the user excludes this private workspace |
 
-The attorney identifies a recurring, non-confidential intake question that can only be addressed at a general educational level. Known: the attorney can review a draft before publication. Unknown: whether the topic is permitted under local rules, whether a buyer wants the asset, and whether it would generate a matter.
+The blocked workspace stays out of scope. The scan does not open client files,
+credential paths, or raw history.
 
-## Route decision
+## What appears true
 
-Recommend one fixed-scope, attorney-reviewed plain-language FAQ and intake-triage outline for a single practice-area page at a hypothetical $600 pilot price. Fallback: create a private outline for the attorney’s own review. No legal advice, lead guarantee, or automated client response is offered.
+The user can draft general educational material for review by a hypothetical
+attorney and has one permissioned firm contact. The attorney retains legal
+judgment and responsibility for conflicts, advertising rules, and
+jurisdiction-specific review. Buyer demand and topic eligibility remain
+unknown. These simulated facts are linked to `LW-01`.
 
-## Opportunity evidence
+## One confirmation
 
-Known: the attorney reports a recurring question. That is an **Unverified anecdote** unless safely documented and independently checked. Project hypothesis: a reviewed educational FAQ may reduce repetitive intake explanation. It is not evidence that a client will hire the firm.
+MoneyPrinter asks: "Is qualified attorney review available before use, and is
+anything above wrong, private, abandoned, or newly changed?" The user confirms
+review is available, excludes individualized client material, and limits the
+test to one general intake topic.
 
-## Offer brief
+## Cash-first ranking
 
-- Buyer: licensed attorney or authorized firm marketing lead.
-- Deliverable: source-linked FAQ draft, clearly labeled intake-routing outline, and one revision after attorney review.
-- Price hypothesis: $600 before final delivery.
-- Exclusions: client legal research, legal advice, conflict checks, jurisdictional-compliance signoff, publication, or outcome claims.
-- Ceiling: five human hours; attorney review is mandatory.
+| Rank | Route | Cash evidence and speed | Decision |
+| ---: | --- | --- | --- |
+| 1 | $600 attorney-reviewed FAQ pilot | One permitted buyer contact and bounded delivery, subject to legal and ethics review | Primary payable test |
+| 2 | Private outline for attorney review | Safe discovery, but no payable event | Fallback |
+| 3 | Automated legal intake answers | Delegates judgment and lacks authority | Reject |
 
-## Payable test
+The reviewed pilot is first only because it has the nearest controlled payable
+event. A reported recurring question remains an unverified anecdote.
 
-Proceed only when the buyer approves the topic, confirms authority, and commits to legal/ethics review before use. Stop if material could be individualized legal advice, the firm cannot review it, or the request needs confidential client data. Publication, submission, and contact require separate immediate approval.
+## Private work continued
 
-## Staged acquisition artifact
+The simulated run prepares a source checklist, a $600 fixed-scope offer, a
+five-hour payable test, one acquisition draft, and a delivery plan. The plan
+requires attorney topic approval, legal and ethics review, an acceptance
+checklist, a correction pass, and deletion of any client information received
+by mistake. It excludes legal advice, conflict checks, publication, outcome
+claims, and automated client response.
 
-**Draft only — not sent; human review and immediate send approval are pending.**
+Staged draft:
 
-> Hi [Name] — I am testing a fixed-scope, attorney-reviewed FAQ drafting service for firms that want a clearer educational intake page. The work does not provide legal advice, replace ethics review, or promise matters. If a $600 outline is worth reviewing, I can send the scope; otherwise, no response is needed.
+> Hi [Name], I am testing a fixed-scope FAQ drafting service for firms that
+> want a clearer general educational intake page. A qualified attorney reviews
+> every draft before use. The work does not provide legal advice or promise
+> matters. If a $600 scope is worth reviewing, I can send it. Otherwise, no
+> response is needed.
 
-Observed situation and permitted source: only an authorized firm request or existing permissioned relationship. Identity and intent disclosed: yes. Easy decline: “no response is needed.” Claims verified or removed: no lead or compliance claim. Human review: pending. External action approval: pending.
+## Exact-action approval
+
+The simulated checkpoint names one email, the exact draft above, one
+pseudonymous attorney, the user's own account, one send at 11:00 local time, $0
+cost, and no attachment. The user approves that email only. Publication,
+client contact, follow-up, and legal work remain unauthorized.
+
+## Simulated action receipt
+
+At 11:00 local time, the hypothetical host sends the approved email unchanged.
+The mail service reports accepted. The receipt records one recipient, one
+message, $0 spend, and no confidential attachment.
 
 ## Hypothetical result
 
-In this simulation, the reviewer rejects the practice-area topic as unsuitable for public education. Hypothetical cash collected: **$0**. No draft is delivered and no client information is handled. This is a safety stop, not a result.
+In this simulation, the attorney replies that the proposed topic is unsuitable
+for public education. Hypothetical cash collected: **$0**. No draft is
+delivered and no client information is handled. This is a safety stop, not a
+legal or customer result.
 
 ## Correct evidence label
 
-**Simulation.** A hypothetical scope request is not contracted revenue, and the reported question remains weaker than verified demand.
+**Simulation.** A hypothetical scope request is not contracted revenue, and
+the reported recurring question remains weaker than verified demand.
 
-## Review decision
+## Rerank
 
-STOP — no credible signal or unacceptable economics
-
-Preserve the reviewer concern, do not pivot to individualized advice, and seek another attorney-approved topic only through a fresh compliance review.
+**STOP: qualified review removes the route.** Preserve the reviewer concern.
+Do not pivot to individualized advice. Another topic can enter the ranking only
+after attorney approval and a new bounded test.

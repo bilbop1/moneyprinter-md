@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P2 after its ten-star gate — exact registry fit, but unavailable at a
+**P2 after its ten-star gate - exact registry fit, but unavailable at a
 zero-star cold start.** OpenAgentSkill requires at least ten GitHub stars before
 submission and applies static security, AI quality, and publication-gate
 checks.
@@ -46,19 +46,21 @@ https://github.com/bilbop1/moneyprinter-md
 
 ## Short description
 
-> A receipts-first Agent Skills pack that routes a short interview toward one
-> credible payable test or the smallest safe discovery step, with human
-> approval before external action.
+> A permissioned 14-day scan of detected, accessible AI CLI and GUI sessions
+> starts one confirmed cash-first route, with specific approval before external
+> action.
 
 ## Long description
 
 > MoneyPrinter.md contains seven open-source skills for legitimate revenue
-> experimentation. The router starts from real assets, constraints, authority,
-> time, budget, proof, and risk; recommends one route and one fallback; and
-> defines a payable test only when credible. Companion skills cover current
-> research, offer design, permissioned acquisition, delivery proof, and
-> cashflow review. Cash, contracted revenue, booked revenue, pipeline,
-> estimates, simulations, and anecdotes remain separate evidence labels.
+> experiments. The current host scans only detected, permitted history sources
+> it can access, reports coverage gaps, and asks for one correction. Cash
+> evidence and payable speed drive the route ranking. The run continues through
+> private research, offer creation, payable-test design, acquisition
+> preparation, and delivery preparation. A specific approval gates the exact
+> external action. Its receipt and result feed the next ranking. Cash,
+> contracts, bookings, pipeline, estimates, simulations, and anecdotes stay
+> separate.
 
 ## Tags / category
 

@@ -43,21 +43,28 @@ before writing:
 - Primary hook used elsewhere: "The models are finally good. Their money
   playbooks are not."
 - Format: seven text-first Agent Skills under the MIT License.
-- Entry point: a short interview that produces a Revenue Profile, one
-  recommended route, one fallback, and an Experiment Brief.
-- Routing boundary: the router compares no more than three paths and waits for
-  approval before it creates acquisition assets.
+- Entry point: one permission to scan the rolling 14 days of detected AI CLI
+  and GUI session sources the current host can access.
+- Coverage boundary: every detected source is reported as scanned, empty,
+  blocked, or unsupported. The product cannot claim inaccessible history.
+- Routing boundary: one confirmation corrects the scan read, then cash evidence
+  and payable speed drive no more than three ranked routes.
+- Work boundary: private research, offer creation, payable-test design,
+  acquisition preparation, and delivery preparation continue without repeated
+  approval.
+- Action boundary: one exact external action needs specific approval. Its
+  receipt and result feed the next ranking.
 - Proof boundary: Cash collected, Revenue contracted, Revenue booked, Pipeline
   signal, Estimated economic value, Simulation, and Unverified anecdote are
   different labels.
 - Example boundary: all five persona walkthroughs are simulations, not customer
   results, endorsements, or forecasts.
-- Action boundary: messages, posts, purchases, contracts, and publications
-  require immediate human approval.
 - Compatibility boundary: the source uses the common Agent Skills format, but
-  no host is marked conversation-verified in this release.
+  no host is marked conversation-verified and cross-application session access
+  depends on the host's current permissions and tools.
 - Income boundary: the project does not promise income, profit, customers,
   conversion, or any particular result.
+- Product boundary: it is a portable Markdown skill, not a companion app.
 
 Repository sources:
 
@@ -78,8 +85,8 @@ personally built the project, then write a plain title yourself.
   invoices, pipeline, estimates, and simulations distinct.
 - Text-first product frame: seven inspectable revenue workflows without a new
   runtime or SaaS layer.
-- Cross-harness experiment frame: one common skills package with documented
-  portability limits.
+- Session-scan frame: one permission, 14 days of accessible AI work, one
+  confirmation, then private work on the cash-first route.
 - Safety frame: a revenue workflow that can recommend a stop decision and keeps
   external actions behind approval.
 
@@ -91,18 +98,18 @@ numbers, and editorial claims.
 
 Write the submission only after answering these without AI:
 
-1. Which projects or recurring claims made you want to build this?
+1. Which pile of AI sessions made you want the product to find the real work?
 2. What did you personally find misleading about the way simulated value was
    described?
-3. Why did you choose inspectable text skills instead of a SaaS product or
+3. Why is the scan limited to detected, permitted, accessible sources?
+4. Why did you choose inspectable text skills instead of a SaaS product or
    agent runtime?
-4. Which design decision took the most judgment?
-5. What did the five persona runs reveal or force you to change?
-6. What has actually been tested locally?
-7. What has not been tested in third-party hosts?
-8. Why is a failed experiment or a $0 result useful to you?
-9. What specific criticism do you want from HN readers?
-10. What would make you stop, narrow, or materially revise the project?
+5. Which design decision took the most judgment?
+6. What did the five simulations reveal or force you to change?
+7. What has actually been tested locally?
+8. What has not been tested in third-party hosts?
+9. Why is a failed experiment or a $0 result useful to you?
+10. What specific criticism would make you stop, narrow, or revise the project?
 
 The answers should contain concrete details the owner remembers and can defend.
 Do not invent a founder story or claim experience that did not happen.

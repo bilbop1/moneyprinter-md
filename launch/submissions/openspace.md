@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P2 — philosophically strong fit, operationally heavier than the direct
+**P2 - philosophically strong fit, operationally heavier than the direct
 directories.** OpenSpace emphasizes skill trust, lineage, and task-result
 quality records, which fits the receipts-first thesis. Its upload path requires
 local setup and trusted skill records rather than a simple URL form.
@@ -52,7 +52,7 @@ copied into public documentation.
 
 Package:
 
-> MoneyPrinter.md — receipts-first revenue experiments
+> MoneyPrinter.md - receipts-first revenue experiments
 
 Primary skill:
 
@@ -60,18 +60,19 @@ Primary skill:
 
 ## Short description
 
-> Route a user's actual assets and constraints toward one credible payable test
-> or the smallest safe discovery step, then retain evidence labels and approval
-> gates through the result.
+> Scan 14 days of detected, accessible AI sessions, confirm the read once, and
+> work one cash-first route through receipts and reranking.
 
 ## Long description
 
 > MoneyPrinter.md is a seven-skill package for legitimate revenue experiments.
-> It combines a short routing interview with evidence-backed research, offer
-> design, test design, permissioned acquisition, delivery proof, and cashflow
-> review. Every claimed outcome stays attached to an explicit evidence level.
-> Public traces must be redacted and must never imply that a simulation,
-> estimate, invoice, or pipeline signal is cash.
+> The current host scans only detected, permitted session sources it can access,
+> reports coverage gaps, and asks for one correction. Cash evidence and payable
+> speed drive the route choice. The run continues through private research,
+> offer work, test design, acquisition preparation, and delivery preparation.
+> A specific approval gates one exact external action. Its receipt and result
+> feed the next ranking. Every outcome keeps its evidence level, and public
+> traces must be redacted.
 
 ## Tags
 

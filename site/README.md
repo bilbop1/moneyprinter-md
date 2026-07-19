@@ -4,6 +4,12 @@ Production landing page for MoneyPrinter.md: a receipts-first revenue operating
 system for frontier agents. The site does not promise income or imply host
 compatibility that has not been verified.
 
+This site is a static public explanation, not a MoneyPrinter companion app. It
+does not scan session history, request AI-host permissions, run the skills, or
+collect coverage receipts. The installed skill runs inside the user's chosen
+host, limited to the detected, permitted, accessible sources that host can
+read.
+
 The deployable source is a Vinext/React page with a Cloudflare Worker entry
 point for Sites. It has no application authentication, database, analytics,
 cookies, or user-data collection. Generated output and `node_modules` stay

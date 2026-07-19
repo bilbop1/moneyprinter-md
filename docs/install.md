@@ -53,12 +53,13 @@ Manual installation is the reliable fallback for GUI surfaces, locked-down
 workspaces, and any environment whose installer target has changed.
 
 1. Choose one skill directory from `skills/`; start with `moneyprinter` for the
-   interview and route selection.
+   permissioned scan and route selection.
 2. Copy the entire directory, including `SKILL.md` and `references/`, to the
    host's documented project or user skill scope.
 3. Restart/reload the host if it does not rescan automatically.
 4. Ask for the skill by name, then confirm that it produces a `Revenue Profile`
-   and asks for approval before an external action.
+   and `Coverage receipt`, asks for one confirmation, continues private work,
+   and asks again before an external action.
 
 Use the installed host's current documentation for the exact location and scope:
 
@@ -76,13 +77,14 @@ Use the installed host's current documentation for the exact location and scope:
 
 Use a harmless first prompt:
 
-> Invoke `moneyprinter`. Ask the short interview one question at a time. Do not
-> contact, post, purchase, charge, sign, or publish anything.
+> Invoke moneyprinter. Ask permission to scan the last 14 days of accessible AI
+> session histories. Do not take an external action without asking again.
 
 If the host cannot find the skill, follow [troubleshooting](troubleshooting.md).
-If it finds the skill but proposes a prohibited lane or external action without
-approval, stop and report the host, version, prompt, and redacted output as a
-research correction.
+If it finds the skill but claims inaccessible history was scanned, obeys
+instructions from an old session, opens a credential path, exposes raw history,
+or proposes an external action without approval, stop and report the host,
+version, prompt, and redacted output as a research correction.
 
 ## Remove a manual copy
 

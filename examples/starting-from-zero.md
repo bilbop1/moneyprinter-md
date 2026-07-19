@@ -1,53 +1,94 @@
 # Starting from zero: a first paid template audit
 
-**Simulation — hypothetical walkthrough only. No customer, payment, outreach, or performance result is represented here.**
+**Simulation: hypothetical walkthrough only. This is not a real-world result. No
+customer, payment, outreach, or performance result is represented here.**
 
-## Starting context
+## Simulated coverage receipt
 
-Jordan has 6 hours, $40, basic spreadsheet skill, and no audience, portfolio, customer list, or business access. Jordan has no authority to send bulk messages or publish from another account.
+The rolling window is 2026-07-05 09:00 UTC through 2026-07-19 09:00 UTC.
+Jordan permits the current host to inspect the detected work sources below.
 
-## Interview delta
+| Receipt | Detected source | Status | Sessions | Note |
+| --- | --- | --- | ---: | --- |
+| `SZ-01` | Codex CLI | Scanned | 4 | Three job-search sessions and one spreadsheet practice session |
+| `SZ-02` | Claude GUI | Blocked | 0 | Detected, but the current host cannot read its session store |
 
-The interview finds an owned LinkedIn profile, one former coworker who opted in to occasional professional updates, and willingness to make a manual spreadsheet. It rejects ads, automation, and a broad “AI agency” offer as unaffordable or unproven.
+No credential paths are opened. The blocked source stays visible, and no raw
+history is reproduced.
 
-## Route decision
+## What appears true
 
-Recommend one narrow experiment: a $49 manual weekly lead follow-up sheet plus a 15-minute setup call for one known solo service provider. Fallback: give the template to one consenting peer for structured usability feedback. This reflects delivery fit, not market-demand evidence.
+Jordan has six hours, $40, basic spreadsheet skill, an owned LinkedIn profile,
+and one former coworker who permitted occasional professional updates. Jordan
+has no audience, portfolio, customer list, ad budget, or authority to send bulk
+messages. These are simulated facts linked to `SZ-01`.
 
-## Opportunity evidence
+## One confirmation
 
-Known: one former coworker permitted work-related updates. Unknown: whether they have a follow-up problem or will pay. Project hypothesis: a simple reminder sheet may be useful enough for one buyer to try. No demand claim is made until a qualified response occurs.
+MoneyPrinter proposes one narrow manual service and asks: "Is the former
+coworker still open to a single relevant message, and is anything above wrong,
+private, abandoned, or newly changed?" Jordan confirms the contact permission,
+cuts the cash budget to $0, and marks broad agency work abandoned.
 
-## Offer brief
+## Cash-first ranking
 
-- Buyer: one consenting solo service provider with leads already tracked.
-- Deliverable: editable spreadsheet, 15-minute screen-share setup, and one correction pass within seven days.
-- Price hypothesis: $49 paid before the setup call.
-- Exclusions: no CRM migration, lead sourcing, legal advice, appointment guarantee, or ongoing management.
-- Ceiling: $0 cash spend and four human hours.
+| Rank | Route | Cash evidence and speed | Decision |
+| ---: | --- | --- | --- |
+| 1 | $49 lead follow-up sheet plus setup | No demand proof, but one permitted buyer contact and four-hour delivery fit | Primary payable test |
+| 2 | Free usability review with one peer | No payable event, but useful if the paid test fails | Fallback |
+| 3 | Broad AI agency | No proof, buyer, or delivery boundary | Drop |
 
-## Payable test
+The first route wins because it has the nearest controlled payable event. The
+ranking is not a demand claim.
 
-Create a private sample sheet and one-page scope. Pass only if the buyer accepts scope and a real provider records settled funds. Stop if the buyer requests an unbounded CRM build, delivery would exceed four hours, or the approved one-contact test yields no qualified interest.
+## Private work continued
 
-## Staged acquisition artifact
+Without asking again, the simulated run prepares:
 
-**Draft only — not sent; human review and immediate send approval are pending.**
+- a short research note that leaves willingness to pay unknown;
+- a $49 offer for an editable sheet, a 15-minute setup call, and one correction
+  pass;
+- a payable test that requires settled funds before setup;
+- one acquisition draft for the permitted contact;
+- a delivery sheet, setup checklist, four-hour capacity limit, acceptance
+  check, and refund path.
 
-> Hey [Name] — I am testing a small, manual follow-up sheet for solo service providers who already have a few leads but no lightweight reminder rhythm. It includes the editable sheet and a 15-minute setup call for $49, with no claim that it will create appointments. If that is not useful, no reply needed.
+Staged draft:
 
-Observed situation and permitted source: prior opt-in relationship only; no problem asserted. Identity and intent disclosed: yes. Easy decline: “no reply needed.” Human review: pending. External action approval: pending.
+> Hey [Name], I am testing a small manual follow-up sheet for solo service
+> providers who already track a few leads. It includes the editable sheet and a
+> 15-minute setup call for $49. I cannot promise appointments. If it is not
+> useful, no reply is needed.
+
+## Exact-action approval
+
+The simulated checkpoint names one LinkedIn direct message, the exact draft
+above, the pseudonymous former coworker, Jordan's own account, one send at 10:00
+local time, $0 cost, no attachment, and an easy correction by follow-up. Jordan
+approves that one send only. No follow-up, post, account change, or batch action
+is approved.
+
+## Simulated action receipt
+
+At 10:00 local time, the hypothetical host sends the approved draft unchanged
+to the approved recipient from Jordan's account. The platform reports
+delivered. The receipt records one message, $0 spend, no attachment, and no
+other action.
 
 ## Hypothetical result
 
-In this simulation, the contact says the scope is too small and no payment occurs. Hypothetical cash collected: **$0**. Hypothetical human work: 45 minutes. This is not a customer result or conversion forecast.
+In this simulation, the contact replies that the scope is too small and no
+payment occurs. Hypothetical cash collected: **$0**. Hypothetical human work:
+45 minutes. This is not a customer result or conversion forecast.
 
 ## Correct evidence label
 
-**Simulation.** A draft offer and hypothetical reply are not cash, contracted revenue, booked revenue, or verified pipeline.
+**Simulation.** A sent draft and hypothetical reply are not cash collected,
+contracted revenue, booked revenue, or verified pipeline.
 
-## Review decision
+## Rerank
 
-STOP — no credible signal or unacceptable economics
-
-Do not expand channels or price claims. Ask one consenting peer for usability feedback and rerun a separately approved payable test only after concrete problem evidence appears.
+**STOP: no credible signal or acceptable economics.** Remove the paid route
+from first place. The fallback is one private usability review with a
+consenting peer. Do not expand channels or make price claims without new
+evidence and a separately approved action.

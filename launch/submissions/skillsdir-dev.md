@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P2 — exact skill-directory fit with a documented GitHub and CLI contribution
+**P2 - exact skill-directory fit with a documented GitHub and CLI contribution
 path, but reach is not independently validated.**
 
 **Status:** public source ready; blocked on owner GitHub authentication and
@@ -54,19 +54,20 @@ shows how the directory handles related skills.
 
 This is under the documented 180-character limit:
 
-> Route real assets and constraints toward one credible payable test or the
-> smallest safe discovery step, with evidence labels and approval gates.
+> Scan 14 days of detected, accessible AI sessions, confirm one cash-first
+> route, then work it through receipts and reranking.
 
 ## Long description
 
 The public guide does not document a long-description requirement. If the
 current issue template asks for one, use:
 
-> MoneyPrinter is the router for seven open-source Agent Skills covering
-> evidence-backed research, offer design, a bounded payable test, permissioned
-> acquisition, delivery proof, and cashflow review. It separates settled cash
-> from contracts, bookings, pipeline, estimates, simulations, and anecdotes,
-> and requires specific human approval before external action.
+> MoneyPrinter is the router for seven open-source Agent Skills. The current
+> host scans permitted AI session sources, reports coverage gaps, and asks for
+> one correction. Cash evidence drives the route choice. The run continues
+> through private research, offer creation, payable-test design, acquisition
+> preparation, and delivery preparation. A specific approval gates one exact
+> external action. Its receipt and result feed the next ranking.
 
 ## Tags / verticals
 

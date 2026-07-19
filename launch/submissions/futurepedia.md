@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P3 — paid and weak fit. Do not spend for the text-only release.** The current
+**P3 - paid and weak fit. Do not spend for the text-only release.** The current
 submission page sells paid AI-tool listings and requires editorial approval.
 
 **Status:** intentionally blocked. No payment or submission has been made.
@@ -29,21 +29,22 @@ again before any purchase.
 
 ## Short description
 
-> A receipts-first AI workflow that routes a short business interview toward a
-> credible revenue experiment or the smallest safe discovery step, with human
-> approval gates.
+> A permissioned 14-day scan of detected, accessible AI sessions starts one
+> confirmed cash-first route, with receipts and exact-action approval.
 
 ## Long description
 
-> MoneyPrinter.md helps beginners and experienced operators test legitimate
-> revenue ideas without mistaking AI simulations for customer results. Seven
-> workflows cover routing, research, offer design, a payable test, permissioned
-> acquisition, delivery proof, and cashflow review.
+> MoneyPrinter.md uses the current host to scan permitted AI session sources,
+> report coverage gaps, and ask for one correction. Seven workflows continue
+> through private research, offer creation, payable-test design, acquisition
+> preparation, and delivery preparation. A specific approval gates one exact
+> external action. Its receipt and result feed the next cash-first ranking.
+> Simulations remain separate from customer results, and no income is promised.
 
 ## Tags / category
 
-Use the closest current business/productivity category only if the product
-becomes an interactive tool.
+The current text-skill package does not fit this paid tool directory. Do not
+create a companion app or choose a category for this release.
 
 ## Links required
 
@@ -69,5 +70,6 @@ editorial/verified placement according to the selected tier.
 
 ## Final human action
 
-Do not submit or pay during the initial launch. Reconsider only after referral
-data from free exact-fit channels establishes a conversion baseline.
+Do not submit or pay. MoneyPrinter remains a portable Markdown skill, not a
+companion app. Reconsider only if this directory later accepts the product in
+its current form and free exact-fit channels establish a referral baseline.

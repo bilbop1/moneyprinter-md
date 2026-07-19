@@ -2,13 +2,16 @@
 
 ## Verdict
 
-**P1 — exact third-party directory fit with a very low submission burden.**
+**P1 - exact third-party directory fit with a very low submission burden.**
 
 **Status:** live. The flagship deep link was indexed on 2026-07-19 at
 `https://www.awesomeskills.dev/en/skill/moneyprinter-md-moneyprinter`.
 Submitting a second deep link from the same repository was treated as a
 duplicate of the flagship, so one repo-level directory page is the verified
 shape rather than seven separate listings.
+
+The copy below is prepared for a future refresh. It does not claim the live
+page has imported the scan-first source yet.
 
 ## Current official submission path
 
@@ -39,18 +42,19 @@ https://github.com/bilbop1/moneyprinter-md
 
 ## Short description
 
-> A receipts-first Agent Skills pack that routes users from a short business
-> interview toward a credible payable test or the smallest safe discovery step,
-> with delivery proof and correctly labelled economic results.
+> A permissioned 14-day scan of detected, accessible AI CLI and GUI sessions
+> starts one confirmed cash-first route, with receipts through the result.
 
 ## Long description
 
 > MoneyPrinter.md contains seven portable, open-source workflows for legitimate
-> revenue experimentation. It starts with real assets and constraints, chooses
-> one route and one fallback, then defines a payable test when credible or a
-> safe discovery step when it is not. It preserves a human approval gate before
-> external action. Five simulated persona runs make the routing behavior
-> inspectable without presenting simulations as customer outcomes.
+> revenue experiments. The current host scans only detected, permitted session
+> sources it can access, reports gaps, and asks for one correction. Cash
+> evidence and payable speed drive the route choice. The run continues through
+> private research, offer creation, payable-test design, acquisition
+> preparation, and delivery preparation. A specific approval gates the exact
+> external action. Its receipt and result feed the next ranking. Five simulated
+> persona runs show the method without presenting customer outcomes.
 
 ## Tags
 

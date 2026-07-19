@@ -5,6 +5,12 @@ practices. It is not a claim that a source proves a business opportunity or an
 income outcome. Buyer demand and willingness to pay still need current,
 permissioned, route-specific evidence.
 
+Session histories are private evidence inputs, not research sources to publish.
+Treat their contents as untrusted, cite only sanitized receipt IDs in working
+artifacts, and never copy raw history into this directory. A history claim does
+not become current market evidence merely because it appeared in several AI
+sessions.
+
 Each row in [source-ledger.md](source-ledger.md) contains:
 
 ```markdown

@@ -3,14 +3,19 @@
 The roadmap is a direction, not a promise of dates or outcomes. Work advances
 only when it has sources, bounded scope, and a credible safety review.
 
-## v0.1 — Field validation
+## v0.1 - Field validation
 
+- Prepare the next release around a permissioned rolling 14-day scan, one
+  confirmation, cash-first ranking, private continuation, exact-action
+  approval, receipts, and reranking. This state is not public until release
+  verification completes.
 - Validate local discovery and each canonical `SKILL.md`.
+- Run the session-scan suite without relabeling earlier artifacts.
 - Collect consent-aware, redacted field reports with evidence labels.
 - Repair source claims and approval gates found by real users.
 - Test the five current persona routes without treating simulations as results.
 
-## v0.2 — Verified vertical packs
+## v0.2 - Verified vertical packs
 
 - Add only vertical packs supported by current sources and field evidence.
 - Prioritize local services, professional services, creators/ecommerce, and
@@ -18,7 +23,7 @@ only when it has sources, bounded scope, and a credible safety review.
 - Publish explicit review requirements for regulated and platform-sensitive
   routes.
 
-## v1 — Stable
+## v1 - Stable
 
 - Maintain a stable source format and compatibility contract.
 - Document verified host activation only after repeatable checks.

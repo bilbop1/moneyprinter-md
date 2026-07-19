@@ -41,17 +41,18 @@ be purchased for the text-only release.
 
 ## Short description
 
-> Seven receipts-first Agent Skills for credible revenue tests and safe
-> discovery steps.
+> Seven receipts-first Agent Skills for a permissioned 14-day scan and one
+> confirmed cash-first route.
 
 ## Long description
 
-> MoneyPrinter.md starts from a user's actual assets, constraints, authority,
-> and risk, then routes toward one bounded payable test when credible or the
-> smallest safe discovery step when it is not. It guides research, offer
-> design, permissioned acquisition, delivery proof, and cashflow review while
-> separating real cash from booked revenue, pipeline, estimates, simulations,
-> and anecdotes.
+> MoneyPrinter.md uses the current host to scan detected, permitted AI session
+> sources it can access, report coverage gaps, and ask for one correction. Cash
+> evidence and payable speed drive the route choice. The run continues through
+> private research, offer work, payable-test design, acquisition preparation,
+> and delivery preparation. A specific approval gates one exact external
+> action. Its receipt and result feed the next ranking while cash remains
+> separate from weaker evidence.
 
 ## Tags / category
 

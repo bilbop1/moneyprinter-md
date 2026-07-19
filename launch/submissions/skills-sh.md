@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**P0 — first launch target.** This is the lowest-friction native discovery
+**P0 - first launch target.** This is the lowest-friction native discovery
 surface for the current repository format. It can also feed Hermes discovery,
 because Hermes' Skills Hub searches Skills.sh.
 
@@ -45,23 +45,23 @@ telemetry.
 
 ## Listing title
 
-> MoneyPrinter.md — receipts-first revenue workflows for AI agents
+> MoneyPrinter.md - receipts-first revenue workflows for AI agents
 
 ## Short description
 
-> A seven-skill, open-source workflow pack that routes a short interview toward
-> one credible payable test or the smallest safe discovery step while keeping
-> economic evidence honestly labelled.
+> One permissioned 14-day scan across detected, accessible AI CLI and GUI
+> sessions starts a confirmed cash-first run with honest evidence labels.
 
 ## Long description
 
-> MoneyPrinter.md starts from the user's actual assets, constraints, authority,
-> and risk. It recommends one route and one fallback, then defines a payable
-> test when credible or the smallest safe discovery step when it is not.
-> Companion skills guide opportunity research, offer design, permissioned
-> acquisition, delivery proof, and an honest cashflow review. It does not
-> promise income or automatically send, post, purchase, charge, sign, or
-> publish.
+> MoneyPrinter.md uses the current host to scan the rolling 14 days of detected,
+> permitted AI session sources it can access. It reports coverage gaps, builds a
+> source-linked portfolio, asks for one correction, and picks the route closest
+> to a real payable event. Companion skills keep working through private
+> research, offer creation, test design, acquisition preparation, and delivery
+> preparation. A specific approval gates one exact external action. The action
+> receipt and result drive the next ranking. MoneyPrinter does not promise
+> income or claim access it did not have.
 
 ## Tags
 

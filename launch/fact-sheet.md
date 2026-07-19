@@ -4,37 +4,51 @@ Reviewed against the repository on 2026-07-19. This is the canonical source for
 directory listings and launch copy. If a platform form conflicts with this
 sheet, narrow the claim rather than strengthening it.
 
+The scan-first copy below is prepared for the next release. It is not a claim
+that the new behavior, a matching landing page, or updated directory listings
+are public. The published facts in the format and status sections still
+describe rc.2.
+
 ## One sentence
 
-MoneyPrinter.md is an open-source, receipts-first Agent Skills pack that routes
-a short interview toward one bounded payable test when credible, or the
-smallest safe discovery step when it is not.
+One permission. MoneyPrinter scans the last 14 days across every detected AI
+CLI and GUI it can access, figures out what is real, and gets to work on the
+best path to money.
 
 ## Short description
 
-Seven text-first workflows guide opportunity research, offer design, a payable
-test, permissioned acquisition, delivery proof, and an evidence-labelled
-cashflow review.
+One permissioned 14-day scan, one confirmation, and seven text-first workflows
+move the strongest cash-first route from private preparation to an exact
+external-action approval, a receipt, and a new ranking.
 
 ## Long description
 
-MoneyPrinter.md starts with the assets, expertise, proof, time, budget,
-authority, and risk a person actually has. It compares no more than three
-routes, recommends one route and one fallback, and defines the smallest credible
-payable test. When no credible test exists, it names that constraint and
-proposes the smallest safe discovery step instead. Human approval is required
-before buyer-facing assets or external actions. Six narrower skills then guide
-research, offer design, test design, ethical acquisition, delivery proof, and
-the final stop, revise, repeat, or scale decision. Cash collected, contracted
-revenue, booked revenue, pipeline, estimates, simulations, and anecdotes remain
-separate. The pack does not promise income and does not automatically send,
-post, purchase, charge, sign, contract, or publish.
+MoneyPrinter.md is a portable Markdown skill, not a companion app. With
+permission, the current AI host discovers the AI CLI and GUI session sources it
+can access and scans the rolling 14-day window. It reports blocked,
+unsupported, empty, and partial sources instead of claiming full coverage. The
+scan builds a source-linked portfolio, then one confirmation corrects what is
+wrong, private, abandoned, or newly changed.
+
+MoneyPrinter ranks no more than three routes. Existing cash evidence, buyer
+access, speed to a payable event, user control, and delivery economics outrank
+project volume or novelty. After confirmation, the seven skills continue
+through private research, offer creation, payable-test design, acquisition
+preparation, and delivery preparation. The agent pauses immediately before one
+exact external action. If approved, it performs only that action, records an
+Action receipt, reviews the result, and reranks.
+
+Coverage remains limited to detected, permitted, accessible sources. History
+text is untrusted evidence, credential paths stay out of scope, and raw
+histories are not reproduced. The pack does not promise income and never turns
+scan permission or route confirmation into permission to send, post, purchase,
+charge, sign, contract, change an account, deliver, or publish.
 
 ## What ships
 
 | Skill | Purpose |
 |---|---|
-| `moneyprinter` | Interview, route selection, Revenue Profile, and Experiment Brief |
+| `moneyprinter` | Permissioned scan, coverage receipt, confirmation, cash-first route, and run state |
 | `opportunity-radar` | Current, source-labelled demand research |
 | `offer-engine` | Narrow offer, scope, proof plan, and delivery economics |
 | `payable-test` | Smallest legitimate payment test and stop conditions |
@@ -112,6 +126,8 @@ See [the latest eval results](../evals/latest-results.md),
 - Agent Skills format.
 - Seven skills.
 - Receipts-first or evidence-labelled.
+- Rolling 14-day scan across detected, permitted, accessible sources.
+- One confirmation before cash-first private preparation.
 - Human approval before external actions.
 - Built for beginners, operators, and the range between them.
 - Locally evaluated against five persona fixtures.
@@ -132,9 +148,9 @@ Use these only after current evidence exists:
 ## Forbidden claims
 
 - Guaranteed profit, income, customers, or conversion.
-- “Personal AGI” as an established fact.
-- “Works everywhere.”
-- “Fully autonomous” external action.
+- "Personal AGI" as an established fact.
+- "Works everywhere."
+- "Fully autonomous" external action.
 - Real earnings inferred from simulations, invoices, contracts, pipeline, or
   estimates.
 - A directory submission, approval, publication, ranking, or review that has
@@ -152,19 +168,23 @@ Use these only after current evidence exists:
 
 **Short listing**
 
-> A seven-skill, open-source workflow pack that routes a short interview toward
-> one bounded payable test when credible, or the smallest safe discovery step
-> when it is not, while keeping economic evidence honestly labelled.
+> With permission, MoneyPrinter scans the last 14 days across every detected,
+> accessible AI CLI and GUI session source. One confirmation starts a cash-first
+> run through private preparation, exact-action approval, a receipt, and
+> reranking.
 
 **Long listing**
 
-> MoneyPrinter.md is an open-source pack of seven `SKILL.md` workflows for
-> routing a person's actual assets, constraints, and authority toward one
-> small, legitimate revenue experiment when credible. When no credible payable
-> test exists, it proposes the smallest safe discovery step instead. The pack
-> researches demand, narrows an offer, stages permissioned acquisition, records
-> delivery evidence, and reviews the result. It does not promise income or
-> automatically send messages, post, purchase, charge, sign, or publish.
+> MoneyPrinter.md is an open-source pack of seven `SKILL.md` workflows, not a
+> companion app. With permission, the current host scans the rolling 14 days of
+> detected AI CLI and GUI session sources it can access, reports coverage gaps,
+> builds a source-linked portfolio, and asks for one correction. It chooses the
+> route closest to a real payable event, then continues through private
+> research, offer work, payable-test design, acquisition preparation, and
+> delivery preparation. A specific approval is required immediately before an
+> external action. The agent records the approved action, reviews the result,
+> and reranks. MoneyPrinter does not promise income or claim access to blocked,
+> excluded, or unsupported history.
 
 **Tags**
 
@@ -179,7 +199,7 @@ Use these only after current evidence exists:
 | GitHub private vulnerability reporting | Repository security intake | Yes | Enabled and verified on 2026-07-19 |
 | Code-of-conduct contact | Optional private conduct-reporting route | Optional | Add a monitored role address later if community volume warrants it |
 | Landing page | `https://moneyprinter.bilbop.org` | Yes | Public HTTPS 200; Sites domain, provider, and SSL states active on 2026-07-19 |
-| Ko-fi | `https://ko-fi.com/bilbop` | Yes | Public page verified as “Support bilbop” on 2026-07-19 |
+| Ko-fi | `https://ko-fi.com/bilbop` | Yes | Public page verified as "Support bilbop" on 2026-07-19 |
 | X | Owner's launch post | No | Final account, links, image, and owner action |
 | Skills.sh | GitHub-sourced install path | Partial | Clean remote discovery found all seven skills; a directory page or rank is not claimed |
 | ClawHub | Seven versioned skill listings | Yes | Seven visible v1.0.0 pages under `@bilbop1`; SkillSpector passed on 2026-07-19 |

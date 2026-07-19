@@ -1,53 +1,90 @@
 # TikTok Shop creator: disclosed conversion test
 
-**Simulation — hypothetical walkthrough only. No creator, product, affiliate account, order, payout, or conversion result is represented here.**
+**Simulation: hypothetical walkthrough only. This is not a real-world result. No
+creator, product, affiliate account, order, payout, or conversion result is
+represented here.**
 
-## Starting context
+## Simulated coverage receipt
 
-A hypothetical creator has a small owned audience and access to an eligible TikTok Shop affiliate account. They can make one original short video but cannot claim a product performance they have not experienced, hide an affiliate relationship, use unapproved assets, or equate an order with a settled payout.
+The rolling window is 2026-07-05 09:00 UTC through 2026-07-19 09:00 UTC. The
+creator permits the current host to inspect the detected work sources below.
 
-## Interview delta
+| Receipt | Detected source | Status | Sessions | Note |
+| --- | --- | --- | ---: | --- |
+| `TT-01` | Kimi Code CLI | Scanned | 6 | Storyboards, product notes, and account questions |
+| `TT-02` | ChatGPT GUI | Empty | 0 | Detected and accessible, with no sessions in the window |
 
-Known: the creator has time for one video and can review platform policy. Unknown: product eligibility, regional disclosures, audience fit, commission rate, returns, payout timing, and account standing. The route is downgraded to research if any policy or account fact is missing.
+No social-account credentials, tokens, private messages, or raw histories are
+opened or reproduced.
 
-## Route decision
+## What appears true
 
-Recommend one disclosed, policy-checked product-demonstration test with a $0 paid-media budget. Fallback: make a private storyboard and ask for creator or brand approval. It excludes fake testimonials, fake scarcity, engagement automation, and earnings claims.
+The hypothetical creator has a small owned audience, an eligible affiliate
+account, a product they can demonstrate, and time for one original video. They
+cannot hide the affiliate relationship, use unapproved assets, or claim a
+result they did not observe. Current product eligibility, disclosure wording,
+commission, returns, and payout timing remain open. These simulated facts are
+linked to `TT-01`.
 
-## Opportunity evidence
+## One confirmation
 
-The creator’s prior audience interest is not assumed. Project hypothesis: an accurate demonstration of a product the creator can actually show may earn a qualified click or question. Platform policy and product approval are prerequisites, not demand proof.
+MoneyPrinter asks: "Can you demonstrate the product honestly on the named
+account, and is anything above wrong, private, abandoned, or newly changed?"
+The creator confirms the product is in hand, sets a $0 spend limit, and excludes
+all health and performance claims.
 
-## Offer brief
+## Cash-first ranking
 
-- Buyer: a brand program or marketplace audience only where participation is permitted and disclosed.
-- Deliverable: one original, properly disclosed short-form demonstration after policy and product approval.
-- Price hypothesis: no promised creator fee; commission is unknown and cannot be forecast.
-- Exclusions: medical/performance guarantees, hidden sponsorship, unlicensed content, paid boosts, bulk DMs, or bought engagement.
-- Ceiling: two human hours and $0 cash spend.
+| Rank | Route | Cash evidence and speed | Decision |
+| ---: | --- | --- | --- |
+| 1 | One disclosed affiliate demonstration | Existing account and direct payout path, but no demand or commission proof | Primary payable test |
+| 2 | Private storyboard review | Safer if policy facts remain unclear, but no payable event | Fallback |
+| 3 | Paid boosts and bulk messages | No budget, consent, or proof | Reject |
 
-## Payable test
+The disclosed post ranks first because it is the nearest attributable payable
+event under the creator's control. It is not a payout forecast.
 
-Before posting, check current TikTok policy and shop rules, confirm disclosure wording, verify product eligibility, and obtain human approval of the exact asset. Stop if a claim cannot be substantiated, policy status is unclear, the product cannot be honestly demonstrated, or the video needs an undisclosed edit. Publishing is a separate external-action approval.
+## Private work continued
 
-## Staged acquisition artifact
+The simulated run prepares a policy-check worksheet that must be refreshed
+before posting, a truthful offer hypothesis, a $0 payable test, one caption and
+video brief, and a delivery record for the final asset. The preparation
+includes disclosure placement, source permissions, human review, attribution
+fields, returns and fee tracking, and a correction or takedown path.
 
-**Draft only — not posted; human review and immediate publish approval are pending.**
+Staged caption:
 
-> I tried [product] for [accurately shown use]. This is an affiliate link if you choose to buy; I may earn a commission. Here is what I can show directly: [one specific observation]. Check the product details and decide for yourself.
+> I used [product] for [accurately shown use]. This is an affiliate link, so I
+> may earn a commission if you buy. The video shows one direct observation:
+> [observation]. Check the product details and decide for yourself.
 
-Observed situation and permitted source: product use only if actually observed. Identity and intent disclosed: affiliate relationship stated. Easy decline: no pressure or urgency. Claims verified or removed: no outcome claim. Human review: pending. External action approval: pending.
+## Exact-action approval
+
+The simulated checkpoint names one reviewed video and the exact caption above,
+the creator's own TikTok Shop account, one public post at 18:00 local time, $0
+spend, the approved audience scope, and a takedown path. The creator approves
+that post only. Edits, boosts, comments, direct messages, and reposts remain
+unauthorized.
+
+## Simulated action receipt
+
+At 18:00 local time, the hypothetical host publishes the approved video and
+caption unchanged to the approved account. The platform reports one public
+post. The receipt records $0 spend, the asset identifier, and no other action.
 
 ## Hypothetical result
 
-In this simulation, the approved video receives hypothetical views but no attributable settled commission record. Hypothetical cash collected: **$0**. Views and clicks are not sales, payout, or profit; returns and fees remain unknown.
+In this simulation, the post receives hypothetical views but no attributable
+settled commission. Hypothetical cash collected: **$0**. Views and clicks are
+not sales, payout, or profit. This is not a performance or revenue result.
 
 ## Correct evidence label
 
-**Simulation.** Dashboard-style metrics and hypothetical traffic cannot be labeled cash collected, revenue booked, or positive unit economics.
+**Simulation.** Hypothetical platform metrics cannot be labeled cash
+collected, revenue booked, or positive unit economics.
 
-## Review decision
+## Rerank
 
-STOP — no credible signal or unacceptable economics
-
-Do not add spend or repeat. Recheck policy and attribution only if a real settled payout record later exists; otherwise choose another approved experiment.
+**STOP: no payable evidence.** Do not add spend or repeat the post. Recheck
+policy and attribution only if a real settled payout record later exists.
+Otherwise move to another confirmed route.
