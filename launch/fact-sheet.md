@@ -172,17 +172,17 @@ Use these only after current evidence exists:
 | Surface | Intended value | Confirmed live? | Blocker |
 |---|---|---:|---|
 | GitHub | `https://github.com/bilbop1/moneyprinter-md` | Yes | Public and verified logged out on 2026-07-19 |
-| GitHub private vulnerability reporting | Repository security intake | No | Enable in repository settings before public launch |
-| Code-of-conduct enforcement | Confirmed private reporting route | No | Owner-confirmed monitored private contact or GitHub private-reporting route |
+| GitHub private vulnerability reporting | Repository security intake | Yes | Enabled and verified on 2026-07-19 |
+| Code-of-conduct contact | Optional private conduct-reporting route | Optional | Add a monitored role address later if community volume warrants it |
 | Landing page | MoneyPrinter page on `bilbop.org` | No | Final deployed URL and logged-out verification |
 | Ko-fi | Voluntary 1% pledge | No | Exact owner-confirmed Ko-fi username |
 | X | Owner's launch post | No | Final account, links, image, and owner action |
-| Skills.sh | GitHub-sourced install path | Yes | Clean remote discovery found all seven skills; directory rank is not claimed |
+| Skills.sh | GitHub-sourced install path | Partial | Clean remote discovery found all seven skills; a directory page or rank is not claimed |
 | ClawHub | Seven versioned skill listings | No | GitHub-backed auth, owner handle, and dry run |
 | OpenAI Plugins Directory | Skills-only plugin | No | Plugin package, public policy/support URLs, identity, auth, review |
 | Claude community marketplace | Skills plugin | No | Claude plugin package, validation, eligible submitter account, auth, review |
-| Hermes optional-skills catalog | Native catalog listing | No | Hermes-specific packaging, retained host test, public source, PR review |
-| Kimi Code | Direct GitHub plugin install | No | Kimi plugin manifest, retained host test, public source |
+| Hermes optional-skills catalog | Native catalog listing | No | Hermes-specific packaging, retained host test, and PR review |
+| Kimi Code | Direct GitHub plugin install | No | Kimi plugin manifest and retained host test |
 
 ## Donation language
 

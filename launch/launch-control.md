@@ -30,7 +30,7 @@ The GitHub source is already public. Promotion that includes the landing page
 remains blocked until its items below pass:
 
 - The GitHub repository opens while logged out and renders the intended README.
-- GitHub private vulnerability reporting is enabled before public launch.
+- **Passed 2026-07-19:** GitHub private vulnerability reporting is enabled.
 - The default branch contains the license, seven skill directories, examples,
   compatibility limits, safety rules, contribution guide, and issue forms.
 - `npx skills add bilbop1/moneyprinter-md --list` succeeds from a clean
@@ -39,8 +39,8 @@ remains blocked until its items below pass:
 - The landing page opens while logged out on desktop and mobile.
 - The landing page's GitHub and install calls to action point to the final
   public repository.
-- The social preview image renders correctly when the URL is pasted into a
-  preview debugger or a private draft.
+- **Passed 2026-07-19:** the 1200 × 630 social preview is uploaded and renders
+  in repository settings. Recheck its public embed before posting.
 - The GitHub and landing targets in `launch/x-launch.md` and
   `launch/show-hn.md` match the live URLs exactly.
 - No secret, local path, private hostname, test credential, or unconfirmed Ko-fi

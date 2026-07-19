@@ -7,9 +7,10 @@ other high-fit channel resolves back to the repository. GitHub can amplify
 useful releases, stars, forks, discussions, field reports, and linked installs,
 but it cannot guarantee cold-start traffic or Trending placement.
 
-**Status:** public source and remote install verified on 2026-07-19. Repository
-metadata, social preview, release, Discussions, and security settings are being
-configured; the landing-page URL remains pending.
+**Status:** public source, remote discovery, metadata, topics, social preview,
+Discussions, and private vulnerability reporting were verified on 2026-07-19.
+The release candidate, one retained host invocation, and landing page remain
+pending.
 
 ## Current submission path
 
@@ -30,7 +31,8 @@ and [GitHub Trending](https://github.com/trending).
 - README, license, security, contribution, issue templates, and compatibility
   caveats present.
 - GitHub private vulnerability reporting enabled.
-- A confirmed, monitored private conduct-enforcement/reporting route.
+- An optional monitored conduct-reporting role address if the community later
+  needs one; this is not a launch requirement.
 - Inspected 1200×630 social preview.
 - Owner approval for the public release.
 
@@ -102,8 +104,7 @@ GitHub topics:
 
 ## Final human action
 
-Authenticate as the intended owner, enable private vulnerability reporting,
-confirm the monitored private conduct-enforcement route, publish the
-repository, configure the About text/topics/social preview, create the release
-candidate, and test the page, install, and one full host invocation before
-sharing any external link.
+Create and verify the release candidate, then retain one full host invocation.
+Add the landing-page URL only after it works logged out. If community conduct
+volume later warrants a private inbox, add a monitored role address rather than
+a personal address.
