@@ -1,13 +1,12 @@
 # MoneyPrinter.md X launch copy
 
-## Release gate
+## Ready state
 
-The current public launch surfaces were checked again on 2026-07-19:
+The public launch surfaces were checked again on 2026-07-19:
 
-- GitHub and the seven-skill install path are live. The copy below targets
-  `v0.1.0-rc.2` and must wait until that release and site badge are public.
+- GitHub, release `v0.1.0-rc.2`, and the seven-skill install path are live.
 - `https://moneyprinter.bilbop.org` is live with the correct repository,
-  install command, and Ko-fi link.
+  rc.2 badge, install command, and Ko-fi link.
 - ClawHub has seven public v1.0.0 listings under `@bilbop1`.
 - Awesome Skills has the public MoneyPrinter flagship page.
 - The Ko-fi page loads as `Support bilbop`.

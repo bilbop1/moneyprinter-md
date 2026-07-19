@@ -84,9 +84,11 @@ Verified on 2026-07-19:
 - `/og.png` returned HTTP 200 as `image/png`.
 - The live page contains the final GitHub URL and
   `npx skills add bilbop1/moneyprinter-md`.
-- The GitHub repository returned HTTP 200, and a fresh remote `--list` check
-  against the current public source found all seven skills. Repeat the check
-  against release target `v0.1.0-rc.2` after the tag is public.
+- The live page shows `0.1.0-rc.2` in its header and footer with no stale rc.1
+  marker.
+- The GitHub repository returned HTTP 200, and fresh remote `--list` checks
+  against both the default branch and public tag `v0.1.0-rc.2` found all seven
+  skills.
 
 These checks establish public site and installer availability. They do not
 establish conversation-level activation in any named host; that retained test

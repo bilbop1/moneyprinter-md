@@ -2,10 +2,11 @@
 
 ## Current state
 
-GitHub and the landing page are live. On 2026-07-19, a clean remote-discovery
-check against the current public source found all seven skills, and the custom
-domain returned HTTPS 200 with its Sites domain, provider, and SSL states
-active. The next release source target is `v0.1.0-rc.2`.
+GitHub and the landing page are live. On 2026-07-19, release source tag
+`v0.1.0-rc.2` resolved to the tested commit, its downloaded archive matched the
+recorded SHA-256 digest, a clean remote-discovery check found all seven skills,
+and the custom domain returned HTTPS 200 with its Sites domain, provider, and
+SSL states active.
 
 | Surface | Publication target | Verified state |
 | --- | --- | --- |
@@ -40,9 +41,8 @@ report is better evidence than a large burst of passive impressions.
 The GitHub source and landing page are public. Keep these checks true before
 promotion, and do not strengthen any unverified compatibility or funding claim:
 
-- **Passed 2026-07-19:** the GitHub repository opens while logged out.
-- **Release gate:** publish and recheck retained release/distribution source
-  tag `v0.1.0-rc.2`.
+- **Passed 2026-07-19:** the GitHub repository opens while logged out; retained
+  release/distribution source tag `v0.1.0-rc.2` resolves to the tested source.
 - **Passed 2026-07-19:** GitHub private vulnerability reporting is enabled.
 - The default branch contains the license, seven skill directories, examples,
   compatibility limits, safety rules, contribution guide, and issue forms.
@@ -74,13 +74,13 @@ experience in replies.
    issues, unique visitors if available, and landing-page visits.
 2. **Done 2026-07-19:** make the GitHub repository public and check it logged
    out.
-3. **Release gate:** publish `v0.1.0-rc.2` from the final tested source and
-   verify its notes, archive, version, and SHA-256 digest.
+3. **Done 2026-07-19:** published `v0.1.0-rc.2` from the final tested source and
+   verified its notes, archive, version, and SHA-256 digest.
 4. **Discovery done 2026-07-19:** the published command found all seven names
    from a clean temporary directory. A retained host invocation remains open.
-5. **Done 2026-07-19:** publish the landing page, activate
-   `moneyprinter.bilbop.org`, and check valid HTTPS, canonical and social
-   metadata, the install command, and the GitHub target.
+5. **Done 2026-07-19:** published the rc.2 landing page, kept
+   `moneyprinter.bilbop.org` active, and checked valid HTTPS, canonical and
+   social metadata, the install command, and the GitHub target.
 6. Update any publication-target labels in launch assets only after both URLs
    pass. Freeze the exact post copy and image you will use.
 7. Use the flagship post plus its first reply in `launch/x-launch.md`. Add the

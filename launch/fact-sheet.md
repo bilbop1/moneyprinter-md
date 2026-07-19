@@ -53,8 +53,8 @@ contains a `SKILL.md`; supporting material stays beside the skill.
 - Public repository: `https://github.com/bilbop1/moneyprinter-md`.
 - Logged-out access and a clean seven-skill remote discovery run were verified
   on 2026-07-19.
-- The next retained release and distribution source target is
-  `v0.1.0-rc.2`; verify it again after the tag is public.
+- The retained release and distribution source is public tag
+  `v0.1.0-rc.2`; a clean listing against that tag found all seven skills.
 - Public landing page: `https://moneyprinter.bilbop.org`. HTTPS 200 and active
   Sites custom-domain, provider, and SSL states were verified on 2026-07-19.
 - ClawHub's current CLI reference says publishing releases the submitted copy

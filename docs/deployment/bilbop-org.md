@@ -16,8 +16,8 @@ The site is deployed through Sites and public at
 - `/og.png` returned HTTP 200 as `image/png`;
 - the live GitHub link and displayed install command matched the public
   repository; and
-- the next release/distribution source target is `v0.1.0-rc.2`; repeat the
-  clean remote listing after that tag is public.
+- the retained release/distribution source is `v0.1.0-rc.2`, and a clean remote
+  listing against that public tag found all seven skills.
 
 The existing Sites project ID is persisted in
 `site/.openai/hosting.json`. Reuse that exact project for later versions; do
