@@ -52,10 +52,8 @@ shows how the directory handles related skills.
 
 ## Short description
 
-This is under the documented 180-character limit:
-
-> Scan 14 days of detected, accessible AI sessions, confirm one cash-first
-> route, then work it through receipts and reranking.
+> With permission, scan 14 days of detected, accessible AI sessions, confirm
+> one cash-first route, then work it through receipts and reranking.
 
 ## Long description
 

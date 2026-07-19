@@ -77,8 +77,9 @@ Do not submit with the placeholders or before the source URL works logged out.
 
 ## Short description
 
-> Scan 14 days of detected, accessible AI sessions, confirm the read once, and
-> start one cash-first route with approval before external action.
+> With permission, scan 14 days of detected, accessible AI sessions, confirm
+> the read once, and start one cash-first route with approval before external
+> action.
 
 ## Tags / category
 

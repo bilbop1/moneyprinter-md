@@ -40,8 +40,8 @@ still include:
 
 ## Short description
 
-> Scan 14 days of detected, accessible AI sessions, confirm the read once, and
-> start one cash-first route with honest evidence labels.
+> With permission, scan 14 days of detected, accessible AI sessions, confirm
+> the read once, and start one cash-first route with honest evidence labels.
 
 ## Long description
 

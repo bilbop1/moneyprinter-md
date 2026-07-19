@@ -75,7 +75,8 @@ one recipient, one message, $0 spend, and no data attachment.
 
 In this simulation, the owner replies that the existing CRM already covers the
 workflow. Hypothetical cash collected: **$0**. No homeowner message is sent and
-no estimate is recovered. This is a failed fit check, not a business result.
+no estimate is recovered. Real cash collected: **$0** because this walkthrough
+did not occur. This is a failed fit check, not a business result.
 
 ## Correct evidence label
 

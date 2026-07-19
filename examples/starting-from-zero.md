@@ -79,7 +79,8 @@ other action.
 
 In this simulation, the contact replies that the scope is too small and no
 payment occurs. Hypothetical cash collected: **$0**. Hypothetical human work:
-45 minutes. This is not a customer result or conversion forecast.
+45 minutes. Real cash collected: **$0** because this walkthrough did not occur.
+This is not a customer result or conversion forecast.
 
 ## Correct evidence label
 

@@ -53,8 +53,9 @@ https://github.com/bilbop1/moneyprinter-md
 > evidence and payable speed drive the route choice. The run continues through
 > private research, offer creation, payable-test design, acquisition
 > preparation, and delivery preparation. A specific approval gates the exact
-> external action. Its receipt and result feed the next ranking. Five simulated
-> persona runs show the method without presenting customer outcomes.
+> external action. Its receipt and result feed the next ranking.
+> Five rewritten hypothetical walkthrough files show the candidate flow. They
+> are not retained rc.3 evaluations, customer outcomes, or release evidence.
 
 ## Tags
 

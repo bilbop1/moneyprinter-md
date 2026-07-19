@@ -76,7 +76,8 @@ post. The receipt records $0 spend, the asset identifier, and no other action.
 
 In this simulation, the post receives hypothetical views but no attributable
 settled commission. Hypothetical cash collected: **$0**. Views and clicks are
-not sales, payout, or profit. This is not a performance or revenue result.
+not sales, payout, or profit. Real cash collected: **$0** because this
+walkthrough did not occur. This is not a performance or revenue result.
 
 ## Correct evidence label
 

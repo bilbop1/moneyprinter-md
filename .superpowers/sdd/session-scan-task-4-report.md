@@ -182,3 +182,137 @@ skills and eleven references.
    action.
 4. Historical eval outputs do not validate the new scan behavior. The
    session-scan evaluation task must produce separate retained results.
+
+## Review correction pass
+
+This section supersedes the earlier corpus counts and release-boundary wording.
+The correction keeps scan-first behavior staged in the checkout while stating
+plainly that the current public rc.2 release remains interview-first.
+
+### Findings corrected
+
+- README and the install guide now put an easy-to-flip release note between the
+  staged scan-first rc.3 copy and the current public rc.2 installer.
+- The public install and activation sections describe rc.2 as interview-first.
+  A separate prompt covers a manual copy from the unreleased checkout.
+- The live ClawHub v1.0.0 listings are tied to rc.1-source commit
+  `61549ff7440331588fd43b6c0707e8d783c51144`, not rc.2.
+- Standalone Hermes, OpenAI Plugins, OpenSpace, Product Hunt, and SkillsDir.dev
+  descriptions now lead directly with permission.
+- SECURITY states that the user controls permitted source scope. It also states
+  that legal, medical, financial, regulated, confidential, and sensitive
+  subject matter is not excluded solely by category. Authority, privacy,
+  least-data, and qualified-review gates still apply.
+- Awesome Skills now identifies the five files as rewritten hypothetical
+  walkthroughs, not retained rc.3 evaluations.
+- Every walkthrough reports both hypothetical cash and real cash as `$0`, and
+  continues to reject any claim that the simulated event occurred.
+
+### Focused RED evidence
+
+The first hardened verifier run exposed both product gaps and overly broad
+negative-claim detectors. The detectors were corrected before any public copy
+was edited. The focused RED run then exited 1 with 16 genuine failures:
+
+- README workflow order and release boundary;
+- install guide release boundary;
+- SECURITY source control and subject-category wording;
+- ClawHub rc.1 provenance;
+- five permission-leading short descriptions;
+- Awesome Skills walkthrough qualification; and
+- explicit real-cash `$0` in all five simulations.
+
+A read-only adversarial review then supplied broader prohibited phrasings.
+After those fixtures were added first, the verifier exited 1 with exactly nine
+escaped cases: read-every-session coverage, run-on-every-host activation,
+ensured profit, three rc.3 release formulations, generic interview-first copy,
+reversed legal-source exclusion wording, and an actual-revenue claim beside
+both `$0` fields. The detectors were widened until all nine failed for the
+intended reason.
+
+### Hardened GREEN contract
+
+```text
+node scripts/verify-public-copy.mjs
+public copy contract: 42 current files, 5 simulations, and 16 adversarial fixtures verified
+```
+
+The 42-file corpus includes every one of the 23 submission Markdown files and
+all five walkthroughs. The verifier now checks:
+
+- ordered hero copy before the first secondary README section;
+- release boundaries beside public installer commands;
+- stale interview language while allowing bounded fallback and current rc.2
+  context;
+- contradictions that claim report-only stopping, unbounded coverage,
+  universal activation, guaranteed income, a companion app, or authorization
+  of external action;
+- prompt injection, credential stores and paths, private keys, authentication
+  tokens, payment credentials, `.env` files, raw-history nonpublication,
+  coverage receipts, user-controlled source scope, subject-category scope, and
+  one-off versus autonomous or bulk action;
+- nonempty, ordered simulation sections, bounded approval and receipts, both
+  `$0` cash fields, and rejection of real outcomes;
+- false public or released rc.3 claims across the full current corpus;
+- punctuation and emoji across that corpus; and
+- adversarial fixtures that must fail for wrong order, report-only stopping,
+  scan-all and read-every coverage, universal host activation, ensured profit,
+  companion-app claims, multiple false public rc.3 formulations, stale
+  interview-first copy, `.env` access, sole category exclusion, an empty
+  simulation section, and claimed real cash or actual revenue.
+
+Task 4 intentionally does not certify `launch/x-launch.md` voice or
+`launch/launch-control.md` final live status. Those files remain owned by the
+later launch pass.
+
+### Fresh verification
+
+```text
+node scripts/verify-release.mjs
+release 0.1.0-rc.2: 7 skills and 6 X posts verified
+
+node scripts/verify-money-machine-chain.mjs
+money-machine chain contract: 6 skills and 11 references verified
+
+uvx --offline --from skills-ref agentskills validate skills/moneyprinter
+Valid skill: skills/moneyprinter
+
+npx skills add . --list
+Found 7 skills
+
+stale public copy audit
+Only five intended README/install references to current public rc.2
+interview-first behavior remain.
+
+humanizer punctuation and emoji audit on changed Markdown
+No matches.
+
+node --check scripts/verify-public-copy.mjs
+No output; exit 0.
+
+git diff --check
+No output; exit 0.
+```
+
+### Correction self-review
+
+- The approved headline remains the first prose paragraph.
+- The intro now orders one confirmation, cash-first priority, private research,
+  offer work, payable-test work, acquisition preparation, delivery
+  preparation, one exact external action, an Action receipt, and reranking.
+- Public install copy cannot be read as an rc.3 availability claim.
+- ClawHub dated status and pinned command now agree.
+- All five standalone descriptions retain detected and accessible bounds while
+  leading with permission.
+- The examples are walkthroughs, not customers, revenue, retained rc.3 evals,
+  or release evidence.
+- Skill and site metadata remain rc.2.
+- A final independent read-only spot check of the corrected copy and exact
+  escaped-claim fixtures returned no findings.
+
+### Remaining boundary
+
+Scan-first rc.3 is still unreleased. Historical rc.1 and rc.2 evaluations do
+not validate it, and the current public installer still returns interview-first
+rc.2. The Task 5 landing-page work and the final X and launch-control status
+must be reviewed in their own gates before any public release claim is made.

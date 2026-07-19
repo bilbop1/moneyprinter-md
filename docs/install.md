@@ -12,6 +12,11 @@ delivery-proof
 cashflow-review
 ```
 
+> Release boundary: The scan-first workflow in this checkout is staged for the
+> unreleased `0.1.0-rc.3`. The current public `0.1.0-rc.2` release remains
+> interview-first. Public installer commands below still install rc.2. This
+> note can be flipped when rc.3 is actually published.
+
 ## Current local verification
 
 From the repository root, list the locally available skills before installing
@@ -25,10 +30,12 @@ Expected result: each of the seven names above appears exactly once. This is a
 local discovery check, not a claim that a particular agent surface has been
 activated.
 
-## Public installer commands
+## Current public rc.2 installer commands
 
-The public repository and remote discovery route were verified on 2026-07-19.
-A clean `--list` run found all seven expected skills:
+The current public rc.2 repository and remote discovery route were verified on
+2026-07-19. A clean `--list` run found all seven expected skills. These commands
+install the interview-first rc.2 release, not the staged scan-first rc.3
+workflow:
 
 ```bash
 npx skills add bilbop1/moneyprinter-md
@@ -51,6 +58,7 @@ targets can change.
 
 Manual installation is the reliable fallback for GUI surfaces, locked-down
 workspaces, and any environment whose installer target has changed.
+Copying from this checkout previews the staged scan-first rc.3 workflow.
 
 1. Choose one skill directory from `skills/`; start with `moneyprinter` for the
    permissioned scan and route selection.
@@ -73,9 +81,16 @@ Use the installed host's current documentation for the exact location and scope:
 | Claude web/Cowork, ChatGPT web, Kimi app/Work | Paste the selected workflow into workspace/project instructions or upload its files only where the product permits it. Treat this as context, not a native installed plugin. |
 | MiniMax | Use a compatible harness that accepts Agent Skills and is configured with MiniMax. This repository does not claim a native MiniMax import path. |
 
-## Confirm activation
+## Confirm current public rc.2 activation
 
 Use a harmless first prompt:
+
+> Invoke moneyprinter. The current public rc.2 uses interview-first intake. Ask
+> one question at a time. Do not take an external action without asking again.
+
+## Confirm the unreleased local checkout
+
+Use this prompt only for a manual copy from the staged scan-first rc.3 checkout:
 
 > Invoke moneyprinter. Ask permission to scan the last 14 days of accessible AI
 > session histories. Do not take an external action without asking again.

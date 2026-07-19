@@ -77,8 +77,8 @@ one recipient, one message, $0 spend, and no customer data.
 
 In this simulation, the owner asks to review the scope but cannot provide a
 privacy-safe baseline. Hypothetical cash collected: **$0**. The reply is a
-pipeline signal only. This is not a business, customer, retention, or savings
-result.
+pipeline signal only. Real cash collected: **$0** because this walkthrough did
+not occur. This is not a business, customer, retention, or savings result.
 
 ## Correct evidence label
 

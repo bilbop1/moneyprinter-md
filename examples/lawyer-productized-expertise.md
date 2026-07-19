@@ -78,7 +78,8 @@ message, $0 spend, and no confidential attachment.
 In this simulation, the attorney replies that the proposed topic is unsuitable
 for public education. Hypothetical cash collected: **$0**. No draft is
 delivered and no client information is handled. This is a safety stop, not a
-legal or customer result.
+legal or customer result. Real cash collected: **$0** because this walkthrough
+did not occur.
 
 ## Correct evidence label
 

@@ -60,8 +60,8 @@ Primary skill:
 
 ## Short description
 
-> Scan 14 days of detected, accessible AI sessions, confirm the read once, and
-> work one cash-first route through receipts and reranking.
+> With permission, scan 14 days of detected, accessible AI sessions, confirm
+> the read once, and work one cash-first route through receipts and reranking.
 
 ## Long description
 

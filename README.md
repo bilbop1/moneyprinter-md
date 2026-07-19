@@ -6,10 +6,16 @@ One permission. MoneyPrinter scans the last 14 days across every detected AI
 CLI and GUI it can access, figures out what is real, and gets to work on the
 best path to money.
 
+> Release boundary: The scan-first workflow in this checkout is staged for the
+> unreleased `0.1.0-rc.3`. The current public `0.1.0-rc.2` release remains
+> interview-first. The live installer command below still installs rc.2. This
+> note can be flipped when rc.3 is actually published.
+
 It shows what it could and could not read, then asks for one confirmation. From
-there it gives proven cash and the nearest payable event priority over project
-size or hype. It keeps going through private research, offer work, payable test
-design, acquisition preparation, and delivery preparation.
+there it applies a cash-first priority: proven cash and the nearest payable
+event outrank project size or hype. It keeps going through private research,
+offer work, payable test design, acquisition preparation, and delivery
+preparation.
 
 The agent pauses before one exact external action. If you approve that action,
 it performs only that action, records an Action receipt, checks the result, and
@@ -20,6 +26,11 @@ This repo contains seven open-source Agent Skills, not a companion app. The
 current AI host does the scanning with its own tools and permissions. Coverage
 is limited to detected, permitted, accessible session sources. MoneyPrinter
 does not promise income, customers, or an autonomous business.
+
+## Current public rc.2 install
+
+The command below installs the current public rc.2 interview-first release. It
+does not install the staged scan-first rc.3 workflow from this checkout.
 
 ```sh
 npx skills add bilbop1/moneyprinter-md

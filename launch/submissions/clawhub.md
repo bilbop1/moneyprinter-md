@@ -11,9 +11,11 @@ counts, stars, tags, changelogs, and scan state.
 zero failures, and all seven v1.0.0 releases were published. SkillSpector later
 marked every package clean and the dashboard changed each listing to visible.
 
-The description below is prepared for a future sync. The live v1.0.0 listing
-remains a historical rc.2 publication until a new source release is published
-and synced.
+The description below is prepared for a future sync. The live v1.0.0 listings
+were published from rc.1-source commit
+`61549ff7440331588fd43b6c0707e8d783c51144`. They are not rc.2 publications.
+A new source release must be published and synced before the copy below is
+live.
 
 ## Current official submission path
 
