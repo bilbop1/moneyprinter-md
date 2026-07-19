@@ -279,15 +279,10 @@ and include one valid and one invalid example for each.
 Run:
 
 ```bash
-skills-ref validate skills/moneyprinter
+uvx --from skills-ref agentskills validate skills/moneyprinter
 ```
 
-Expected: output containing `valid` and exit code `0`. If `skills-ref` is not on
-`PATH`, run:
-
-```bash
-uvx skills-ref validate skills/moneyprinter
-```
+Expected: output containing `Valid skill` and exit code `0`.
 
 - [ ] **Step 8: Review against all persona fixtures**
 
@@ -421,8 +416,8 @@ authority.
 Run:
 
 ```bash
-skills-ref validate skills/opportunity-radar
-skills-ref validate skills/offer-engine
+uvx --from skills-ref agentskills validate skills/opportunity-radar
+uvx --from skills-ref agentskills validate skills/offer-engine
 ```
 
 Expected: both valid.
@@ -534,8 +529,8 @@ to be:
 Run:
 
 ```bash
-skills-ref validate skills/payable-test
-skills-ref validate skills/ethical-acquisition
+uvx --from skills-ref agentskills validate skills/payable-test
+uvx --from skills-ref agentskills validate skills/ethical-acquisition
 rg -n -i "guaranteed income|risk-free profit|scrape.*email|mass dm|fake review|impersonat" skills
 ```
 
@@ -643,8 +638,8 @@ base-case gross profit before scaling.
 Run:
 
 ```bash
-skills-ref validate skills/delivery-proof
-skills-ref validate skills/cashflow-review
+uvx --from skills-ref agentskills validate skills/delivery-proof
+uvx --from skills-ref agentskills validate skills/cashflow-review
 ```
 
 Then present these artifacts to the skills:
@@ -930,7 +925,9 @@ Run:
 git diff --check
 rg -n -e 'T[B]D' -e 'T[O]DO' -e 'F[I]XME' -e 'example\\.com' -e 'your-username' README.md docs skills examples research .github || true
 npx skills add . --list
-for dir in skills/*; do skills-ref validate "$dir" || exit 1; done
+for dir in skills/*; do
+  uvx --from skills-ref agentskills validate "$dir" || exit 1
+done
 ```
 
 Expected:
@@ -964,7 +961,7 @@ git commit -m "docs: prepare MoneyPrinter public launch surface"
 
 ```bash
 for dir in skills/*; do
-  skills-ref validate "$dir" || exit 1
+  uvx --from skills-ref agentskills validate "$dir" || exit 1
 done
 ```
 

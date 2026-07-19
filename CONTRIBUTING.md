@@ -33,7 +33,9 @@ Run the applicable checks before opening a pull request:
 
 ```sh
 npx skills add . --list
-for dir in skills/*; do skills-ref validate "$dir" || exit 1; done
+for dir in skills/*; do
+  uvx --from skills-ref agentskills validate "$dir" || exit 1
+done
 git diff --check
 ```
 
