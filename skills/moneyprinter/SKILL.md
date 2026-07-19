@@ -17,8 +17,13 @@ or pipeline value with cash collected.
 ## Workflow
 
 1. Read `references/safety-boundaries.md`.
-2. Extract facts already present in the conversation.
-3. Read `references/interview.md`.
+2. Read `references/interview.md`. Before the first intake question, give its
+   data-minimization notice. Default to aggregates, ranges, pseudonyms, and
+   sanitized excerpts; never solicit raw personal data, confidential files,
+   credentials, payment data, or regulated records. If host retention is
+   unknown, assume the conversation may be retained.
+3. Extract only the minimum relevant facts already present in the conversation;
+   abstract sensitive material rather than repeating it.
 4. Ask at most seven short questions, one at a time when interactive.
 5. Write a Revenue Profile containing:
    - starting stage;
@@ -50,7 +55,9 @@ economics.
 
 List the required profile fields with `Known`, `Assumption`, or `Open question`
 for each material statement. Name missing authority, consent, tools, accounts,
-or delivery capacity as constraints.
+or delivery capacity as constraints. Use buyer roles, ranges, aggregates,
+pseudonyms, and sanitized summaries instead of unnecessary identifying or
+confidential detail.
 
 ### Route Decision
 

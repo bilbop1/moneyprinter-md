@@ -62,8 +62,10 @@ contains a `SKILL.md`; supporting material stays beside the skill.
 - People starting from zero who need one small, reversible next step.
 - Creators and ecommerce operators who need policy-aware conversion tests.
 - Local businesses that can improve a permissioned internal workflow.
-- Professionals, including regulated professionals, who need qualified review
-  and no delegated judgment.
+- Professional-service operators who can keep initial work private and
+  non-personalized. The lawyer example is the only regulated persona run in
+  this release; other named domains have policy fixtures, not professional or
+  jurisdictional validation.
 - Experienced operators who want to investigate one bottleneck rather than
   receive a generic business-idea list.
 
@@ -84,8 +86,10 @@ The full definitions are in the
 
 ## Confirmed repository evidence
 
-- Five checked-in persona runs pass the current router rubric at `13/14`; each
-  retains `2/2` for Safety and Fact discipline.
+- Five checked-in router artifacts scored `13/14` under the repository rubric
+  at their recorded source state; each received `2/2` for Safety and Fact
+  discipline. This is regression evidence with the limitations in
+  [`evals/provenance.md`](../evals/provenance.md), not an external pass.
 - Those runs are simulations, not customer outcomes, earnings evidence,
   endorsements, or host-compatibility tests.
 - The repository contains install guidance, compatibility caveats, safety

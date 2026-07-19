@@ -29,7 +29,7 @@
 
 ## Continue threshold
 
-- Continue only when an accepted order, signed agreement, paid deposit, or explicit user attestation confirms an enforceable contract; record it as **Revenue contracted** only then, otherwise use **Pipeline signal**. Go only if the expected contribution margin for the paid trial is positive after fully loaded test cost; stop if no credible buyer problem or delivery boundary is verified.
+- Continue only when a buyer action has the artifact required for its evidence label. Record **Revenue contracted** only from privacy-safe redacted signed-obligation evidence, and record a paid deposit as **Cash collected** only from privacy-safe redacted settlement evidence. A user attestation without the required artifact is **Unverified anecdote**; use **Revenue booked** or **Pipeline signal** only when its definition is met. Go only if the expected contribution margin for the paid trial is positive after fully loaded test cost; stop if no credible buyer problem or delivery boundary is verified.
 
 ## Failure conditions
 

@@ -7,7 +7,20 @@ body:
   - type: markdown
     attributes:
       value: |
-        Do not include secrets, customer data, private documents, or material you lack permission to share. A failed or stopped test is useful evidence.
+        This issue is public. Do not upload or paste original evidence, secrets, customer data, private documents, or material you lack permission to share. A failed or stopped test is useful evidence.
+
+        Use exactly one evidence label:
+        - **Cash collected** — settled payment backed by an inspected processor or bank settlement artifact.
+        - **Revenue contracted** — signed obligation backed by an inspected signed agreement or equivalent binding-order artifact.
+        - **Revenue booked** — an invoice or order has been created but has not settled.
+        - **Pipeline signal** — a buyer reply, accepted meeting, proposal, waitlist entry, or documented intent.
+        - **Estimated economic value** — modeled value with a formula, assumptions, and sensitivity.
+        - **Simulation** — a benchmark or hypothetical result, labeled beside every headline number.
+        - **Unverified anecdote** — an unsupported reported result without the artifact required for a stronger label.
+
+        A statement or user attestation alone cannot establish **Cash collected** or **Revenue contracted**. If settlement evidence or a signed-obligation artifact is unavailable, select **Unverified anecdote**.
+
+        Keep originals private. In the redacted-evidence field, describe only the artifact type, relevant status, date window, currency, and rounded amount when safe. Remove names, account or transaction numbers, signatures, customer data, confidential terms, and identifying metadata.
   - type: dropdown
     id: result_label
     attributes:
@@ -62,7 +75,7 @@ body:
     id: evidence
     attributes:
       label: Redacted evidence
-      description: Explain what supports the label without publishing sensitive information.
+      description: Describe the privacy-safe redacted artifact details you inspected; do not upload or paste the original. If Cash collected or Revenue contracted lacks its required artifact, select Unverified anecdote.
     validations:
       required: true
   - type: textarea
@@ -78,4 +91,6 @@ body:
       label: Consent and safety
       options:
         - label: I have permission to share this redacted report and did not include secrets or personal data.
+          required: true
+        - label: I used the definitions above. If I selected Cash collected or Revenue contracted, I inspected the required supporting artifact; otherwise I selected Unverified anecdote.
           required: true

@@ -100,9 +100,11 @@ contact, a charge, publication, or an account change.
 
 ## Evidence discipline
 
-A settled payment is `Cash collected`. A signed obligation is `Revenue
-contracted`; an invoice or order is `Revenue booked`; interest without a
-payment condition is `Pipeline signal`. Modeling a likely result is `Estimated
-economic value`; a hypothetical example is `Simulation`; an unsupported report
-is `Unverified anecdote`. Use the label that the observed evidence earns, not
-the label that makes the test look strongest.
+A settled payment supported by an inspected, privacy-safe settlement artifact
+is `Cash collected`. A signed obligation supported by an inspected,
+privacy-safe signed-obligation artifact is `Revenue contracted`; an invoice or
+order is `Revenue booked`; interest without a payment condition is `Pipeline
+signal`. Modeling a likely result is `Estimated economic value`; a hypothetical
+example is `Simulation`; a report without the artifact required for a stronger
+label is `Unverified anecdote`. Use the label that the observed evidence earns,
+not the label that makes the test look strongest.

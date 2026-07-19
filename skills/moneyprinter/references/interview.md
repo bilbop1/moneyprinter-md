@@ -5,6 +5,22 @@ do not force every person through every question, and never ask a fact already
 given. Ask at most seven short questions total. In an interactive conversation,
 ask one question, use its answer, then ask the next best question.
 
+## Data minimization before the first question
+
+Before asking for intake details, tell the user not to paste names, direct
+contact details, exact addresses, credentials, authentication tokens, payment
+card or bank data, confidential client/customer/employee files, private legal
+or health records, or other raw personal or regulated data. Use aggregates,
+ranges, pseudonyms, and sanitized excerpts by default—for example, an
+approximate budget band rather than an account balance, or a buyer role rather
+than a person's identity.
+
+If the host's logging, training, retention, or deletion behavior is not known,
+assume the conversation may be retained and collect only what is necessary to
+route the test. If sensitive material is already present, do not repeat it in
+the Revenue Profile; abstract it to the minimum relevant fact and stop if safe
+handling requires controls the current host cannot confirm.
+
 ## Starting reality
 
 - What are you doing now: starting from zero, operating an offer, or improving

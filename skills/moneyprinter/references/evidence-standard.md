@@ -1,19 +1,25 @@
 # Evidence standard
 
 Every economic result uses exactly one label below. The label describes the
-current evidence, not the hoped-for outcome. Keep supporting records private or
-redacted when personal, confidential, or regulated information is involved.
+current evidence, not the hoped-for outcome. Artifact-backed labels require an
+inspected source record; a narrative statement or explicit user attestation
+alone is not a substitute. Keep original supporting records private and share
+only privacy-safe redacted details when personal, confidential, or regulated
+information is involved.
 
-1. **Cash collected** — settled payment received.
-   - Valid: A processor settlement record shows $250 arrived; label the result
-     **Cash collected**.
-   - Invalid: An issued $250 invoice is labeled **Cash collected** before it is
-     settled.
+1. **Cash collected** — settled payment received, supported by a settlement
+   artifact.
+   - Valid: A redacted processor or bank settlement record shows $250 arrived;
+     label the result **Cash collected**.
+   - Invalid: An issued $250 invoice or user attestation without settlement
+     evidence is labeled **Cash collected**.
 
-2. **Revenue contracted** — signed obligation, not yet collected.
-   - Valid: Both parties signed a $1,000 service agreement and no payment has
-     settled; label it **Revenue contracted**.
-   - Invalid: A prospect's verbal interest is labeled **Revenue contracted**.
+2. **Revenue contracted** — signed obligation, not yet collected, supported by
+   a signed-obligation artifact.
+   - Valid: A redacted executed $1,000 service agreement records both parties'
+     signatures and no payment has settled; label it **Revenue contracted**.
+   - Invalid: Verbal interest or user attestation without a signed-obligation
+     artifact is labeled **Revenue contracted**.
 
 3. **Revenue booked** — invoice or order created, not yet settled.
    - Valid: An approved $300 order exists in the order system but no settlement
@@ -38,13 +44,16 @@ redacted when personal, confidential, or regulated information is involved.
      beside the number.
    - Invalid: A benchmark result is called **Cash collected**.
 
-7. **Unverified anecdote** — reported but not independently supported.
-   - Valid: A user says a template "helped close a sale" without records;
-     label it **Unverified anecdote**.
+7. **Unverified anecdote** — reported but not supported by the artifact required
+   for a stronger label.
+   - Valid: A user reports a payment, contract, or sale without the appropriate
+     supporting artifact; label it **Unverified anecdote**.
    - Invalid: A reported result without supporting records is labeled **Revenue
      contracted**.
 
 For a public field report, include the time window, starting assets, cash spend,
 model and harness, human work, method, result label, and redacted evidence where
 safe. Never infer settlement, a contract, or a buyer's intent from a benchmark,
-dashboard estimate, invoice draft, page view, or anecdote.
+dashboard estimate, invoice draft, page view, anecdote, or attestation. If
+settlement evidence or a signed-obligation artifact is unavailable, use
+**Unverified anecdote**, not **Cash collected** or **Revenue contracted**.

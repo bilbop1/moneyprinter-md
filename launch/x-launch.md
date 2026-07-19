@@ -59,7 +59,7 @@ MoneyPrinter uses 7 evidence labels.
 
 A reply or meeting is a Pipeline signal. An invoice is Revenue booked. Modeled savings are Estimated economic value. A hypothetical run is a Simulation.
 
-Only a settled payment is Cash collected.
+Only a settled payment with inspected support is Cash collected.
 ```
 
 ### 3/6

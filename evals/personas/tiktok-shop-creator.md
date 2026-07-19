@@ -27,7 +27,12 @@
 
 ## Continue threshold
 
-- Continue only when tracked affiliate settlement produces **Cash collected**; repeat only if actual contribution margin is positive after fully loaded test cost. Treat clicks, orders, and dashboard estimates as weaker evidence and stop if policy compliance or attribution cannot be verified.
+- Continue only when a tracked affiliate settlement is supported by an
+  inspected, privacy-safe redacted settlement artifact and therefore earns
+  **Cash collected**; without that artifact, use **Unverified anecdote**.
+  Repeat only if actual contribution margin is positive after fully loaded test
+  cost. Treat clicks, orders, and dashboard estimates as weaker evidence and
+  stop if policy compliance or attribution cannot be verified.
 
 ## Failure conditions
 

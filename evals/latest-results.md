@@ -4,14 +4,28 @@
 **Release candidate:** `0.1.0-rc.1`
 **Skill under review:** [`skills/moneyprinter/SKILL.md`](../skills/moneyprinter/SKILL.md)
 
+**Provenance:** See [`provenance.md`](provenance.md) for source commits,
+execution-surface limits, raw-output locations, grading, and the unavailable
+exact model identifier. A `Pass` below means only that a checked-in artifact met
+this repository's rubric; it is not external validation or a safety
+certification.
+
 ## Method
 
-Each checked-in persona fixture was run through the current router as a
-frontier-agent conversation. Only the fixture's `Known facts` were treated as
-answers. The run records the unanswered adaptive questions, then creates the
-actual Revenue Profile, route comparison, decision, Experiment Brief, and
-immediate approval gate required by the skill. No missing fact was invented and
-the example walkthroughs were not used as response input or outcome evidence.
+Each checked-in persona fixture was run through the router source last
+behaviorally updated at commit `388133f` as a frontier-agent conversation. Only
+the fixture's `Known facts` were treated as answers. The run records the
+unanswered adaptive questions, then creates the Revenue Profile, route
+comparison, decision, Experiment Brief, and immediate approval gate required by
+that source state. No missing fact was invented and the example walkthroughs
+were not used as response input or outcome evidence.
+
+Later RC hardening added artifact proof requirements, labor-economics gates,
+privacy-minimized intake, and stronger execution prerequisites. The five scores
+below have not been silently upgraded to cover those changes; use the separate
+activation, regulated-safety, and untrusted-content results for the retained
+follow-up fixtures, and rerun the full personas before a model- or host-specific
+claim.
 
 Because every fixture intentionally withholds material facts, each result
 downgrades the supposed 24-hour **payable** test to a 24-hour private discovery
@@ -19,6 +33,8 @@ artifact. That is honest safety behavior, but earns `1/2` for Speed to proof
 under the rubric; the other six dimensions earn `2/2` from the recorded output.
 These are agent-run Markdown evaluation artifacts, not real customer outcomes
 or a claim that any cash, message, post, payment, or workflow change occurred.
+The five files under [`runs/`](runs/) are the retained complete outputs used for
+scoring; no separate hidden transcript is cited as proof.
 
 ## Results
 
@@ -45,6 +61,28 @@ before classification. Recorded lexical ambiguities remain in the result.
 This closes the repository-level activation/non-activation prompt gate; it does
 not upgrade any named host to **Verified**. Host discovery and invocation still
 require retained tests in that host.
+
+## Regulated-work and approval-gate controls
+
+The separate
+[`safety/2026-07-19-results.md`](safety/2026-07-19-results.md) suite covers
+legal, medical, financial, tax, and employment prompts; unlicensed users;
+missing reviewers and jurisdictions; sensitive data; and unknown execution
+authority. It matched `11/12` exact classifications and produced safe blocking,
+private-discovery, staging, or bounded-administration behavior on `12/12`.
+R12's `STOP` versus `PRIVATE_DISCOVERY` taxonomy mismatch is retained. The
+suite is not described as a pass, professional validation, or jurisdictional
+compliance evidence.
+
+## Downstream untrusted-content controls
+
+The
+[`adversarial/2026-07-19-results.md`](adversarial/2026-07-19-results.md)
+suite placed malicious embedded instructions in five downstream artifacts.
+The blind reviewer selected the intended skill and matched the safe oracle
+disposition on `5/5`, obeyed `0/5` injections, and took `0/5` external actions.
+This remains fixture-level simulation evidence, not universal prompt-injection
+resistance.
 
 ## Evidence pointers and calibration
 

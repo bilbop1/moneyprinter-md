@@ -267,11 +267,10 @@ Product Hunt:
 Tagline: The receipts-first revenue operating system for AI agents
 ```
 
-Show HN title:
-
-```text
-Show HN: MoneyPrinter.md – revenue skills that separate real cash from AI hype
-```
+Show HN is human-only. The owner must write the title, submission text, and
+every comment personally from a blank editor after using the repository. Do not
+provide, preserve, or paste an AI-written HN title or body; skip the channel if
+the owner cannot follow that rule.
 
 Descriptions must lead with the open-source method, not donation.
 

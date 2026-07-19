@@ -38,9 +38,10 @@ question this repository is testing—not a claim that it has been solved.
 
 MoneyPrinter starts from reality rather than an archetype. A person with no
 audience may get a one-contact, fixed-scope test. A local operator may get a
-permissioned internal-workflow audit. A regulated professional gets a narrower
-route with qualified review and no delegated judgment. A creator gets a
-disclosed, policy-checked test rather than an engagement-growth promise.
+permissioned internal-workflow audit. The included lawyer simulation narrows to
+private scope-mapping with qualified review and no delegated judgment; it does
+not validate the pack for every regulated profession or jurisdiction. A creator
+gets a disclosed, policy-checked test rather than an engagement-growth promise.
 
 The output is a **Revenue Profile**, a primary route, a fallback, and an
 **Experiment Brief** with buyer, pain, offer hypothesis, cost ceiling, proof
@@ -54,13 +55,13 @@ label; a better-looking label cannot be inferred from weaker evidence.
 
 | Label | Means |
 | --- | --- |
-| Cash collected | A payment has settled. |
-| Revenue contracted | A signed obligation exists; payment has not settled. |
+| Cash collected | A payment settled and an inspected, privacy-safe settlement artifact supports it. |
+| Revenue contracted | An inspected, privacy-safe signed-obligation artifact exists; payment has not settled. |
 | Revenue booked | An invoice or order exists; payment has not settled. |
 | Pipeline signal | A reply, meeting, proposal, waitlist, or intent exists. |
 | Estimated economic value | A model with explicit assumptions and sensitivity. |
 | Simulation | A benchmark or hypothetical result. |
-| Unverified anecdote | A reported result without independent support. |
+| Unverified anecdote | A reported result without the artifact required for a stronger label. |
 
 Read the full [evidence standard](skills/moneyprinter/references/evidence-standard.md)
 before publishing a field report.
@@ -116,8 +117,12 @@ a source and review date in the [source ledger](research/source-ledger.md).
 
 The [persona evals](evals/README.md) exercise the interview and safety
 boundaries for a beginner, roofer, lawyer, creator, and experienced operator.
-They do not represent customer outcomes. The relevant host documentation and
-fresh market evidence should be checked again before a real external action.
+The separate regulated-work fixtures cover stop and staging behavior for legal,
+medical, financial, tax, and employment prompts. Neither suite represents
+customer outcomes, professional validation, or jurisdictional compliance. Read
+the [evaluation provenance](evals/provenance.md); the relevant qualified
+review, host documentation, and fresh market evidence must be checked again
+before a real external action.
 
 ## Safety and external-action gates
 

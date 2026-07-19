@@ -32,11 +32,11 @@ private or redacted unless specific publication consent permits disclosure.
 | --- | --- |
 | A benchmark grader awarded $2,000 of simulated task value | `Simulation` |
 | An invoice for $2,000 was sent but remains unpaid | `Revenue booked` |
-| A $500 card payment settled | `Cash collected` |
-| Signed obligation exists but payment has not settled | `Revenue contracted` |
+| A $500 card payment settled and an inspected, privacy-safe settlement artifact supports it | `Cash collected` |
+| An inspected, privacy-safe signed-obligation artifact exists but payment has not settled | `Revenue contracted` |
 | Reply, meeting, proposal, waitlist, or stated intent | `Pipeline signal` |
 | Modelled value with stated assumptions and sensitivity | `Estimated economic value` |
-| Reported result without independent support | `Unverified anecdote` |
+| Reported result without the artifact required for a stronger label | `Unverified anecdote` |
 
 Never infer settlement, acceptance, a contract, or permission from a benchmark,
 invoice, draft, dashboard, page view, or anecdote.

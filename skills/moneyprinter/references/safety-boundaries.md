@@ -23,7 +23,12 @@ Require explicit human approval before any external communication, contact,
 outreach, posting, purchase, spend, payment collection, contract, commitment,
 publication, account change, or use of third-party/customer data. Stage drafts
 and name the intended payload, audience, channel, spend, account, timing, scope,
-and evidence label. Route approval is not execution approval. Obtain explicit
+and evidence label. Before requesting execution approval, confirm as `Pass`
+that the approver controls the named account or action; confirm any third-party
+data has an authorized consent or lawful-use basis and is minimized; and confirm
+any required qualified regulated review for the named jurisdiction and scope.
+`Unknown` or `Fail` on any prerequisite is a hard stop, not an approvable risk.
+Route approval is not execution approval. Obtain explicit
 approval immediately before execution of the specific action. If the payload,
 audience, channel, spend, account, timing, or any other material execution
 detail changes, pause and obtain reapproval immediately before execution. Do not
@@ -36,7 +41,10 @@ Require qualified human review, applicable jurisdiction or licensing checks,
 and an approved scope before public claims, personalized guidance, customer
 communications, or regulated-data handling. Do not process confidential,
 personal, customer, employee, patient, or client data outside authorized
-controls, consent, contracts, and platform policies.
+controls, consent or another documented lawful basis, contracts, and platform
+policies. If the reviewer, jurisdiction, license, data basis, or approved scope
+is unknown, stop at a private, non-personalized discovery or administrative
+step.
 
 ## Truth, proof, and platform rules
 
