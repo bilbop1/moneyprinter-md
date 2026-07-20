@@ -88,6 +88,12 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
     html,
     /<div class="flow-circuit" aria-label="MoneyPrinter operating loop">[\s\S]*?<ol class="flow-steps">[\s\S]*?<\/ol>[\s\S]*?<\/div>/,
   );
+  assert.match(html, /<ol[^>]+class="evidence-ladder"/);
+  assert.match(html, /<ol[^>]+class="route-list route-rail"/);
+  assert.match(html, /<ol[^>]+class="skill-relay"/);
+  assert.match(html, /aria-label="Evidence strength from strongest to weakest"/);
+  assert.match(html, /aria-label="Seven-skill execution relay"/);
+  assert.match(html, /role="table"[^>]+aria-label="Compatibility validation console"/);
 
   for (const id of requiredSectionIds) {
     assert.match(html, new RegExp(`<section[^>]+id=["']${id}["']`, "i"));
@@ -177,6 +183,17 @@ test("keeps the production surface honest and starter-free", async () => {
   assert.match(page, /className="approval-gate"/);
   assert.match(page, /EXACT ACTION\s*APPROVAL/);
   assert.doesNotMatch(page, /className="flow-strip"/);
+  assert.match(page, /className="evidence-ladder"/);
+  assert.match(page, /className="route-list route-rail"/);
+  assert.match(page, /className="skill-relay"/);
+  assert.match(page, /className="validation-console"/);
+  assert.match(page, /className="guardrail-controls"/);
+  assert.doesNotMatch(page, /className="evidence-grid"/);
+  assert.doesNotMatch(page, /className="skill-map"/);
+  assert.match(css, /\.evidence-ladder\s*\{/);
+  assert.match(css, /\.skill-relay\s*\{/);
+  assert.match(css, /\.validation-console\s*\{/);
+  assert.doesNotMatch(css, /\.skill-map\s*\{/);
   assert.deepEqual(
     [...new Set(page.match(/https?:\/\/[^";\s]+/g) ?? [])],
     ["https://github.com/bilbop1/moneyprinter-md", "https://ko-fi.com/bilbop"],

@@ -110,14 +110,20 @@ export default function Home() {
 
         <section id="proof" className="section-shell split-section" aria-labelledby="proof-title">
           <div><p className="section-label">01 / EVIDENCE, NOT VIBES</p><h2 id="proof-title">Name the evidence before you name the win.</h2><p>A receipt is the smallest durable unit of learning: who paid, what changed hands, what it cost to deliver, and what should be tested next.</p></div>
-          <div className="evidence-grid" aria-label="Evidence labels">
-            {evidence.map((item, index) => <div className={`evidence evidence-${index}`} key={item}><span>0{index + 1}</span>{item}</div>)}
-          </div>
+          <ol className="evidence-ladder" aria-label="Evidence strength from strongest to weakest">
+            {evidence.map((item, index) => (
+              <li className={`evidence evidence-${index}`} key={item}>
+                <span className="evidence-rank">{String(index + 1).padStart(2, "0")}</span>
+                <span className="evidence-name">{item}</span>
+                <span className="evidence-signal" aria-hidden="true" />
+              </li>
+            ))}
+          </ol>
         </section>
 
         <section id="routes" className="section-shell" aria-labelledby="routes-title">
           <div className="section-heading"><div><p className="section-label">02 / PICK A REAL START</p><h2 id="routes-title">Five starting points. One credible next step.</h2></div><p>Routes are not identities. Start with the nearest real asset, keep the first step private when facts are missing, and earn the right to test.</p></div>
-          <ol className="route-list">{routes.map(([title, test], index) => <li key={title}><span className="route-number">0{index + 1}</span><div><h3>{title}</h3><p>{test}</p></div><span className="route-arrow" aria-hidden="true">↗</span></li>)}</ol>
+          <ol className="route-list route-rail">{routes.map(([title, test], index) => <li key={title}><span className="route-number">0{index + 1}</span><div><h3>{title}</h3><p>{test}</p></div><span className="route-arrow" aria-hidden="true">ENTER</span></li>)}</ol>
         </section>
 
         <section id="flow" className="section-shell flow-section" aria-labelledby="flow-title">
@@ -161,17 +167,25 @@ export default function Home() {
 
         <section id="receipts" className="section-shell receipts-section" aria-labelledby="receipts-title">
           <div className="section-heading"><div><p className="section-label">04 / SEVEN SKILLS</p><h2 id="receipts-title">Each move earns its place by making the next receipt clearer.</h2></div><p>Not a funnel. Not a content calendar. A sequence that keeps an agent close to a human decision and an observable outcome.</p></div>
-          <div className="skill-map">{skills.map(([skill, description], index) => <article key={skill} className="skill-card"><span>{String(index + 1).padStart(2, "0")}</span><h3>{skill}</h3><p>{description}</p></article>)}</div>
+          <ol className="skill-relay" aria-label="Seven-skill execution relay">
+            {skills.map(([skill, description], index) => (
+              <li key={skill} className={`skill-module ${index === 0 ? "skill-router" : "skill-worker"}`}>
+                <span className="skill-index">{String(index + 1).padStart(2, "0")}</span>
+                <div><h3>{skill}</h3><p>{description}</p></div>
+                <span className="skill-handoff" aria-hidden="true">{index === 0 ? "ROUTE" : index === skills.length - 1 ? "REVIEW" : "PASS"}</span>
+              </li>
+            ))}
+          </ol>
         </section>
 
         <section id="compatibility" className="section-shell compatibility" aria-labelledby="compatibility-title">
           <div><p className="section-label">05 / PORTABILITY IS A CLAIM TOO</p><h2 id="compatibility-title">Installable is not activated.</h2><p>The rc.3 files pass local package checks, and public GitHub discovery finds all seven. The release asset and this landing page are live. The best corrected blind local session run passed 5 of 6; one run reached the approval gate but skipped required artifact sections. MiniMax is provider-only.</p></div>
-          <div className="matrix" role="table" aria-label="Compatibility matrix"><div className="matrix-row matrix-head" role="row"><span role="columnheader">Surface</span><span role="columnheader">State</span><span role="columnheader">Meaning</span></div><div className="matrix-row" role="row"><span role="cell">Portable core</span><span role="cell" className="signal">Locally validated</span><span role="cell">Seven rc.3 skill files pass package checks.</span></div><div className="matrix-row" role="row"><span role="cell">Full host chain</span><span role="cell" className="warning">Experimental</span><span role="cell">Best corrected blind local run: 5/6.</span></div><div className="matrix-row" role="row"><span role="cell">Public rc.3 receipt</span><span role="cell" className="signal">Verified</span><span role="cell">GitHub release, remote discovery, and landing page are live.</span></div><div className="matrix-row" role="row"><span role="cell">MiniMax</span><span role="cell" className="warning">Provider-only</span><span role="cell">Not a general compatibility promise.</span></div></div>
+          <div className="validation-console" role="table" aria-label="Compatibility validation console"><div className="matrix-row matrix-head" role="row"><span role="columnheader">Surface</span><span role="columnheader">State</span><span role="columnheader">Meaning</span></div><div className="matrix-row" role="row"><span role="cell">Portable core</span><span role="cell" className="signal"><span className="status-lamp" aria-hidden="true" />Locally validated</span><span role="cell">Seven rc.3 skill files pass package checks.</span></div><div className="matrix-row" role="row"><span role="cell">Full host chain</span><span role="cell" className="warning"><span className="status-lamp" aria-hidden="true" />Experimental</span><span role="cell">Best corrected blind local run: 5/6.</span></div><div className="matrix-row" role="row"><span role="cell">Public rc.3 receipt</span><span role="cell" className="signal"><span className="status-lamp" aria-hidden="true" />Verified</span><span role="cell">GitHub release, remote discovery, and landing page are live.</span></div><div className="matrix-row" role="row"><span role="cell">MiniMax</span><span role="cell" className="warning"><span className="status-lamp" aria-hidden="true" />Provider-only</span><span role="cell">Not a general compatibility promise.</span></div></div>
         </section>
 
         <section id="method" className="section-shell method-section" aria-labelledby="method-title">
           <p className="section-label">06 / METHOD &amp; SAFETY</p><h2 id="method-title">The test—or discovery step—is bounded and reviewable.</h2>
-          <div className="method-links"><a href="#flow"><span>01</span><strong>Route before you automate</strong><em>Keep a human decision in the loop.</em></a><a href="#receipts"><span>02</span><strong>Receipt before you repeat</strong><em>Separate delivered value from a story about value.</em></a><a href="#proof"><span>03</span><strong>Review before you scale</strong><em>Stop when the claim outruns the evidence.</em></a></div>
+          <div className="guardrail-controls"><a href="#flow"><span>01</span><strong>Route before you automate</strong><em>Keep a human decision in the loop.</em></a><a href="#receipts"><span>02</span><strong>Receipt before you repeat</strong><em>Separate delivered value from a story about value.</em></a><a href="#proof"><span>03</span><strong>Review before you scale</strong><em>Stop when the claim outruns the evidence.</em></a></div>
         </section>
 
         <section id="pledge" className="section-shell pledge" aria-labelledby="pledge-title">
