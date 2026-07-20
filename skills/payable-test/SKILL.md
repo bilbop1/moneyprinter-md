@@ -4,7 +4,7 @@ description: Turn a confirmed Offer Brief into one ethical, smallest viable paid
 license: MIT
 metadata:
   author: bilbop
-  version: "0.1.0-rc.2"
+  version: "0.1.0-rc.3"
 ---
 
 # Payable Test

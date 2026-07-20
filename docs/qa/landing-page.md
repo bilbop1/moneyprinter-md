@@ -1,7 +1,7 @@
 # Landing-page QA
 
 Reviewed: 2026-07-19
-Release candidate: `0.1.0-rc.2`
+Release candidate: `0.1.0-rc.3`
 
 ## Automated checks
 
@@ -15,17 +15,21 @@ npm run lint
 Result:
 
 - Vinext production build completed.
-- Five server-render, metadata-safety, accessibility, and social-image tests
-  passed.
+- Five server-render, metadata-safety, accessibility, flow, and social-image
+  tests passed.
 - ESLint completed with no findings.
-- The committed social image is a real 1200 × 630 PNG.
+- The two committed copies of the social image are byte-identical 1200 × 630
+  PNGs.
 
 ## Browser checks
 
-Desktop:
+Desktop, 1440 × 1250:
 
+- The scan-first hero, 14-day receipt, rc.3 marker, install control, GitHub
+  control, and full disclaimer rendered without overlap or clipping.
 - One `h1`, eight named sections, all seven canonical skill names, the full
-  evidence taxonomy, compatibility caveats, and the voluntary pledge rendered.
+  evidence taxonomy, compatibility caveats, and voluntary pledge remain in the
+  rendered document.
 - The visitor-facing command is
   `npx skills add bilbop1/moneyprinter-md`, and the GitHub control is a real
   link to the intended repository. Both GitHub targets passed from a clean
@@ -33,18 +37,24 @@ Desktop:
   QA/discovery command in repository documentation.
 - The copy control changed to `Copied` and exposed the live-region confirmation
   `Command copied to clipboard.`
-- No warning or error was recorded for `localhost:4173`.
+- The ten-stage flow renders in a bounded five-column grid on wide screens and
+  collapses to one column below 720 px.
 
 Exact mobile emulation:
 
-| Viewport | Root width | Document overflow | Navigation | Flow/skill layout |
+| Viewport | Inner/root/body width | Document overflow | Navigation | Flow/skill layout |
 | --- | ---: | --- | --- | --- |
-| 390 × 844 | 390 px | None | Compact header | Single-column below 720 px |
-| 320 × 568 | 320 px | None | Compact header | 294/296 px single columns |
+| 320 × 568 | 320/320/320 px | None | Compact header | Single-column below 720 px |
 
-The mobile checks used browser device-metric emulation rather than the host
-window's minimum width. The first raw window-size screenshots were discarded
-because Edge held a 492 px CSS viewport while cropping the image to 390 px.
+The mobile check used Edge DevTools device-metric emulation because a raw
+320 px Edge window retains a roughly 500 px CSS viewport. The probe confirmed
+the rc.3 title and hero, `document.readyState === "complete"`,
+`window.innerWidth === 320`, and root/body scroll widths of 320 before capture.
+
+The first desktop attempt used `127.0.0.1` while Vinext was listening on IPv6
+localhost and captured `ERR_CONNECTION_REFUSED`. It was discarded. The final
+desktop capture used the verified `localhost:4173` page; both committed
+previews were visually inspected after replacement.
 
 ## Metadata abuse cases
 
@@ -68,12 +78,13 @@ Covered cases:
   preview.
 - `launch/assets/landing-mobile-preview.png` — exact 320 × 568 mobile preview.
 
-The primary card says `QUICK INTERVIEW`, `BEGINNER → OPERATOR`, and
-`PORTABLE CORE`. It does not claim that every host has been activation-tested.
+The primary card says `SCAN THE LAST 14 DAYS`, `GET TO WORK`,
+`ONE CONFIRMATION`, and `RECEIPTS → RERANK`. It does not claim that every host
+has been activation-tested.
 
-## Published runtime checks
+## Prior published runtime baseline
 
-Verified on 2026-07-19:
+Verified on 2026-07-19 before the rc.3 deployment task:
 
 - `https://moneyprinter.bilbop.org` returned HTTPS 200 with a valid
   certificate.
@@ -92,4 +103,5 @@ Verified on 2026-07-19:
 
 These checks establish public site and installer availability. They do not
 establish conversation-level activation in any named host; that retained test
-remains open.
+remains open. They also do not establish that rc.3 is live; publication and a
+fresh runtime receipt belong to the release task.

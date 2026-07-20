@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const repoRoot = new URL("../", import.meta.url);
-const releaseVersion = "0.1.0-rc.2";
+const releaseVersion = "0.1.0-rc.3";
 const skillNames = [
   "moneyprinter",
   "opportunity-radar",

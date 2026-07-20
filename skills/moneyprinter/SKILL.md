@@ -4,7 +4,7 @@ description: Use when the user asks how to make money, monetize existing work, g
 license: MIT
 metadata:
   author: bilbop
-  version: "0.1.0-rc.2"
+  version: "0.1.0-rc.3"
 ---
 
 # MoneyPrinter

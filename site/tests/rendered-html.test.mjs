@@ -52,15 +52,24 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>MoneyPrinter\.md \| Receipts-first revenue OS<\/title>/i);
+  assert.match(html, /<title>MoneyPrinter\.md \| Turn 14 days of AI work into one money route<\/title>/i);
   assert.match(html, /<link rel="canonical" href="http:\/\/localhost\/"/i);
   assert.match(html, /<meta property="og:image" content="http:\/\/localhost\/og\.png"/i);
   assert.match(html, /<meta name="twitter:card" content="summary_large_image"/i);
   assert.match(html, /<meta name="twitter:image" content="http:\/\/localhost\/og\.png"/i);
-  assert.match(html, /<meta name="twitter:image:alt" content="MoneyPrinter\.md — run AI income experiments and keep the receipts\."/i);
-  assert.match(html, /A receipts-first revenue operating system for frontier agents\./);
-  assert.match(html, /OPEN SOURCE\s*\/\s*RECEIPTS FIRST/);
-  assert.match(html, /The models are finally good\. Their money playbooks are not\./);
+  assert.match(html, /<meta name="twitter:image:alt" content="MoneyPrinter\.md: scan the last 14 days, get to work, then rerank from receipts\."/i);
+  assert.match(html, /With permission, MoneyPrinter scans accessible AI sessions/);
+  assert.match(html, /WITH PERMISSION\s*\/\s*RECEIPTS FIRST/);
+  assert.match(html, /Your last 14 days are already the brief\./);
+  assert.match(html, /last 14 days/i);
+  assert.match(html, /AI CLI and GUI/i);
+  assert.match(html, /one confirmation/i);
+  assert.match(html, /gets to work/i);
+  assert.doesNotMatch(html, /Answer a short interview/i);
+  assert.match(
+    html,
+    /Permission[\s\S]*14-day scan[\s\S]*Confirm[\s\S]*Prioritize[\s\S]*Offer[\s\S]*Payable test[\s\S]*Acquire[\s\S]*Deliver[\s\S]*Receipt[\s\S]*Rerank/i,
+  );
   assert.match(html, /No guaranteed income\. No fake benchmark dollars\. No autonomous spam\./);
   assert.match(html, /npx skills add bilbop1\/moneyprinter-md/);
   assert.doesNotMatch(html, /npx skills add (?:\.|\S+ --list)/);
@@ -116,7 +125,8 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
   assert.match(html, /<header\b/i);
   assert.match(html, /<main\b/i);
   assert.match(html, /<footer\b/i);
-  assert.match(html, /0\.1\.0-rc\.2/);
+  assert.match(html, /0\.1\.0-rc\.3/);
+  assert.doesNotMatch(html, /0\.1\.0-rc\.2/);
   assert.doesNotMatch(html, /Your site is taking shape|Building your site|Starter Project|codex-preview|react-loading-skeleton/i);
 });
 
@@ -150,7 +160,7 @@ test("keeps the production surface honest and starter-free", async () => {
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.doesNotMatch(packageJson, /drizzle|db:generate/);
   assert.equal(JSON.parse(packageJson).name, "moneyprinter-md-site");
-  assert.equal(JSON.parse(packageJson).version, "0.1.0-rc.2");
+  assert.equal(JSON.parse(packageJson).version, "0.1.0-rc.3");
   assert.match(readme, /npx skills add \. --list/);
 
   for (const unusedStarterPath of [
@@ -175,6 +185,8 @@ test("keeps the production surface honest and starter-free", async () => {
   assert.match(css, /\.install-control code\s*\{[^}]*min-width:\s*0/is);
   assert.match(css, /@media \(max-width:\s*900px\)\s*\{[^}]*\.hero\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/is);
   assert.match(css, /@media \(max-width:\s*720px\)/i);
+  assert.match(css, /\.flow-strip\s*\{[^}]*grid-template-columns:\s*repeat\(5,\s*minmax\(0,\s*1fr\)\)[^}]*overflow-x:\s*clip/is);
+  assert.doesNotMatch(css, /\.flow-strip\s*\{[^}]*grid-template-columns:\s*repeat\(8/i);
   assert.match(css, /\.flow-strip,\s*\.skill-map\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)[^}]*overflow-x:\s*visible/is);
 
   const paper = css.match(/--paper:\s*(#[0-9a-f]{6})/i)?.[1];
@@ -211,8 +223,12 @@ test("falls back to a non-public local origin for an invalid Host", async () => 
 });
 
 test("ships the launch card at the declared social dimensions", async () => {
-  const card = await readFile(new URL("../public/og.png", import.meta.url));
+  const [card, launchCard] = await Promise.all([
+    readFile(new URL("../public/og.png", import.meta.url)),
+    readFile(new URL("../../launch/assets/moneyprinter-social-card.png", import.meta.url)),
+  ]);
   assert.ok(card.byteLength > 100_000, "social card should not be a placeholder");
+  assert.deepEqual(card, launchCard, "site and launch copies of the social card must be byte-identical");
 
   const pngSignature = card.subarray(0, 8).toString("hex");
   assert.equal(pngSignature, "89504e470d0a1a0a");

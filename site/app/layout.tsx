@@ -2,11 +2,11 @@ import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 
-const title = "MoneyPrinter.md | Receipts-first revenue OS";
+const title = "MoneyPrinter.md | Turn 14 days of AI work into one money route";
 const description =
-  "A receipts-first revenue operating system for frontier agents: test payable offers, keep the evidence, and review the claim.";
+  "With permission, MoneyPrinter scans accessible AI sessions, asks for one confirmation, and gets to work on the strongest cash-first route.";
 const socialImageAlt =
-  "MoneyPrinter.md — run AI income experiments and keep the receipts.";
+  "MoneyPrinter.md: scan the last 14 days, get to work, then rerank from receipts.";
 
 function metadataBaseFromHost(hostHeader: string | null): URL {
   const host = hostHeader?.trim() ?? "";

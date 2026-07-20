@@ -4,7 +4,7 @@ description: Coordinate and record an exact-approved delivery against pre-define
 license: MIT
 metadata:
   author: bilbop
-  version: "0.1.0-rc.2"
+  version: "0.1.0-rc.3"
 ---
 
 # Delivery Proof

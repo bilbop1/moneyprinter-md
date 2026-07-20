@@ -4,7 +4,7 @@ description: Review a completed payable test using cash, delivery evidence, and 
 license: MIT
 metadata:
   author: bilbop
-  version: "0.1.0-rc.2"
+  version: "0.1.0-rc.3"
 ---
 
 # Cashflow Review

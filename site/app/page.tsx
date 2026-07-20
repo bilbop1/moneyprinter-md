@@ -14,7 +14,18 @@ const routes = [
   ["Existing operator", "Baseline one leaking handoff privately; change live delivery only after guardrails and rollback are approved."],
 ];
 
-const flow = ["Interview", "Route", "Research", "Offer", "Payable test", "Delivery", "Receipt", "Review"];
+const flow = [
+  "Permission",
+  "14-day scan",
+  "Confirm",
+  "Prioritize",
+  "Offer",
+  "Payable test",
+  "Acquire",
+  "Deliver",
+  "Receipt",
+  "Rerank",
+];
 const evidence = [
   "Cash collected",
   "Revenue contracted",
@@ -25,7 +36,7 @@ const evidence = [
   "Unverified anecdote",
 ];
 const skills = [
-  ["moneyprinter", "Set the receipt-first operating standard."],
+  ["moneyprinter", "Scan the work, confirm the read, and keep the cash-first route moving."],
   ["opportunity-radar", "Find a buyer-adjacent constraint worth testing."],
   ["offer-engine", "Make the exchange specific and bounded."],
   ["payable-test", "Ask for the smallest real payment."],
@@ -56,16 +67,16 @@ export default function Home() {
         <nav aria-label="Section navigation">
           <a href="#proof">Proof</a><a href="#flow">Method</a><a href="#compatibility">Compatibility</a>
         </nav>
-        <span className="release-mark">0.1.0-rc.2</span>
+        <span className="release-mark">0.1.0-rc.3</span>
       </header>
 
       <main id="main-content">
         <section id="hero" className="hero section-shell" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow"><span aria-hidden="true">◆</span> OPEN SOURCE / RECEIPTS FIRST</p>
-            <h1 id="hero-title">The models are finally good. Their money playbooks are not.</h1>
-            <p className="lede">A receipts-first revenue operating system for frontier agents.</p>
-            <p className="hero-note">A practical field guide for testing useful offers, tracing what happened, and refusing to confuse a benchmark with a bank balance.</p>
+            <p className="eyebrow"><span aria-hidden="true">◆</span> WITH PERMISSION / RECEIPTS FIRST</p>
+            <h1 id="hero-title">Your last 14 days are already the brief.</h1>
+            <p className="lede">MoneyPrinter scans every detected AI CLI and GUI it can access, asks for one confirmation, then gets to work.</p>
+            <p className="hero-note">It separates receipts from hype, picks the strongest cash-first route, and keeps moving through the offer, payable test, acquisition, delivery, and rerank.</p>
             <div className="install-control" aria-label="Install command">
               <code>{installCommand}</code>
               <button type="button" onClick={copyInstall} aria-label={`${copyLabel}: ${installCommand}`}>{copyLabel}</button>
@@ -77,13 +88,13 @@ export default function Home() {
             </div>
             <p className="disclaimer">No guaranteed income. No fake benchmark dollars. No autonomous spam.</p>
           </div>
-          <aside className="receipt hero-receipt" aria-label="MoneyPrinter receipt preview">
-            <div className="receipt-top"><span>MP / RECEIPT 001</span><span>STATUS: OPEN</span></div>
-            <div className="receipt-total"><small>Claim under review</small><strong>$19,000</strong><em>simulated benchmark value</em></div>
-            <p className="receipt-warning">$19,000 simulated benchmark value ≠ $19,000 cash collected</p>
+          <aside className="receipt hero-receipt" aria-label="MoneyPrinter scan receipt preview">
+            <div className="receipt-top"><span>MP / 14-DAY SCAN</span><span>READY TO CONFIRM</span></div>
+            <div className="receipt-total"><small>Accessible history window</small><strong>14 DAYS</strong><em>detected + permitted sources</em></div>
+            <p className="receipt-warning">Coverage names every scanned, empty, blocked, unsupported, or excluded source.</p>
             <div className="receipt-rule" />
-            <dl><div><dt>Ask</dt><dd>Find a payable test</dd></div><div><dt>Proof</dt><dd>Keep the source receipt</dd></div><div><dt>Next</dt><dd>Review before repeat</dd></div></dl>
-            <div className="receipt-stamp">UNSETTLED</div>
+            <dl><div><dt>Permission</dt><dd>One scoped grant</dd></div><div><dt>Confirm</dt><dd>One correction pass</dd></div><div><dt>Next</dt><dd>Get to work</dd></div></dl>
+            <div className="receipt-stamp">RERANK</div>
           </aside>
         </section>
 
@@ -100,7 +111,8 @@ export default function Home() {
         </section>
 
         <section id="flow" className="section-shell flow-section" aria-labelledby="flow-title">
-          <p className="section-label">03 / THE LOOP</p><h2 id="flow-title">A money playbook should leave a trail.</h2>
+          <p className="section-label">03 / THE LOOP</p><h2 id="flow-title">It does not stop at ranking the work.</h2>
+          <p className="flow-copy">The scan ends with one confirmation. The run does not. MoneyPrinter keeps doing the private work until an exact external action needs approval, then records the result and reranks.</p>
           <ol className="flow-strip">{flow.map((step, index) => <li key={step}><span>{String(index + 1).padStart(2, "0")}</span>{step}</li>)}</ol>
         </section>
 
@@ -128,7 +140,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><span>MoneyPrinter.md <b>0.1.0-rc.2</b></span><span>Receipts first. Claims second.</span><a href="#hero">Back to top ↑</a></footer>
+      <footer className="site-footer"><span>MoneyPrinter.md <b>0.1.0-rc.3</b></span><span>Receipts first. Claims second.</span><a href="#hero">Back to top ↑</a></footer>
     </>
   );
 }
