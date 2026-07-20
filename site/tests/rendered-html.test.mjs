@@ -160,8 +160,23 @@ test("keeps the production surface honest and starter-free", async () => {
       /@media \(max-width:\s*900px\)\s*\{((?:[^{}]|\{[^{}]*\})*)\}/gis,
     ),
   ].map(([, rules]) => rules).join("\n");
+  const mobileFlowFallback = [
+    ...css.matchAll(
+      /@media \(max-width:\s*720px\)\s*\{((?:[^{}]|\{[^{}]*\})*)\}/gis,
+    ),
+  ].map(([, rules]) => rules).join("\n");
   assert.match(narrowFlowFallback, /\.flow-circuit\s*\{[^}]*max-width:\s*100%/is);
   assert.match(narrowFlowFallback, /\.flow-node\s*\{[^}]*min-width:\s*0/is);
+  assert.match(
+    mobileFlowFallback,
+    /\.flow-steps\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/is,
+    "the mobile loop must replace the desktop 12-column grid with one readable column",
+  );
+  assert.match(
+    mobileFlowFallback,
+    /\.flow-node\s*\{[^}]*width:\s*100%/is,
+    "each mobile loop step must fill the single-column track",
+  );
 
   assert.match(page, /navigator\.clipboard/);
   assert.match(page, /https:\/\/github\.com\/bilbop1\/moneyprinter-md/);
@@ -184,6 +199,11 @@ test("keeps the production surface honest and starter-free", async () => {
   assert.match(
     page,
     /<path className="flow-path flow-return" data-from="Rerank" data-to="Prioritize" d="[^"]*660 290" \/>/,
+  );
+  assert.doesNotMatch(
+    page,
+    /className="flow-path flow-return"[^>]+d="[^"]*V335[^"]*"/,
+    "the rerank return must not rise through the Deliver node before reaching Prioritize",
   );
   assert.match(page, /className="approval-gate"/);
   assert.match(page, /EXACT ACTION\s*APPROVAL/);

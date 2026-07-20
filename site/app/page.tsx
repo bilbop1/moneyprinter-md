@@ -145,7 +145,7 @@ export default function Home() {
               <path className="flow-path flow-intake" d="M120 155 H565" />
               <path className="flow-path flow-drop" d="M565 155 C650 155 650 290 755 290" />
               <path className="flow-path flow-outbound" d="M755 290 H1080 V470 H190" />
-              <path className="flow-path flow-return" data-from="Rerank" data-to="Prioritize" d="M120 470 C45 470 45 575 180 575 H650 C710 575 710 515 710 455 V335 C710 305 685 290 660 290" />
+              <path className="flow-path flow-return" data-from="Rerank" data-to="Prioritize" d="M120 470 C45 470 45 575 180 575 H580 C620 575 620 530 620 480 V350 C620 315 635 290 660 290" />
             </svg>
             <ol className="flow-steps">
               {flow.map((step, index) => (
