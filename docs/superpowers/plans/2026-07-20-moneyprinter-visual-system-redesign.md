@@ -360,7 +360,7 @@ Run:
 ```bash
 cd site
 npm run build
-npm run preview
+npm run start -- --port 4174
 ```
 
 Expected: the server prints a local preview URL and remains running.
