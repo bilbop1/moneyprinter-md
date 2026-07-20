@@ -133,9 +133,6 @@ export default function Home() {
             <div className="flow-phase flow-phase-read">
               <span>READ THE WORK</span><em>one scoped pass</em>
             </div>
-            <div className="flow-phase flow-phase-run">
-              <span>RUN THE MONEY LOOP</span><em>receipt decides what repeats</em>
-            </div>
             <svg className="flow-wiring" viewBox="0 0 1200 610" preserveAspectRatio="none" aria-hidden="true" focusable="false">
               <defs>
                 <marker id="flow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -150,7 +147,12 @@ export default function Home() {
             <ol className="flow-steps">
               {flow.map((step, index) => (
                 <li className={`flow-node flow-node-${index + 1}`} key={step}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  {index === 3 && (
+                    <div className="flow-phase flow-phase-run">
+                      <span>RUN THE MONEY LOOP</span><em>receipt decides what repeats</em>
+                    </div>
+                  )}
+                  <span className="flow-node-index">{String(index + 1).padStart(2, "0")}</span>
                   <strong>{step}</strong>
                   {index === 5 && (
                     <span className="approval-gate" aria-label="EXACT ACTION APPROVAL">

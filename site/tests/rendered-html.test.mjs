@@ -71,6 +71,11 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
     html,
     /Permission[\s\S]*14-day scan[\s\S]*Confirm[\s\S]*Prioritize[\s\S]*Offer[\s\S]*Payable test[\s\S]*Acquire[\s\S]*Deliver[\s\S]*Receipt[\s\S]*Rerank/i,
   );
+  assert.match(
+    html,
+    /<ol class="flow-steps">[\s\S]*?Confirm[\s\S]*?RUN THE MONEY LOOP[\s\S]*?Prioritize[\s\S]*?<\/ol>/i,
+    "the money-loop phase transition must follow Confirm and precede Prioritize in document order",
+  );
   assert.match(html, /No guaranteed income\. No fake benchmark dollars\. No autonomous spam\./);
   assert.match(html, /npx skills add bilbop1\/moneyprinter-md/);
   assert.doesNotMatch(html, /npx skills add (?:\.|\S+ --list)/);
