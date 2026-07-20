@@ -36,6 +36,26 @@ and continuation beyond a report. The retained rc.1 and rc.2 persona,
 activation, safety, and adversarial outputs are historical evidence. They have
 not been relabeled as new session-scan results.
 
+The first blind S01 run exposed a fixture defect: its oracle required a
+cross-host merge but the prompt supplied no stable shared identity. The
+initial run also summarized S06 artifacts instead of showing their required
+bodies. The one-shot result is therefore retained as `4/6`. Corrected S01 and
+an unchanged S06 replication each pass, producing a combined `6/6` that is not
+misrepresented as a clean one-shot result. See the
+[`session-scan results`](session-scan/2026-07-19-results.md).
+
+## End-to-end orchestration controls
+
+The [`orchestration prompts`](orchestration/prompts.md) pressure the full
+Money Machine Run state graph, exact-action approval and reapproval, Action
+receipts, delivery proof, evidence labels, labor economics, and each `STOP`,
+`REVISE`, `REPEAT`, and `SCALE` path. The initial suite is invalid because it
+collapsed simulated suite evidence into hypothetical cash and decisions. The
+corrected `6/6` keeps actual evidence `Simulation` and labels every operational
+path counterfactual. These are not customer outcomes, host activation, cash
+evidence, or tool execution. See the
+[`orchestration results`](orchestration/2026-07-19-results.md).
+
 ## Activation and quiet controls
 
 The router transcripts test behavior after a skill is in context. The separate

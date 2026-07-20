@@ -3,6 +3,81 @@
 This release keeps evaluation artifacts inspectable, but it does not describe
 them as a certification, customer outcome, or host-compatibility proof.
 
+## Rc.3 session-scan and orchestration runs
+
+- **Evaluated skill source:** exact commit
+  `b6d2fe859553e5f998ea3b6138006ce535b21d98`.
+- **Initial evaluator task path:**
+  `/root/scan_task7_evals/blind_eval_rc3`.
+- **Corrected evaluator task path:**
+  `/root/scan_task7_evals/blind_corrected_rc3`.
+- **Bounded replication task path:** `/root/bounded_blind_eval`.
+- **Evaluator task UUIDs:** `Unavailable`; the collaboration surface exposed
+  canonical task paths but no independent UUIDs.
+- **Execution surface:** independent Codex subagents with no inherited
+  conversation context. Interrupted attempts and their lack of output are
+  disclosed in the fixture notes.
+- **Exact model identifier:** `Unavailable` for the two
+  `/root/scan_task7_evals/*` evaluators. The bounded replication exposed
+  `gpt-5.6-terra` at medium effort.
+- **Allowed inputs before returning:** the session-scan and orchestration prompt
+  files plus the seven skill bodies and references read from the exact source
+  commit.
+- **Prohibited inputs before returning:** both oracles, every result and raw
+  output file, baseline, plans, rubrics, this provenance file, repository
+  history, parent conversation, and parent-agent reasoning.
+- **Tools and external state:** no browsing, network, real history store,
+  browser, adapter, message, payment rail, account, buyer, or external action.
+  Counts, receipts, payments, deliveries, and decisions in the fixtures are
+  local simulations.
+- **Session-scan raw output:** retained without result edits in
+  [`session-scan/2026-07-19-raw-evaluator-output.md`](session-scan/2026-07-19-raw-evaluator-output.md).
+- **Initial orchestration raw output:** retained without result edits in
+  [`orchestration/2026-07-19-raw-evaluator-output.md`](orchestration/2026-07-19-raw-evaluator-output.md).
+- **Corrected orchestration raw output:** retained without result edits in
+  [`orchestration/2026-07-19-corrected-raw-evaluator-output.md`](orchestration/2026-07-19-corrected-raw-evaluator-output.md).
+- **Bounded combined raw output:** retained unchanged in
+  [`.superpowers/sdd/bounded-blind-eval-output.md`](../.superpowers/sdd/bounded-blind-eval-output.md),
+  with scoped copies under the session-scan and orchestration eval folders.
+- **Input hashes:** initial and corrected prompt/oracle hashes are retained in
+  the S01 and orchestration fixture-defect notes. The session oracle and
+  MoneyPrinter hashes remain pinned to the evaluated source.
+- **Grading:** the repository agent opened the pre-existing session oracle and
+  each orchestration oracle only after the corresponding blind output, then
+  recorded ID-by-ID results. `scripts/verify-evals.mjs` checks fixture/result
+  IDs without deduplication, exact expected grade maps, hashes, task paths,
+  narrow claims, and case-bound decision, receipt, evidence, delivery, and
+  labor fields. It does not replace manual semantic comparison.
+- **Initial session result:** `4/6` exact observable matches after independent
+  review. S01 used a defective merge fixture. S06 summarized downstream work
+  without showing the required artifact bodies. The earlier draft `5/6` grade
+  is withdrawn.
+- **Corrected S01 retry:** the prompt added the same project name, sanitized
+  repository locator, and buyer artifact across Codex and Claude. The same
+  independent evaluator reran only S01 while still prohibited from the oracle
+  and result files. The retry passed without weakening the skill or oracle.
+- **S06 replication:** the unchanged prompt passed in the bounded replication
+  by returning observable compact artifact bodies. It does not erase the
+  initial behavioral miss. The combined corrected/replicated session suite is
+  `6/6`, but the one-shot result remains `4/6`.
+- **Initial orchestration result:** `Invalid`. The initial fixture conflicted
+  with the pinned evidence standard by treating simulated records as actual
+  cash and operational `SCALE` decisions.
+- **Corrected orchestration result:** `6/6`. Actual suite evidence remains
+  `Simulation`; separately prefixed counterfactual labels and branches cover
+  the full state graph, material-change reapproval, delivery proof, labor
+  economics, and `STOP`, `REVISE`, `REPEAT`, and `SCALE` without becoming
+  operational decisions or execution authority.
+- **Bounded orchestration replication:** it corroborated all four branches and
+  did not repeat the original O06 invented changes. Under the corrected
+  oracle's strict observable rule it is `5/6`, because O06 listed only the
+  changed fields and did not explicitly restate the four unchanged fields. The
+  separate corrected six-row table is the retained `6/6` run.
+
+These are local simulated contract and pressure tests. They are not customer
+outcomes, cash evidence, host activation, or proof that another model or host
+will reproduce the traces.
+
 ## Router persona runs
 
 - **Source state:** router-run artifacts were last behaviorally updated at Git
