@@ -123,7 +123,40 @@ export default function Home() {
         <section id="flow" className="section-shell flow-section" aria-labelledby="flow-title">
           <p className="section-label">03 / THE LOOP</p><h2 id="flow-title">It does not stop at ranking the work.</h2>
           <p className="flow-copy">The scan ends with one confirmation. The written workflow does not. It directs the host through private work until an exact external action needs approval, then records the result and reranks. Exact host conformance is still experimental.</p>
-          <ol className="flow-strip">{flow.map((step, index) => <li key={step}><span>{String(index + 1).padStart(2, "0")}</span>{step}</li>)}</ol>
+          <div className="flow-circuit" aria-label="MoneyPrinter operating loop">
+            <div className="flow-phase flow-phase-read">
+              <span>READ THE WORK</span><em>one scoped pass</em>
+            </div>
+            <div className="flow-phase flow-phase-run">
+              <span>RUN THE MONEY LOOP</span><em>receipt decides what repeats</em>
+            </div>
+            <svg className="flow-wiring" viewBox="0 0 1200 610" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <defs>
+                <marker id="flow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" />
+                </marker>
+              </defs>
+              <path className="flow-path flow-intake" d="M120 155 H565" />
+              <path className="flow-path flow-drop" d="M565 155 C650 155 650 290 755 290" />
+              <path className="flow-path flow-outbound" d="M755 290 H1080 V470 H190" />
+              <path className="flow-path flow-return" d="M190 470 C65 470 55 560 180 575 H725 C790 575 810 530 810 480" />
+            </svg>
+            <ol className="flow-steps">
+              {flow.map((step, index) => (
+                <li className={`flow-node flow-node-${index + 1}`} key={step}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{step}</strong>
+                  {index === 5 && (
+                    <span className="approval-gate" aria-label="EXACT ACTION APPROVAL">
+                      <b>EXACT ACTION</b>
+                      APPROVAL
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ol>
+            <p className="flow-return-label"><span>RESULT LOGGED</span> Rerank from the receipt, not the story.</p>
+          </div>
         </section>
 
         <section id="receipts" className="section-shell receipts-section" aria-labelledby="receipts-title">
