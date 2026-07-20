@@ -56,10 +56,16 @@ them as a certification, customer outcome, or host-compatibility proof.
   repository locator, and buyer artifact across Codex and Claude. The same
   independent evaluator reran only S01 while still prohibited from the oracle
   and result files. The retry passed without weakening the skill or oracle.
-- **S06 replication:** the unchanged prompt passed in the bounded replication
-  by returning observable compact artifact bodies. It does not erase the
-  initial behavioral miss. The combined corrected/replicated session suite is
-  `6/6`, but the one-shot result remains `4/6`.
+- **S06 replication:** the unchanged prompt failed again in the bounded
+  replication. Broadly named artifact sections do not satisfy the pinned
+  downstream contracts: the response omitted the Opportunity Evidence Table
+  and claim ledger; eleven required Offer Brief headings and the low/base/high
+  economics table; `Why these channels fit`; and the required
+  `Execution blocked — prerequisite unresolved` checkpoint status. This is a
+  retained model-compliance limitation, not a fixture defect.
+- **Best corrected session result:** `5/6`, after substituting the corrected S01
+  while retaining S06 as `Fail`. The initial one-shot result remains `4/6`;
+  neither run is reported as `6/6`.
 - **Initial orchestration result:** `Invalid`. The initial fixture conflicted
   with the pinned evidence standard by treating simulated records as actual
   cash and operational `SCALE` decisions.

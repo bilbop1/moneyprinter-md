@@ -1,4 +1,4 @@
-# S06 behavioral miss and replication
+# S06 behavioral misses and replication
 
 Independent review found that the first blind S06 trace named the downstream
 stages but did not show the required Offer Brief, Payable Test Plan, Staged
@@ -9,6 +9,22 @@ The S06 prompt, session oracle, and MoneyPrinter skill were not changed for the
 replication. A fresh blind evaluator receives the same S06 prompt and the skill
 chain pinned at the same commit. Its output is retained separately and cannot
 erase the first miss.
+
+The unchanged replication is also a `Fail`. It returned sections named Offer
+Brief, Payable Test Plan, Staged Acquisition Plan, and private fulfillment
+preparation, but did not satisfy the exact downstream-chain contracts:
+
+- Opportunity Radar's required Opportunity Evidence Table and claim ledger are
+  absent.
+- The Offer Brief has only `Buyer` from the twelve required headings; it omits
+  eleven required Offer Brief headings and the low/base/high economics table.
+- Staged Acquisition omits `Why these channels fit`.
+- Because authority, data basis, price, capacity, and other prerequisites remain
+  unresolved, the checkpoint needed to print
+  `Execution blocked — prerequisite unresolved`; it does not.
+
+This is a retained model-compliance limitation, not a fixture defect. The best
+corrected session suite is `5/6`: corrected S01 passes and S06 remains a failure.
 
 ## Input provenance
 
@@ -30,5 +46,6 @@ erase the first miss.
   canonical task paths but no independent UUIDs.
 
 The first fresh S06 replication attempts were interrupted after prolonged
-no-response and returned no raw output. The successful bounded evaluator
-returned compact observable artifact bodies without changing the S06 prompt.
+no-response and returned no raw output. The bounded evaluator returned compact
+artifact sections without changing the S06 prompt, but the exact omissions above
+keep the replication at `Fail`. Both returned S06 attempts remain unchanged.

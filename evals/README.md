@@ -39,9 +39,13 @@ not been relabeled as new session-scan results.
 The first blind S01 run exposed a fixture defect: its oracle required a
 cross-host merge but the prompt supplied no stable shared identity. The
 initial run also summarized S06 artifacts instead of showing their required
-bodies. The one-shot result is therefore retained as `4/6`. Corrected S01 and
-an unchanged S06 replication each pass, producing a combined `6/6` that is not
-misrepresented as a clean one-shot result. See the
+bodies. The one-shot result is therefore retained as `4/6`. Corrected S01
+passes. The unchanged S06 replication fails because it still omits the
+Opportunity Evidence Table and claim ledger, eleven required Offer Brief
+headings and the low/base/high economics table, `Why these channels fit`, and
+the required `Execution blocked - prerequisite unresolved` status. The best
+corrected session suite is `5/6`, with S06 retained as a model-compliance
+limitation rather than relabeled as a fixture defect. See the
 [`session-scan results`](session-scan/2026-07-19-results.md).
 
 ## End-to-end orchestration controls

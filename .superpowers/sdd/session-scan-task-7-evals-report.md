@@ -49,15 +49,20 @@ required bodies.
 The original prompts, trace, and failures remain retained. Corrected S01 gives
 Codex and Claude the same project name, sanitized repository locator, and buyer
 artifact; its retry passed. Unchanged S06 was independently replicated with
-compact observable research, Offer Brief, Payable Test Plan, Staged Acquisition
-Plan, fulfillment preparation, and the unresolved exact gate; it passed.
+broadly named research, offer, payable-test, acquisition, fulfillment, and gate
+sections, but it failed the exact downstream contracts. The response omits the
+Opportunity Evidence Table and claim ledger; eleven required Offer Brief
+headings and its low/base/high economics table; `Why these channels fit`; and
+the required `Execution blocked — prerequisite unresolved` checkpoint status.
+This is a retained model-compliance limitation, not a fixture defect.
 
 Final reporting is intentionally two-part:
 
 - initial one-shot suite: `4/6`;
 - corrected S01: `Pass`;
-- unchanged S06 replication: `Pass`;
-- combined corrected/replicated suite: `6/6`;
+- original S06: `Fail`;
+- unchanged S06 replication: `Fail`;
+- best corrected session suite: `5/6`;
 - clean one-shot `6/6`: `No`.
 
 Neither the skill nor oracle was weakened after the mismatch.

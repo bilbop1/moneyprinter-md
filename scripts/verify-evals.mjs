@@ -106,6 +106,7 @@ const orchestrationResults = await read(
 const orchestrationDefect = await read(
   "evals/orchestration/2026-07-19-fixture-defect.md",
 );
+const evalReadme = await read("evals/README.md");
 const latestResults = await read("evals/latest-results.md");
 const provenance = await read("evals/provenance.md");
 const currentMoneyPrinter = await read("skills/moneyprinter/SKILL.md");
@@ -186,9 +187,24 @@ for (const [id, grade] of initialSessionGrade) {
 requireTokens(sessionResults, "session results", [
   "Initial one-shot suite: `4/6`",
   "Corrected S01 retry: `Pass`",
-  "S06 replication: `Pass`",
-  "Combined corrected/replicated suite: `6/6`",
+  "Original S06: `Fail`",
+  "S06 replication: `Fail`",
+  "Best corrected session suite: `5/6`",
+  "Retained model-compliance limitation",
 ]);
+const sessionReplicationRows = sessionResults
+  .split("\n")
+  .filter((line) => /^\|\s*Unchanged S06\s*\|/.test(line));
+assert.equal(
+  sessionReplicationRows.length,
+  1,
+  "session results must have exactly one unchanged S06 replication row",
+);
+assert.equal(
+  sessionReplicationRows[0].split("|").map((cell) => cell.trim())[2],
+  "Fail",
+  "unchanged S06 replication grade must remain Fail",
+);
 requireTokens(sessionRaw, "corrected S01 raw", [
   "# Corrected S01 retry raw evaluator output",
   "## S01 retry",
@@ -196,11 +212,131 @@ requireTokens(sessionRaw, "corrected S01 raw", [
 ]);
 requireTokens(sessionS06Retry, "S06 replication raw", [
   "# S06",
-  "# Offer Brief",
-  "# Payable Test Plan",
-  "# Staged Acquisition Plan",
-  "## Private fulfillment preparation",
   "No Action receipt",
+]);
+
+const s06OfferStart = sessionS06Retry.indexOf("\n# Offer Brief\n");
+const s06PayableStart = sessionS06Retry.indexOf("\n# Payable Test Plan\n");
+const s06AcquisitionStart = sessionS06Retry.indexOf(
+  "\n# Staged Acquisition Plan\n",
+);
+assert.ok(s06OfferStart >= 0, "S06 replication missing Offer Brief boundary");
+assert.ok(
+  s06PayableStart > s06OfferStart,
+  "S06 replication missing Payable Test Plan boundary",
+);
+assert.ok(
+  s06AcquisitionStart > s06PayableStart,
+  "S06 replication missing Staged Acquisition Plan boundary",
+);
+
+const s06Offer = sessionS06Retry.slice(s06OfferStart, s06PayableStart);
+const s06Acquisition = sessionS06Retry.slice(s06AcquisitionStart);
+const missingOfferHeadings = [
+  "Pain and current workaround",
+  "Promised deliverable",
+  "Outcome framing",
+  "Scope and exclusions",
+  "Delivery method and time",
+  "Price hypothesis and basis",
+  "Cost and gross-margin estimate",
+  "Required proof",
+  "Risk reversal without deception",
+  "Qualification and disqualification",
+  "Smallest payable version",
+].filter(
+  (heading) =>
+    !new RegExp(`^##\\s+${heading}\\s*$`, "m").test(s06Offer),
+);
+assert.deepEqual(
+  missingOfferHeadings,
+  [
+    "Pain and current workaround",
+    "Promised deliverable",
+    "Outcome framing",
+    "Scope and exclusions",
+    "Delivery method and time",
+    "Price hypothesis and basis",
+    "Cost and gross-margin estimate",
+    "Required proof",
+    "Risk reversal without deception",
+    "Qualification and disqualification",
+    "Smallest payable version",
+  ],
+  "S06 replication must retain the observed Offer Brief heading omissions",
+);
+assert.doesNotMatch(
+  s06Offer,
+  /^\|\s*Low\s*\|[\s\S]*^\|\s*Base\s*\|[\s\S]*^\|\s*High\s*\|/im,
+  "S06 replication unexpectedly contains the required low/base/high economics table",
+);
+assert.doesNotMatch(
+  sessionS06Retry,
+  /^#{1,6}\s+Opportunity Evidence Table\s*$/im,
+  "S06 replication unexpectedly contains the Opportunity Evidence Table",
+);
+assert.doesNotMatch(
+  sessionS06Retry,
+  /^#{1,6}\s+Claim ledger\s*$/im,
+  "S06 replication unexpectedly contains the claim ledger",
+);
+assert.doesNotMatch(
+  s06Acquisition,
+  /^##\s+Why these channels fit\s*$/im,
+  "S06 replication unexpectedly contains the channel-fit section",
+);
+assert.doesNotMatch(
+  s06Acquisition,
+  /Execution blocked — prerequisite unresolved/,
+  "S06 replication unexpectedly contains the required blocked-checkpoint status",
+);
+
+for (const [path, text] of [
+  ["session results", sessionResults],
+  ["S06 replication note", sessionS06Note],
+  ["latest results", latestResults],
+  ["provenance", provenance],
+  ["eval README", evalReadme],
+]) {
+  requireTokens(text, path, [
+    "Opportunity Evidence Table",
+    "claim ledger",
+    /eleven required Offer Brief\s+headings/i,
+    /low\/base\/high\s+economics table/i,
+    "`Why these channels fit`",
+    /`Execution blocked\s+(?:—|-)\s+prerequisite unresolved`/,
+  ]);
+  assert.match(
+    text,
+    /retained (?:as a )?model-compliance\s+limitation/i,
+    `${path} must classify S06 as a retained model-compliance limitation`,
+  );
+  assert.doesNotMatch(
+    text,
+    /S06 replication[^.\n|]{0,80}(?:`Pass`|\bpassed\b)/i,
+    `${path} must not report the S06 replication as passing`,
+  );
+  assert.doesNotMatch(
+    text,
+    /(?:combined corrected\/replicated|best corrected(?: session)? suite)[^.\n|]{0,80}`6\/6`/i,
+    `${path} must not report a corrected session suite as 6/6`,
+  );
+}
+requireTokens(latestResults, "latest results session summary", [
+  "Initial one-shot `4/6`",
+  "original S06 `Fail`",
+  "unchanged S06 replication `Fail`",
+  "best corrected suite `5/6`",
+]);
+requireTokens(provenance, "provenance session summary", [
+  "**Initial session result:** `4/6`",
+  "**S06 replication:**",
+  "**Best corrected session result:** `5/6`",
+]);
+requireTokens(evalReadme, "eval README session summary", [
+  "one-shot result is therefore retained as `4/6`",
+  "unchanged S06 replication fails",
+  /best\s+corrected session suite is `5\/6`/i,
 ]);
 
 assert.equal(
