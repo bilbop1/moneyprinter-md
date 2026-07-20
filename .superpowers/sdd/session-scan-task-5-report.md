@@ -60,13 +60,14 @@ generation pass.
 Both committed card paths are byte-identical:
 
 ```text
-bffd589756c2e1c945dd143dddb2709e6701c49d7662761a046a2f2a38e022a1  site/public/og.png
-bffd589756c2e1c945dd143dddb2709e6701c49d7662761a046a2f2a38e022a1  launch/assets/moneyprinter-social-card.png
+a82c7cbfabb6f9e34dd21d2ed5febb3085e8ca3bea81ba1799d114755779d59e  site/public/og.png
+a82c7cbfabb6f9e34dd21d2ed5febb3085e8ca3bea81ba1799d114755779d59e  launch/assets/moneyprinter-social-card.png
 ```
 
-The card says `SCAN THE LAST 14 DAYS`, `GET TO WORK`,
-`14-DAY SCAN`, `ONE CONFIRMATION`, and `RECEIPTS -> RERANK`. Visual inspection
-found the text legible and the receipt edge intact at the declared dimensions.
+The card says `WITH PERMISSION • DETECTED + ACCESSIBLE`,
+`SCAN THE LAST 14 DAYS`, `GET TO WORK`, `14-DAY SCAN`, `ONE CONFIRMATION`, and
+`RECEIPTS -> RERANK`. Visual inspection found the text legible and the receipt
+edge intact at the declared dimensions.
 
 ## Browser evidence
 
@@ -147,3 +148,20 @@ passing results above.
 4. The screenshots cover the first screen, not every section at every
    breakpoint. Server-rendered tests cover the complete document structure and
    the exact 320 px browser probe covers horizontal overflow.
+
+## Review correction
+
+Review found one P1: the standalone card still said
+`SCAN THE LAST 14 DAYS` without visible permission or source-coverage scope.
+The page copy was bounded, but the card could travel without that context.
+
+No new image generation was used. A deterministic Sharp composite sampled the
+existing black field, covered only the old top line, and replaced it with
+exactly `WITH PERMISSION • DETECTED + ACCESSIBLE`. The title, scan/get-to-work
+lines, receipt edge, and bottom `14-DAY SCAN • ONE CONFIRMATION • RECEIPTS ->
+RERANK` line remain unchanged.
+
+The same corrected PNG was copied to both public paths and visually inspected
+at 1200 × 630. Open Graph and X alternative text now state `with permission`,
+`detected`, and `accessible`; rendered tests assert the scoped string on both
+metadata surfaces.

@@ -55,9 +55,10 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
   assert.match(html, /<title>MoneyPrinter\.md \| Turn 14 days of AI work into one money route<\/title>/i);
   assert.match(html, /<link rel="canonical" href="http:\/\/localhost\/"/i);
   assert.match(html, /<meta property="og:image" content="http:\/\/localhost\/og\.png"/i);
+  assert.match(html, /<meta property="og:image:alt" content="MoneyPrinter\.md: with permission, scan the last 14 days of detected and accessible AI sessions, get to work, then rerank from receipts\."/i);
   assert.match(html, /<meta name="twitter:card" content="summary_large_image"/i);
   assert.match(html, /<meta name="twitter:image" content="http:\/\/localhost\/og\.png"/i);
-  assert.match(html, /<meta name="twitter:image:alt" content="MoneyPrinter\.md: scan the last 14 days, get to work, then rerank from receipts\."/i);
+  assert.match(html, /<meta name="twitter:image:alt" content="MoneyPrinter\.md: with permission, scan the last 14 days of detected and accessible AI sessions, get to work, then rerank from receipts\."/i);
   assert.match(html, /With permission, MoneyPrinter scans accessible AI sessions/);
   assert.match(html, /WITH PERMISSION\s*\/\s*RECEIPTS FIRST/);
   assert.match(html, /Your last 14 days are already the brief\./);
