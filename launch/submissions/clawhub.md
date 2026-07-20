@@ -6,16 +6,23 @@
 MoneyPrinter skill a versioned, searchable page with install commands, download
 counts, stars, tags, changelogs, and scan state.
 
-**Status:** live. On 2026-07-19, ClawHub CLI 0.23.1 authenticated as
-`@bilbop1`, the provenance-pinned dry run found exactly seven new skills with
-zero failures, and all seven v1.0.0 releases were published. SkillSpector later
-marked every package clean and the dashboard changed each listing to visible.
+**Status:** rc.3 update published. On 2026-07-19, ClawHub CLI 0.23.1
+authenticated as `@bilbop1`, the provenance-pinned dry run found exactly seven
+updates with zero failures, and all seven `1.0.1` packages were accepted from
+`d191c622fd2449fb3399c7140a36a564482498f8`. A repeat dry run reported all
+seven already synced.
 
-The description below is prepared for a future sync. The live v1.0.0 listings
-were published from rc.1-source commit
-`61549ff7440331588fd43b6c0707e8d783c51144`. They are not rc.2 publications.
-A new source release must be published and synced before the copy below is
-live.
+Unauthenticated public metadata now reports `1.0.1` as latest for all seven
+listings. Six packages reached a clean SAFE scan result. The primary
+`moneyprinter` listing is public and its moderation verdict is clean, but its
+detailed SkillSpector envelope flags the headline cross-app 14-day history
+scan as suspicious; its static scan is clean. All seven Skill Cards are still
+pending. Do not describe all seven scan envelopes as SAFE or claim that the
+cards are complete.
+
+The historical `v1.0.0` listings came from rc.1-source commit
+`61549ff7440331588fd43b6c0707e8d783c51144`. They were not rc.2 or rc.3
+publications.
 
 ## Current official submission path
 
@@ -49,11 +56,14 @@ clawhub sync \
   --root ./skills \
   --all \
   --dry-run \
+  --json \
   --owner bilbop1 \
-  --source-repo https://github.com/bilbop1/moneyprinter-md \
-  --source-ref main \
-  --source-commit 61549ff7440331588fd43b6c0707e8d783c51144 \
-  --bump patch
+  --source-repo bilbop1/moneyprinter-md \
+  --source-ref v0.1.0-rc.3 \
+  --source-commit d191c622fd2449fb3399c7140a36a564482498f8 \
+  --bump patch \
+  --tags latest \
+  --changelog "rc.3: scan the last 14 days, confirm one route, then work it through offer, test, acquisition, delivery, cashflow review, and rerank"
 ```
 
 Only after the dry run is clean:
@@ -62,17 +72,18 @@ Only after the dry run is clean:
 clawhub sync \
   --root ./skills \
   --all \
+  --json \
   --owner bilbop1 \
-  --source-repo https://github.com/bilbop1/moneyprinter-md \
-  --source-ref main \
-  --source-commit 61549ff7440331588fd43b6c0707e8d783c51144 \
+  --source-repo bilbop1/moneyprinter-md \
+  --source-ref v0.1.0-rc.3 \
+  --source-commit d191c622fd2449fb3399c7140a36a564482498f8 \
   --bump patch \
-  --tags latest
+  --tags latest \
+  --changelog "rc.3: scan the last 14 days, confirm one route, then work it through offer, test, acquisition, delivery, cashflow review, and rerank"
 ```
 
-For a future release, replace the pinned source commit with the exact tested
-commit and select the intentional semantic-version bump. Do not reuse this
-command blindly.
+For a future release, replace the pinned source commit and source ref with the
+exact tested release. Do not reuse this command blindly.
 
 ## Listing title
 
@@ -137,9 +148,9 @@ source repository's social preview current.
 
 ## Final human action
 
-No publication action remains for v1.0.0. Maintain source provenance on future
-syncs, review the dry run, use the correct semantic version bump, and inspect
-the resulting public pages before linking them.
+No ClawHub upload action remains for `1.0.1`. Maintain source provenance on
+future syncs, review the dry run, use the correct semantic version bump, and
+recheck the asynchronous Skill Cards before claiming they are complete.
 
 Primary public listing:
 

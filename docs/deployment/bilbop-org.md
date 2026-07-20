@@ -15,9 +15,13 @@ The site is deployed through Sites and public at
 - the canonical, `og:url`, and social-image URLs used the custom hostname;
 - `/og.png` returned HTTP 200 as `image/png`;
 - the live GitHub link and displayed install command matched the public
-  repository; and
-- the retained release/distribution source is `v0.1.0-rc.2`, and a clean remote
-  listing against that public tag found all seven skills.
+  repository;
+- Sites version 4 was saved and deployed from
+  `d191c622fd2449fb3399c7140a36a564482498f8`;
+- the retained release/distribution source is `v0.1.0-rc.3`, and a clean remote
+  listing against public `main` found all seven skills; and
+- the downloaded rc.3 release ZIP matched SHA-256
+  `94b0912576514a7d712bf46db17223b67b8766a19c2d09352215a6e41619f278`.
 
 The existing Sites project ID is persisted in
 `site/.openai/hosting.json`. Reuse that exact project for later versions; do

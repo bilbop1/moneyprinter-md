@@ -7,10 +7,10 @@ other high-fit channel resolves back to the repository. GitHub can amplify
 useful releases, stars, forks, discussions, field reports, and linked installs,
 but it cannot guarantee cold-start traffic or Trending placement.
 
-**Status:** rc.2 public source, remote discovery, metadata, topics, social
-preview, Discussions, private vulnerability reporting, and release were
-verified on 2026-07-19. The rc.3 source candidate is ready for publication,
-but its public receipt and retained host invocation are still pending.
+**Status:** rc.3 is public. The tagged source, release asset and digest, clean
+seven-skill remote discovery, metadata, topics, social preview, Discussions,
+and private vulnerability reporting were verified on 2026-07-19. Retained
+named-host invocation is still experimental.
 
 ## Current submission path
 
@@ -55,8 +55,7 @@ Repository About:
 
 ## Long description
 
-Use this body for the rc.3 prerelease. Do not call it published until the
-release and asset are visible logged out:
+This is the body used for the public rc.3 prerelease:
 
 > MoneyPrinter.md is seven open-source Agent Skills built around one
 > permissioned 14-day scan. It tells the current host to report every detected
@@ -113,6 +112,7 @@ GitHub topics:
 
 ## Final human action
 
-Retain one full host invocation. Keep the confirmed landing-page URL in the
-repository About field. If community conduct volume later warrants a private
-inbox, add a monitored role address rather than a personal address.
+No GitHub publication action remains for rc.3. Retain one full host invocation.
+Keep the confirmed landing-page URL in the repository About field. If
+community conduct volume later warrants a private inbox, add a monitored role
+address rather than a personal address.

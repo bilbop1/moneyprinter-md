@@ -144,10 +144,10 @@ test("keeps the production surface honest and starter-free", async () => {
   assert.match(page, /https:\/\/github\.com\/bilbop1\/moneyprinter-md/);
   assert.match(page, /Exact host conformance is still experimental/i);
   assert.match(page, /MiniMax is provider-only/i);
-  assert.match(page, /Install the seven rc\.3 source-candidate skills\./i);
+  assert.match(page, /Install the seven public rc\.3 skills\./i);
   assert.match(page, /Seven rc\.3 skill files pass package checks\./i);
   assert.match(page, /Best corrected blind local run: 5\/6\./i);
-  assert.match(page, /Verify after release publication\./i);
+  assert.match(page, /GitHub release, remote discovery, and landing page are live\./i);
   assert.doesNotMatch(
     page,
     /Install all seven skills from the public repository|Public GitHub installer command verified/i,
@@ -182,9 +182,10 @@ test("keeps the production surface honest and starter-free", async () => {
   assert.equal(guaranteedIncomeMentions.length, 1);
   assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
   assert.match(css, /min-height:\s*44px/);
-  assert.match(css, /max-width:\s*1180px/);
+  assert.match(css, /--max:\s*1360px/);
+  assert.match(css, /max-width:\s*var\(--max\)/);
   assert.match(css, /\.wordmark,\s*nav a,\s*\.site-footer a,\s*\.text-control\s*\{[^}]*min-height:\s*44px[^}]*display:\s*inline-flex/is);
-  assert.match(css, /\.hero-copy,\s*\.hero-receipt\s*\{[^}]*min-width:\s*0/is);
+  assert.match(css, /\.hero-copy,\s*\.hero-side,\s*\.hero-receipt\s*\{[^}]*min-width:\s*0/is);
   assert.match(css, /\.install-control code\s*\{[^}]*min-width:\s*0/is);
   assert.match(css, /@media \(max-width:\s*900px\)\s*\{[^}]*\.hero\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/is);
   assert.match(css, /@media \(max-width:\s*720px\)/i);
@@ -196,6 +197,24 @@ test("keeps the production surface honest and starter-free", async () => {
   const stampInk = css.match(/--stamp-ink:\s*(#[0-9a-f]{6})/i)?.[1];
   assert.ok(paper && stampInk, "receipt paper and stamp colors must be explicit hex values");
   assert.ok(contrast(paper, stampInk) >= 4.5, "UNSETTLED stamp ink must meet AA contrast on receipt paper");
+});
+
+test("puts Ko-fi above the hero receipt and keeps the pledge details nearby", async () => {
+  const [page, css] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+  ]);
+
+  const supportIndex = page.indexOf('className="hero-support"');
+  const receiptIndex = page.indexOf('className="receipt hero-receipt"');
+
+  assert.ok(supportIndex >= 0, "hero support block is missing");
+  assert.ok(receiptIndex > supportIndex, "Ko-fi support must render before the hero receipt");
+  assert.match(page, /Support MoneyPrinter on Ko-fi/);
+  assert.match(page, /href="#pledge"/);
+  assert.match(css, /\.hero-side\s*\{/);
+  assert.match(css, /\.hero-support\s*\{/);
+  assert.match(css, /\.kofi-button\s*\{/);
 });
 
 test("derives social URLs from Host and ignores forwarded-host injection", async () => {

@@ -5,13 +5,12 @@ Treat a directory route as live only when its packet names a verified public
 listing URL and review date. A prepared packet by itself proves nothing was
 submitted, approved, ranked, or published.
 
-Scan-first descriptions are rc.3 candidate copy. They describe a permissioned
-14-day scan of detected AI CLI and GUI session sources the current host can
-access, one confirmation, cash-first private work, one exact external-action
-approval, an Action receipt, and reranking. They do not claim that the matching
-release, landing page, or refreshed directory listings have been verified
-live. Published rc.2 and ClawHub v1.0.0 facts remain dated history until a
-post-publication receipt updates them.
+Scan-first descriptions match the public rc.3 source. They describe a
+permissioned 14-day scan of detected AI CLI and GUI session sources the current
+host can access, one confirmation, cash-first private work, one exact
+external-action approval, an Action receipt, and reranking. The GitHub release,
+remote discovery path, and landing page are verified live. Each directory
+packet still carries its own submission and review status.
 
 Before using any packet:
 

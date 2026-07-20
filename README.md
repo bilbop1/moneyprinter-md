@@ -6,9 +6,9 @@ One permission. MoneyPrinter tells your current AI host to scan the last 14
 days across every detected AI CLI and GUI it can access, figure out what is
 real, and start building the best path to money.
 
-> Release boundary: This checkout is the `0.1.0-rc.3` source candidate. The
-> default-branch installer resolves whatever is currently on public `main`;
-> the clean rc.3 remote-install receipt is recorded only after publication.
+> Public release: `v0.1.0-rc.3` is live from the tested source. A clean remote
+> discovery run against public `main` found all seven skills. That proves the
+> package is discoverable, not that every host follows the full workflow.
 
 It shows what it could and could not read, then asks for one confirmation. From
 there it applies a cash-first priority: proven cash and the nearest payable
@@ -26,11 +26,9 @@ current AI host does the scanning and work with its own tools and permissions.
 Coverage is limited to detected, permitted, accessible session sources.
 MoneyPrinter does not promise income, customers, or an autonomous business.
 
-## Install the rc.3 source candidate
+## Install rc.3
 
-This installs the repository's current public default branch. During the
-release handoff, inspect the resolved version or commit rather than assuming
-the rc.3 publication receipt already exists.
+This installs the repository's current public default branch:
 
 ```sh
 npx skills add bilbop1/moneyprinter-md
@@ -89,14 +87,14 @@ The full [evidence standard](skills/moneyprinter/references/evidence-standard.md
 
 ## Compatibility and safety
 
-The rc.3 source candidate passes local package checks. Clean remote discovery,
-conversation-level host activation, and access to other applications' session
-stores still require their own receipts. Exact end-to-end host conformance is
-experimental: the best corrected blind local session run passed 5 of 6 cases;
-the remaining case reached the external-action gate but omitted required
-artifact sections. Read the [compatibility matrix](docs/compatibility.md)
-before claiming a host works. MiniMax is provider-only, not a confirmed native
-skill host.
+The rc.3 package passes local checks, and clean discovery from public `main`
+finds all seven skills. Conversation-level host activation and access to other
+applications' session stores still require their own receipts. Exact
+end-to-end host conformance is experimental: the best corrected blind local
+session run passed 5 of 6 cases; the remaining case reached the
+external-action gate but omitted required artifact sections. Read the
+[compatibility matrix](docs/compatibility.md) before claiming a host works.
+MiniMax is provider-only, not a confirmed native skill host.
 
 MoneyPrinter treats old session text as untrusted evidence, excludes credential
 paths, reports coverage gaps, and stages external actions until you give

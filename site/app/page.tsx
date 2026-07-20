@@ -81,21 +81,31 @@ export default function Home() {
               <code>{installCommand}</code>
               <button type="button" onClick={copyInstall} aria-label={`${copyLabel}: ${installCommand}`}>{copyLabel}</button>
             </div>
-            <p className="copy-status" aria-live="polite">{copyState === "manual" ? "Clipboard unavailable — the command stays selectable." : copyState === "copied" ? "Command copied to clipboard." : "Install the seven rc.3 source-candidate skills."}</p>
+            <p className="copy-status" aria-live="polite">{copyState === "manual" ? "Clipboard unavailable — the command stays selectable." : copyState === "copied" ? "Command copied to clipboard." : "Install the seven public rc.3 skills."}</p>
             <div className="hero-controls">
               <a className="text-control" href={repositoryUrl} target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
               <a className="text-control" href="#method">Read the method <span aria-hidden="true">↓</span></a>
             </div>
             <p className="disclaimer">No guaranteed income. No fake benchmark dollars. No autonomous spam.</p>
           </div>
-          <aside className="receipt hero-receipt" aria-label="MoneyPrinter scan receipt preview">
-            <div className="receipt-top"><span>MP / 14-DAY SCAN</span><span>READY TO CONFIRM</span></div>
-            <div className="receipt-total"><small>Accessible history window</small><strong>14 DAYS</strong><em>detected + permitted sources</em></div>
-            <p className="receipt-warning">Coverage names every scanned, empty, blocked, unsupported, or excluded source.</p>
-            <div className="receipt-rule" />
-            <dl><div><dt>Permission</dt><dd>One scoped grant</dd></div><div><dt>Confirm</dt><dd>One correction pass</dd></div><div><dt>Next</dt><dd>Get to work</dd></div></dl>
-            <div className="receipt-stamp">RERANK</div>
-          </aside>
+          <div className="hero-side">
+            <aside className="hero-support" aria-label="Support MoneyPrinter">
+              <p className="hero-support-kicker">KEEP THE PRINTER INKED</p>
+              <p>If this thing makes you money, consider throwing 1% back into keeping it free, tested, and updated.</p>
+              <div className="hero-support-actions">
+                <a className="kofi-button" href={kofiUrl} target="_blank" rel="noreferrer">Support MoneyPrinter on Ko-fi <span aria-hidden="true">↗</span></a>
+                <a className="pledge-control" href="#pledge">Read the 1% pledge <span aria-hidden="true">↓</span></a>
+              </div>
+            </aside>
+            <aside className="receipt hero-receipt" aria-label="MoneyPrinter scan receipt preview">
+              <div className="receipt-top"><span>MP / 14-DAY SCAN</span><span>READY TO CONFIRM</span></div>
+              <div className="receipt-total"><small>Accessible history window</small><strong>14 DAYS</strong><em>detected + permitted sources</em></div>
+              <p className="receipt-warning">Coverage names every scanned, empty, blocked, unsupported, or excluded source.</p>
+              <div className="receipt-rule" />
+              <dl><div><dt>Permission</dt><dd>One scoped grant</dd></div><div><dt>Confirm</dt><dd>One correction pass</dd></div><div><dt>Next</dt><dd>Get to work</dd></div></dl>
+              <div className="receipt-stamp">RERANK</div>
+            </aside>
+          </div>
         </section>
 
         <section id="proof" className="section-shell split-section" aria-labelledby="proof-title">
@@ -122,8 +132,8 @@ export default function Home() {
         </section>
 
         <section id="compatibility" className="section-shell compatibility" aria-labelledby="compatibility-title">
-          <div><p className="section-label">05 / PORTABILITY IS A CLAIM TOO</p><h2 id="compatibility-title">Installable is not activated.</h2><p>The rc.3 files pass local package checks. Public rc.3 discovery still needs its release receipt. The best corrected blind local session run passed 5 of 6; one run reached the approval gate but skipped required artifact sections. MiniMax is provider-only.</p></div>
-          <div className="matrix" role="table" aria-label="Compatibility matrix"><div className="matrix-row matrix-head" role="row"><span role="columnheader">Surface</span><span role="columnheader">State</span><span role="columnheader">Meaning</span></div><div className="matrix-row" role="row"><span role="cell">Portable core</span><span role="cell" className="signal">Locally validated</span><span role="cell">Seven rc.3 skill files pass package checks.</span></div><div className="matrix-row" role="row"><span role="cell">Full host chain</span><span role="cell" className="warning">Experimental</span><span role="cell">Best corrected blind local run: 5/6.</span></div><div className="matrix-row" role="row"><span role="cell">Public rc.3 receipt</span><span role="cell" className="warning">Pending</span><span role="cell">Verify after release publication.</span></div><div className="matrix-row" role="row"><span role="cell">MiniMax</span><span role="cell" className="warning">Provider-only</span><span role="cell">Not a general compatibility promise.</span></div></div>
+          <div><p className="section-label">05 / PORTABILITY IS A CLAIM TOO</p><h2 id="compatibility-title">Installable is not activated.</h2><p>The rc.3 files pass local package checks, and public GitHub discovery finds all seven. The release asset and this landing page are live. The best corrected blind local session run passed 5 of 6; one run reached the approval gate but skipped required artifact sections. MiniMax is provider-only.</p></div>
+          <div className="matrix" role="table" aria-label="Compatibility matrix"><div className="matrix-row matrix-head" role="row"><span role="columnheader">Surface</span><span role="columnheader">State</span><span role="columnheader">Meaning</span></div><div className="matrix-row" role="row"><span role="cell">Portable core</span><span role="cell" className="signal">Locally validated</span><span role="cell">Seven rc.3 skill files pass package checks.</span></div><div className="matrix-row" role="row"><span role="cell">Full host chain</span><span role="cell" className="warning">Experimental</span><span role="cell">Best corrected blind local run: 5/6.</span></div><div className="matrix-row" role="row"><span role="cell">Public rc.3 receipt</span><span role="cell" className="signal">Verified</span><span role="cell">GitHub release, remote discovery, and landing page are live.</span></div><div className="matrix-row" role="row"><span role="cell">MiniMax</span><span role="cell" className="warning">Provider-only</span><span role="cell">Not a general compatibility promise.</span></div></div>
         </section>
 
         <section id="method" className="section-shell method-section" aria-labelledby="method-title">

@@ -15,7 +15,7 @@ npm run lint
 Result:
 
 - Vinext production build completed.
-- Five server-render, metadata-safety, accessibility, flow, and social-image
+- Six server-render, metadata-safety, accessibility, flow, and social-image
   tests passed.
 - ESLint completed with no findings.
 - The two committed copies of the social image are byte-identical 1200 × 630
@@ -27,6 +27,9 @@ Desktop, 1440 × 1250:
 
 - The scan-first hero, 14-day receipt, rc.3 marker, install control, GitHub
   control, and full disclaimer rendered without overlap or clipping.
+- The desktop shell expands to 1360 px, and the Ko-fi support block sits above
+  the receipt with a second in-page link to the full voluntary 1% pledge.
+- Below 720 px, both support controls stack at full width before the receipt.
 - One `h1`, eight named sections, all seven canonical skill names, the full
   evidence taxonomy, compatibility caveats, and voluntary pledge remain in the
   rendered document.
@@ -56,8 +59,8 @@ browser uses an overlay scrollbar.
 The first desktop attempt used `127.0.0.1` while Vinext was listening on IPv6
 localhost and captured `ERR_CONNECTION_REFUSED`. It was discarded. The final
 desktop and mobile captures used the verified `localhost:4173` production
-build. Both committed previews were visually inspected after the current
-source-candidate wording replaced the stale public-install copy.
+build. Both committed previews were visually inspected against the rc.3
+source.
 
 ## Metadata abuse cases
 
@@ -104,7 +107,21 @@ Verified on 2026-07-19 before the rc.3 deployment task:
   against both the default branch and public tag `v0.1.0-rc.2` found all seven
   skills.
 
-These checks establish public site and installer availability. They do not
-establish conversation-level activation in any named host; that retained test
-remains open. They also do not establish that rc.3 is live; publication and a
-fresh runtime receipt belong to the release task.
+These checks establish the prior rc.2 public baseline. They do not establish
+conversation-level activation in any named host.
+
+## Current rc.3 runtime receipt
+
+Verified on 2026-07-19 after the rc.3 deployment:
+
+- Sites version 4 was built, saved, and deployed from
+  `d191c622fd2449fb3399c7140a36a564482498f8`.
+- Both the Sites production URL and `https://moneyprinter.bilbop.org` returned
+  HTTPS 200 with the rc.3 scan-first copy.
+- Sites reported the custom-domain, provider, and SSL states active.
+- `/og.png` returned HTTP 200 as `image/png`.
+- The public GitHub release, remote install target, and landing-page calls to
+  action resolve to the final project.
+- The full named-host chain remains experimental. The best corrected blind
+  local session run is still 5/6, and no simulation score was upgraded during
+  publication.

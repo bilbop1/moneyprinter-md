@@ -4,10 +4,10 @@ Reviewed against the repository on 2026-07-19. This is the canonical source for
 directory listings and launch copy. If a platform form conflicts with this
 sheet, narrow the claim rather than strengthening it.
 
-The scan-first copy below describes the `0.1.0-rc.3` source candidate. It is not
-a claim that the matching release, landing page, or directory updates have
-been verified live. Dated rc.2 and ClawHub v1.0.0 facts remain historical until
-a post-publication receipt replaces them.
+The `0.1.0-rc.3` GitHub prerelease, remote discovery path, and landing page are
+live. The tagged source is
+`d191c622fd2449fb3399c7140a36a564482498f8`. Named-host activation remains
+experimental, and directory status is recorded separately below.
 
 ## One sentence
 
@@ -63,15 +63,20 @@ contains a `SKILL.md`; supporting material stays beside the skill.
 
 - Format: text-first Agent Skills directories using `SKILL.md`.
 - Repository license: MIT.
-- Release candidate: `0.1.0-rc.3`.
+- Public prerelease: `0.1.0-rc.3`.
 - Public repository: `https://github.com/bilbop1/moneyprinter-md`.
 - Logged-out access and a clean seven-skill remote discovery run were verified
   on 2026-07-19.
-- The last retained public release and distribution receipt before the rc.3
-  publication step is tag `v0.1.0-rc.2`; a clean listing against that tag found
-  all seven skills.
+- Tag `v0.1.0-rc.3` resolves to
+  `d191c622fd2449fb3399c7140a36a564482498f8`. Its downloaded release ZIP
+  passed an archive test and matched SHA-256
+  `94b0912576514a7d712bf46db17223b67b8766a19c2d09352215a6e41619f278`.
 - Public landing page: `https://moneyprinter.bilbop.org`. HTTPS 200 and active
-  Sites custom-domain, provider, and SSL states were verified on 2026-07-19.
+  Sites custom-domain, provider, and SSL states were verified after the rc.3
+  deployment on 2026-07-19.
+- ClawHub published all seven `1.0.1` package updates from the rc.3 source with
+  zero sync failures. Unauthenticated public metadata reports `1.0.1` as
+  latest for all seven. Skill Cards are still pending.
 - ClawHub's current CLI reference says publishing releases the submitted copy
   under MIT-0, even though its publishing guide does not surface that license
   detail. The GitHub repository remains MIT; publishing the same skill content
@@ -212,7 +217,7 @@ Use these only after current evidence exists:
 | Ko-fi | `https://ko-fi.com/bilbop` | Yes | Public page verified as "Support bilbop" on 2026-07-19 |
 | X | Owner's launch post | No | Final account, links, image, and owner action |
 | Skills.sh | GitHub-sourced install path | Partial | Clean remote discovery found all seven skills; a directory page or rank is not claimed |
-| ClawHub | Seven versioned skill listings | Yes | Seven visible v1.0.0 pages under `@bilbop1`; SkillSpector passed on 2026-07-19 |
+| ClawHub | Seven versioned skill listings | Yes | All seven v1.0.1 pages are public and report v1.0.1 as latest; six narrower skills scan SAFE, while the flagship's public moderation verdict is clean but its detailed SkillSpector envelope flags the intended cross-app history scan; Skill Cards remain pending |
 | Awesome Skills | Flagship directory page | Yes | Public `moneyprinter` page verified on 2026-07-19 |
 | agentskill.sh | Repository import | No | All seven files detected; platform database was over its storage quota and rejected writes |
 | OpenAI Plugins Directory | Skills-only plugin | No | Plugin package, public policy/support URLs, identity, auth, review |

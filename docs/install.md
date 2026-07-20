@@ -12,9 +12,9 @@ delivery-proof
 cashflow-review
 ```
 
-> Release boundary: This checkout is the `0.1.0-rc.3` source candidate. The
-> default-branch installer resolves whatever is currently on public `main`;
-> the clean rc.3 remote-install receipt is recorded only after publication.
+> Public release: `v0.1.0-rc.3` is live. A clean remote discovery run against
+> public `main` found all seven skills. Discovery does not prove that a named
+> host followed the workflow end to end.
 
 ## Current local verification
 
@@ -29,11 +29,9 @@ Expected result: each of the seven names above appears exactly once. This is a
 local discovery check, not a claim that a particular agent surface has been
 activated.
 
-## Install the rc.3 source candidate
+## Install rc.3
 
-These commands resolve the repository's current public default branch. During
-the release handoff, inspect the resolved version or commit rather than
-assuming the rc.3 publication receipt already exists:
+This command resolves the repository's current public default branch:
 
 ```bash
 npx skills add bilbop1/moneyprinter-md
@@ -56,7 +54,7 @@ targets can change.
 
 Manual installation is the reliable fallback for GUI surfaces, locked-down
 workspaces, and any environment whose installer target has changed. Copying
-from this checkout uses the rc.3 source candidate directly.
+from this checkout uses the rc.3 files directly.
 
 1. Choose one skill directory from `skills/`; start with `moneyprinter` for the
    permissioned scan and route selection.

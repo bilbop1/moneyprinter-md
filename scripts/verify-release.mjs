@@ -255,8 +255,8 @@ assert.match(recommendedPost, /\bthe last 14 days\b/i);
 assert.match(recommendedPost, /\bdetected AI CLIs \+ GUIs it can access\b/i);
 assert.match(
   recommendedPost,
-  /\bdetected AI CLIs \+ GUIs it can access\.\n\nit figures out what shit is real\. then it starts working on the best money route\b/i,
-  "the opener must split scanning from judgment and execution",
+  /\bdetected AI CLIs \+ GUIs it can access\. figures out what shit is real\. then gets to work on the best money route\b/i,
+  "the opener must keep scanning, judgment, and execution explicit",
 );
 assert.match(recommendedPost, /https:\/\/github\.com\/bilbop1\/moneyprinter-md\b/);
 assert.doesNotMatch(

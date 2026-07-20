@@ -4,31 +4,35 @@
 
 Checked on 2026-07-19:
 
-- GitHub release `v0.1.0-rc.2` and its seven-skill install path are live.
-- `https://moneyprinter.bilbop.org` is live on rc.2.
-- ClawHub has seven public v1.0.0 listings under `@bilbop1`.
+- GitHub release `v0.1.0-rc.3`, its release asset, and the seven-skill install
+  path are live.
+- `https://moneyprinter.bilbop.org` is live on rc.3.
+- GitHub has the final 1280 × 640 social preview.
+- ClawHub has seven public `1.0.1` listings under `@bilbop1`. Six narrower
+  skills scan SAFE. The flagship is public with a clean moderation verdict,
+  while its detailed trust envelope flags the intended broad history scan.
+  Skill Cards are still pending.
 - Awesome Skills has the public MoneyPrinter flagship page.
 - The Ko-fi page loads as `Support bilbop`.
 
-The 14-day scan copy below is staged for rc.3. Do not post it while rc.2 is
-still the public release. Host conversation activation is still unverified, so
-none of these posts says the skills run everywhere.
+The 14-day scan copy below is ready to post. Host conversation activation is
+still unverified, so none of these posts says the skills run everywhere.
 
 ## Recommended flagship post
 
 Attach `launch/assets/moneyprinter-social-card.png`.
 
 ```text
-too many chats say "this could be huge" then do nothing lol
+too many ai chats say "this could be huge" then do fuck all lol
 
-so i made MoneyPrinter. with permission it checks the last 14 days across detected AI CLIs + GUIs it can access.
+so i made MoneyPrinter
 
-it figures out what shit is real. then it starts working on the best money route
+with permission it checks the last 14 days across detected AI CLIs + GUIs it can access. figures out what shit is real. then gets to work on the best money route
 
 https://github.com/bilbop1/moneyprinter-md
 ```
 
-Character count: 299 raw, 280 weighted.
+Character count: 294 raw, 275 weighted.
 
 ## First reply
 
@@ -102,10 +106,9 @@ Character count: 222 raw, 221 weighted.
 
 ## Posting sequence
 
-1. Wait until the ready state says rc.3 is public.
-2. Post the recommended flagship with the social card.
-3. Add the first reply.
-4. Use the install or funding replies only when the conversation calls for
+1. Post the recommended flagship with the social card.
+2. Add the first reply.
+3. Use the install or funding replies only when the conversation calls for
    them.
 
 Do not post both flagships. Do not claim a named host is activated until a

@@ -137,7 +137,10 @@ function staleInterviewViolations(text) {
 
 function contradictionViolations(text) {
   const violations = [];
-  const claimsText = withoutSection(text, "Forbidden claims");
+  const claimsText = withoutSection(text, "Forbidden claims").replace(
+    /```[\s\S]*?```/g,
+    "",
+  );
   const contradictions = [
     {
       pattern:
@@ -232,19 +235,32 @@ function contradictionViolations(text) {
   return violations;
 }
 
-function releaseClaimViolations(text) {
+function staleReleaseViolations(text) {
   const violations = [];
-  const positiveClaims = [
-    /\b(?:0\.1\.0-)?rc\.3\s+(?:is|is now|remains|has been)\s+(?:public|live|released|published|available)\b/i,
-    /\b(?:public|live|released|published|available)\s+(?:version\s+)?(?:0\.1\.0-)?rc\.3\b/i,
-    /\b(?:release|installer|listing)\s+(?:0\.1\.0-)?rc\.3\s+(?:is\s+)?(?:live|public|available|published)\b/i,
-    /\bcurrent public release\s+(?:is|runs|serves)\s+(?:version\s+)?(?:0\.1\.0-)?rc\.3\b/i,
-    /\binstaller\s+(?:now\s+)?(?:serves|installs|delivers|returns)\s+(?:version\s+)?(?:0\.1\.0-)?rc\.3\b/i,
-    /\b(?:0\.1\.0-)?rc\.3\s+(?:now\s+)?(?:ships|launches|releases)\s+publicly\b/i,
+  const staleClaims = [
+    {
+      pattern: /\b(?:0\.1\.0-)?rc\.3\b[\s\S]{0,100}\bsource candidate\b/i,
+      message: "stale rc.3 source-candidate language",
+    },
+    {
+      pattern:
+        /\b(?:receipt|verification|check)\b[\s\S]{0,100}\bafter publication\b|\bafter publication\b[\s\S]{0,100}\b(?:receipt|verification|check)\b/i,
+      message: "stale post-publication receipt boundary",
+    },
+    {
+      pattern:
+        /\bcurrent public (?:release|version|site)\b[\s\S]{0,80}\b(?:0\.1\.0-)?rc\.2\b|\b(?:0\.1\.0-)?rc\.2\b[\s\S]{0,80}\bcurrent public (?:release|version|site)\b/i,
+      message: "rc.2 described as the current public release",
+    },
+    {
+      pattern:
+        /\b(?:0\.1\.0-)?rc\.3\b[\s\S]{0,80}\b(?:not|isn't|is not)\b[\s\S]{0,40}\b(?:public|live|released|published)\b/i,
+      message: "rc.3 described as not public",
+    },
   ];
 
-  for (const pattern of positiveClaims) {
-    if (pattern.test(text)) violations.push("rc.3 described as public or released");
+  for (const claim of staleClaims) {
+    if (claim.pattern.test(text)) violations.push(claim.message);
   }
 
   return violations;
@@ -252,17 +268,17 @@ function releaseClaimViolations(text) {
 
 function releaseBoundaryViolations(text, kind) {
   const violations = [];
-  const normalized = normalize(text);
-  const candidate =
-    /\b(?:0\.1\.0-)?rc\.3\b[\s\S]{0,80}\bsource candidate\b/i;
-  const publicationReceipt =
-    /\bdefault-branch installer\b[\s\S]{0,140}\bpublic `?main`?\b[\s\S]{0,180}\breceipt\b[\s\S]{0,80}\bafter publication\b/i;
+  const normalized = normalize(text.replace(/^>\s?/gm, ""));
+  const publicRelease =
+    /\bpublic release\b[\s\S]{0,80}\b(?:v?0\.1\.0-)?rc\.3\b[\s\S]{0,80}\blive\b|\b(?:v?0\.1\.0-)?rc\.3\b[\s\S]{0,80}\blive\b[\s\S]{0,80}\bpublic release\b/i;
+  const remoteReceipt =
+    /\bclean remote discovery run\b[\s\S]{0,220}\bpublic `?main`?\b[\s\S]{0,220}\ball seven skills\b/i;
 
-  if (!candidate.test(normalized)) {
-    violations.push("missing rc.3 source-candidate boundary");
+  if (!publicRelease.test(normalized)) {
+    violations.push("missing live public rc.3 release boundary");
   }
-  if (!publicationReceipt.test(normalized)) {
-    violations.push("missing post-publication remote-install receipt boundary");
+  if (!remoteReceipt.test(normalized)) {
+    violations.push("missing clean public-main discovery receipt");
   }
 
   const installCommand = "npx skills add bilbop1/moneyprinter-md";
@@ -271,19 +287,19 @@ function releaseBoundaryViolations(text, kind) {
     violations.push("missing public install command");
   } else {
     const preceding = normalize(text.slice(Math.max(0, installIndex - 700), installIndex));
-    if (!/\b(?:0\.1\.0-)?rc\.3\b[\s\S]{0,80}\bsource candidate\b/i.test(preceding)) {
-      violations.push("install command is not locally labelled rc.3 source candidate");
+    if (!/\b(?:v?0\.1\.0-)?rc\.3\b[\s\S]{0,100}\b(?:public|live)\b|\b(?:public|live)\b[\s\S]{0,100}\b(?:v?0\.1\.0-)?rc\.3\b/i.test(preceding)) {
+      violations.push("install command is not locally labelled as public rc.3");
     }
-    if (!/\b(?:default branch|release handoff)\b/i.test(preceding)) {
-      violations.push("install command lacks transitional default-branch context");
+    if (!/\bpublic default branch\b/i.test(preceding)) {
+      violations.push("install command lacks public default-branch context");
     }
   }
 
   if (kind === "README") {
     const headlineIndex = normalized.indexOf(approvedHeadline);
-    const boundaryIndex = normalized.search(/\brelease boundary\b/i);
+    const boundaryIndex = normalized.search(/\bpublic release\b/i);
     if (headlineIndex < 0 || boundaryIndex < headlineIndex) {
-      violations.push("release boundary must follow the approved headline");
+      violations.push("public release boundary must follow the approved headline");
     }
   }
 
@@ -528,7 +544,7 @@ const readme = await read("README.md");
 check("README has ordered scan-first workflow", () =>
   requireNoViolations(workflowViolations(readme)),
 );
-check("README separates the rc.3 candidate from its public receipt", () =>
+check("README carries the live rc.3 release and discovery receipt", () =>
   requireNoViolations(releaseBoundaryViolations(readme, "README")),
 );
 check("README rejects a companion app", () => {
@@ -536,7 +552,7 @@ check("README rejects a companion app", () => {
 });
 
 const install = await read("docs/install.md");
-check("install separates the rc.3 candidate from its public receipt", () =>
+check("install carries the live rc.3 release and discovery receipt", () =>
   requireNoViolations(releaseBoundaryViolations(install, "install")),
 );
 
@@ -568,6 +584,13 @@ check("ClawHub v1.0.0 is tied to the rc.1 source commit", () => {
   requireMatch(clawHub, /v1\.0\.0[\s\S]{0,240}\brc\.1(?:-source)?\b/i);
   requireMatch(clawHub, /61549ff7440331588fd43b6c0707e8d783c51144/);
   rejectMatch(clawHub, /v1\.0\.0[\s\S]{0,240}\bhistorical rc\.2\b/i);
+});
+check("ClawHub v1.0.1 is tied to the rc.3 source commit", () => {
+  requireMatch(
+    clawHub,
+    /1\.0\.1[\s\S]{0,500}\brc\.3\b|\brc\.3\b[\s\S]{0,500}\b1\.0\.1\b/i,
+  );
+  requireMatch(clawHub, /d191c622fd2449fb3399c7140a36a564482498f8/);
 });
 
 for (const path of [
@@ -604,7 +627,7 @@ for (const path of currentCopyFiles) {
   check(`${path} has no contradictory public claims`, () =>
     requireNoViolations([
       ...contradictionViolations(text),
-      ...releaseClaimViolations(text),
+      ...staleReleaseViolations(text),
     ]),
   );
   check(`${path} passes punctuation coverage`, () =>
@@ -750,22 +773,22 @@ external action.
       ),
   },
   {
-    name: "rejects a false public rc.3 claim",
-    expected: "public or released",
+    name: "rejects stale rc.3 source-candidate language",
+    expected: "source-candidate",
     violations: () =>
-      releaseClaimViolations("The current public release is rc.3."),
+      staleReleaseViolations("MoneyPrinter rc.3 is still a source candidate."),
   },
   {
-    name: "rejects an installer-serves-rc.3 claim",
-    expected: "public or released",
+    name: "rejects a stale post-publication receipt boundary",
+    expected: "post-publication",
     violations: () =>
-      releaseClaimViolations("The installer now serves rc.3."),
+      staleReleaseViolations("Record the verification receipt after publication."),
   },
   {
-    name: "rejects an rc.3-ships-publicly claim",
-    expected: "public or released",
+    name: "rejects rc.2 as the current public release",
+    expected: "current public release",
     violations: () =>
-      releaseClaimViolations("MoneyPrinter rc.3 ships publicly today."),
+      staleReleaseViolations("The current public release is rc.2."),
   },
   {
     name: "rejects interview-first copy outside a fallback or release boundary",
@@ -845,6 +868,13 @@ check("allows bounded fallback and current rc.2 interview language", () => {
   requireNoViolations(
     staleInterviewViolations(
       "The current public rc.2 release uses interview-first intake.",
+    ),
+  );
+});
+check("allows the verified public rc.3 release state", () => {
+  requireNoViolations(
+    staleReleaseViolations(
+      "Public release: v0.1.0-rc.3 is live. A clean remote discovery run against public main found all seven skills.",
     ),
   );
 });
