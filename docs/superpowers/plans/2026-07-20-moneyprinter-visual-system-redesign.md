@@ -422,8 +422,7 @@ git commit -m "fix: polish the responsive MoneyPrinter schematic"
 
 **Files:**
 - Modify only if public-state facts change: `README.md`
-- Modify only if deployment receipts change: `docs/qa/landing-page-validation.md`
-- Modify only if deployment receipts change: `docs/qa/landing-page-deploy-receipt.md`
+- Modify only if deployment receipts change: `docs/qa/landing-page.md`
 
 **Interfaces:**
 - Consumes: the clean, visually inspected source commit.
@@ -451,7 +450,7 @@ silent, and only intentional receipt documentation is dirty.
 - [ ] **Step 2: Commit any final receipt documentation**
 
 ```bash
-git add docs/qa/landing-page-validation.md docs/qa/landing-page-deploy-receipt.md
+git add docs/qa/landing-page.md
 git commit -m "docs: record the visual-system deployment"
 ```
 

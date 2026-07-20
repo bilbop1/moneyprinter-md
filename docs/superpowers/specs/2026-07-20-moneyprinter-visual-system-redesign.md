@@ -1,7 +1,7 @@
 # MoneyPrinter Visual System Redesign
 
-**Date:** 2026-07-20  
-**Status:** Approved for implementation under standing design authority  
+**Date:** 2026-07-20
+**Status:** Approved for implementation under standing design authority
 **Surface:** `moneyprinter.bilbop.org`
 
 ## Verdict

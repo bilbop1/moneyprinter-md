@@ -40,27 +40,36 @@ Desktop, 1440 × 1250:
   QA/discovery command in repository documentation.
 - The copy control changed to `Copied` and exposed the live-region confirmation
   `Command copied to clipboard.`
-- The ten-stage flow renders in a bounded five-column grid on wide screens and
-  collapses to one column below 720 px.
+- The ten-stage flow renders as a connected operating circuit on wide screens:
+  Permission, scan, and confirmation feed a money loop with an exact-action
+  approval gate between Payable test and Acquire, and a dashed return from
+  Rerank to Prioritize.
+- Below 720 px, the decorative SVG wiring hides and the ten steps become one
+  ordered vertical circuit with a continuous rail and the approval gate still
+  between Payable test and Acquire.
+- The evidence taxonomy renders as a descending strength ladder, the five
+  starting routes share a visible entry rail, the seven skills form a connected
+  router/worker relay, compatibility is a written-state validation console, and
+  the method links are large guardrail controls rather than flat tables.
 
 Current preview captures:
 
-| Output | Browser inner/root/body width | Horizontal overflow | Navigation | Flow/skill layout |
+| Output | Browser viewport / document width | Horizontal overflow | Navigation | Flow/skill layout |
 | --- | ---: | --- | --- | --- |
-| 1440 × 1250 | 1440/1425/1425 px | None; 15 px is the visible vertical scrollbar | Full header | Five-column flow |
-| 320 × 568 | 335/320/320 px | None in the captured 320 px content plane | Compact header | Single-column below 720 px |
+| 1440 × 1250 | 1440/1440 px | None | Full header | SVG operating circuit; six-worker relay alternates across a shared rail |
+| 320 × 568 | 320/320 px | None | Compact header | One-column loop and vertical skill relay |
 
-The current mobile artifact uses a 335 px browser viewport because this browser
-reserves 15 px for a classic vertical scrollbar. The screenshot crops the
-remaining 320 px content plane, whose root and body widths both measured 320
-px. This keeps the committed artifact exactly 320 × 568 without pretending the
-browser uses an overlay scrollbar.
+End-to-end browser inspection also covered 1440 × 1000, 900 × 1000, and a true
+320 × 900 viewport. No rendered element was offscreen, no visible link or
+button measured below 44 × 44 px, and the page had no horizontal overflow at
+any inspected width. At 320 px, the flow is one 248 px column and all ten nodes
+remain readable in order.
 
-The first desktop attempt used `127.0.0.1` while Vinext was listening on IPv6
-localhost and captured `ERR_CONNECTION_REFUSED`. It was discarded. The final
-desktop and mobile captures used the verified `localhost:4173` production
-build. Both committed previews were visually inspected against the rc.3
-source.
+The Browser screenshot surface subtracts its capture gutter from requested
+dimensions. Capture bounds were calibrated to produce exact 1440 × 1250 and
+320 × 568 PNG outputs without resampling or distortion. The final captures used
+the verified `localhost:4174` production build, passed PNG signature and
+dimension checks, and were visually inspected against the rc.3 source.
 
 ## Metadata abuse cases
 
