@@ -2,123 +2,109 @@
 
 ## Ready state
 
-The public launch surfaces were checked again on 2026-07-19:
+Checked on 2026-07-19:
 
-- GitHub, release `v0.1.0-rc.2`, and the seven-skill install path are live.
-- `https://moneyprinter.bilbop.org` is live with the correct repository,
-  rc.2 badge, install command, and Ko-fi link.
+- GitHub release `v0.1.0-rc.2` and its seven-skill install path are live.
+- `https://moneyprinter.bilbop.org` is live on rc.2.
 - ClawHub has seven public v1.0.0 listings under `@bilbop1`.
 - Awesome Skills has the public MoneyPrinter flagship page.
 - The Ko-fi page loads as `Support bilbop`.
 
-Host conversation activation remains unverified. The copy below does not say
-the skills work everywhere.
+The 14-day scan copy below is staged for rc.3. Do not post it while rc.2 is
+still the public release. Host conversation activation is still unverified, so
+none of these posts says the skills run everywhere.
 
 ## Recommended flagship post
 
 Attach `launch/assets/moneyprinter-social-card.png`.
 
 ```text
-I built an "AI money printer" repo that's allowed to tell you the idea is bad.
+too many chats say "this could be huge" then do nothing lol
 
-MoneyPrinter interviews you, narrows the next test, and keeps benchmarks separate from cash.
-
-Sometimes it says you're not ready to charge yet.
-
-7 open-source skills. MIT.
+so i made MoneyPrinter. with permission it checks the last 14 days across detected AI CLIs + GUIs it can access, figures out what shit is actually real and starts working on the best money route
 
 https://github.com/bilbop1/moneyprinter-md
 ```
 
-Character count: 295 raw, 276 with X's 23-character URL weighting.
+Character count: 299 raw, 280 weighted.
 
 ## First reply
 
-Post this as a self-reply to the flagship.
-
 ```text
-First it asks what you can do, prove, risk, and reach.
+the point is it does not hand you another cute opportunity report and fuck off
 
-Then it gives you one small test or, if charging now would be bullshit, a private discovery step.
-
-It drafts the work. You approve before anything gets sent, posted, bought, charged, or signed.
+it keeps doing the private work after the scan. when it gets to an outside action it stops and asks about that exact move first
 
 https://moneyprinter.bilbop.org
 ```
 
-Character count: 282 raw, 274 with X's 23-character URL weighting.
+Character count: 240 raw, 232 weighted.
 
-## Optional third post
+## Install reply
 
-Use this only if you want the install command in the initial thread.
+Use this only if people ask how it works across hosts.
 
 ```text
-I tested it against five starting points: a total beginner, a roofer, a lawyer, a TikTok Shop creator, and an existing operator.
+still just 7 MIT markdown skills btw. no companion app hiding behind it
 
-Each example says Simulation. I'd rather show $0 than dress up a benchmark as revenue.
+a compatible host does the work using the session history it can access. the repo has install notes for Codex, Claude Code, Kimi, Hermes, OpenClaw and MiniMax
 
-Install:
+install:
 npx skills add bilbop1/moneyprinter-md
 ```
 
-Character count: 265.
+Character count: 280 raw, 280 weighted.
 
 ## Alternate flagship
 
-Use this instead of the recommended flagship, not as a duplicate post.
+Use this instead of the recommended post, not as a duplicate.
 
 ```text
-I kept seeing "AI money printer" repos that treated a benchmark like money in the bank.
+i have way too many half done ideas in AI chats
 
-So I built the one I wanted: it starts with what you can actually do, helps you design one small test, and can say the idea isn't ready.
-
-7 open-source skills. MIT.
+with permission MoneyPrinter checks the last 14 days across detected AI CLIs + GUIs it can access and calls bullshit on most of it. then it works the best money route instead of handing me another report
 
 https://github.com/bilbop1/moneyprinter-md
 ```
 
-Character count: 297 raw, 278 with X's 23-character URL weighting.
+Character count: 296 raw, 277 weighted.
 
 ## Later follow-up
 
-This works as a separate follow-up after the launch has had time to breathe.
-
 ```text
-If an agent says it made you $19,000 because a benchmark estimated $19,000 of value, it made you $0.
+most AI business shit stops at "here are 10 opportunities"
 
-That stupid distinction is why I built MoneyPrinter.
+MoneyPrinter keeps going after that and does the boring private work too
 
-A short interview leads to one test or an honest "not yet." You approve every external action.
+when an exact outside action comes up it asks. then the receipt decides if the route deserves another minute
 
 https://github.com/bilbop1/moneyprinter-md
 ```
 
-Character count: 294 raw, 275 with X's 23-character URL weighting.
+Character count: 286 raw, 267 weighted.
 
 ## Funding reply
 
-Do not put this in the launch post or initial thread. Use it only if someone
-asks how maintenance is funded.
+Keep Ko-fi out of the opener. Use this if somebody asks how maintenance is
+funded.
 
 ```text
-If this ever makes you profit you can honestly trace back to it, and you want to help me keep it updated, I set up a voluntary 1% pledge:
+if this ever makes you profit you can honestly trace back to it and you wanna help me keep the thing updated, i made a voluntary 1% pledge
 
 https://ko-fi.com/bilbop
 
-No tracking. No obligation. The repo stays MIT either way.
+no tracking or obligation. the repo stays MIT either way
 ```
 
-Character count: 223 raw, 222 with X's 23-character URL weighting.
+Character count: 222 raw, 221 weighted.
 
 ## Posting sequence
 
-1. Post the recommended flagship with the social card attached.
-2. Add the first reply immediately so the method and live overview are easy to
-   find.
-3. Add the optional third post only if you want a compact thread.
-4. Stay available for replies. Answer from the repository and turn
-   reproducible failures into issues.
+1. Wait until the ready state says rc.3 is public.
+2. Post the recommended flagship with the social card.
+3. Add the first reply.
+4. Use the install or funding replies only when the conversation calls for
+   them.
 
-Do not post the alternate flagship on the same launch day. Do not add the
-Ko-fi link to the opener. Do not say MoneyPrinter works in a named host until a
+Do not post both flagships. Do not claim a named host is activated until a
 retained invocation proves it.
