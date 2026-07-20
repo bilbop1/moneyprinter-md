@@ -170,6 +170,10 @@ test("keeps the production surface honest and starter-free", async () => {
   assert.match(page, /<svg[^>]+className="flow-wiring"[^>]+aria-hidden="true"[^>]+focusable="false"/s);
   assert.match(page, /<marker[^>]+id="flow-arrow"/s);
   assert.match(page, /className="flow-path flow-return"/);
+  assert.match(
+    page,
+    /<path className="flow-path flow-return" data-from="Rerank" data-to="Prioritize" d="[^"]*660 290" \/>/,
+  );
   assert.match(page, /className="approval-gate"/);
   assert.match(page, /EXACT ACTION\s*APPROVAL/);
   assert.doesNotMatch(page, /className="flow-strip"/);
