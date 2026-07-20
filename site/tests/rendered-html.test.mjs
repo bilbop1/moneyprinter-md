@@ -84,6 +84,8 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
   );
   assert.match(html, /bilbop1\/moneyprinter-md/);
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
+  assert.match(html, /<ol[^>]+class="flow-steps"/);
+  assert.match(html, /aria-label="MoneyPrinter operating loop"/);
 
   for (const id of requiredSectionIds) {
     assert.match(html, new RegExp(`<section[^>]+id=["']${id}["']`, "i"));
@@ -154,6 +156,13 @@ test("keeps the production surface honest and starter-free", async () => {
   );
   assert.match(page, /voluntarily returning 1%/i);
   assert.match(page, /https:\/\/ko-fi\.com\/bilbop/);
+  assert.match(page, /className="flow-circuit"/);
+  assert.match(page, /<svg[^>]+className="flow-wiring"[^>]+aria-hidden="true"[^>]+focusable="false"/s);
+  assert.match(page, /<marker[^>]+id="flow-arrow"/s);
+  assert.match(page, /className="flow-path flow-return"/);
+  assert.match(page, /className="approval-gate"/);
+  assert.match(page, /EXACT ACTION\s*APPROVAL/);
+  assert.doesNotMatch(page, /className="flow-strip"/);
   assert.deepEqual(
     [...new Set(page.match(/https?:\/\/[^";\s]+/g) ?? [])],
     ["https://github.com/bilbop1/moneyprinter-md", "https://ko-fi.com/bilbop"],
@@ -189,9 +198,12 @@ test("keeps the production surface honest and starter-free", async () => {
   assert.match(css, /\.install-control code\s*\{[^}]*min-width:\s*0/is);
   assert.match(css, /@media \(max-width:\s*900px\)\s*\{[^}]*\.hero\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/is);
   assert.match(css, /@media \(max-width:\s*720px\)/i);
-  assert.match(css, /\.flow-strip\s*\{[^}]*grid-template-columns:\s*repeat\(5,\s*minmax\(0,\s*1fr\)\)[^}]*overflow-x:\s*clip/is);
-  assert.doesNotMatch(css, /\.flow-strip\s*\{[^}]*grid-template-columns:\s*repeat\(8/i);
-  assert.match(css, /\.flow-strip,\s*\.skill-map\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)[^}]*overflow-x:\s*visible/is);
+  assert.match(css, /\.flow-circuit\s*\{[^}]*position:\s*relative/is);
+  assert.match(css, /\.flow-wiring\s*\{[^}]*position:\s*absolute/is);
+  assert.match(css, /\.flow-return\s*\{[^}]*stroke-dasharray/is);
+  assert.match(css, /@media \(max-width:\s*720px\)[\s\S]*\.flow-wiring\s*\{[^}]*display:\s*none/is);
+  assert.match(css, /@media \(max-width:\s*720px\)[\s\S]*\.flow-steps::before/is);
+  assert.doesNotMatch(css, /\.flow-strip\s*\{/);
 
   const paper = css.match(/--paper:\s*(#[0-9a-f]{6})/i)?.[1];
   const stampInk = css.match(/--stamp-ink:\s*(#[0-9a-f]{6})/i)?.[1];
