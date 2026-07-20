@@ -163,3 +163,32 @@ AssertionError [ERR_ASSERTION]: the opener must split scanning from judgment and
 ```
 
 The split opener then passed the expanded verifier.
+
+## Final verifier correction
+
+A second review checked the false-positive side of the verifier.
+
+The new acceptance fixtures were added before the implementation changed:
+
+- `npm test -- --runInBand`;
+- `nothing here guarantees profit`;
+- `we make no claim that it guarantees money`.
+
+The contrast fixture `not hype but guarantees profit` was added as a required
+rejection. The RED run exited 1 because the old 50-character negation window
+incorrectly treated the earlier `not` as negating the guarantee:
+
+```text
+AssertionError [ERR_ASSERTION]: X verifier must reject "not hype but guarantees profit" as guaranteed money outcome
+```
+
+Negation is now evaluated inside the current clause. Punctuation, a newline,
+`but`, `however`, or `yet` starts a new clause. Direct negative forms,
+`nothing`, and `make no claim` can negate the claim inside that clause, but
+language before a contrast cannot.
+
+A whitespace-delimited `--` is still rejected in prose such as `first -- then`.
+It is allowed only on a command-looking line beginning with a recognized CLI,
+which covers `npm test -- --runInBand` without weakening the punctuation rule
+for ordinary copy. Existing hyphenated words and attached flags such as
+`open-source`, `--help`, and `--dry-run` remain accepted.

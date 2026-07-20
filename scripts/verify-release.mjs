@@ -62,9 +62,23 @@ const posts = [...xLaunch.matchAll(/```text\n([\s\S]*?)\n```/g)].map((match) => 
 assert.ok(posts.length >= 3, "the launch file must contain a flagship, reply, and alternate post");
 
 function isNegatedBefore(text, index) {
-  const prefix = text.slice(Math.max(0, index - 50), index);
-  return /\b(?:no|not|never|without|cannot|can't|won't|isn't|aren't|doesn't|don't|didn't)(?:\s+\w+){0,2}\s*$/i.test(
-    prefix,
+  const beforeClaim = text.slice(0, index);
+  const boundaries = [
+    ...beforeClaim.matchAll(/[.!?;:,\n]|\b(?:but|however|yet)\b/gi),
+  ];
+  const lastBoundary = boundaries.at(-1);
+  const clause = beforeClaim.slice(
+    lastBoundary ? lastBoundary.index + lastBoundary[0].length : 0,
+  );
+
+  return (
+    /\b(?:no|not|never|without|cannot|can't|won't|isn't|aren't|doesn't|don't|didn't)(?:\s+(?:ever|really))?\s*$/i.test(
+      clause,
+    ) ||
+    /\bnothing(?:\s+\w+){0,2}\s*$/i.test(clause) ||
+    /\b(?:make|makes|made)\s+no\s+claim(?:\s+that)?(?:\s+\w+){0,2}\s*$/i.test(
+      clause,
+    )
   );
 }
 
@@ -90,13 +104,24 @@ function hasUniversalHostClaim(post) {
   return false;
 }
 
+function hasProseDoubleHyphen(post) {
+  const commandStart =
+    /^\s*(?:[$>]\s*)?(?:npm|npx|pnpm|yarn|bun|node|python\d*|uv|uvx|git|gh|clawhub|codex|claude|kimi|hermes|moneyprinter|skills)\b/i;
+
+  return post.split("\n").some((line) => {
+    const hasStandaloneDoubleHyphen = /(?:^|\s)--(?=\s|$)/.test(line);
+    return hasStandaloneDoubleHyphen && !commandStart.test(line);
+  });
+}
+
 function xPostViolations(post) {
   const violations = [];
 
   if (
-    /[—–“”‘’]|\p{Extended_Pictographic}|(?:^|\s)#[\p{L}\p{N}_]+|(?:^|\s)--(?=\s|$)/u.test(
+    /[—–“”‘’]|\p{Extended_Pictographic}|(?:^|\s)#[\p{L}\p{N}_]+/u.test(
       post,
-    )
+    ) ||
+    hasProseDoubleHyphen(post)
   ) {
     violations.push("humanizer-blocked punctuation, emoji, or hashtag");
   }
@@ -124,6 +149,7 @@ const rejectedXFixtures = [
   ["all hosts are supported", "universal host activation"],
   ["it is guaranteed to make money", "guaranteed money outcome"],
   ["guaranteed income", "guaranteed money outcome"],
+  ["not hype but guarantees profit", "guaranteed money outcome"],
   ["it’s ready", "humanizer-blocked punctuation, emoji, or hashtag"],
   ["first -- then", "humanizer-blocked punctuation, emoji, or hashtag"],
 ];
@@ -139,8 +165,11 @@ for (const fixture of [
   "7 open-source skills",
   "moneyprinter --help",
   "clawhub sync --all --dry-run",
+  "npm test -- --runInBand",
   "no guaranteed profit",
   "does not guarantee income",
+  "nothing here guarantees profit",
+  "we make no claim that it guarantees money",
   "does not run everywhere",
 ]) {
   assert.deepEqual(
