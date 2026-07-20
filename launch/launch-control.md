@@ -8,17 +8,13 @@ recorded SHA-256 digest, a clean remote-discovery check found all seven skills,
 and the custom domain returned HTTPS 200 with its Sites domain, provider, and
 SSL states active.
 
-Those are rc.2 publication facts. The 14-day scan source and candidate launch
-copy are not public until the version, site, release, and distribution checks
-are completed. Do not describe the new behavior as live before that gate.
-
 | Surface | Publication target | Verified state |
 | --- | --- | --- |
 | GitHub | `https://github.com/bilbop1/moneyprinter-md` | **Passed 2026-07-19:** public logged-out access and clean discovery of all seven skills |
 | Landing page | `https://moneyprinter.bilbop.org` | **Passed 2026-07-19:** public HTTPS 200, correct project, canonical metadata, social image, and final GitHub/install targets |
 | ClawHub | `https://clawhub.ai/bilbop1/skills/moneyprinter` | **Passed 2026-07-19:** seven visible v1.0.0 listings, clean SkillSpector results, and public OpenClaw install commands |
 | Awesome Skills | `https://www.awesomeskills.dev/en/skill/moneyprinter-md-moneyprinter` | **Passed 2026-07-19:** public flagship listing with the source and install command |
-| Ko-fi | `https://ko-fi.com/bilbop` | **Passed 2026-07-19:** public page loads as "Support bilbop"; repository funding file uses the confirmed username |
+| Ko-fi | `https://ko-fi.com/bilbop` | **Passed 2026-07-19:** public page loads as “Support bilbop”; repository funding file uses the confirmed username |
 
 Do not post or submit a target URL while it is private, unconfigured, or
 returning placeholder content.
@@ -112,10 +108,7 @@ experience in replies.
 ### Product evidence
 
 - Clean installs confirmed by people other than the maintainer.
-- Permissioned scans that show honest source coverage and reach one confirmed
-  cash-first route.
-- Runs that continue through private acquisition and delivery preparation.
-- Exact approved actions with an Action receipt and a later rerank.
+- Interview runs that reach one bounded route and one fallback.
 - Approval-gate or evidence-label failures.
 - Field reports, including failed experiments.
 - Research corrections and reproducible compatibility reports.
@@ -139,7 +132,7 @@ successful experiment, or cash collected.
 | --- | --- | --- |
 | Link clicks, then immediate install failures | Packaging or documentation is broken | Pause promotion, reproduce, fix, and publish the correction |
 | Stars with no installs, issues, or field use | The hook works; product value is still unknown | Improve the first-run path and ask for specific usability feedback |
-| Scans confirm a route but no exact action reaches approval | The route, offer, or payable test may be too broad, risky, or expensive | Review the run receipt and narrow the next action |
+| Interview completions but no approved tests | Routes may be too broad, risky, or expensive | Review the route output and narrow the payable test |
 | Repeated confusion about evidence labels | README or skill wording is unclear | Add a concrete valid and invalid example |
 | One well-documented failed field report | The method is producing inspectable evidence | Thank the reporter, preserve the failure, and revise only if the evidence supports it |
 | A settled payment with redacted support | Potential `Cash collected` evidence | Verify scope, costs, consent, attribution, and settlement before publishing |

@@ -316,3 +316,34 @@ Scan-first rc.3 is still unreleased. Historical rc.1 and rc.2 evaluations do
 not validate it, and the current public installer still returns interview-first
 rc.2. The Task 5 landing-page work and the final X and launch-control status
 must be reviewed in their own gates before any public release claim is made.
+
+## Task ownership correction
+
+Final review found that Task 4 had also rewritten `launch/x-launch.md` and
+`launch/launch-control.md`, even though this verifier deliberately excludes
+those Task 6 and Task 7 surfaces. Both files were restored exactly to the Task
+4 base at commit `73bfdc1`. No Task 5 file was edited or staged as part of this
+correction.
+
+Exact base comparison:
+
+```text
+git diff --exit-code 73bfdc1 -- launch/x-launch.md launch/launch-control.md
+Task 6/7 launch files: exact match to 73bfdc1
+```
+
+Fresh correction verification:
+
+```text
+node scripts/verify-public-copy.mjs
+public copy contract: 42 current files, 5 simulations, and 16 adversarial fixtures verified
+
+node scripts/verify-release.mjs
+release 0.1.0-rc.2: 7 skills and 6 X posts verified
+
+git diff --check
+No output; exit 0.
+```
+
+This leaves the Task 4 corpus and its hardened checks intact while returning X
+voice and final launch status to their owning tasks.
