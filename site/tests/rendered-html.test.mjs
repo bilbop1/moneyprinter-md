@@ -59,13 +59,13 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
   assert.match(html, /<meta name="twitter:card" content="summary_large_image"/i);
   assert.match(html, /<meta name="twitter:image" content="http:\/\/localhost\/og\.png"/i);
   assert.match(html, /<meta name="twitter:image:alt" content="MoneyPrinter\.md: with permission, scan the last 14 days of detected and accessible AI sessions, get to work, then rerank from receipts\."/i);
-  assert.match(html, /With permission, MoneyPrinter scans accessible AI sessions/);
+  assert.match(html, /With permission, MoneyPrinter tells your AI host to scan accessible sessions/);
   assert.match(html, /WITH PERMISSION\s*\/\s*RECEIPTS FIRST/);
   assert.match(html, /Your last 14 days are already the brief\./);
   assert.match(html, /last 14 days/i);
   assert.match(html, /AI CLI and GUI/i);
   assert.match(html, /one confirmation/i);
-  assert.match(html, /gets to work/i);
+  assert.match(html, /get(?:s)? to work/i);
   assert.doesNotMatch(html, /Answer a short interview/i);
   assert.match(
     html,
@@ -142,13 +142,15 @@ test("keeps the production surface honest and starter-free", async () => {
 
   assert.match(page, /navigator\.clipboard/);
   assert.match(page, /https:\/\/github\.com\/bilbop1\/moneyprinter-md/);
-  assert.match(page, /host activation remains unverified/i);
+  assert.match(page, /Exact host conformance is still experimental/i);
   assert.match(page, /MiniMax is provider-only/i);
-  assert.match(page, /Install all seven skills from the public repository\./i);
-  assert.match(page, /Public GitHub installer command verified\./i);
+  assert.match(page, /Install the seven rc\.3 source-candidate skills\./i);
+  assert.match(page, /Seven rc\.3 skill files pass package checks\./i);
+  assert.match(page, /Best corrected blind local run: 5\/6\./i);
+  assert.match(page, /Verify after release publication\./i);
   assert.doesNotMatch(
     page,
-    /Remote install target — confirm the repository is live before running|live-public verification is pending/i,
+    /Install all seven skills from the public repository|Public GitHub installer command verified/i,
   );
   assert.match(page, /voluntarily returning 1%/i);
   assert.match(page, /https:\/\/ko-fi\.com\/bilbop/);
@@ -224,9 +226,11 @@ test("falls back to a non-public local origin for an invalid Host", async () => 
 });
 
 test("ships the launch card at the declared social dimensions", async () => {
-  const [card, launchCard] = await Promise.all([
+  const [card, launchCard, desktopPreview, mobilePreview] = await Promise.all([
     readFile(new URL("../public/og.png", import.meta.url)),
     readFile(new URL("../../launch/assets/moneyprinter-social-card.png", import.meta.url)),
+    readFile(new URL("../../launch/assets/landing-desktop-preview.png", import.meta.url)),
+    readFile(new URL("../../launch/assets/landing-mobile-preview.png", import.meta.url)),
   ]);
   assert.ok(card.byteLength > 100_000, "social card should not be a placeholder");
   assert.deepEqual(card, launchCard, "site and launch copies of the social card must be byte-identical");
@@ -235,4 +239,8 @@ test("ships the launch card at the declared social dimensions", async () => {
   assert.equal(pngSignature, "89504e470d0a1a0a");
   assert.equal(card.readUInt32BE(16), 1200);
   assert.equal(card.readUInt32BE(20), 630);
+  assert.equal(desktopPreview.readUInt32BE(16), 1440);
+  assert.equal(desktopPreview.readUInt32BE(20), 1250);
+  assert.equal(mobilePreview.readUInt32BE(16), 320);
+  assert.equal(mobilePreview.readUInt32BE(20), 568);
 });

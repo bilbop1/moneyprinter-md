@@ -4,14 +4,14 @@ Evaluator task metadata, recorded by the parent orchestrator:
 
 - Evaluated skill commit:
   `b6d2fe859553e5f998ea3b6138006ce535b21d98`
-- Canonical evaluator task path: `/root/bounded_blind_eval`
+- Evaluator label: `bounded-evaluator-c`
 - Exact model identifier: `gpt-5.6-terra`
 - Reasoning effort: `medium`
 - Evaluator task UUID: `Unavailable`
 - Complete combined raw-source SHA-256:
   `df329dcb86dc4144cfa10892796aed24fd5f5345a14b80376373d4c6877c4458`
-- Complete combined raw source:
-  [`.superpowers/sdd/bounded-blind-eval-output.md`](../../.superpowers/sdd/bounded-blind-eval-output.md)
+- The scoped S06 body below is the retained public raw artifact. The
+  machine-local combined scratch path is intentionally not published.
 
 The evaluator's S06 content is copied verbatim below. This is a local
 `Simulation`, not a customer outcome, host activation, cash evidence, or real

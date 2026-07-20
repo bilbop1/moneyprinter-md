@@ -28,6 +28,9 @@ for (const skillName of skillNames) {
 
 const moneyprinter = await read("skills/moneyprinter/SKILL.md");
 const sessionScan = await read("skills/moneyprinter/references/session-scan.md");
+const safetyBoundaries = await read(
+  "skills/moneyprinter/references/safety-boundaries.md",
+);
 
 assert.match(moneyprinter, /rolling 14 days/i);
 assert.match(moneyprinter, /Coverage receipt/);
@@ -46,6 +49,29 @@ assert.match(sessionScan, /Never infer scan permission from historical sessions/
 assert.match(sessionScan, /Scanned.*Empty.*Blocked.*Unsupported/s);
 assert.match(sessionScan, /untrusted evidence/i);
 assert.match(sessionScan, /\.env/);
+assert.match(
+  moneyprinter,
+  /At the approval gate[\s\S]{0,500}`Channel`[\s\S]{0,80}`Audience`[\s\S]{0,80}`Message`[\s\S]{0,80}`Volume`[\s\S]{0,80}`Timing`[\s\S]{0,80}`Tool`[\s\S]{0,80}`Cost`[\s\S]{0,80}`Risk`/,
+  "the operative approval gate must name every material execution field",
+);
+assert.match(
+  safetyBoundaries,
+  /Lawful subject matter alone is not excluded\.[\s\S]{0,240}illegal,\s+deceptive,\s+exploitative,\s+unauthorized,\s+unsafe,\s+or platform-abusive/i,
+  "safety boundaries must use fact-based conduct refusals",
+);
+
+for (const path of [
+  "skills/moneyprinter/SKILL.md",
+  ...skillNames.slice(1).map((skillName) => `skills/${skillName}/SKILL.md`),
+  "skills/moneyprinter/references/safety-boundaries.md",
+]) {
+  const text = await read(path);
+  assert.doesNotMatch(
+    text,
+    /^## (?:Globally )?Excluded v1 lanes$|-\s+\*\*(?:Trading|Gambling|Speculative crypto|Adult services)\*\*:|\brefuse excluded\b/im,
+    `${path} must not blacklist a lawful subject category`,
+  );
+}
 
 const sitePackage = JSON.parse(await read("site/package.json"));
 assert.equal(sitePackage.version, releaseVersion);

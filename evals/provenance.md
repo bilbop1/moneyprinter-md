@@ -7,19 +7,21 @@ them as a certification, customer outcome, or host-compatibility proof.
 
 - **Evaluated skill source:** exact commit
   `b6d2fe859553e5f998ea3b6138006ce535b21d98`.
-- **Initial evaluator task path:**
-  `/root/scan_task7_evals/blind_eval_rc3`.
-- **Corrected evaluator task path:**
-  `/root/scan_task7_evals/blind_corrected_rc3`.
-- **Bounded replication task path:** `/root/bounded_blind_eval`.
+- **Frozen evaluated skill:** the exact MoneyPrinter input is retained at
+  [`snapshots/moneyprinter-b6d2fe859553e5f998ea3b6138006ce535b21d98.md`](snapshots/moneyprinter-b6d2fe859553e5f998ea3b6138006ce535b21d98.md),
+  SHA-256
+  `019b2feba4febb63e19a79aba2e3984f032758cf3291e1e6658d128f435c33d8`.
+- **Initial evaluator label:** `blind-evaluator-a`.
+- **Corrected evaluator label:** `blind-evaluator-b`.
+- **Bounded replication evaluator label:** `bounded-evaluator-c`.
 - **Evaluator task UUIDs:** `Unavailable`; the collaboration surface exposed
-  canonical task paths but no independent UUIDs.
+  stable evaluator labels but no independent UUIDs.
 - **Execution surface:** independent Codex subagents with no inherited
   conversation context. Interrupted attempts and their lack of output are
   disclosed in the fixture notes.
-- **Exact model identifier:** `Unavailable` for the two
-  `/root/scan_task7_evals/*` evaluators. The bounded replication exposed
-  `gpt-5.6-terra` at medium effort.
+- **Exact model identifier:** `Unavailable` for `blind-evaluator-a` and
+  `blind-evaluator-b`. The bounded replication exposed `gpt-5.6-terra` at
+  medium effort.
 - **Allowed inputs before returning:** the session-scan and orchestration prompt
   files plus the seven skill bodies and references read from the exact source
   commit.
@@ -36,18 +38,23 @@ them as a certification, customer outcome, or host-compatibility proof.
   [`orchestration/2026-07-19-raw-evaluator-output.md`](orchestration/2026-07-19-raw-evaluator-output.md).
 - **Corrected orchestration raw output:** retained without result edits in
   [`orchestration/2026-07-19-corrected-raw-evaluator-output.md`](orchestration/2026-07-19-corrected-raw-evaluator-output.md).
-- **Bounded combined raw output:** retained unchanged in
-  [`.superpowers/sdd/bounded-blind-eval-output.md`](../.superpowers/sdd/bounded-blind-eval-output.md),
-  with scoped copies under the session-scan and orchestration eval folders.
+- **Bounded raw output:** the returned S06 and O01-O06 bodies are retained in
+  scoped raw files under the session-scan and orchestration eval folders. The
+  parent-recorded combined-source SHA-256 is
+  `df329dcb86dc4144cfa10892796aed24fd5f5345a14b80376373d4c6877c4458`;
+  its machine-local scratch path is intentionally not part of the release.
 - **Input hashes:** initial and corrected prompt/oracle hashes are retained in
   the S01 and orchestration fixture-defect notes. The session oracle and
   MoneyPrinter hashes remain pinned to the evaluated source.
 - **Grading:** the repository agent opened the pre-existing session oracle and
   each orchestration oracle only after the corresponding blind output, then
   recorded ID-by-ID results. `scripts/verify-evals.mjs` checks fixture/result
-  IDs without deduplication, exact expected grade maps, hashes, task paths,
+  IDs without deduplication, exact expected grade maps, hashes, evaluator labels,
   narrow claims, and case-bound decision, receipt, evidence, delivery, and
-  labor fields. It does not replace manual semantic comparison.
+  labor fields. Its orchestration checks also reject affirmative actual action,
+  publication, delivery, payment, cash, or receipt clauses that contradict the
+  required no-actual-action layer. It does not replace manual semantic
+  comparison.
 - **Initial session result:** `4/6` exact observable matches after independent
   review. S01 used a defective merge fixture. S06 summarized downstream work
   without showing the required artifact bodies. The earlier draft `5/6` grade
@@ -79,6 +86,11 @@ them as a certification, customer outcome, or host-compatibility proof.
   oracle's strict observable rule it is `5/6`, because O06 listed only the
   changed fields and did not explicitly restate the four unchanged fields. The
   separate corrected six-row table is the retained `6/6` run.
+- **Post-evaluation source changes:** the final rc.3 source later adds the
+  Approval-gate fields `Volume` and `Tool` and replaces category-based safety
+  refusals with fact-based safety wording. Those changes were not inputs to
+  these retained traces. The observations and grades are not silently upgraded
+  to cover the later source.
 
 These are local simulated contract and pressure tests. They are not customer
 outcomes, cash evidence, host activation, or proof that another model or host

@@ -4,35 +4,35 @@ Reviewed against the repository on 2026-07-19. This is the canonical source for
 directory listings and launch copy. If a platform form conflicts with this
 sheet, narrow the claim rather than strengthening it.
 
-The scan-first copy below is prepared for the next release. It is not a claim
-that the new behavior, a matching landing page, or updated directory listings
-are public. The published facts in the format and status sections still
-describe rc.2.
+The scan-first copy below describes the `0.1.0-rc.3` source candidate. It is not
+a claim that the matching release, landing page, or directory updates have
+been verified live. Dated rc.2 and ClawHub v1.0.0 facts remain historical until
+a post-publication receipt replaces them.
 
 ## One sentence
 
-One permission. MoneyPrinter scans the last 14 days across every detected AI
-CLI and GUI it can access, figures out what is real, and gets to work on the
-best path to money.
+One permission. MoneyPrinter tells your current AI host to scan the last 14
+days across every detected AI CLI and GUI it can access, figure out what is
+real, and start building the best path to money.
 
 ## Short description
 
 One permissioned 14-day scan, one confirmation, and seven text-first workflows
-move the strongest cash-first route from private preparation to an exact
+direct the strongest cash-first route from private preparation to an exact
 external-action approval, a receipt, and a new ranking.
 
 ## Long description
 
 MoneyPrinter.md is a portable Markdown skill, not a companion app. With
-permission, the current AI host discovers the AI CLI and GUI session sources it
-can access and scans the rolling 14-day window. It reports blocked,
-unsupported, empty, and partial sources instead of claiming full coverage. The
-scan builds a source-linked portfolio, then one confirmation corrects what is
-wrong, private, abandoned, or newly changed.
+permission, it tells the current AI host to discover the AI CLI and GUI session
+sources it can access and scan the rolling 14-day window. The host should
+report blocked, unsupported, empty, and partial sources instead of claiming
+full coverage. The scan builds a source-linked portfolio, then one
+confirmation corrects what is wrong, private, abandoned, or newly changed.
 
 MoneyPrinter ranks no more than three routes. Existing cash evidence, buyer
 access, speed to a payable event, user control, and delivery economics outrank
-project volume or novelty. After confirmation, the seven skills continue
+project volume or novelty. After confirmation, the seven skills direct the host
 through private research, offer creation, payable-test design, acquisition
 preparation, and delivery preparation. The agent pauses immediately before one
 exact external action. If approved, it performs only that action, records an
@@ -63,12 +63,13 @@ contains a `SKILL.md`; supporting material stays beside the skill.
 
 - Format: text-first Agent Skills directories using `SKILL.md`.
 - Repository license: MIT.
-- Release candidate: `0.1.0-rc.2`.
+- Release candidate: `0.1.0-rc.3`.
 - Public repository: `https://github.com/bilbop1/moneyprinter-md`.
 - Logged-out access and a clean seven-skill remote discovery run were verified
   on 2026-07-19.
-- The retained release and distribution source is public tag
-  `v0.1.0-rc.2`; a clean listing against that tag found all seven skills.
+- The last retained public release and distribution receipt before the rc.3
+  publication step is tag `v0.1.0-rc.2`; a clean listing against that tag found
+  all seven skills.
 - Public landing page: `https://moneyprinter.bilbop.org`. HTTPS 200 and active
   Sites custom-domain, provider, and SSL states were verified on 2026-07-19.
 - ClawHub's current CLI reference says publishing releases the submitted copy
@@ -111,6 +112,13 @@ The full definitions are in the
   [`evals/provenance.md`](../evals/provenance.md), not an external pass.
 - Those runs are simulations, not customer outcomes, earnings evidence,
   endorsements, or host-compatibility tests.
+- The rc.3 blind session-scan suite's best corrected result is `5/6`. Its
+  remaining S06 failure reached the external-action gate but omitted required
+  artifact sections.
+- The corrected orchestration suite is `6/6`. It tests state and claim
+  handling, not a real send, publication, delivery, payment, or cash result.
+- Every rc.3 evaluation is a local simulation. Exact end-to-end host
+  conformance remains experimental.
 - The repository contains install guidance, compatibility caveats, safety
   boundaries, contribution guidance, and a source ledger.
 - No third-party host is marked conversation-verified by this release.
@@ -128,6 +136,8 @@ See [the latest eval results](../evals/latest-results.md),
 - Receipts-first or evidence-labelled.
 - Rolling 14-day scan across detected, permitted, accessible sources.
 - One confirmation before cash-first private preparation.
+- A written full-loop instruction from ranking through offer, payable test,
+  acquisition, delivery, receipt, and reranking.
 - Human approval before external actions.
 - Built for beginners, operators, and the range between them.
 - Locally evaluated against five persona fixtures.
@@ -179,7 +189,7 @@ Use these only after current evidence exists:
 > companion app. With permission, the current host scans the rolling 14 days of
 > detected AI CLI and GUI session sources it can access, reports coverage gaps,
 > builds a source-linked portfolio, and asks for one correction. It chooses the
-> route closest to a real payable event, then continues through private
+> route closest to a real payable event, then directs the host through private
 > research, offer work, payable-test design, acquisition preparation, and
 > delivery preparation. A specific approval is required immediately before an
 > external action. The agent records the approved action, reviews the result,

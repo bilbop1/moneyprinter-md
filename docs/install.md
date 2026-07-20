@@ -12,10 +12,9 @@ delivery-proof
 cashflow-review
 ```
 
-> Release boundary: The scan-first workflow in this checkout is staged for the
-> unreleased `0.1.0-rc.3`. The current public `0.1.0-rc.2` release remains
-> interview-first. Public installer commands below still install rc.2. This
-> note can be flipped when rc.3 is actually published.
+> Release boundary: This checkout is the `0.1.0-rc.3` source candidate. The
+> default-branch installer resolves whatever is currently on public `main`;
+> the clean rc.3 remote-install receipt is recorded only after publication.
 
 ## Current local verification
 
@@ -30,12 +29,11 @@ Expected result: each of the seven names above appears exactly once. This is a
 local discovery check, not a claim that a particular agent surface has been
 activated.
 
-## Current public rc.2 installer commands
+## Install the rc.3 source candidate
 
-The current public rc.2 repository and remote discovery route were verified on
-2026-07-19. A clean `--list` run found all seven expected skills. These commands
-install the interview-first rc.2 release, not the staged scan-first rc.3
-workflow:
+These commands resolve the repository's current public default branch. During
+the release handoff, inspect the resolved version or commit rather than
+assuming the rc.3 publication receipt already exists:
 
 ```bash
 npx skills add bilbop1/moneyprinter-md
@@ -57,8 +55,8 @@ targets can change.
 ## Manual installation
 
 Manual installation is the reliable fallback for GUI surfaces, locked-down
-workspaces, and any environment whose installer target has changed.
-Copying from this checkout previews the staged scan-first rc.3 workflow.
+workspaces, and any environment whose installer target has changed. Copying
+from this checkout uses the rc.3 source candidate directly.
 
 1. Choose one skill directory from `skills/`; start with `moneyprinter` for the
    permissioned scan and route selection.
@@ -81,19 +79,20 @@ Use the installed host's current documentation for the exact location and scope:
 | Claude web/Cowork, ChatGPT web, Kimi app/Work | Paste the selected workflow into workspace/project instructions or upload its files only where the product permits it. Treat this as context, not a native installed plugin. |
 | MiniMax | Use a compatible harness that accepts Agent Skills and is configured with MiniMax. This repository does not claim a native MiniMax import path. |
 
-## Confirm current public rc.2 activation
+## Confirm scan-first activation
 
 Use a harmless first prompt:
 
-> Invoke moneyprinter. The current public rc.2 uses interview-first intake. Ask
-> one question at a time. Do not take an external action without asking again.
-
-## Confirm the unreleased local checkout
-
-Use this prompt only for a manual copy from the staged scan-first rc.3 checkout:
-
 > Invoke moneyprinter. Ask permission to scan the last 14 days of accessible AI
-> session histories. Do not take an external action without asking again.
+> session histories, report the coverage, and ask for one confirmation. Keep
+> working privately on the confirmed route. Do not take an external action
+> without asking again about that exact action.
+
+Finding the skill is not proof that the host followed every required stage.
+The best corrected blind local session run passed 5 of 6 cases; the remaining
+case reached the external-action gate but omitted required artifact sections.
+Treat exact end-to-end host conformance as experimental until your retained
+run proves it.
 
 If the host cannot find the skill, follow [troubleshooting](troubleshooting.md).
 If it finds the skill but claims inaccessible history was scanned, obeys

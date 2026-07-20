@@ -1,5 +1,10 @@
 # MoneyPrinter evals
 
+The rc.3 session-scan and orchestration runs are tied to the exact
+[frozen MoneyPrinter input](snapshots/moneyprinter-b6d2fe859553e5f998ea3b6138006ce535b21d98.md),
+not whichever skill body happens to be current. Later approval-gate and safety
+wording changes do not silently inherit those grades.
+
 Every persona file contains:
 
 1. Known facts the session scan should recover.
@@ -59,6 +64,13 @@ corrected `6/6` keeps actual evidence `Simulation` and labels every operational
 path counterfactual. These are not customer outcomes, host activation, cash
 evidence, or tool execution. See the
 [`orchestration results`](orchestration/2026-07-19-results.md).
+
+The deterministic grader also runs
+[`verifier-adversarial-fixtures.md`](orchestration/verifier-adversarial-fixtures.md).
+Those controls include the required `Simulation` and no-actual-action language
+while inserting contradictory claims of a real send, publication, delivery,
+payment, cash collection, or Action receipt. Every contradictory row must be
+rejected; a counterfactual-only control must pass.
 
 ## Activation and quiet controls
 

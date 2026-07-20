@@ -7,7 +7,7 @@ async function read(path) {
 }
 
 const approvedHeadline =
-  "One permission. MoneyPrinter scans the last 14 days across every detected AI CLI and GUI it can access, figures out what is real, and gets to work on the best path to money.";
+  "One permission. MoneyPrinter tells your current AI host to scan the last 14 days across every detected AI CLI and GUI it can access, figure out what is real, and start building the best path to money.";
 
 const submissions = (await readdir(new URL("launch/submissions/", repoRoot)))
   .filter((name) => name.endsWith(".md"))
@@ -254,15 +254,15 @@ function releaseBoundaryViolations(text, kind) {
   const violations = [];
   const normalized = normalize(text);
   const candidate =
-    /\bscan-first\b[\s\S]{0,120}\bstaged\b[\s\S]{0,80}\bunreleased\b[\s\S]{0,50}\b(?:0\.1\.0-)?rc\.3\b/i;
-  const current =
-    /\bcurrent public\b[\s\S]{0,50}\b(?:0\.1\.0-)?rc\.2\b[\s\S]{0,100}\binterview-first\b/i;
+    /\b(?:0\.1\.0-)?rc\.3\b[\s\S]{0,80}\bsource candidate\b/i;
+  const publicationReceipt =
+    /\bdefault-branch installer\b[\s\S]{0,140}\bpublic `?main`?\b[\s\S]{0,180}\breceipt\b[\s\S]{0,80}\bafter publication\b/i;
 
   if (!candidate.test(normalized)) {
-    violations.push("missing staged unreleased rc.3 scan-first boundary");
+    violations.push("missing rc.3 source-candidate boundary");
   }
-  if (!current.test(normalized)) {
-    violations.push("missing current public rc.2 interview-first boundary");
+  if (!publicationReceipt.test(normalized)) {
+    violations.push("missing post-publication remote-install receipt boundary");
   }
 
   const installCommand = "npx skills add bilbop1/moneyprinter-md";
@@ -271,11 +271,11 @@ function releaseBoundaryViolations(text, kind) {
     violations.push("missing public install command");
   } else {
     const preceding = normalize(text.slice(Math.max(0, installIndex - 700), installIndex));
-    if (!/\b(?:0\.1\.0-)?rc\.2\b/i.test(preceding)) {
-      violations.push("public install command is not locally labelled rc.2");
+    if (!/\b(?:0\.1\.0-)?rc\.3\b[\s\S]{0,80}\bsource candidate\b/i.test(preceding)) {
+      violations.push("install command is not locally labelled rc.3 source candidate");
     }
-    if (!/\b(?:current public|public installer|public rc\.2)\b/i.test(preceding)) {
-      violations.push("public install command lacks current-public context");
+    if (!/\b(?:default branch|release handoff)\b/i.test(preceding)) {
+      violations.push("install command lacks transitional default-branch context");
     }
   }
 
@@ -528,7 +528,7 @@ const readme = await read("README.md");
 check("README has ordered scan-first workflow", () =>
   requireNoViolations(workflowViolations(readme)),
 );
-check("README separates unreleased rc.3 from public rc.2", () =>
+check("README separates the rc.3 candidate from its public receipt", () =>
   requireNoViolations(releaseBoundaryViolations(readme, "README")),
 );
 check("README rejects a companion app", () => {
@@ -536,7 +536,7 @@ check("README rejects a companion app", () => {
 });
 
 const install = await read("docs/install.md");
-check("install separates unreleased rc.3 from public rc.2", () =>
+check("install separates the rc.3 candidate from its public receipt", () =>
   requireNoViolations(releaseBoundaryViolations(install, "install")),
 );
 
@@ -628,8 +628,8 @@ check("current-file corpus covers every submission and simulation", () => {
 });
 
 const changelog = await read("CHANGELOG.md");
-check("changelog records rc.3 as unreleased", () => {
-  requireMatch(changelog, /^## 0\.1\.0-rc\.3 - Unreleased$/m);
+check("changelog records the rc.3 release date", () => {
+  requireMatch(changelog, /^## 0\.1\.0-rc\.3 - 2026-07-19$/m);
   requireMatch(changelog, /14-day/i);
   requireMatch(changelog, /rc\.1\/rc\.2[\s\S]{0,100}historical/i);
 });

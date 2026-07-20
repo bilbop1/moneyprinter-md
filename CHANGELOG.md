@@ -2,7 +2,7 @@
 
 All notable changes to MoneyPrinter will be documented here.
 
-## 0.1.0-rc.3 - Unreleased
+## 0.1.0-rc.3 - 2026-07-19
 
 - Replaced default intake with a permissioned rolling 14-day scan across
   detected AI CLI and GUI session sources the current host can access.
@@ -12,10 +12,9 @@ All notable changes to MoneyPrinter will be documented here.
 - Kept one exact external-action approval immediately before execution, then
   added the Action receipt, result review, and reranking loop.
 - Preserved rc.1/rc.2 evaluations, specs, plans, and published facts as
-  historical evidence. They are not rc.3 validation or proof that the
-  unreleased behavior is public.
-- Kept all skill and site metadata at `0.1.0-rc.2`; the version bump belongs to
-  the next release task.
+  historical evidence. They are not rc.3 validation.
+- Added a fresh blind local session suite and corrected orchestration suite.
+  These are simulations, not customer outcomes or named-host activation.
 
 ## 0.1.0-rc.2 - 2026-07-19
 

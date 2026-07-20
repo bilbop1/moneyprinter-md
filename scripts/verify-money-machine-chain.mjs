@@ -25,6 +25,20 @@ const referenceFiles = [
   "skills/cashflow-review/references/decision-rules.md",
 ];
 
+const conductBoundaryFiles = [
+  "skills/moneyprinter/references/safety-boundaries.md",
+  "skills/payable-test/SKILL.md",
+  "skills/ethical-acquisition/SKILL.md",
+  "skills/delivery-proof/SKILL.md",
+  "skills/cashflow-review/SKILL.md",
+];
+
+const conductPolicyFiles = [
+  "skills/moneyprinter/SKILL.md",
+  ...skillFiles,
+  "skills/moneyprinter/references/safety-boundaries.md",
+];
+
 const forbiddenLegacyPatterns = [
   /user's approved `Experiment Brief`/i,
   /approved `Opportunity Evidence Table`/i,
@@ -341,6 +355,72 @@ for (const path of [
   check(`${path} invalidates changed checkpoint fields`, () =>
     requireReapprovalCoverage(text),
   );
+}
+
+const operativeApprovalFields = [
+  "Channel",
+  "Audience",
+  "Message",
+  "Volume",
+  "Timing",
+  "Tool",
+  "Cost",
+  "Risk",
+];
+
+const moneyPrinter = await read("skills/moneyprinter/SKILL.md");
+check("moneyprinter operative approval gate names every material field", () => {
+  const match = moneyPrinter.match(
+    /At the approval gate,([\s\S]{0,1200}?)\n\n`delivery-proof`/i,
+  );
+  if (!match) throw new Error("missing bounded operative approval gate");
+  for (const field of operativeApprovalFields) {
+    requireMatch(match[1], new RegExp(`\\b${field}\\b`));
+  }
+});
+
+const requiredConductFacts = [
+  "illegal",
+  "deceptive",
+  "exploitative",
+  "unauthorized",
+  "unsafe",
+  "platform-abusive",
+];
+const forbiddenCategoryExclusions = [
+  /^## (?:Globally )?Excluded v1 lanes$/im,
+  /-\s+\*\*(?:Trading|Gambling|Speculative crypto|Adult services)\*\*:/i,
+  /\bRefuse trading,\s*gambling,\s*speculative crypto,\s*adult services\b/i,
+  /\brefuse excluded\b/i,
+];
+
+for (const path of conductBoundaryFiles) {
+  const text = await read(path);
+  check(`${path} uses fact-based conduct boundaries`, () => {
+    requireMatch(text, /Lawful subject matter alone is not excluded\./);
+    for (const fact of requiredConductFacts) {
+      requireMatch(text, new RegExp(`\\b${fact}\\b`, "i"));
+    }
+  });
+}
+
+check("safety boundaries preserve qualified-review constraints without a subject ban", () => {
+  const text = cache.get(
+    "skills/moneyprinter/references/safety-boundaries.md",
+  );
+  requireMatch(text, /bypass required qualified review/i);
+  if (/provide regulated professional advice/i.test(text)) {
+    throw new Error("blanket regulated-advice refusal remains");
+  }
+});
+
+for (const path of conductPolicyFiles) {
+  const text = await read(path);
+  for (const pattern of forbiddenCategoryExclusions) {
+    check(`${path} has no blanket subject-category exclusion ${pattern}`, () => {
+      if (pattern.test(text)) throw new Error(`forbidden ${pattern}`);
+    });
+  }
 }
 
 const deliveryProof = await read("skills/delivery-proof/SKILL.md");

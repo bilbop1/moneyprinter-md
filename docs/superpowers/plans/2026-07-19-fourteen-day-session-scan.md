@@ -458,7 +458,7 @@ git diff --check
 cd site && npm test && npm run lint
 cd ..
 for skill in skills/*; do uvx --offline --from skills-ref agentskills validate "$skill"; done
-env npm_config_cache=/Volumes/Lexar/Codex/.cache/npm npx --yes skills add . --list
+env npm_config_cache="${MONEYPRINTER_CACHE_DIR:-$HOME/.cache/npm}" npx --yes skills add . --list
 ```
 
 Expected: release verifier, site tests, lint, seven skill validations, and
@@ -481,8 +481,8 @@ the remote main SHA matches.
 
 - [ ] **Step 4: Build and publish rc.3**
 
-Build `moneyprinter-md-0.1.0-rc.3.zip` from the tested commit under
-`/Volumes/Lexar/Codex/MoneyPrinter-release/`, create tag `v0.1.0-rc.3`, publish
+Build `moneyprinter-md-0.1.0-rc.3.zip` from the tested commit under the
+operator-selected release-output directory, create tag `v0.1.0-rc.3`, publish
 it as a GitHub prerelease, and verify the asset digest.
 
 - [ ] **Step 5: Deploy the saved site version**

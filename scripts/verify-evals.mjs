@@ -53,6 +53,55 @@ function tableRow(text, id) {
   return rows[0];
 }
 
+function markdownTableCells(row) {
+  const cells = row.split("|").slice(1, -1).map((cell) => cell.trim());
+  assert.ok(cells.length > 1, "expected a Markdown table row");
+  return cells;
+}
+
+function assertSimulationActualLayer(row, label) {
+  const actualLayer = markdownTableCells(row)[1].replaceAll("`", "");
+  requireTokens(actualLayer, `${label} actual layer`, [
+    "Simulation",
+    /no actual (?:external )?action/i,
+    /no actual Action receipt/i,
+  ]);
+
+  const clauses = actualLayer.split(
+    /(?<=[.!?;])\s+|\s+(?:but|however|yet)\s+/i,
+  );
+  const affirmativeEventPatterns = [
+    /\b(?:send|email|message)\s+(?:was\s+)?(?:completed|sent)\b|\b(?:sent|emailed|messaged)\b/i,
+    /\b(?:post|content|message)\s+(?:was\s+)?(?:actually\s+)?(?:posted|published)\b|\b(?:posted|published)\b/i,
+    /\bdelivery\s+(?:was\s+)?(?:accepted|completed|made)\b|\bdelivered\b/i,
+    /\bpayment\s+(?:was\s+)?(?:settled|received|collected|completed)\b/i,
+    /\bcash\s+(?:was\s+)?collected\b/i,
+    /\bAction receipt\s+(?:exists|was\s+(?:created|recorded))\b/i,
+  ];
+  for (const clause of clauses) {
+    for (const pattern of affirmativeEventPatterns) {
+      const matcher = new RegExp(pattern.source, `${pattern.flags}g`);
+      for (const match of clause.matchAll(matcher)) {
+        const before = clause.slice(0, match.index);
+        const boundary = Math.max(
+          before.lastIndexOf(","),
+          before.lastIndexOf(";"),
+          before.lastIndexOf(":"),
+          before.lastIndexOf("."),
+        );
+        const localPrefix = before.slice(boundary + 1);
+        const negated =
+          /\b(?:no|not|never|without)\b(?:\s+\w+){0,4}\s*$/i.test(localPrefix);
+        if (!negated) {
+          assert.fail(
+            `${label} contradicts its no-actual-action layer: ${clause}`,
+          );
+        }
+      }
+    }
+  }
+}
+
 function requireTokens(text, label, tokens) {
   for (const token of tokens) {
     if (token instanceof RegExp) {
@@ -106,12 +155,14 @@ const orchestrationResults = await read(
 const orchestrationDefect = await read(
   "evals/orchestration/2026-07-19-fixture-defect.md",
 );
+const orchestrationVerifierAdversarial = await read(
+  "evals/orchestration/verifier-adversarial-fixtures.md",
+);
 const evalReadme = await read("evals/README.md");
 const latestResults = await read("evals/latest-results.md");
 const provenance = await read("evals/provenance.md");
-const currentMoneyPrinter = await read("skills/moneyprinter/SKILL.md");
-const boundedCombinedRaw = await read(
-  ".superpowers/sdd/bounded-blind-eval-output.md",
+const evaluatedMoneyPrinter = await read(
+  `evals/snapshots/moneyprinter-${evaluatedSkillCommit}.md`,
 );
 
 assert.deepEqual(tableIds(sessionPrompts, "S"), sessionIds);
@@ -126,6 +177,22 @@ assert.deepEqual(exactHeadingIds(orchestrationInitialRaw, "O"), orchestrationIds
 assert.deepEqual(tableIds(orchestrationCorrectedRaw, "O"), orchestrationIds);
 assert.deepEqual(exactHeadingIds(orchestrationBoundedRaw, "O"), orchestrationIds);
 assert.deepEqual(tableIds(orchestrationResults, "O"), orchestrationIds);
+for (const id of [
+  "V01", "V02", "V03", "V04", "V05", "V06", "V07", "V08", "V09",
+]) {
+  const row = tableRow(orchestrationVerifierAdversarial, id);
+  const expected = markdownTableCells(row).at(-1);
+  if (expected === "Reject") {
+    assert.throws(
+      () => assertSimulationActualLayer(row, id),
+      /contradicts its no-actual-action layer/,
+      `${id} must reject a contradiction despite containing the required negative tokens`,
+    );
+  } else {
+    assert.equal(expected, "Accept", `${id} has an unknown verifier expectation`);
+    assert.doesNotThrow(() => assertSimulationActualLayer(row, id));
+  }
+}
 
 const sourcePinnedFiles = [
   ["session raw", sessionRaw],
@@ -158,10 +225,14 @@ for (const [path, text] of [
 }
 assert.match(sessionS06Retry, /Exact model identifier:\s*`gpt-5\.6-terra`/);
 assert.match(orchestrationBoundedRaw, /Exact model identifier:\s*`gpt-5\.6-terra`/);
-assert.equal(
-  sha256(boundedCombinedRaw),
-  "df329dcb86dc4144cfa10892796aed24fd5f5345a14b80376373d4c6877c4458",
-);
+for (const [path, text] of [
+  ["S06 replication raw", sessionS06Retry],
+  ["orchestration bounded raw", orchestrationBoundedRaw],
+]) {
+  requireTokens(text, path, [
+    "df329dcb86dc4144cfa10892796aed24fd5f5345a14b80376373d4c6877c4458",
+  ]);
+}
 
 for (const [path, text] of [
   ["session results", sessionResults],
@@ -348,16 +419,17 @@ assert.equal(
   "78da010cd0a3895c86e12f3976467fdb780799060d07d4c2271c9202cdbf1f82",
 );
 assert.equal(
-  sha256(currentMoneyPrinter),
+  sha256(evaluatedMoneyPrinter),
   "019b2feba4febb63e19a79aba2e3984f032758cf3291e1e6658d128f435c33d8",
 );
 requireTokens(sessionS01Defect, "S01 defect", [
   "5b4efd94f3ffd7e2abf1fa1b75198dd2a6e285b23f68e1df44746c09d42af8e6",
-  "/root/scan_task7_evals/blind_eval_rc3",
+  "blind-evaluator-a",
   "UUID: `Unavailable`",
 ]);
 requireTokens(sessionS06Note, "S06 note", [
-  "/root/scan_task7_evals/blind_corrected_rc3",
+  "blind-evaluator-b",
+  "bounded-evaluator-c",
   "UUIDs: `Unavailable`",
 ]);
 
@@ -387,11 +459,7 @@ const expectedBranches = new Map([
 ]);
 for (const id of orchestrationIds) {
   const row = correctedRows.get(id);
-  requireTokens(row, id, [
-    "`Simulation`",
-    /no actual (?:external )?action/i,
-    /no actual Action receipt/i,
-  ]);
+  assertSimulationActualLayer(row, id);
   const cells = tableRow(orchestrationResults, id)
     .split("|")
     .map((cell) => cell.trim());
@@ -463,12 +531,22 @@ assert.doesNotMatch(
   /timing[^.\n]{0,80}\b(?:was|is|materially)\s+(?:changed|mismatched)\b/i,
 );
 requireTokens(provenance, "provenance", [
-  "/root/scan_task7_evals/blind_eval_rc3",
-  "/root/scan_task7_evals/blind_corrected_rc3",
-  "/root/bounded_blind_eval",
+  "blind-evaluator-a",
+  "blind-evaluator-b",
+  "bounded-evaluator-c",
+  `snapshots/moneyprinter-${evaluatedSkillCommit}.md`,
+  "Approval-gate fields `Volume` and `Tool`",
+  "fact-based safety wording",
+  "not silently upgraded",
   "UUID",
   "Unavailable",
 ]);
+assert.doesNotMatch(
+  [provenance, sessionS01Defect, sessionS06Note, sessionS06Retry,
+    orchestrationDefect, orchestrationResults, orchestrationBoundedRaw].join("\n"),
+  /\/root\//,
+  "published eval provenance must not expose machine-local evaluator paths",
+);
 
 console.log(
   `eval contract: ${sessionIds.length} session-scan and ${orchestrationIds.length} corrected orchestration cases verified`,

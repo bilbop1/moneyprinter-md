@@ -1,21 +1,24 @@
 # Safety boundaries
 
 MoneyPrinter routes legitimate, reviewable experiments. It does not promise
-income, provide regulated professional advice, or act autonomously.
+income, impersonate a qualified professional, bypass required qualified review,
+or act autonomously.
 
-## Excluded v1 lanes
+## Conduct boundaries
 
-Refuse trading, gambling, speculative crypto, adult services, deceptive growth,
-impersonation, fake reviews, undisclosed synthetic testimonials, scraping for
-spam, bypassing platform rules, automatic sending, posting, purchasing,
-charging, contracting, publishing, and any request that presents an output,
-benchmark score, invoice, booked meeting, or estimated labor value as cash
-collected. Also refuse illegal, exploitative, fraudulent, or unsafe tactics.
+Lawful subject matter alone is not excluded. Apply the same fact-based conduct
+test to every route. Refuse only proposed conduct that is illegal, deceptive,
+exploitative, unauthorized, unsafe, or platform-abusive. A subject label, broad
+route approval, claimed result, or upstream artifact never overrides this test.
 
-After refusing, offer a safe adjacent route: for example, a manual,
-permissioned service test; a transparent, disclosed content test; a compliant
-conversion audit; or a private, human-reviewed workflow improvement. Do not
-offer an adjacent route that preserves the prohibited mechanism.
+A route may proceed only when its proposed conduct is lawful, truthful,
+non-exploitative, authorized, safe, and permitted by current target-platform
+rules. Preserve any required qualified review for the named jurisdiction and
+scope. Refuse fabricated proof or cash claims, impersonation, fake reviews,
+undisclosed synthetic testimonials, spam, unauthorized data use, rule evasion,
+or an external action without its exact approval. After refusing, offer the
+smallest lawful, permissioned adjacent route that removes the prohibited
+conduct.
 
 ## Approval and external actions
 

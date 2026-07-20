@@ -7,11 +7,10 @@ other high-fit channel resolves back to the repository. GitHub can amplify
 useful releases, stars, forks, discussions, field reports, and linked installs,
 but it cannot guarantee cold-start traffic or Trending placement.
 
-**Status:** public source, remote discovery, metadata, topics, social preview,
-Discussions, private vulnerability reporting, and release candidate were
-verified on 2026-07-19. The landing page is also public at
-`https://moneyprinter.bilbop.org`. One retained host invocation remains
-pending.
+**Status:** rc.2 public source, remote discovery, metadata, topics, social
+preview, Discussions, private vulnerability reporting, and release were
+verified on 2026-07-19. The rc.3 source candidate is ready for publication,
+but its public receipt and retained host invocation are still pending.
 
 ## Current submission path
 
@@ -28,7 +27,8 @@ and [GitHub Trending](https://github.com/trending).
 
 - Working owner authentication.
 - Public repository at the intended URL.
-- Clean clone, remote install, and one end-to-end host invocation pass.
+- Clean clone and remote discovery; record exact end-to-end host invocation
+  separately instead of treating package discovery as activation.
 - README, license, security, contribution, issue templates, and compatibility
   caveats present.
 - GitHub private vulnerability reporting enabled.
@@ -45,28 +45,32 @@ Repository name:
 
 Release title:
 
-> MoneyPrinter.md 0.1.0-rc.2 - ready for honest tests
+> MoneyPrinter.md 0.1.0-rc.3 - scan the work, then work the route
 
 ## Short description
 
 Repository About:
 
-> Receipts-first Agent Skills for bounded revenue experiments.
+> Turn 14 days of AI work into one cash-first route, then work it to a receipt.
 
 ## Long description
 
-Next release notes draft. Do not attach this copy to the public rc.2 release or
-claim it is published before the version bump and release task:
+Use this body for the rc.3 prerelease. Do not call it published until the
+release and asset are visible logged out:
 
 > MoneyPrinter.md is seven open-source Agent Skills built around one
-> permissioned 14-day scan. The current host reports every detected AI CLI and
-> GUI session source as scanned, empty, blocked, or unsupported, then asks for
-> one correction. Cash evidence and payable speed drive the route choice. The
-> run continues through private research, offer creation, payable-test design,
-> acquisition preparation, and delivery preparation. A specific approval gates
-> one exact external action. Its receipt and result drive the next ranking.
-> Five checked-in walkthroughs are simulations, not customer or earnings
-> claims.
+> permissioned 14-day scan. It tells the current host to report every detected
+> AI CLI and GUI session source as scanned, empty, blocked, or unsupported,
+> then ask for one correction. Cash evidence and payable speed drive the route
+> choice. The seven skills direct the host through private research, offer
+> creation, payable-test design, acquisition preparation, and delivery
+> preparation. A specific approval gates one exact external action. Its receipt
+> and result drive the next ranking.
+>
+> The best corrected blind local session suite passed 5/6; the remaining run
+> reached the approval gate but omitted required artifact sections. Corrected
+> orchestration passed 6/6. All evaluation runs are simulations, not customer
+> outcomes, earnings claims, or named-host activation.
 
 ## Tags
 

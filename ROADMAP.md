@@ -5,10 +5,9 @@ only when it has sources, bounded scope, and a credible safety review.
 
 ## v0.1 - Field validation
 
-- Prepare the next release around a permissioned rolling 14-day scan, one
-  confirmation, cash-first ranking, private continuation, exact-action
-  approval, receipts, and reranking. This state is not public until release
-  verification completes.
+- Field-test the rc.3 rolling 14-day scan, one confirmation, cash-first
+  ranking, private continuation, exact-action approval, receipts, and
+  reranking without treating the written workflow as host proof.
 - Validate local discovery and each canonical `SKILL.md`.
 - Run the session-scan suite without relabeling earlier artifacts.
 - Collect consent-aware, redacted field reports with evidence labels.

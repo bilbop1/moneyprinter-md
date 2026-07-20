@@ -50,12 +50,10 @@ a fresh blind evaluator. Both raw runs and both grades remain inspectable.
 
 ## Evaluator provenance
 
-- Initial evaluator task path:
-  `/root/scan_task7_evals/blind_eval_rc3`
-- Corrected evaluator task path:
-  `/root/scan_task7_evals/blind_corrected_rc3`
+- Initial evaluator label: `blind-evaluator-a`
+- Corrected evaluator label: `blind-evaluator-b`
 - Evaluator task UUIDs: `Unavailable`; the collaboration surface exposed
-  canonical task paths but no independent UUIDs.
+  stable evaluator labels but no independent UUIDs.
 - The first two combined corrected-run attempts were interrupted after
   prolonged no-response and returned no raw output. The same still-blind
   corrected evaluator then completed the bounded six-row orchestration table.

@@ -40,7 +40,6 @@ reported separately rather than replacing the initial mismatch.
   `c419972ce777112b43065388b82f7999e3a5576d626412800e4467da2b646d13`
 - Unchanged oracle SHA-256:
   `78da010cd0a3895c86e12f3976467fdb780799060d07d4c2271c9202cdbf1f82`
-- Canonical evaluator task path:
-  `/root/scan_task7_evals/blind_eval_rc3`
+- Evaluator label: `blind-evaluator-a`
 - Evaluator task UUID: `Unavailable`; the collaboration surface exposed a
-  canonical task path but no independent UUID.
+  stable evaluator label but no independent UUID.

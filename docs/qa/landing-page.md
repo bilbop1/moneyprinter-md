@@ -40,21 +40,24 @@ Desktop, 1440 × 1250:
 - The ten-stage flow renders in a bounded five-column grid on wide screens and
   collapses to one column below 720 px.
 
-Exact mobile emulation:
+Current preview captures:
 
-| Viewport | Inner/root/body width | Document overflow | Navigation | Flow/skill layout |
+| Output | Browser inner/root/body width | Horizontal overflow | Navigation | Flow/skill layout |
 | --- | ---: | --- | --- | --- |
-| 320 × 568 | 320/320/320 px | None | Compact header | Single-column below 720 px |
+| 1440 × 1250 | 1440/1425/1425 px | None; 15 px is the visible vertical scrollbar | Full header | Five-column flow |
+| 320 × 568 | 335/320/320 px | None in the captured 320 px content plane | Compact header | Single-column below 720 px |
 
-The mobile check used Edge DevTools device-metric emulation because a raw
-320 px Edge window retains a roughly 500 px CSS viewport. The probe confirmed
-the rc.3 title and hero, `document.readyState === "complete"`,
-`window.innerWidth === 320`, and root/body scroll widths of 320 before capture.
+The current mobile artifact uses a 335 px browser viewport because this browser
+reserves 15 px for a classic vertical scrollbar. The screenshot crops the
+remaining 320 px content plane, whose root and body widths both measured 320
+px. This keeps the committed artifact exactly 320 × 568 without pretending the
+browser uses an overlay scrollbar.
 
 The first desktop attempt used `127.0.0.1` while Vinext was listening on IPv6
 localhost and captured `ERR_CONNECTION_REFUSED`. It was discarded. The final
-desktop capture used the verified `localhost:4173` page; both committed
-previews were visually inspected after replacement.
+desktop and mobile captures used the verified `localhost:4173` production
+build. Both committed previews were visually inspected after the current
+source-candidate wording replaced the stale public-install copy.
 
 ## Metadata abuse cases
 

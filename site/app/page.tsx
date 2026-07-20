@@ -75,13 +75,13 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow"><span aria-hidden="true">◆</span> WITH PERMISSION / RECEIPTS FIRST</p>
             <h1 id="hero-title">Your last 14 days are already the brief.</h1>
-            <p className="lede">MoneyPrinter scans every detected AI CLI and GUI it can access, asks for one confirmation, then gets to work.</p>
-            <p className="hero-note">It separates receipts from hype, picks the strongest cash-first route, and keeps moving through the offer, payable test, acquisition, delivery, and rerank.</p>
+            <p className="lede">MoneyPrinter tells your current AI host to scan every detected AI CLI and GUI it can access, ask for one confirmation, then get to work.</p>
+            <p className="hero-note">The seven skills separate receipts from hype, pick the strongest cash-first route, and direct the host through the offer, payable test, acquisition, delivery, and rerank.</p>
             <div className="install-control" aria-label="Install command">
               <code>{installCommand}</code>
               <button type="button" onClick={copyInstall} aria-label={`${copyLabel}: ${installCommand}`}>{copyLabel}</button>
             </div>
-            <p className="copy-status" aria-live="polite">{copyState === "manual" ? "Clipboard unavailable — the command stays selectable." : copyState === "copied" ? "Command copied to clipboard." : "Install all seven skills from the public repository."}</p>
+            <p className="copy-status" aria-live="polite">{copyState === "manual" ? "Clipboard unavailable — the command stays selectable." : copyState === "copied" ? "Command copied to clipboard." : "Install the seven rc.3 source-candidate skills."}</p>
             <div className="hero-controls">
               <a className="text-control" href={repositoryUrl} target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
               <a className="text-control" href="#method">Read the method <span aria-hidden="true">↓</span></a>
@@ -112,7 +112,7 @@ export default function Home() {
 
         <section id="flow" className="section-shell flow-section" aria-labelledby="flow-title">
           <p className="section-label">03 / THE LOOP</p><h2 id="flow-title">It does not stop at ranking the work.</h2>
-          <p className="flow-copy">The scan ends with one confirmation. The run does not. MoneyPrinter keeps doing the private work until an exact external action needs approval, then records the result and reranks.</p>
+          <p className="flow-copy">The scan ends with one confirmation. The written workflow does not. It directs the host through private work until an exact external action needs approval, then records the result and reranks. Exact host conformance is still experimental.</p>
           <ol className="flow-strip">{flow.map((step, index) => <li key={step}><span>{String(index + 1).padStart(2, "0")}</span>{step}</li>)}</ol>
         </section>
 
@@ -122,8 +122,8 @@ export default function Home() {
         </section>
 
         <section id="compatibility" className="section-shell compatibility" aria-labelledby="compatibility-title">
-          <div><p className="section-label">05 / PORTABILITY IS A CLAIM TOO</p><h2 id="compatibility-title">Installable is not activated.</h2><p>The portable core is installer-documented but host activation remains unverified. MiniMax is provider-only. Treat every host-specific claim as a receipt waiting to happen.</p></div>
-          <div className="matrix" role="table" aria-label="Compatibility matrix"><div className="matrix-row matrix-head" role="row"><span role="columnheader">Surface</span><span role="columnheader">State</span><span role="columnheader">Meaning</span></div><div className="matrix-row" role="row"><span role="cell">Portable core</span><span role="cell" className="signal">Installer-verified</span><span role="cell">Public GitHub installer command verified.</span></div><div className="matrix-row" role="row"><span role="cell">Host activation</span><span role="cell" className="warning">Unverified</span><span role="cell">Do not imply it works everywhere.</span></div><div className="matrix-row" role="row"><span role="cell">MiniMax</span><span role="cell" className="warning">Provider-only</span><span role="cell">Not a general compatibility promise.</span></div></div>
+          <div><p className="section-label">05 / PORTABILITY IS A CLAIM TOO</p><h2 id="compatibility-title">Installable is not activated.</h2><p>The rc.3 files pass local package checks. Public rc.3 discovery still needs its release receipt. The best corrected blind local session run passed 5 of 6; one run reached the approval gate but skipped required artifact sections. MiniMax is provider-only.</p></div>
+          <div className="matrix" role="table" aria-label="Compatibility matrix"><div className="matrix-row matrix-head" role="row"><span role="columnheader">Surface</span><span role="columnheader">State</span><span role="columnheader">Meaning</span></div><div className="matrix-row" role="row"><span role="cell">Portable core</span><span role="cell" className="signal">Locally validated</span><span role="cell">Seven rc.3 skill files pass package checks.</span></div><div className="matrix-row" role="row"><span role="cell">Full host chain</span><span role="cell" className="warning">Experimental</span><span role="cell">Best corrected blind local run: 5/6.</span></div><div className="matrix-row" role="row"><span role="cell">Public rc.3 receipt</span><span role="cell" className="warning">Pending</span><span role="cell">Verify after release publication.</span></div><div className="matrix-row" role="row"><span role="cell">MiniMax</span><span role="cell" className="warning">Provider-only</span><span role="cell">Not a general compatibility promise.</span></div></div>
         </section>
 
         <section id="method" className="section-shell method-section" aria-labelledby="method-title">

@@ -3,13 +3,18 @@
 **Date:** 2026-07-19
 **Current release candidate:** `0.1.0-rc.3`
 **Evaluated skill commit:** `b6d2fe859553e5f998ea3b6138006ce535b21d98`
-**Skill under review:** [`skills/moneyprinter/SKILL.md`](../skills/moneyprinter/SKILL.md)
+**Skill under review:** [frozen evaluated MoneyPrinter
+snapshot](snapshots/moneyprinter-b6d2fe859553e5f998ea3b6138006ce535b21d98.md)
 
 **Provenance:** See [`provenance.md`](provenance.md) for source commits,
 execution-surface limits, raw-output locations, grading, and the unavailable
 exact model identifier. A `Pass` below means only that a checked-in artifact met
 this repository's rubric; it is not external validation or a safety
 certification.
+
+The final rc.3 source later adds the `Volume` and `Tool` approval-gate fields
+and fact-based safety wording. Those changes were not inputs to these traces,
+so the retained grades are not upgraded to cover them.
 
 The rc.3 rows are local simulated contract and pressure tests. They are not
 customer outcomes, host activation, cash evidence, or proof that a named model
