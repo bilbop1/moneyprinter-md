@@ -72,8 +72,9 @@ contains a `SKILL.md`; supporting material stays beside the skill.
   passed an archive test and matched SHA-256
   `94b0912576514a7d712bf46db17223b67b8766a19c2d09352215a6e41619f278`.
 - Public landing page: `https://moneyprinter.bilbop.org`. HTTPS 200 and active
-  Sites custom-domain, provider, and SSL states were verified after the rc.3
-  deployment on 2026-07-19.
+  Sites custom-domain, provider, and SSL states were verified after the current
+  rc.3 deployment on 2026-07-20. Sites version 5 serves the wider hero with the
+  Ko-fi controls above the receipt.
 - ClawHub published all seven `1.0.1` package updates from the rc.3 source with
   zero sync failures. Unauthenticated public metadata reports `1.0.1` as
   latest for all seven. Skill Cards are still pending.

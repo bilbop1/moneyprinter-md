@@ -2,7 +2,7 @@
 
 ## Ready state
 
-Checked on 2026-07-19:
+Checked on 2026-07-20:
 
 - GitHub release `v0.1.0-rc.3`, its release asset, and the seven-skill install
   path are live.

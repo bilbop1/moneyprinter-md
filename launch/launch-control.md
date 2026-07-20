@@ -8,12 +8,14 @@ GitHub rc.3 and the rc.3 landing page are live. On 2026-07-19, release tag
 matched SHA-256
 `94b0912576514a7d712bf46db17223b67b8766a19c2d09352215a6e41619f278`,
 a clean remote-discovery check found all seven skills, and the custom domain
-returned HTTPS 200 with its Sites domain, provider, and SSL states active.
+returned HTTPS 200 with its Sites domain, provider, and SSL states active. On
+2026-07-20, Sites version 5 deployed the wider Ko-fi hero from
+`14f8e29656599df8b7be9929e5967e1b7eb5ef75`.
 
 | Surface | Publication target | Verified state |
 | --- | --- | --- |
 | GitHub | `https://github.com/bilbop1/moneyprinter-md` | **Passed 2026-07-19:** public rc.3 tag, release asset and digest, clean seven-skill discovery, About metadata, topics, and persisted 1280 × 640 social preview |
-| Landing page | `https://moneyprinter.bilbop.org` | **Passed 2026-07-19:** rc.3 deployment, public HTTPS 200, active custom-domain/provider/SSL states, canonical metadata, social image, and final GitHub/install targets |
+| Landing page | `https://moneyprinter.bilbop.org` | **Passed 2026-07-20:** Sites version 5, public HTTPS 200, active custom-domain/provider/SSL states, 1360 px hero with no horizontal overflow, live Ko-fi controls above the receipt, canonical metadata, social image, and final GitHub/install targets |
 | ClawHub | `https://clawhub.ai/bilbop1/skills/moneyprinter` | **Live 2026-07-19:** seven v1.0.1 pages report v1.0.1 as latest; six narrower skills scan SAFE, the flagship is public with a clean moderation verdict and a suspicious detailed trust envelope for the intended cross-app scan, and Skill Cards remain pending |
 | Awesome Skills | `https://www.awesomeskills.dev/en/skill/moneyprinter-md-moneyprinter` | **Passed 2026-07-19:** public flagship listing with the source and install command |
 | Ko-fi | `https://ko-fi.com/bilbop` | **Passed 2026-07-19:** public page loads as “Support bilbop”; repository funding file uses the confirmed username |

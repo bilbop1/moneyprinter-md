@@ -6,7 +6,8 @@ Local site source: `site/`
 ## Current status
 
 The site is deployed through Sites and public at
-`https://moneyprinter.bilbop.org`. On 2026-07-19:
+`https://moneyprinter.bilbop.org`. The current production state was rechecked
+on 2026-07-20:
 
 - the custom hostname returned HTTPS 200 with a valid certificate;
 - Sites reported the custom-domain, provider, and SSL states active;
@@ -16,8 +17,10 @@ The site is deployed through Sites and public at
 - `/og.png` returned HTTP 200 as `image/png`;
 - the live GitHub link and displayed install command matched the public
   repository;
-- Sites version 4 was saved and deployed from
-  `d191c622fd2449fb3399c7140a36a564482498f8`;
+- Sites version 5 was saved and deployed from
+  `14f8e29656599df8b7be9929e5967e1b7eb5ef75`;
+- the live hero uses a 1360 px desktop shell and places the Ko-fi support
+  control above the 14-day receipt with no horizontal overflow;
 - the retained release/distribution source is `v0.1.0-rc.3`, and a clean remote
   listing against public `main` found all seven skills; and
 - the downloaded rc.3 release ZIP matched SHA-256

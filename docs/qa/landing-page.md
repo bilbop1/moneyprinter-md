@@ -1,6 +1,6 @@
 # Landing-page QA
 
-Reviewed: 2026-07-19
+Reviewed: 2026-07-20
 Release candidate: `0.1.0-rc.3`
 
 ## Automated checks
@@ -112,13 +112,16 @@ conversation-level activation in any named host.
 
 ## Current rc.3 runtime receipt
 
-Verified on 2026-07-19 after the rc.3 deployment:
+Verified on 2026-07-20 after the current rc.3 deployment:
 
-- Sites version 4 was built, saved, and deployed from
-  `d191c622fd2449fb3399c7140a36a564482498f8`.
-- Both the Sites production URL and `https://moneyprinter.bilbop.org` returned
-  HTTPS 200 with the rc.3 scan-first copy.
+- Sites version 5 was built, saved, and deployed from
+  `14f8e29656599df8b7be9929e5967e1b7eb5ef75`.
+- The configured production URL `https://moneyprinter.bilbop.org` returned
+  HTTPS 200 with the rc.3 scan-first copy and the new Ko-fi hero controls.
 - Sites reported the custom-domain, provider, and SSL states active.
+- Live browser measurement found a 1360 px hero, zero horizontal overflow, the
+  Ko-fi block above the receipt, and the exact `https://ko-fi.com/bilbop`
+  target.
 - `/og.png` returned HTTP 200 as `image/png`.
 - The public GitHub release, remote install target, and landing-page calls to
   action resolve to the final project.
