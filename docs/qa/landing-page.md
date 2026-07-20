@@ -62,7 +62,7 @@ Current preview captures:
 End-to-end browser inspection also covered 1440 × 1000, 900 × 1000, and a true
 320 × 900 viewport. No rendered element was offscreen, no visible link or
 button measured below 44 × 44 px, and the page had no horizontal overflow at
-any inspected width. At 320 px, the flow is one 248 px column and all ten nodes
+any inspected width. At 320 px, the flow is one 233 px column and all ten nodes
 remain readable in order.
 
 The Browser screenshot surface subtracts its capture gutter from requested
@@ -137,3 +137,24 @@ Verified on 2026-07-20 after the current rc.3 deployment:
 - The full named-host chain remains experimental. The best corrected blind
   local session run is still 5/6, and no simulation score was upgraded during
   publication.
+
+## Visual-system deployment receipt
+
+Verified on 2026-07-20 after the visual-system redesign:
+
+- GitHub `main` and the Sites source branch both resolved to
+  `bb85927ac75e68cdeb2ce4fb5ccc60b5e576190d` before deployment.
+- Sites version 6 was saved from that exact source commit and production
+  deployment `appgdep_6a5e8b43cbb081919daa6bdef0b1882d` succeeded.
+- The provider URL and `https://moneyprinter.bilbop.org/` returned HTTPS 200.
+  The custom-domain response used `Cache-Control: no-store, must-revalidate`.
+- Live HTML contains `.flow-circuit` and no `.flow-strip`. A fresh browser
+  connection to the custom domain rendered the connected SVG circuit, the
+  exact Ko-fi target, the public GitHub target, and the rc.3 copy.
+- Final browser inspection covered 1440 × 1000, 900 × 1000, and true
+  320 × 900 layouts after the phase-order fix. The desktop SVG remained
+  visible; the mobile SVG hid; `RUN THE MONEY LOOP` appeared between Confirm
+  and Prioritize; no element was offscreen; and no visible link or button
+  measured below 44 × 44 px.
+- At 320 px, all ten flow nodes rendered in one 233 px-wide ordered rail with
+  no horizontal overflow.
