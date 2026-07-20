@@ -370,7 +370,7 @@ Expected: the server prints a local preview URL and remains running.
 
 - [ ] **Step 2: Inspect at 1440×1000**
 
-Use the in-app browser to check the complete page and specifically verify:
+Use the in-app browser to inspect the full page and specifically verify:
 
 - the SVG paths pass through or between the intended nodes;
 - the approval gate sits between Payable test and Acquire;
@@ -381,7 +381,7 @@ Use the in-app browser to check the complete page and specifically verify:
 - compatibility caveats remain readable;
 - Ko-fi and receipt remain above the redesigned systems.
 
-Capture the complete desktop page to:
+Capture a first-screen desktop preview to:
 
 `launch/assets/landing-desktop-preview.png`
 
@@ -396,7 +396,7 @@ Verify:
 - all links/buttons meet a 44-pixel minimum target;
 - no clipped text or accidental two-column squeeze remains.
 
-Capture the complete mobile page to:
+Capture an exact-viewport mobile preview to:
 
 `launch/assets/landing-mobile-preview.png`
 
