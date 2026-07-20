@@ -84,8 +84,10 @@ test("server-renders the MoneyPrinter receipts-first landing page", async () => 
   );
   assert.match(html, /bilbop1\/moneyprinter-md/);
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
-  assert.match(html, /<ol[^>]+class="flow-steps"/);
-  assert.match(html, /aria-label="MoneyPrinter operating loop"/);
+  assert.match(
+    html,
+    /<div class="flow-circuit" aria-label="MoneyPrinter operating loop">[\s\S]*?<ol class="flow-steps">[\s\S]*?<\/ol>[\s\S]*?<\/div>/,
+  );
 
   for (const id of requiredSectionIds) {
     assert.match(html, new RegExp(`<section[^>]+id=["']${id}["']`, "i"));
@@ -141,6 +143,14 @@ test("keeps the production surface honest and starter-free", async () => {
     readFile(new URL("package.json", siteRoot), "utf8"),
     readFile(new URL("README.md", siteRoot), "utf8"),
   ]);
+
+  const narrowFlowFallback = [
+    ...css.matchAll(
+      /@media \(max-width:\s*360px\)\s*\{((?:[^{}]|\{[^{}]*\})*)\}/gis,
+    ),
+  ].map(([, rules]) => rules).join("\n");
+  assert.match(narrowFlowFallback, /\.flow-circuit\s*\{[^}]*max-width:\s*100%/is);
+  assert.match(narrowFlowFallback, /\.flow-node\s*\{[^}]*min-width:\s*0/is);
 
   assert.match(page, /navigator\.clipboard/);
   assert.match(page, /https:\/\/github\.com\/bilbop1\/moneyprinter-md/);
