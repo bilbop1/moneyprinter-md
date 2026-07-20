@@ -101,9 +101,6 @@ Replace the existing `flow-strip` ordered list with this structure:
   <div className="flow-phase flow-phase-read">
     <span>READ THE WORK</span><em>one scoped pass</em>
   </div>
-  <div className="flow-phase flow-phase-run">
-    <span>RUN THE MONEY LOOP</span><em>receipt decides what repeats</em>
-  </div>
   <svg className="flow-wiring" viewBox="0 0 1200 610" preserveAspectRatio="none" aria-hidden="true" focusable="false">
     <defs>
       <marker id="flow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -113,15 +110,20 @@ Replace the existing `flow-strip` ordered list with this structure:
     <path className="flow-path flow-intake" d="M120 155 H565" />
     <path className="flow-path flow-drop" d="M565 155 C650 155 650 290 755 290" />
     <path className="flow-path flow-outbound" d="M755 290 H1080 V470 H190" />
-    <path className="flow-path flow-return" d="M190 470 C65 470 55 560 180 575 H725 C790 575 810 530 810 480" />
+    <path className="flow-path flow-return" data-from="Rerank" data-to="Prioritize" d="M120 470 C45 470 45 575 180 575 H580 C620 575 620 530 620 480 V350 C620 315 635 290 660 290" />
   </svg>
   <ol className="flow-steps">
     {flow.map((step, index) => (
       <li className={`flow-node flow-node-${index + 1}`} key={step}>
-        <span>{String(index + 1).padStart(2, "0")}</span>
+        {index === 3 && (
+          <div className="flow-phase flow-phase-run">
+            <span>RUN THE MONEY LOOP</span><em>receipt decides what repeats</em>
+          </div>
+        )}
+        <span className="flow-node-index">{String(index + 1).padStart(2, "0")}</span>
         <strong>{step}</strong>
         {index === 5 && (
-          <span className="approval-gate">
+          <span className="approval-gate" aria-label="EXACT ACTION APPROVAL">
             <b>EXACT ACTION</b>
             APPROVAL
           </span>
@@ -157,6 +159,7 @@ The relevant selectors must be explicit:
 .flow-path { fill: none; stroke: #687061; stroke-width: 3; vector-effect: non-scaling-stroke; marker-end: url(#flow-arrow); }
 .flow-wiring marker path { fill: var(--acid); }
 .flow-return { stroke: var(--acid); stroke-dasharray: 10 8; }
+.flow-phase-run { top: -3rem; left: 0; width: max-content; }
 .flow-steps { position: absolute; inset: 0; z-index: 1; list-style: none; margin: 0; padding: 0; }
 .flow-node { position: absolute; width: 150px; min-height: 96px; }
 .approval-gate { position: absolute; min-width: 132px; color: var(--danger); border: 2px solid currentColor; transform: rotate(-3deg); }
@@ -171,7 +174,7 @@ normal document flow:
 .flow-circuit { min-height: 0; overflow: visible; padding: 2rem 0 1rem; }
 .flow-wiring { display: none; }
 .flow-phase { position: static; margin: 0 0 1.5rem 3rem; }
-.flow-phase-run { margin-top: 2rem; }
+.flow-node-4 .flow-phase-run { position: static; width: auto; margin: .9rem 0 .25rem; }
 .flow-steps { position: relative; display: grid; gap: .3rem; padding-left: 3rem; }
 .flow-steps::before { content: ""; position: absolute; left: 1rem; top: 1rem; bottom: 1rem; width: 2px; background: var(--line); }
 .flow-node { position: relative; inset: auto; width: auto; min-height: 74px; padding: .65rem 0; }
@@ -454,7 +457,7 @@ git add docs/qa/landing-page.md
 git commit -m "docs: record the visual-system deployment"
 ```
 
-Skip this commit only when neither file changed.
+Skip this commit only when the QA ledger did not change.
 
 - [ ] **Step 3: Push the tested branch to GitHub main**
 
