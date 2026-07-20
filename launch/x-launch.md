@@ -21,7 +21,9 @@ Attach `launch/assets/moneyprinter-social-card.png`.
 ```text
 too many chats say "this could be huge" then do nothing lol
 
-so i made MoneyPrinter. with permission it checks the last 14 days across detected AI CLIs + GUIs it can access, figures out what shit is actually real and starts working on the best money route
+so i made MoneyPrinter. with permission it checks the last 14 days across detected AI CLIs + GUIs it can access.
+
+it figures out what shit is real. then it starts working on the best money route
 
 https://github.com/bilbop1/moneyprinter-md
 ```

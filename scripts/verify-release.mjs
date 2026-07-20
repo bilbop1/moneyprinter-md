@@ -61,6 +61,95 @@ const xLaunch = await read("launch/x-launch.md");
 const posts = [...xLaunch.matchAll(/```text\n([\s\S]*?)\n```/g)].map((match) => match[1]);
 assert.ok(posts.length >= 3, "the launch file must contain a flagship, reply, and alternate post");
 
+function isNegatedBefore(text, index) {
+  const prefix = text.slice(Math.max(0, index - 50), index);
+  return /\b(?:no|not|never|without|cannot|can't|won't|isn't|aren't|doesn't|don't|didn't)(?:\s+\w+){0,2}\s*$/i.test(
+    prefix,
+  );
+}
+
+function hasGuaranteedMoneyClaim(post) {
+  const pattern =
+    /\b(?:guarantees?|promises?|ensures?)\s+(?:you\s+)?(?:money|profit|income|revenue)\b|\bguaranteed\s+(?:(?:money|profit|income|revenue)\b|to\s+(?:make|earn|produce)\s+(?:you\s+)?(?:money|profit|income|revenue)\b)/gi;
+
+  for (const match of post.matchAll(pattern)) {
+    if (!isNegatedBefore(post, match.index)) return true;
+  }
+
+  return false;
+}
+
+function hasUniversalHostClaim(post) {
+  const pattern =
+    /\b(?:(?:works?|runs?)\s+(?:(?:in|on)\s+every host|everywhere)|all hosts?\s+(?:are|is)\s+supported)\b/gi;
+
+  for (const match of post.matchAll(pattern)) {
+    if (!isNegatedBefore(post, match.index)) return true;
+  }
+
+  return false;
+}
+
+function xPostViolations(post) {
+  const violations = [];
+
+  if (
+    /[—–“”‘’]|\p{Extended_Pictographic}|(?:^|\s)#[\p{L}\p{N}_]+|(?:^|\s)--(?=\s|$)/u.test(
+      post,
+    )
+  ) {
+    violations.push("humanizer-blocked punctuation, emoji, or hashtag");
+  }
+  if (
+    /\b(?:pivotal|groundbreaking|game-changing|transformative|marks a shift|the future of|here is|let me know|would you like|want me to)\b/i.test(
+      post,
+    )
+  ) {
+    violations.push("generic significance or chatbot framing");
+  }
+  if (hasUniversalHostClaim(post)) {
+    violations.push("universal host activation");
+  }
+  if (hasGuaranteedMoneyClaim(post)) {
+    violations.push("guaranteed money outcome");
+  }
+
+  return violations;
+}
+
+const rejectedXFixtures = [
+  ["works on every host", "universal host activation"],
+  ["runs on every host", "universal host activation"],
+  ["runs everywhere", "universal host activation"],
+  ["all hosts are supported", "universal host activation"],
+  ["it is guaranteed to make money", "guaranteed money outcome"],
+  ["guaranteed income", "guaranteed money outcome"],
+  ["it’s ready", "humanizer-blocked punctuation, emoji, or hashtag"],
+  ["first -- then", "humanizer-blocked punctuation, emoji, or hashtag"],
+];
+
+for (const [fixture, expectedViolation] of rejectedXFixtures) {
+  assert.ok(
+    xPostViolations(fixture).includes(expectedViolation),
+    `X verifier must reject ${JSON.stringify(fixture)} as ${expectedViolation}`,
+  );
+}
+
+for (const fixture of [
+  "7 open-source skills",
+  "moneyprinter --help",
+  "clawhub sync --all --dry-run",
+  "no guaranteed profit",
+  "does not guarantee income",
+  "does not run everywhere",
+]) {
+  assert.deepEqual(
+    xPostViolations(fixture),
+    [],
+    `X verifier must allow legitimate hyphenation or CLI flags in ${JSON.stringify(fixture)}`,
+  );
+}
+
 const countedPosts = [
   ...xLaunch.matchAll(
     /```text\n([\s\S]*?)\n```\n\nCharacter count: (\d+) raw, (\d+) weighted\./g,
@@ -89,20 +178,10 @@ for (const [index, post] of posts.entries()) {
     `X post ${index + 1} documents the wrong weighted count`,
   );
   assert.ok(xWeightedLength <= 280, `X post ${index + 1} is ${xWeightedLength} weighted characters`);
-  assert.doesNotMatch(
-    post,
-    /[—–“”]|\p{Extended_Pictographic}|(?:^|\s)#[\p{L}\p{N}_]+/u,
-    `X post ${index + 1} contains humanizer-blocked punctuation, emoji, or a hashtag`,
-  );
-  assert.doesNotMatch(
-    post,
-    /\b(?:pivotal|groundbreaking|game-changing|transformative|marks a shift|the future of|here is|let me know|would you like|want me to)\b/i,
-    `X post ${index + 1} contains generic significance or chatbot framing`,
-  );
-  assert.doesNotMatch(
-    post,
-    /\b(?:works? everywhere|runs? (?:in|on) every host|guarantees?|promises?|ensures?)\b/i,
-    `X post ${index + 1} claims host activation or a guaranteed outcome`,
+  assert.deepEqual(
+    xPostViolations(post),
+    [],
+    `X post ${index + 1} contains blocked copy`,
   );
 }
 
@@ -119,8 +198,11 @@ assert.match(recommendedPost, /\n\nso i made MoneyPrinter\b/, "the opener must u
 assert.match(recommendedPost, /\bwith permission\b/i);
 assert.match(recommendedPost, /\bthe last 14 days\b/i);
 assert.match(recommendedPost, /\bdetected AI CLIs \+ GUIs it can access\b/i);
-assert.match(recommendedPost, /\bfigures out what shit is actually real\b/i);
-assert.match(recommendedPost, /\bstarts working on the best money route\b/i);
+assert.match(
+  recommendedPost,
+  /\bdetected AI CLIs \+ GUIs it can access\.\n\nit figures out what shit is real\. then it starts working on the best money route\b/i,
+  "the opener must split scanning from judgment and execution",
+);
 assert.match(recommendedPost, /https:\/\/github\.com\/bilbop1\/moneyprinter-md\b/);
 assert.doesNotMatch(
   recommendedPost,
