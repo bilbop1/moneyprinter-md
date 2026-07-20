@@ -130,6 +130,49 @@ function hasUniversalHostClaim(post) {
   return false;
 }
 
+function isConditionalBefore(text, index) {
+  const beforeClaim = text.slice(0, index);
+  const boundaries = [
+    ...beforeClaim.matchAll(/[.!?;:\n]|\b(?:but|however|yet)\b/gi),
+  ];
+  const lastBoundary = boundaries.at(-1);
+  const clause = beforeClaim.slice(
+    lastBoundary ? lastBoundary.index + lastBoundary[0].length : 0,
+  );
+
+  return /\bif(?:\s+\w+){0,4}\s*$/i.test(clause);
+}
+
+function hasUnqualifiedMoneyOutcome(post) {
+  const pattern =
+    /\b(?:MoneyPrinter|it|this|the skill)\s+(?:makes?|earns?|generates?|gets?)\s+(?:you\s+)?(?:money|profit|income|revenue|paid)\b/gi;
+
+  for (const match of post.matchAll(pattern)) {
+    if (!isNegatedBefore(post, match.index) && !isConditionalBefore(post, match.index)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function hasAutonomousExternalActionClaim(post) {
+  return /\b(?:MoneyPrinter|it|this|the skill)\s+(?:sends?|posts?|publishes?|purchases?|charges?|signs?|contracts?|delivers?)\b/i.test(
+    post,
+  );
+}
+
+function hasNamedHostActivationClaim(post) {
+  const pattern =
+    /\b(?:works?|runs?)\s+(?:in|on|with)\s+(?:Codex|Claude(?: Code)?|Kimi|Hermes|OpenClaw|MiniMax)\b/gi;
+
+  for (const match of post.matchAll(pattern)) {
+    if (!isNegatedBefore(post, match.index)) return true;
+  }
+
+  return false;
+}
+
 function hasProseDoubleHyphen(post) {
   const commandStart =
     /^\s*(?:[$>]\s*)?(?:npm|npx|pnpm|yarn|bun|node|python\d*|uv|uvx|git|gh|clawhub|codex|claude|kimi|hermes|moneyprinter|skills)\b/i;
@@ -164,6 +207,15 @@ function xPostViolations(post) {
   if (hasGuaranteedMoneyClaim(post)) {
     violations.push("guaranteed money outcome");
   }
+  if (hasUnqualifiedMoneyOutcome(post)) {
+    violations.push("unqualified money outcome");
+  }
+  if (hasAutonomousExternalActionClaim(post)) {
+    violations.push("autonomous external action");
+  }
+  if (hasNamedHostActivationClaim(post)) {
+    violations.push("named host activation");
+  }
 
   return violations;
 }
@@ -176,6 +228,9 @@ const rejectedXFixtures = [
   ["it is guaranteed to make money", "guaranteed money outcome"],
   ["guaranteed income", "guaranteed money outcome"],
   ["not hype but guarantees profit", "guaranteed money outcome"],
+  ["MoneyPrinter makes you money", "unqualified money outcome"],
+  ["it sends the message for you", "autonomous external action"],
+  ["works in Codex", "named host activation"],
   ["it’s ready", "humanizer-blocked punctuation, emoji, or hashtag"],
   ["first -- then", "humanizer-blocked punctuation, emoji, or hashtag"],
 ];
@@ -196,7 +251,9 @@ for (const fixture of [
   "does not guarantee income",
   "nothing here guarantees profit",
   "we make no claim that it guarantees money",
+  "if MoneyPrinter makes you money",
   "does not run everywhere",
+  "does not work in Codex",
 ]) {
   assert.deepEqual(
     xPostViolations(fixture),
@@ -247,18 +304,47 @@ assert.ok(recommendedSection, "the launch file must keep one recommended flagshi
 const recommendedPost = recommendedSection.match(/```text\n([\s\S]*?)\n```/)?.[1];
 assert.ok(recommendedPost, "the recommended flagship section must contain one X post");
 
-assert.match(recommendedPost, /^too many\b/, "the opener must begin as a lowercase personal complaint");
+const firstReplySection = xLaunch.match(
+  /^## First reply\s*$([\s\S]*?)(?=^## |(?![\s\S]))/m,
+)?.[1];
+const firstReplyPost = firstReplySection?.match(/```text\n([\s\S]*?)\n```/)?.[1];
+assert.ok(firstReplyPost, "the launch file must keep one immediate first reply");
+assert.match(firstReplyPost, /\boutside action\b/i);
+assert.match(firstReplyPost, /\bshows me the exact move and asks\b/i);
+assert.match(firstReplyPost, /https:\/\/moneyprinter\.bilbop\.org\b/);
+assert.match(
+  recommendedSection,
+  /Image description:[\s\S]*WITH PERMISSION, DETECTED \+ ACCESSIBLE/i,
+  "the uploaded image description must preserve the card's access qualifier",
+);
+assert.match(xLaunch, /credential paths are out of scope/i);
+assert.match(xLaunch, /exact host conformance is still experimental/i);
+assert.doesNotMatch(
+  xLaunch,
+  /stricter than most serious-sounding AI business tools/i,
+  "the reply bank must not use an unsupported comparative claim",
+);
+
+assert.match(
+  recommendedPost,
+  /^i have way too much half done shit spread across AI chats\./,
+  "the opener must begin with the maker's concrete personal complaint",
+);
 assert.match(recommendedPost, /\blol\b/, "the opener must preserve the user's rough-human voice");
 assert.match(recommendedPost, /\n\nso i made MoneyPrinter\b/, "the opener must use the user's rough paragraph turn");
 assert.match(recommendedPost, /\bwith permission\b/i);
-assert.match(recommendedPost, /\bthe last 14 days\b/i);
-assert.match(recommendedPost, /\bdetected AI CLIs \+ GUIs it can access\b/i);
+assert.match(recommendedPost, /\bthe last 14 days it can access\b/i);
 assert.match(
   recommendedPost,
-  /\bdetected AI CLIs \+ GUIs it can access\. figures out what shit is real\. then gets to work on the best money route\b/i,
+  /\bpicks what looks closest to getting paid and starts doing the work\b/i,
   "the opener must keep scanning, judgment, and execution explicit",
 );
 assert.match(recommendedPost, /https:\/\/github\.com\/bilbop1\/moneyprinter-md\b/);
+assert.doesNotMatch(
+  recommendedPost,
+  /\bbest money route\b|\bthe receipt decides\b/i,
+  "the opener must not fall back to polished launch slogans",
+);
 assert.doesNotMatch(
   recommendedPost,
   /\b[^,\n]+,\s+[^,\n]+,\s+(?:and|or)\s+[^,\n]+[.!?]?/i,
