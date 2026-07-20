@@ -155,6 +155,11 @@ test("keeps the production surface honest and starter-free", async () => {
       /@media \(max-width:\s*360px\)\s*\{((?:[^{}]|\{[^{}]*\})*)\}/gis,
     ),
   ].map(([, rules]) => rules).join("\n");
+  const mediumSkillFallback = [
+    ...css.matchAll(
+      /@media \(max-width:\s*900px\)\s*\{((?:[^{}]|\{[^{}]*\})*)\}/gis,
+    ),
+  ].map(([, rules]) => rules).join("\n");
   assert.match(narrowFlowFallback, /\.flow-circuit\s*\{[^}]*max-width:\s*100%/is);
   assert.match(narrowFlowFallback, /\.flow-node\s*\{[^}]*min-width:\s*0/is);
 
@@ -194,6 +199,23 @@ test("keeps the production surface honest and starter-free", async () => {
   assert.match(css, /\.skill-relay\s*\{/);
   assert.match(css, /\.validation-console\s*\{/);
   assert.doesNotMatch(css, /\.skill-map\s*\{/);
+  assert.match(css, /\.route-list li\s*\{[^}]*background:\s*transparent/is);
+  assert.match(css, /\.skill-relay\s*\{[^}]*grid-template-rows:\s*160px 230px 230px/is);
+  assert.match(css, /\.skill-relay::before\s*\{[^}]*top:\s*435px/is);
+  assert.match(css, /\.skill-worker:nth-child\(even\)\s*\{[^}]*grid-row:\s*2/is);
+  assert.match(css, /\.skill-worker:nth-child\(odd\)\s*\{[^}]*grid-row:\s*3/is);
+  assert.match(
+    mediumSkillFallback,
+    /\.skill-worker::before\s*\{[^}]*width:\s*1\.3rem[^}]*height:\s*2px/is,
+  );
+  assert.doesNotMatch(
+    mediumSkillFallback,
+    /\.skill-worker::before\s*\{[^}]*display:\s*none/is,
+  );
+  assert.match(
+    mediumSkillFallback,
+    /\.skill-worker:nth-child\(even\)::before,\s*\.skill-worker:nth-child\(odd\)::before\s*\{[^}]*top:\s*50%[^}]*bottom:\s*auto[^}]*height:\s*2px/is,
+  );
   assert.deepEqual(
     [...new Set(page.match(/https?:\/\/[^";\s]+/g) ?? [])],
     ["https://github.com/bilbop1/moneyprinter-md", "https://ko-fi.com/bilbop"],
