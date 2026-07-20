@@ -200,10 +200,13 @@ test("keeps the production surface honest and starter-free", async () => {
     page,
     /<path className="flow-path flow-return" data-from="Rerank" data-to="Prioritize" d="[^"]*660 290" \/>/,
   );
-  assert.doesNotMatch(
-    page,
-    /className="flow-path flow-return"[^>]+d="[^"]*V335[^"]*"/,
-    "the rerank return must not rise through the Deliver node before reaching Prioritize",
+  const flowReturnPath = page.match(
+    /<path className="flow-path flow-return" data-from="Rerank" data-to="Prioritize" d="([^"]+)" \/>/,
+  )?.[1];
+  assert.equal(
+    flowReturnPath,
+    "M120 470 C45 470 45 575 180 575 H580 C620 575 620 530 620 480 V350 C620 315 635 290 660 290",
+    "the rerank return must use the approved route around Deliver and back to Prioritize",
   );
   assert.match(page, /className="approval-gate"/);
   assert.match(page, /EXACT ACTION\s*APPROVAL/);
